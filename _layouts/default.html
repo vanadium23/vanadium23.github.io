@@ -3,29 +3,27 @@
 <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <meta name="description" content="Vanadium23 Blog">
+    <!-- Start meta tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vanadium23 Blog">
+    <meta name="author" content="Ivan Chernov">
+    <meta name="keywords" content="Python,Blog,MOOC">
+    <!-- Stop meta tags -->
+
     <link href="css/normalize.css" rel="stylesheet" media="all">
     <link href="css/styles.css" rel="stylesheet" media="all">
 
-    <link rel="icon" type="image/png" href="/favicon.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/favicon.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="64x64">
 </head>
 <body>
     <header role="banner">
-        <h1><abbr title="HyperText Markup Language 5">HTML5</abbr> Bones</h1>
-        <nav role="navigation">
-        </nav>
+        <h1>Vanadium23 Blog</h1>
+        <nav role="navigation"></nav>
     </header>
     <div class="wrap">
         <main role="main">
             {{ content }}
         </main>
-        <aside role="complementary">
-            <h3>Did you know?</h3>
-            <p>The article and section elements cause a lot of confusion when people are trying to decide how and when to use them. The article: <a href="http://www.iandevlin.com/blog/2011/04/html5/html5-section-or-article">section or article?</a> might help you choose.</p>            
-        </aside>
     </div>
     <footer role="contentinfo">
         <small>Copyright &copy; <time datetime="2016">2016</time></small>
