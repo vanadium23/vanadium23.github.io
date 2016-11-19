@@ -1,44 +1,35 @@
 ---
-layout: default
-title: vanadium23
+layout: page
+permalink: /
 ---
 
 <section>
     <pre>
         <code class="python hljs">
-            import this  # Never forget about Zen of Python
-            import antigravity  # With <3 to xkcd
-            import requests
+import this  # Never forget about Zen of Python
+import antigravity  # With <3 to xkcd
+import requests
 
 
-            class Vanadium23(Developer):
-                def __init__(self):
-                    # Techonologies
-                    self.languages = ['Python', 'Javascript', 'PHP']
-                    self.frameworks = ['Django', 'Flask', 'Slim', 'Laravel']
-                    self.technologies = ['Redis', 'PostgresSQL', 'git']
-                    self.editor = 'Sublime Text'
+class Vanadium23(Developer):
+    def __init__(self):
+        # Techonologies
+        self.languages = ['Python', 'Javascript', 'PHP']
+        self.frameworks = ['Django', 'Flask', 'Slim', 'Laravel']
+        self.technologies = ['Redis', 'PostgresSQL', 'git']
+        self.editor = 'Sublime Text'
 
-                    # Personal info
-                    self.first_name = 'Ivan'
-                    self.last_name = 'Chernov'
-                    self.email = '<a href="mailto:chernoffivan@gmail.com">chernoffivan@gmail.com</a>'
+        # Personal info
+        self.first_name = 'Ivan'
+        self.last_name = 'Chernov'
+        self.email = '<a href="mailto:chernoffivan@gmail.com">chernoffivan@gmail.com</a>'
 
-                @property
-                def full_name(self):
-                    return '{} {}'.format(self.first_name, self.last_name)
+    @property
+    def full_name(self):
+        return '{} {}'.format(self.first_name, self.last_name)
 
-                @property
-                def external_links(self):
-                    return {
-                        'codewars': '<a href="https://www.codewars.com/users/vanadium23">https://www.codewars.com/users/vanadium23</a>',
-                        'github': '<a href="https://github.com/vanadium23">https://github.com/vanadium23</a>',
-                        'linkedin': '<a href="https://www.linkedin.com/in/vanadium23">https://www.linkedin.com/in/vanadium23</a>',
-                        'stackoverflow': '<a href="https://stackoverflow.com/users/4809450/vanadium23">https://stackoverflow.com/users/4809450/vanadium23</a>',
-                    }
-
-                def download_cv(self):
-                    requests.get('<a href="http://vanadium23.me/cv.pdf">http://vanadium23.me/cv.pdf</a>')
-    	</code>
+    def download_cv(self):
+        requests.get('<a href="http://vanadium23.me/cv.pdf">http://vanadium23.me/cv.pdf</a>')
+        </code>
     </pre>
 </section>

@@ -1,0 +1,20 @@
+---
+layout: page
+title: 404 - Page not found
+---
+
+<section>
+    <pre>
+        <code class="python hljs">
+from django.http import Http404
+from django.shortcuts import redirect
+
+class Simple404Middleware(object):
+    def process_exception(self, request, exception):
+        if isinstance(exception, Http404):
+            # oops, we are on this page
+            # go back to index
+            return redirect('<a href="/">home</a>')
+        </code>
+    </pre>
+</section>
