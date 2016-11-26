@@ -9,7 +9,7 @@ Generally, I prefer gunicorn + eventlet, but when you switch (or start) django p
 Based on [gunicorn docs](http://docs.gunicorn.org/en/stable/design.html?highlight=gaiohttp#asyncio-workers), you need simply switch worker to _gaiohttp_ and that's all.
 
 Then, something bad happens.
-![_config.yml]({{ site.baseurl }}/images/gaiohttp-memory.png)
+![gaiohttp-memory]({{ site.baseurl }}/images/gaiohttp-memory.png)
 
 Answer is very simple: <strike>you write some memoryleaking code</strike> _gaiohttp_ ignores max_requests option.
 In other words, workers won't be killed after max_requests count. After some search on internet, there is an [article](http://asvetlov.blogspot.ru/2014/06/asyncio-aiohttp-gunicorn.html) from asyncio contributor about copy-n-pasting worker from aiohttp repo to gunicorn.
