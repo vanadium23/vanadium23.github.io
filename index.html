@@ -1,35 +1,21 @@
 ---
-layout: page
+layout: default
 permalink: /
 ---
 
-<section>
-    <pre>
-        <code class="python hljs">
-import this  # Never forget about Zen of Python
-import antigravity  # With <3 to xkcd
-import requests
+<div class="posts">
+  {% for post in site.posts %}
+    {% if post.tags contains 'books' %}
+    {% else %}
+    <article class="post">
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
 
-class Vanadium23(Developer):
-    def __init__(self):
-        # Techonologies
-        self.languages = ['Python', 'Javascript', 'PHP']
-        self.frameworks = ['Django', 'Flask', 'Slim', 'Laravel']
-        self.technologies = ['Redis', 'PostgresSQL', 'git']
-        self.editor = 'Sublime Text'
-
-        # Personal info
-        self.first_name = 'Ivan'
-        self.last_name = 'Chernov'
-        self.email = '<a href="mailto:chernoffivan@gmail.com">chernoffivan@gmail.com</a>'
-
-    @property
-    def full_name(self):
-        return '{} {}'.format(self.first_name, self.last_name)
-
-    def download_cv(self):
-        requests.get('<a href="http://vanadium23.me/cv.pdf">http://vanadium23.me/cv.pdf</a>')
-        </code>
-    </pre>
-</section>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+    {% endif %}
+  {% endfor %}
+</div>

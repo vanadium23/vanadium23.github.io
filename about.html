@@ -1,0 +1,35 @@
+---
+layout: page
+permalink: /about/
+---
+
+<section style="margin-top: -80px;">
+    <pre>
+        <code class="python hljs">
+import this  # Never forget about Zen of Python
+import antigravity  # With <3 to xkcd
+import requests
+
+
+class Vanadium23(Developer):
+    def __init__(self):
+        # Techonologies
+        self.languages = ['Python', 'Javascript', 'PHP']
+        self.frameworks = ['Django', 'Flask', 'Slim', 'Laravel']
+        self.technologies = ['Redis', 'PostgresSQL', 'git']
+        self.editor = 'Sublime Text'
+
+        # Personal info
+        self.first_name = 'Ivan'
+        self.last_name = 'Chernov'
+        self.email = '<a href="mailto:chernoffivan@gmail.com">chernoffivan@gmail.com</a>'
+
+    @property
+    def full_name(self):
+        return '{} {}'.format(self.first_name, self.last_name)
+
+    def download_cv(self):
+        requests.get('<a href="http://vanadium23.me/cv.pdf">http://vanadium23.me/cv.pdf</a>')
+        </code>
+    </pre>
+</section>
