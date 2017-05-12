@@ -5,7 +5,7 @@ permalink: /
 
 <div class="posts">
   {% for post in site.posts %}
-    {% if post.tags contains 'books' %}
+    {% if post.tags contains 'blog' %}
     {% else %}
     <article class="post">
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
