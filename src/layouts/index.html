@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ .Title }}</title>
+
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="64x64">
+    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/style.css" />
+</head>
+<body>
+    <header>
+        <a href="{{ .Site.BaseURL }}/" class="site-avatar"><img src="{{ .Site.Params.Avatar }}" /></a>
+
+        <div class="site-info">
+          <h1 class="site-name"><a href="{{ .Site.BaseURL }}/">{{ .Site.Params.Name }}</a></h1>
+          <p class="site-description">{{ .Site.Params.Description }}</p>
+        </div>
+
+        <nav>
+          <a href="{{ .Site.BaseURL }}/">Home</a>
+          <a href="{{ .Site.BaseURL }}/about">About</a>
+        </nav>
+    </header>
+    <main>
+        {{ range .Data.Pages }}
+        <li><span><a href="{{ .RelPermalink }}">{{ .Title }}</a><time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</h4></time></span></span></li>
+        {{ end }}
+    </main>
+    <footer>
+        {{ if isset .Site.Params "dribbble" }}<a href="https://dribbble.com/{{ .Site.Params.Dribbble }}"><i class="svg-icon dribbble"></i></a>{{ end }}
+        {{ if isset .Site.Params "email" }}<a href="mailto:{{ .Site.Params.Email }}"><i class="svg-icon email"></i></a>{{ end }}
+        {{ if isset .Site.Params "facebook" }}<a href="https://www.facebook.com/{{ .Site.Params.Facebook }}"><i class="svg-icon facebook"></i></a>{{ end }}
+        {{ if isset .Site.Params "flickr" }}<a href="https://www.flickr.com/{{ .Site.Params.Flickr }}"><i class="svg-icon flickr"></i></a>{{ end }}
+        {{ if isset .Site.Params "github" }}<a href="https://github.com/{{ .Site.Params.Github }}"><i class="svg-icon github"></i></a>{{ end }}
+        {{ if isset .Site.Params "instagram" }}<a href="https://instagram.com/{{ .Site.Params.Instagram }}"><i class="svg-icon instagram"></i></a>{{ end }}
+        {{ if isset .Site.Params "linkedin" }}<a href="https://www.linkedin.com/in/{{ .Site.Params.Linkedin }}"><i class="svg-icon linkedin"></i></a>{{ end }}
+        {{ if isset .Site.Params "pinterest" }}<a href="https://www.pinterest.com/{{ .Site.Params.Pinterest }}"><i class="svg-icon pinterest"></i></a>{{ end }}
+        {{ if isset .Site.Params "twitter" }}<a href="https://www.twitter.com/{{ .Site.Params.Twitter }}"><i class="svg-icon twitter"></i></a>{{ end }}
+        {{ if isset .Site.Params "stackoverflow" }}<a href="http://stackoverflow.com/{{ .Site.Params.Stackoverflow }}"><i class="svg-icon stackoverflow"></i></a>{{ end }}
+        {{ if isset .Site.Params "youtube" }}<a href="https://youtube.com/{{ .Site.Params.Youtube }}"><i class="svg-icon youtube"></i></a>{{ end }}
+        {{ if isset .Site.Params "googleplus" }}<a href="https://plus.google.com/{{ .Site.Params.Googleplus }}"><i class="svg-icon googleplus"></i></a>{{ end }}
+        {{ if isset .Site.Params "codewars" }}<a href="https://www.codewars.com/users/{{ .Site.Params.Codewars }}"><i class="svg-icon codewars"></i></a>{{ end }}
+    </footer>
+</body>
+</html>

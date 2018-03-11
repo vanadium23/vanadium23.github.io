@@ -1,0 +1,17 @@
+baseURL: http://vanadium23.me
+disablePathToLower: true
+languageCode: en-us
+title: My New Hugo Site
+
+params:
+  avatar: https://avatars1.githubusercontent.com/u/2872741?v=3&s=460
+  name: vanadium23
+  description: Fullstack Dev @ Ostrovok.ru
+
+  # footer links
+  twitter: vanadium23
+  github: vanadium23
+  stackoverflow: users/4809450/vanadium23
+  codewars: vanadium23
+  linkedin: vanadium23
+  email: chernoffivan@gmail.com

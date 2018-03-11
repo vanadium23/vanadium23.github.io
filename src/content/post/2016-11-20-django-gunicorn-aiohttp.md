@@ -1,5 +1,5 @@
 ---
-layout: post
+date: 2016-11-20T00:00:00Z
 title: Cook django with aiohttp workers
 ---
 

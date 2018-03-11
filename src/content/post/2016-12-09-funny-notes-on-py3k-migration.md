@@ -1,5 +1,5 @@
 ---
-layout: post
+date: 2016-12-09T00:00:00Z
 title: Funny notes on migration to python3
 ---
 

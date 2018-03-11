@@ -1,7 +1,8 @@
 ---
-layout: post
+date: 2017-05-12T00:00:00Z
+tags:
+- blog
 title: Заметки по поездке Брюгге-Роттердам-Брюссель
-tags: [blog]
 ---
 
 ## Must see

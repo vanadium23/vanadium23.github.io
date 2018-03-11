@@ -1,7 +1,10 @@
 ---
-layout: post
+date: 2017-08-18T00:00:00Z
+tags:
+- video
+- slides
+- python
 title: The Ajax, The REST and The GraphQL
-tags: [video, slides, python]
 ---
 
 My presentation about GraphQL from MoscowPython Meetup #47 @ Mail.Ru HQ.

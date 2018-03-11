@@ -1,7 +1,9 @@
 ---
-layout: post
+date: 2017-09-02T00:00:00Z
+tags:
+- database
+- monitoring
 title: Stupid mistakes with database
-tags: [database, monitoring]
 ---
 
 You know you're wrong at database administrating, when...
