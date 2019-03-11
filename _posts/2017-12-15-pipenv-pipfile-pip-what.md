@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PipEnv, Pipfile, pip... what?!
-tags: [video, slides, python]
+tags: [video, slides, python, dev]
 ---
 
 My presentation about PipEnv from [MoscowPython Meetup #50](http://www.moscowpython.ru/meetup/50/) @ Rambler HQ.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stupid mistakes with database
-tags: [database, monitoring]
+tags: [database, monitoring, dev]
 ---
 
 You know you're wrong at database administrating, when...

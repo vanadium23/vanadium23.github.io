@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Cook django with aiohttp workers
+tags: [dev, django, python]
 ---
 
 There is some standart stack to run django in production.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Заметки по поездке Брюгге-Роттердам-Брюссель
-tags: [blog]
+tags: [blog, travel]
 ---
 
 ## Must see

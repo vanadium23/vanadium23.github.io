@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Держи кармашек в чистоте
-tags: [blog]
+tags: [blog, reading, productivity]
 ---
 
 Ретроспектива о том, как я организовал свой список чтения. (Спойлер: getpocket.com и не только).

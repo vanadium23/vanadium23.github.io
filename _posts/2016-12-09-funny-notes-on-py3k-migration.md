@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Funny notes on migration to python3
+tags: [dev, python, py3k]
 ---
 
 Python3 is a great pain in python community. It was released on Dec 3, 2008 and brings major breaking changes and also new interpreter was slower, than python2 realization. After long way and five releases, in 2016, it's obvious to start on python 3.5: type hinting, asyncio, same perfomance and gets better in coming [python 3.6](https://docs.python.org/3.6/whatsnew/3.6.html).
