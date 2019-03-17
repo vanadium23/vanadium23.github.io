@@ -1,0 +1,61 @@
+{{ block "preload" . }}
+{{ with .Content }}{{ end }}
+{{ end }}
+{{ $baseCSS := resources.Get "css/base.css" | resources.ExecuteAsTemplate "css/base.css" . | minify | fingerprint }}
+{{ $extraCSS := .Scratch.Get "css" | uniq }}
+{{ $allCSS := $baseCSS | slice | append $extraCSS }}
+{{ $allJS := .Scratch.Get "js" | uniq }}
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    {{ if eq .Title site.Title }}
+    {{ site.Title }} - {{ site.Params.Description }}
+    {{ else }}
+    {{ with .Title }}{{ . }} | {{ end }}{{ site.Title }}
+    {{ end }}
+  </title>
+  {{ range .AlternativeOutputFormats }}
+  {{ printf "<link rel=%q type=%q href=%q title=%q>" .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+  {{ end }}
+  {{ range $allCSS }}
+  <link rel="stylesheet" href="{{ .Permalink }}" integrity="{{ .Data.Integrity }}">
+  {{ end }}
+  <link rel="stylesheet" href="/css/style.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+  {{ hugo.Generator }}
+</head>
+<body>
+  {{ partial "banner.html" .}}
+  <main>
+    <div class="u-wrapper">
+      <div class="u-padding">
+        {{ block "main" . }}{{ end }}
+      </div>
+    </div>
+  </main>
+  {{ partial "footer.html" . }}
+  {{ range $allJS }}
+  <script type="text/javascript" src="{{ .Permalink }}" integrity="{{ .Data.Integrity }}"></script>
+  {{ end }}
+  {{- if .Site.GoogleAnalytics }}
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', '{{.Site.GoogleAnalytics}}', 'auto');
+      ga('send', 'pageview');
+  </script>
+{{- end}}
+</body>
+</html>
