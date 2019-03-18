@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+
+
+
+<?xml-stylesheet type="text/xsl" href="#stylesheet" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xsl">
+    <xsl:output method="html" doctype-system="about:legacy-compat" />
+    <xsl:template match="/rss">
+      <html lang="ru-ru">
+        <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>L10n RSS | vanadium23</title>
+          <link rel="stylesheet" href="https://vanadium23.me/css/base.min.34ac18bc3a855e272b475cf37b39ff5a4782c6c135d52b81107686678deaa01a.css" integrity="sha256-NKwYvDqFXicrR1zzezn/WkeCxsE11SuBEHaGZ43qoBo=" />
+        </head>
+        <body>
+          <nav class="u-background">
+    <div class="u-wrapper">
+        <ul class="Banner">
+            <li class="Banner-item Banner-item--title">
+                <a class="Banner-link u-clickable" href="https://vanadium23.me/">
+                    vanadium23
+                </a>
+            </li>
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/tags/dev/">Dev (Eng)</a>
+        </li>
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/about">About</a>
+        </li>
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a>
+        </li>
+        
+        </ul>
+    </div>
+</nav>
+          <main>
+            <div class="u-wrapper">
+              <div class="u-padding">
+                <h2 class="Heading-title">
+                  
+                  <a class="Heading-link u-clickable" href="https://vanadium23.me/tags/l10n/index.xml" rel="bookmark">L10n RSS</a>
+                  
+                </h2>
+                
+              </div>
+            </div>
+          </main>
+          
+<footer class="Footer">
+  <div class="u-wrapper">
+    <div class="u-padding">
+        
+        <a href="https://github.com/vanadium23"><i class="svg-icon github"></i></a>
+        <a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"></i></a>
+        <a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"></i></a>
+        <a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"></i></a>
+        <a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"></i></a>
+    </div>
+  </div>
+</footer>
+
+        </body>
+      </html>
+    </xsl:template>
+  </xsl:stylesheet>
+  <channel>
+    <title>L10n on vanadium23</title>
+    <link>https://vanadium23.me/tags/l10n/</link>
+    <description>Recent content in L10n on vanadium23</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Sat, 26 Nov 2016 17:00:00 +0300</lastBuildDate>
+    <atom:link href="https://vanadium23.me/tags/l10n/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Say hello to l10n in python</title>
+      <link>https://vanadium23.me/l10n-in-python/</link>
+      <pubDate>Sat, 26 Nov 2016 17:00:00 +0300</pubDate>
+      <guid>https://vanadium23.me/l10n-in-python/</guid>
+      <description>&lt;p&gt;In python world, many solutions for trivial problems could be found in standart library: from &lt;a href=&#34;https://docs.python.org/3/library/statistics.html&#34;&gt;statistical functions&lt;/a&gt; to &lt;a href=&#34;https://docs.python.org/3/library/gettext.html&#34;&gt;localization&lt;/a&gt; for your package.
+But somehow some things just don&amp;rsquo;t connect to each other, and you just stuck at combining this constructor in right way.&lt;/p&gt;
+
+&lt;p&gt;This gifs pretty sums up situation:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/modern-development.gif&#34; alt=&#34;modern-development&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Our task:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;create python package, that has localized string&lt;/li&gt;
+&lt;li&gt;provide this string to django application&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;First thing, that you find at &lt;a href=&#34;https://docs.python.org/3/library/gettext.html&#34;&gt;gettext docs&lt;/a&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import gettext
+import os
+
+BASE_DIR = os.path.dirname(__file__)
+LOCALE_DIR = os.path.join(BASE_DIR, &#39;locale&#39;)
+
+# try to set param fallback to False
+t = gettext.translation(&#39;default&#39;, LOCALE_DIR, fallback=True)
+_ = t.ugettext
+
+message = _(&#39;Test!&#39;)
+print(message)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To change language on your system, you can simply set enviroment variable &lt;em&gt;LANG&lt;/em&gt; or &lt;em&gt;LANGUAGE&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;~ export LANG=ru
+~ python test.py
+Test!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This won&amp;rsquo;t work, because you don&amp;rsquo;t have translated phrases in your locale dir. Let&amp;rsquo;s compile them.
+Command pygettext grabs all string in &lt;em&gt;ugettext&lt;/em&gt; function and dumps it to pot file.
+After it, you need to init new locale (&lt;em&gt;note:&lt;/em&gt; if you need to merge with previos translations use &lt;em&gt;msgmerge&lt;/em&gt;).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;~ pygettext test.py
+~ mkdir -p ./locale/{en,ru}/LC_MESSAGES/
+~ msginit --input=messages.pot --locale=en_US.UTF-8 \
+--output=./locale/en/LC_MESSAGES/default.po
+~ msginit --input=messages.pot --locale=ru_RU.UTF-8 \
+--output=./locale/ru/LC_MESSAGES/default.po
+~ rm messages.pot
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you can open default.po files with some tools, like &lt;a href=&#34;https://poedit.net/&#34;&gt;POEdit&lt;/a&gt; (&lt;em&gt;note:&lt;/em&gt; I prefer Sublime Text for small po).
+Change in ru po msgstr from &amp;lsquo;Test!&amp;rsquo; to &amp;lsquo;Тест!&amp;rsquo;. When you run script again, output will be same (&amp;lsquo;Test!&amp;rsquo;).
+This is because after modifying po, we need to compile it to binary format (known as mo).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;~ msgfmt en/LC_MESSAGES/default.po -o en/LC_MESSAGES/default.mo
+~ msgfmt ru/LC_MESSAGES/default.po -o ru/LC_MESSAGES/default.mo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Woo-hoo, output should be translated now, but it doesn&amp;rsquo;t work with django.
+What shall we do? Read the &lt;a href=&#34;https://docs.djangoproject.com/en/1.10/topics/i18n/translation/#how-django-discovers-translations&#34;&gt;manual&lt;/a&gt;.
+So we need to rename namespace from default to django, but also django realize &lt;a href=&#34;https://github.com/django/django/blob/1.10.3/django/utils/translation/trans_real.py#L90&#34;&gt;own class&lt;/a&gt;, so insted of using gettext.translation.ugettext you need to use &lt;em&gt;django.utils.translation&lt;/em&gt; one.
+Full example can be found in &lt;a href=&#34;https://github.com/vanadium23/py-hello-l10n&#34;&gt;repository&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

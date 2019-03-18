@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+
+
+
+<?xml-stylesheet type="text/xsl" href="#stylesheet" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xsl">
+    <xsl:output method="html" doctype-system="about:legacy-compat" />
+    <xsl:template match="/rss">
+      <html lang="ru-ru">
+        <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Slides RSS | vanadium23</title>
+          <link rel="stylesheet" href="https://vanadium23.me/css/base.min.34ac18bc3a855e272b475cf37b39ff5a4782c6c135d52b81107686678deaa01a.css" integrity="sha256-NKwYvDqFXicrR1zzezn/WkeCxsE11SuBEHaGZ43qoBo=" />
+        </head>
+        <body>
+          <nav class="u-background">
+    <div class="u-wrapper">
+        <ul class="Banner">
+            <li class="Banner-item Banner-item--title">
+                <a class="Banner-link u-clickable" href="https://vanadium23.me/">
+                    vanadium23
+                </a>
+            </li>
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/tags/dev/">Dev (Eng)</a>
+        </li>
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/about">About</a>
+        </li>
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a>
+        </li>
+        
+        </ul>
+    </div>
+</nav>
+          <main>
+            <div class="u-wrapper">
+              <div class="u-padding">
+                <h2 class="Heading-title">
+                  
+                  <a class="Heading-link u-clickable" href="https://vanadium23.me/tags/slides/index.xml" rel="bookmark">Slides RSS</a>
+                  
+                </h2>
+                
+              </div>
+            </div>
+          </main>
+          
+<footer class="Footer">
+  <div class="u-wrapper">
+    <div class="u-padding">
+        
+        <a href="https://github.com/vanadium23"><i class="svg-icon github"></i></a>
+        <a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"></i></a>
+        <a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"></i></a>
+        <a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"></i></a>
+        <a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"></i></a>
+    </div>
+  </div>
+</footer>
+
+        </body>
+      </html>
+    </xsl:template>
+  </xsl:stylesheet>
+  <channel>
+    <title>Slides on vanadium23</title>
+    <link>https://vanadium23.me/tags/slides/</link>
+    <description>Recent content in Slides on vanadium23</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Fri, 15 Dec 2017 17:00:00 +0300</lastBuildDate>
+    <atom:link href="https://vanadium23.me/tags/slides/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PipEnv, Pipfile, pip... what?!</title>
+      <link>https://vanadium23.me/pipenv-pipfile-pip-what/</link>
+      <pubDate>Fri, 15 Dec 2017 17:00:00 +0300</pubDate>
+      <guid>https://vanadium23.me/pipenv-pipfile-pip-what/</guid>
+      <description>&lt;p&gt;My presentation about PipEnv from &lt;a href=&#34;http://www.moscowpython.ru/meetup/50/&#34;&gt;MoscowPython Meetup #50&lt;/a&gt; @ Rambler HQ.&lt;/p&gt;
+
+&lt;p&gt;Video is in russian:
+&lt;iframe width=&#34;640&#34; height=&#34;360&#34; src=&#34;https://www.youtube.com/embed/2N0phx7WTEI&#34; frameborder=&#34;0&#34; gesture=&#34;media&#34; allow=&#34;encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;And slides in english:
+&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;a52512c5af6c43a09cba15f23737e449&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Ajax, The REST and The GraphQL</title>
+      <link>https://vanadium23.me/ajax-rest-graphql/</link>
+      <pubDate>Fri, 18 Aug 2017 17:00:00 +0300</pubDate>
+      <guid>https://vanadium23.me/ajax-rest-graphql/</guid>
+      <description>&lt;p&gt;My presentation about GraphQL from MoscowPython Meetup #47 @ Mail.Ru HQ.&lt;/p&gt;
+
+&lt;p&gt;Video is in russian:
+&lt;iframe width=&#34;640&#34; height=&#34;360&#34; src=&#34;https://www.youtube.com/embed/9JqtlPO78y0&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;And slides in english:
+&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;3022a498ddc344b4933b4b955dd7c660&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

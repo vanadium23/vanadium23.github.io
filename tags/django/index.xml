@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+
+
+
+<?xml-stylesheet type="text/xsl" href="#stylesheet" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xsl">
+    <xsl:output method="html" doctype-system="about:legacy-compat" />
+    <xsl:template match="/rss">
+      <html lang="ru-ru">
+        <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Django RSS | vanadium23</title>
+          <link rel="stylesheet" href="https://vanadium23.me/css/base.min.34ac18bc3a855e272b475cf37b39ff5a4782c6c135d52b81107686678deaa01a.css" integrity="sha256-NKwYvDqFXicrR1zzezn/WkeCxsE11SuBEHaGZ43qoBo=" />
+        </head>
+        <body>
+          <nav class="u-background">
+    <div class="u-wrapper">
+        <ul class="Banner">
+            <li class="Banner-item Banner-item--title">
+                <a class="Banner-link u-clickable" href="https://vanadium23.me/">
+                    vanadium23
+                </a>
+            </li>
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/tags/dev/">Dev (Eng)</a>
+        </li>
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/about">About</a>
+        </li>
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a>
+        </li>
+        
+        </ul>
+    </div>
+</nav>
+          <main>
+            <div class="u-wrapper">
+              <div class="u-padding">
+                <h2 class="Heading-title">
+                  
+                  <a class="Heading-link u-clickable" href="https://vanadium23.me/tags/django/index.xml" rel="bookmark">Django RSS</a>
+                  
+                </h2>
+                
+              </div>
+            </div>
+          </main>
+          
+<footer class="Footer">
+  <div class="u-wrapper">
+    <div class="u-padding">
+        
+        <a href="https://github.com/vanadium23"><i class="svg-icon github"></i></a>
+        <a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"></i></a>
+        <a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"></i></a>
+        <a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"></i></a>
+        <a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"></i></a>
+    </div>
+  </div>
+</footer>
+
+        </body>
+      </html>
+    </xsl:template>
+  </xsl:stylesheet>
+  <channel>
+    <title>Django on vanadium23</title>
+    <link>https://vanadium23.me/tags/django/</link>
+    <description>Recent content in Django on vanadium23</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Sun, 20 Nov 2016 17:00:00 +0300</lastBuildDate>
+    <atom:link href="https://vanadium23.me/tags/django/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cook django with aiohttp workers</title>
+      <link>https://vanadium23.me/django-gunicorn-aiohttp/</link>
+      <pubDate>Sun, 20 Nov 2016 17:00:00 +0300</pubDate>
+      <guid>https://vanadium23.me/django-gunicorn-aiohttp/</guid>
+      <description>&lt;p&gt;There is some standart stack to run django in production.
+For python 2, it is nginx + gunicorn or uwsgi + monkey patching libs, such as gevent or eventlet.
+Generally, I prefer gunicorn + eventlet, but when you switch (or start) django project on latest python 3.5, eventlet can do &lt;a href=&#34;https://github.com/eventlet/eventlet/issues/313&#34;&gt;some bad magic&lt;/a&gt;. And you can switch to a new built-in mechanism, called &lt;em&gt;aiohttp&lt;/em&gt;.
+Based on &lt;a href=&#34;http://docs.gunicorn.org/en/stable/design.html?highlight=gaiohttp#asyncio-workers&#34;&gt;gunicorn docs&lt;/a&gt;, you need simply switch worker to &lt;em&gt;gaiohttp&lt;/em&gt; and that&amp;rsquo;s all.&lt;/p&gt;
+
+&lt;p&gt;Then, something bad happens.
+&lt;img src=&#34;https://vanadium23.me/images/gaiohttp-memory.png&#34; alt=&#34;gaiohttp-memory&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Answer is very simple: &lt;strike&gt;you write some memoryleaking code&lt;/strike&gt; &lt;em&gt;gaiohttp&lt;/em&gt; ignores max_requests option.
+In other words, workers won&amp;rsquo;t be killed after max_requests count. After some search on internet, there is an &lt;a href=&#34;http://asvetlov.blogspot.ru/2014/06/asyncio-aiohttp-gunicorn.html&#34;&gt;article&lt;/a&gt; from asyncio contributor about copy-n-pasting worker from aiohttp repo to gunicorn.
+&lt;a href=&#34;http://aiohttp.readthedocs.io/en/stable/deployment.html#start-gunicorn&#34;&gt;Aiohttp docs&lt;/a&gt; says that you should use &lt;code&gt;aiohttp.worker.GunicornWebWorker&lt;/code&gt;, but when you switch setting there will be error.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[5898] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File &amp;quot;./gunicorn/arbiter.py&amp;quot;, line 557, in spawn_worker
+    worker.init_process()
+  File &amp;quot;./aiohttp/worker.py&amp;quot;, line 37, in init_process
+    super().init_process()
+  File &amp;quot;./gunicorn/workers/base.py&amp;quot;, line 132, in init_process
+    self.run()
+  File &amp;quot;./aiohttp/worker.py&amp;quot;, line 40, in run
+    self.loop.run_until_complete(self.wsgi.startup())
+AttributeError:
+    &#39;WSGIHandler&#39; object has no attribute &#39;startup&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So &lt;em&gt;aiohttp.worker.GunicornWebWorker&lt;/em&gt; differs from standart wsgi app for django. Luckily, python community has two packages to overcome these difficulties: &lt;em&gt;aiohttp-wsgi&lt;/em&gt; and &lt;em&gt;aiodjango&lt;/em&gt;, add them to your &lt;em&gt;requirements.txt&lt;/em&gt;.
+After this modify your &lt;em&gt;wsgi.py&lt;/em&gt; according to &lt;a href=&#34;http://aiodjango.readthedocs.io/en/latest/usage.html#defining-the-application&#34;&gt;docs&lt;/a&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import os
+
+from django.core.wsgi import get_wsgi_application
+
+from aiodjango import get_aio_application
+
+
+os.environ.setdefault(&#39;DJANGO_SETTINGS_MODULE&#39;, &#39;settings&#39;)
+
+# Build WSGI application
+# Any WSGI middleware would be added here
+application = get_wsgi_application()
+
+# Build aiohttp application
+app = get_aio_application(application)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That&amp;rsquo;s all folks.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

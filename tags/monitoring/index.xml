@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+
+
+
+<?xml-stylesheet type="text/xsl" href="#stylesheet" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xsl">
+    <xsl:output method="html" doctype-system="about:legacy-compat" />
+    <xsl:template match="/rss">
+      <html lang="ru-ru">
+        <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Monitoring RSS | vanadium23</title>
+          <link rel="stylesheet" href="https://vanadium23.me/css/base.min.34ac18bc3a855e272b475cf37b39ff5a4782c6c135d52b81107686678deaa01a.css" integrity="sha256-NKwYvDqFXicrR1zzezn/WkeCxsE11SuBEHaGZ43qoBo=" />
+        </head>
+        <body>
+          <nav class="u-background">
+    <div class="u-wrapper">
+        <ul class="Banner">
+            <li class="Banner-item Banner-item--title">
+                <a class="Banner-link u-clickable" href="https://vanadium23.me/">
+                    vanadium23
+                </a>
+            </li>
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/tags/dev/">Dev (Eng)</a>
+        </li>
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/about">About</a>
+        </li>
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a>
+        </li>
+        
+        </ul>
+    </div>
+</nav>
+          <main>
+            <div class="u-wrapper">
+              <div class="u-padding">
+                <h2 class="Heading-title">
+                  
+                  <a class="Heading-link u-clickable" href="https://vanadium23.me/tags/monitoring/index.xml" rel="bookmark">Monitoring RSS</a>
+                  
+                </h2>
+                
+              </div>
+            </div>
+          </main>
+          
+<footer class="Footer">
+  <div class="u-wrapper">
+    <div class="u-padding">
+        
+        <a href="https://github.com/vanadium23"><i class="svg-icon github"></i></a>
+        <a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"></i></a>
+        <a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"></i></a>
+        <a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"></i></a>
+        <a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"></i></a>
+    </div>
+  </div>
+</footer>
+
+        </body>
+      </html>
+    </xsl:template>
+  </xsl:stylesheet>
+  <channel>
+    <title>Monitoring on vanadium23</title>
+    <link>https://vanadium23.me/tags/monitoring/</link>
+    <description>Recent content in Monitoring on vanadium23</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Sat, 02 Sep 2017 17:00:00 +0300</lastBuildDate>
+    <atom:link href="https://vanadium23.me/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stupid mistakes with database</title>
+      <link>https://vanadium23.me/stupid-database-mistakes/</link>
+      <pubDate>Sat, 02 Sep 2017 17:00:00 +0300</pubDate>
+      <guid>https://vanadium23.me/stupid-database-mistakes/</guid>
+      <description>&lt;p&gt;You know you&amp;rsquo;re wrong at database administrating, when&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;1-don-t-monitor-free-space-on-disk&#34;&gt;1. Don&amp;rsquo;t monitor free space on disk&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;DO:&lt;/strong&gt; Just do it, and not some simple trigger on 10% free left space, but either how many days till day X.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-don-t-make-check-backups&#34;&gt;2. Don&amp;rsquo;t &lt;del&gt;make&lt;/del&gt; check backups&lt;/h2&gt;
+
+&lt;p&gt;So you use some tools for backing up your database, but when day X comes, you can not restore from it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;DO:&lt;/strong&gt; every backup needs to be restored.&lt;/p&gt;
+
+&lt;h2 id=&#34;3-don-t-monitor-slowest-frequent-queries&#34;&gt;3. Don&amp;rsquo;t monitor slowest/frequent queries&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;DO:&lt;/strong&gt; there is different approaches for that, but the simplest one is &lt;a href=&#34;https://github.com/dalibo/pgbadger&#34;&gt;pgBadger&lt;/a&gt; with syslog.&lt;/p&gt;
+
+&lt;h2 id=&#34;4-don-t-use-int4-as-pk-for-append-only-tables&#34;&gt;4. Don&amp;rsquo;t use int4 as pk for append-only tables&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;DO:&lt;/strong&gt; just use bigint. Rails make bigint as default for pk in &lt;a href=&#34;http://www.mccartie.com/2016/12/05/rails-5.1.html&#34;&gt;5.1&lt;/a&gt;. Hopefully, Django will make it in 2.x.&lt;/p&gt;
+
+&lt;h2 id=&#34;5-don-t-restart-database-on-every-error-you-see&#34;&gt;5. Don&amp;rsquo;t restart database on every error you see.&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;DO:&lt;/strong&gt; hire DBA (just joking). Try to find a root cause with your monitoring. May be it&amp;rsquo;s just bad statics on table and you need to run &lt;code&gt;ANALYSE table&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

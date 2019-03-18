@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+
+
+
+<?xml-stylesheet type="text/xsl" href="#stylesheet" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xsl">
+    <xsl:output method="html" doctype-system="about:legacy-compat" />
+    <xsl:template match="/rss">
+      <html lang="ru-ru">
+        <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Travel RSS | vanadium23</title>
+          <link rel="stylesheet" href="https://vanadium23.me/css/base.min.34ac18bc3a855e272b475cf37b39ff5a4782c6c135d52b81107686678deaa01a.css" integrity="sha256-NKwYvDqFXicrR1zzezn/WkeCxsE11SuBEHaGZ43qoBo=" />
+        </head>
+        <body>
+          <nav class="u-background">
+    <div class="u-wrapper">
+        <ul class="Banner">
+            <li class="Banner-item Banner-item--title">
+                <a class="Banner-link u-clickable" href="https://vanadium23.me/">
+                    vanadium23
+                </a>
+            </li>
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/tags/dev/">Dev (Eng)</a>
+        </li>
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/about">About</a>
+        </li>
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a>
+        </li>
+        
+        </ul>
+    </div>
+</nav>
+          <main>
+            <div class="u-wrapper">
+              <div class="u-padding">
+                <h2 class="Heading-title">
+                  
+                  <a class="Heading-link u-clickable" href="https://vanadium23.me/tags/travel/index.xml" rel="bookmark">Travel RSS</a>
+                  
+                </h2>
+                
+              </div>
+            </div>
+          </main>
+          
+<footer class="Footer">
+  <div class="u-wrapper">
+    <div class="u-padding">
+        
+        <a href="https://github.com/vanadium23"><i class="svg-icon github"></i></a>
+        <a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"></i></a>
+        <a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"></i></a>
+        <a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"></i></a>
+        <a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"></i></a>
+    </div>
+  </div>
+</footer>
+
+        </body>
+      </html>
+    </xsl:template>
+  </xsl:stylesheet>
+  <channel>
+    <title>Travel on vanadium23</title>
+    <link>https://vanadium23.me/tags/travel/</link>
+    <description>Recent content in Travel on vanadium23</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Sat, 19 Jan 2019 17:00:00 +0300</lastBuildDate>
+    <atom:link href="https://vanadium23.me/tags/travel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Заметки по поездке в Тайланд</title>
+      <link>https://vanadium23.me/thailand/</link>
+      <pubDate>Sat, 19 Jan 2019 17:00:00 +0300</pubDate>
+      <guid>https://vanadium23.me/thailand/</guid>
+      <description>&lt;p&gt;Тайланд - это когда хочешь в лето зимой, но чтобы ещё было дешево. Во всяком случае, так мы думали с друзьями, когда решали где справить Новый год.
+Как оказалось, Тайланд - это когда ешь рис весь отпуск.&lt;/p&gt;
+
+&lt;h2 id=&#34;маршрут-поездки&#34;&gt;Маршрут поездки&lt;/h2&gt;
+
+&lt;p&gt;Бангкок &amp;ndash;&amp;gt; Ао Нанг (Краби) &amp;ndash;&amp;gt; остров Пхи-Пхи &amp;ndash;&amp;gt; Ао Нанг (Краби) &amp;ndash;&amp;gt; Бангкок&lt;/p&gt;
+
+&lt;h2 id=&#34;про-еду&#34;&gt;Про еду&lt;/h2&gt;
+
+&lt;p&gt;Так как не являюсь любителем острого, то еда в Тайланде строилась по одному принципу:
+1. Выбери рис или рисовую лапшу.
+2. Добавьте овощи по выбору.
+3. Добавьте мясо: курица, говядина, свинина или морепродукты.
+4. &lt;strike&gt;(опционально) Добавить соус на основе пасты из чили.&lt;/strike&gt;&lt;/p&gt;
+
+&lt;p&gt;Кроме этого из достойных упоминаний - спринг роллы, тайский омлет с п.3, маленькие шашлычки.
+Если рис в конец надоел, то везде можно найти европейские ресторанчики, но с чуть более высоким ценником.
+Ещё есть ночные маркеты, где можно найти крошку картошку или мексиканские блюда, но они будут на ~3+.
+И последнее о чём хотелось бы упомянуть, что макдак и бургер кинг - очень дорогие места: один чизбургер стоит ~140 рублей.&lt;/p&gt;
+
+&lt;h3 id=&#34;ао-нанг-краби&#34;&gt;Ао Нанг (Краби)&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Маленькая деревня&lt;/li&gt;
+&lt;li&gt;Есть три пляжа
+
+&lt;ul&gt;
+&lt;li&gt;при отеле Centara - супер чистый, мелкий песок, всё отлично, кроме факта что надо добираться через тропу сквозь лес.&lt;/li&gt;
+&lt;li&gt;пляж Ао Нанга - тут толпа людей и лодок, но при отливе возможно купаться.&lt;/li&gt;
+&lt;li&gt;пляж Nopparat Thara - меньше людей, мельче вода, людей не так много, но при отливе вода уходит метров на 100. Зато появляются крабики в огромных количествах.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;В городе есть всё для туристов - ночные маркеты, массажи, лодочки.&lt;/li&gt;
+&lt;li&gt;А вот мест для посещения так себе - храм на горе, треккинг, слоны и острова.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;остров-пхи-пхи&#34;&gt;Остров Пхи-Пхи&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Маленькая деревня доверху наполненная туристами.&lt;/li&gt;
+&lt;li&gt;Куча кафешек с более приятной едой:
+
+&lt;ul&gt;
+&lt;li&gt;Конструктор бургеров Monster Burger.&lt;/li&gt;
+&lt;li&gt;Местный ресторан Garlic, в котором подают &lt;a href=&#34;https://ru.wikipedia.org/wiki/%D0%A0%D1%91%D1%88%D1%82%D0%B8&#34;&gt;рёшти (rösti)&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;В большинстве мест наливают ведёрко коктейля за 600 рублей.&lt;/li&gt;
+&lt;li&gt;Из достопримечательностей - смотровая площадка, пляжи острова и соседние острова.&lt;/li&gt;
+&lt;li&gt;Ещё можно поплавать на каяках.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;бангкок&#34;&gt;Бангкок&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Мегаполис с кучей дорог, которые идут на уровне 5 этажа и выше.&lt;/li&gt;
+&lt;li&gt;Достопримечательности на любой вкус:
+
+&lt;ul&gt;
+&lt;li&gt;Есть старый город с статуями Будды, дворец, гробницы.&lt;/li&gt;
+&lt;li&gt;Есть музеи, в том числе и &lt;a href=&#34;https://www.tripadvisor.ru/Attraction_Review-g293916-d1210675-Reviews-Bangkok_Art_Culture_Centre_BACC-Bangkok.html&#34;&gt;современного искусства&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Есть парк с варанами в центре города.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;В бангкоке после 2 недель лагеров успешно был найден &lt;a href=&#34;https://www.facebook.com/mitrcraft/&#34;&gt;крафтовый бар&lt;/a&gt; с местной медовухой. Она была просто отличная.
+
+&lt;ul&gt;
+&lt;li&gt;Заодно познакомились с основателями крафта в Тае и узнали, что его так мало, потому что варить на продажу и для себя запрещено. Подробнее можете в &lt;a href=&#34;https://www.youtube.com/watch?v=kpbBlyIKQMQ&#34;&gt;видео&lt;/a&gt; посмотреть.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;бюджет-на-2-людей&#34;&gt;Бюджет на 2 людей&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Билеты&lt;/strong&gt; - на новогодние праздники не смогли найти дешевле 30000₽ за одного.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Жильё&lt;/strong&gt; - ~3000₽ за ночь на двоих.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Транспорт:&lt;/strong&gt; - берите байк, если это деревня. Стоит 400₽/сутки.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Еда:&lt;/strong&gt; - порция риса с мясом 150₽ :)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;p-s&#34;&gt;P.s.&lt;/h3&gt;
+
+&lt;p&gt;В этой поездке было много смешных и не очень историй:
+1. Мы летели China Southern и опоздали на пересадку в Гуанчжоу. Опоздали, потому что китайская таможня не очень расторопна и техническая остановка вместо часа заняла 2 или 3. Так как это произошло в первый раз, поэтому что делать было непонятно. В итоге билеты поменяли на стойке регистрации без доплаты на следующий рейс через 5 часов.
+2. Следите за едой, особенно морепродуктами. Не забудьте взять с собой аптечку.&lt;/p&gt;
+
+&lt;p&gt;P.p.s. Спасибо моим друзьям за то, что так клёво встретили и провели Новый год. &amp;lt;3&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Заметки по поездке в Черногорию</title>
+      <link>https://vanadium23.me/montenegro/</link>
+      <pubDate>Mon, 06 Aug 2018 17:00:00 +0300</pubDate>
+      <guid>https://vanadium23.me/montenegro/</guid>
+      <description>&lt;p&gt;Черногория - это как Крым, только цены в евро. А если серьёзно, то так оно и есть, просто погуглите фоточки.&lt;/p&gt;
+
+&lt;h2 id=&#34;что-делать-смотреть&#34;&gt;Что делать/смотреть&lt;/h2&gt;
+
+&lt;p&gt;Возьмите тачку, по округам можно поездить и посмотреть как на горы, так и на море.
+По климату - если ехать в сезон (июль), то днём пекло, а утром/вечером жара, но терпимая.&lt;/p&gt;
+
+&lt;h3 id=&#34;тиват&#34;&gt;Тиват&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Деревня рядом с аэропортом.&lt;/li&gt;
+&lt;li&gt;Есть пару/тройку пляжей - либо галька, либо бетонка.&lt;/li&gt;
+&lt;li&gt;Порт монтенегро - местный богатый район с кафешками и ресторанами.&lt;/li&gt;
+&lt;li&gt;Хорошее расположение до других городов и пляжей в Черногории.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;котор&#34;&gt;Котор&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Старый город - похоже на медины в &lt;a href=&#34;https://vanadium23.me/marocco/&#34;&gt;Марокко&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Можно подняться на гору рядом и сделать панораму на весь город.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;будва&#34;&gt;Будва&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Опять же старый город.&lt;/li&gt;
+&lt;li&gt;Тут собрались все ночные развлечения.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;жабляк&#34;&gt;Жабляк&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Город в горах (150 км от Тивата), где самый клёвый ресторан на Черногорию. Называется он Oro.&lt;/li&gt;
+&lt;li&gt;Парк Дурмитор с черным озером.&lt;/li&gt;
+&lt;li&gt;Недалеко от города (~20 км) - мост Джурджевича, там красивый вид на каньон реки и есть тарзанки/зиплайны.&lt;/li&gt;
+&lt;li&gt;Там много гор, куда есть пешие тропы.&lt;/li&gt;
+&lt;li&gt;Ещё там не так жарко, как везде, поэтому берите тёплые вещи.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;пераст&#34;&gt;Пераст&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Маленький пеший город.&lt;/li&gt;
+&lt;li&gt;Можно доплыть до монастыря на островке.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;пляжи&#34;&gt;Пляжи&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Яз (Jaz) - мелкая галька, не сильно отличается от городских. Народу много.&lt;/li&gt;
+&lt;li&gt;Бечичи (Becici) - посёлок-отель, так же мелкая галька, но почище.&lt;/li&gt;
+&lt;li&gt;Плави Хоризонти (Plavi Horizonti) - имхо, лучший пляж. Песок + очень пологий вход, как на Азовском море.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;что-поесть&#34;&gt;Что поесть&lt;/h2&gt;
+
+&lt;p&gt;Все кафе и рестораны по качеству плюс-минус одинаковые, поэтому расскажу про кухню:
+* Плескавица - мясо с мясом и полито сверху мясом.
+* Чевапчичи - местный вид кебаба.
+* Телячья чорба - местный вид супа, ещё он есть с курицей.
+* Карагеоргиев шницель - огромная такая котлета по-киевски. Внезапно погуглил и это правда &lt;a href=&#34;https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%80%D0%B0%D0%B3%D0%B5%D0%BE%D1%80%D0%B3%D0%B8%D0%B5%D0%B2_%D1%88%D0%BD%D0%B8%D1%86%D0%B5%D0%BB%D1%8C&#34;&gt;неудачная котлета&lt;/a&gt;.
+* Каймак - густые сливки, похожие на сыр.
+* Приганица - пончики на завтрак, подаются с мёдом/джемом.&lt;/p&gt;
+
+&lt;h2 id=&#34;бюджет-на-2-людей&#34;&gt;Бюджет на 2 людей&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Билеты&lt;/strong&gt; - можно найти за 8000-10000₽ за одного.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Жильё&lt;/strong&gt; - ~45-50 евро за ночь на двоих.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Транспорт:&lt;/strong&gt; - берите тачку, у нас вышло 40 евро/день за автомат с полным КАСКО.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Еда:&lt;/strong&gt; - хорошо поесть на двоих ~20 евро.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;P.s. хотелось бы отметить, что черногорцы - очень гостеприимный народ. А владелец наших апартаментов бесплатно довёз нас до аэропорта и обратно. (:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Заметки по поездке в Марокко</title>
+      <link>https://vanadium23.me/marocco/</link>
+      <pubDate>Sun, 25 Feb 2018 17:00:00 +0300</pubDate>
+      <guid>https://vanadium23.me/marocco/</guid>
+      <description>&lt;p&gt;Арааабская ночь&lt;/p&gt;
+
+&lt;h2 id=&#34;общее&#34;&gt;Общее&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Про города:&lt;/strong&gt; &lt;strike&gt;все&lt;/strike&gt; большинство городов строится по принципу, что есть медина (крепость), внутри которой всё для туристов и остальной город напоминает типичный жилой город.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Про еду:&lt;/strong&gt; тажин кефта - мясные шарики в томатном соусе с яйцом. Ничего больше вам не нужно! Если шутки в сторону, то порции &lt;em&gt;очень&lt;/em&gt; большие, поэтому салат/закуску стоит брать одну на двоих.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Про такси:&lt;/strong&gt; единственный вид транспорта по городу, во всех такси есть таксометер. Он там есть и им надо об этом напоминать и говорить сразу. Для маленьких городов есть фикс прайс в 7 дирхам (~50 рублей).&lt;/li&gt;
+&lt;li&gt;Про &lt;strong&gt;культуру:&lt;/strong&gt; надо понимать, что там везде базар, поэтому если вам говорят ценник X, то надо говорить X/4 и где-то в X/2 вы сойдётесь. (Система очень сильно напоминает Kingdom Come: Deliverance)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;маршрут-поездки&#34;&gt;Маршрут поездки&lt;/h2&gt;
+
+&lt;p&gt;Касабланка-Эссуэйра-Марракеш-Рабат-Шефшауэн-Фез-Касабланка&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;36 часов на общественном транспорте&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&amp;gt;1500 км было наезжано&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Касабланка&lt;/strong&gt; - грязный город, где как в Москве всё перестраивают. Самое интересное место набережная с мечетью Хасанна II.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Эссуэйра&lt;/strong&gt; - если вы сёрфите или просто хотите пляжа, даже в зимнее время года (но купаться в нём нельзя). Очень маленькая медина ~1 день, зато много &amp;ldquo;европейских&amp;rdquo; ресторанов.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Марракеш&lt;/strong&gt; - крупный город, но на самом деле отправная точка для того, чтобы съездить на треккинг, в пустыню или на водопад. В самом городе есть три старых замка и музей Ив Сент Лорана, но он дорогой и бесполезный, а вот в замки сходите, там есть фотографии древнего Марракеша и помогает удивиться как ничего не поменялось. Медины, как таковой нет, но зато есть центральная площадь, где ночью собирается весь колорит.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Рабат&lt;/strong&gt; - это столица Марокко, поэтому там есть музей современного искусства. Медина - не очень.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Шефшауэн&lt;/strong&gt; - красивый синий город в горах. Очень уютный, очень красивый, must see.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Фез&lt;/strong&gt; - огромная медина, в которой вы заблудитесь. Местные будут вам подсказывать, а потом трясти деньги. Там шёл дождь, поэтому много чего не могу рассказать :(&lt;/li&gt;
+&lt;li&gt;Смотри п.1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;бюджет-на-2-людей&#34;&gt;Бюджет на 2 людей&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Билеты&lt;/strong&gt; - ~35000₽ туда, сюда на двоих&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Жильё&lt;/strong&gt; - ~2000₽ за ночь на двоих&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Транспорт:&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;По городу, как правило, ходишь пешком или такси, но там счётчик&lt;/li&gt;
+&lt;li&gt;Между городами на автобусе 100 дирхам (~600₽) на одного&lt;/li&gt;
+&lt;li&gt;Между городами на поезде не ездить, там адовая духота даже зимой&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Поглазеть:&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Музеи - как правило, 10 дирхам (~60₽) на одного&lt;/li&gt;
+&lt;li&gt;Экскурсии - будут предлагать за 300 дирхам (~1800₽) с человека, можно сторговаться на 150 дирхам (~900₽) за человека&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Еда:&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;где-то пожрать это 150 дирхам (~900₽) на двоих, это прям плотно поесть. Не переживайте ходить в местные забегаловки, которые не суперпристойно выглядят, т.к. готовят они везде одинаково.&lt;/li&gt;
+&lt;li&gt;готовить дома - не нужно, местные жральни довольно дешёвые и сытные&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Заметки по поездке Брюгге-Роттердам-Брюссель</title>
+      <link>https://vanadium23.me/brugge-rotterdam-brussel/</link>
+      <pubDate>Fri, 12 May 2017 17:00:00 +0300</pubDate>
+      <guid>https://vanadium23.me/brugge-rotterdam-brussel/</guid>
+      <description>&lt;p&gt;Идеальный трип на майские&lt;/p&gt;
+
+&lt;h2 id=&#34;must-see&#34;&gt;Must see&lt;/h2&gt;
+
+&lt;p&gt;Обязательно пользуйтесь картами &lt;a href=&#34;https://www.use-it.travel/home&#34;&gt;USE IT&lt;/a&gt;: там есть все местные музеи, барчики и едальни, а ещё их дают бесплатно на стойках для туристов.
+- Брюгге
+  - Просто ходите по центру, там красиво, есть башня
+  - Больше одной ночи там делать нечего
+- Роттердам
+    - Музеи: Kunsthal, Евроматча, Het Nieuwe Instituut, Boijmans van Beuningen
+    - Жральни: bazaar и ходите в супермаркет
+- Гаага (на английском звучит как Хааг)
+    - Музеи: музей Эшера, парк мини Голландия
+    - Доехать до порта, если тепло (в мае уже норм)
+    - Жрать: бутер с селёдкой
+- Брюссель
+    - Вообще ехать туда не стоит: грязно и убого
+    - Музеи: MOOF, музей Маггрита, музей бельгийского пива, Атомиум(!)
+    - Жральни: рядом с площадью музеев куча фудтраков&lt;/p&gt;
+
+&lt;h2 id=&#34;бюджет-на-2-людей&#34;&gt;Бюджет на 2 людей&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Билеты - ~250€ туда, сюда на одного&lt;/li&gt;
+&lt;li&gt;Жильё - ~50€ за ночь на одного&lt;/li&gt;
+&lt;li&gt;Транспорт:
+
+&lt;ul&gt;
+&lt;li&gt;По городу на день 10€ на сутки&lt;/li&gt;
+&lt;li&gt;Между городами на поезде от 15€ и дальше по расстоянию (Брюгге&amp;lt;-&amp;gt;Роттердам - 30€ т.к. два поезда)&lt;/li&gt;
+&lt;li&gt;Между городами на автобусе от 8€ и дальше по расстоянию (&lt;a href=&#34;https://www.flibco.com/en&#34;&gt;flibco&lt;/a&gt;, &lt;a href=&#34;https://www.flixbus.ru/&#34;&gt;flixbus&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Музеи: 15€ за вход на человека, но:
+
+&lt;ul&gt;
+&lt;li&gt;В Роттердаме есть &lt;a href=&#34;https://www.rotterdamwelcomecard.com/en/alle-kortingen.html&#34;&gt;welcome card&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;В Брюсселе за 24€ можно купить &lt;a href=&#34;https://visit.brussels/en/lists/brussels-card-museums&#34;&gt;bruxellescard&lt;/a&gt; == 39 музеев&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Еда:
+
+&lt;ul&gt;
+&lt;li&gt;где-то пожрать это 15-20€, если нормально есть. Можно постратся и найти места где дешевле, но сложно&lt;/li&gt;
+&lt;li&gt;готовить дома - это где-то 10-12€ на завтрак+ужин&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Скидосы: если вам меньше 26 лет, просите везде скидосы! Как правило он есть в районе 10-25%.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;p-s&#34;&gt;P.S.&lt;/h3&gt;
+
+&lt;p&gt;На последок хотел сказать, что в Роттердаме заселялся через AirBnb и с нами жил очень классный южный кореец (студент по обмену), поэтому вечера проходили в культурном обмене за бутылочкой пива:
+- 80 кг риса в месяц на семью из 4 человек
+- очень много про различное восприятие поведения в общественных местах
+- он побывал почти во всей Европе и Азии, да и успел смотаться в Бразилию о чём тоже охотно делился&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
