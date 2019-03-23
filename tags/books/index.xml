@@ -12,7 +12,7 @@
         <head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <title>Books RSS | vanadium23</title>
-          <link rel="stylesheet" href="https://vanadium23.me/css/base.min.34ac18bc3a855e272b475cf37b39ff5a4782c6c135d52b81107686678deaa01a.css" integrity="sha256-NKwYvDqFXicrR1zzezn/WkeCxsE11SuBEHaGZ43qoBo=" />
+          <link rel="stylesheet" href="https://vanadium23.me/css/base.min.27a00236c228648b974d9db6a50a2b99aa261df60d156de69f19d97917950e6b.css" integrity="sha256-J6ACNsIoZIuXTZ22pQormaomHfYNFW3mnxnZeReVDms=" />
         </head>
         <body>
           <nav class="u-background">
@@ -51,8 +51,7 @@
               </div>
             </div>
           </main>
-          
-<footer class="Footer">
+          <footer class="Footer">
   <div class="u-wrapper">
     <div class="u-padding">
         
@@ -64,7 +63,6 @@
     </div>
   </div>
 </footer>
-
         </body>
       </html>
     </xsl:template>
