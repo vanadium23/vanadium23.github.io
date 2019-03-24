@@ -73,8 +73,60 @@
     <description>Recent content in Blog on vanadium23</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Fri, 15 Mar 2019 17:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 24 Mar 2019 14:00:00 +0300</lastBuildDate>
     <atom:link href="https://vanadium23.me/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Переезд блога с jekyll на hugo</title>
+      <link>https://vanadium23.me/migrating-to-hugo/</link>
+      <pubDate>Sun, 24 Mar 2019 14:00:00 +0300</pubDate>
+      <guid>https://vanadium23.me/migrating-to-hugo/</guid>
+      <description>&lt;p&gt;Недавно прочитал статью про &lt;a href=&#34;https://dev.to/winduptoy/a-javascript-free-frontend-2d3e&#34;&gt;фронтенд без javascript&amp;rsquo;a&lt;/a&gt; и решил, что пора переделать бложик на старый манер: только html, только css. А раз начну переделывать, то заодно можно съехать с jekyll.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt;: страница блога похудела в 3 раза: было 237 килобайт, стало 83. Можно порезать гуглоаналитику и станет ещё в 2 раза легче.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/pagespeed100.png&#34; alt=&#34;PageSpeed 100&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;причины-большого-веса-страниц&#34;&gt;Причины большого веса страниц.&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Грузил никому ненужную аватарку прямиком с гитхаба.&lt;/li&gt;
+&lt;li&gt;Подключал highlight js, хотя это можно делать на этапе сборки странички.&lt;/li&gt;
+&lt;li&gt;Использовал стороннюю тему и там было много всего, хотя сейчас есть flex и CSS grid, поэтому можно половину выкинуть.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;причины-миграции-на-hugo-вместо-jekyll&#34;&gt;Причины миграции на hugo вместо jekyll.&lt;/h3&gt;
+
+&lt;p&gt;Плюсы:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hugo использует бонус golang в виде компиляции в один бинарник, и не надо мучаться с настройкой rvm-ruby-bundler-jekyll.&lt;/li&gt;
+&lt;li&gt;Hugo умеет импортировать jekyll репозиторий: &lt;code&gt;hugo import jekyll /path/to/src&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Hugo получил поддержку общества, поэтому уже есть и темы, и всякие ништячки локализации.&lt;/li&gt;
+&lt;li&gt;В hugo &lt;a href=&#34;https://gohugo.io/content-management/&#34;&gt;много настроек&lt;/a&gt; и &lt;a href=&#34;https://gohugo.io/hugo-pipes/bundling/&#34;&gt;собирает css/js&lt;/a&gt; самостоятельно без помощи внешних утилит.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Минусы:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go templates - это худший шаблонизатор в мире. Уверен, что кто пользовались jinja2 сразу поймут боль.&lt;/li&gt;
+&lt;li&gt;Слишком много настроек из-за чего иногда сложно найти, как сделать что-то простое.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;подводные-камни-при-переезде&#34;&gt;Подводные камни при переезде.&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Если вы используете Github User Page, а не Github Project Page, то вам не повезло и папку docs/ в репозитории вы использовать не можете. Вместо этого придеться в репозиторий &lt;username&gt;.github.io класть сразу сгенерированную статику. То есть, необходимо создать ещё один репозиторий, где будет hugo, а предыдущий подключить в качестве сабмодуля гита.&lt;/li&gt;
+&lt;li&gt;Если вы мигрируете с jekyll, то не забудьте удалить предыдущий config.yaml из репозитория, иначе gihub будет считать, что это jekyll репозиторий и попробует его собрать.&lt;/li&gt;
+&lt;li&gt;По-умолчанию, jekyll использует название файла в качестве пути, а hugo повторяет иерархию папок. Для того, чтобы повторить поведение, можно в config.yaml прописать опцию permalinks, или же в каждом файле использовать опцию alias.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;доделки-доделочки&#34;&gt;Доделки-доделочки.&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Надо отказаться от google analytics, так как это от лукавого. Сначала думал сделать свой пиксель, а сейчас думаю зачем мне трекать кто читает?&lt;/li&gt;
+&lt;li&gt;Добавить переключалку на ночную тему. Задача со звёздочкой сделать это без js :)&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>Краткий пересказ книги &#34;Architecturing for Scale&#34;</title>
       <link>https://vanadium23.me/architecting-for-scale/</link>
