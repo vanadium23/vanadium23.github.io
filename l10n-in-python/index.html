@@ -1,24 +1,13 @@
 
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="ru-ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    
-    Say hello to l10n in python | vanadium23
-    
-  </title>
-  
+  <title>Say hello to l10n in python | vanadium23</title>
   
   <link rel="stylesheet" href="https://vanadium23.me/css/base.min.3c02acd74ba6a1be714a24ba7a6fc0b9edcbfaca1fe3edcf85de41256e89649d.css" integrity="sha256-PAKs10umob5xSiS6em/Aue3L&#43;sof4&#43;3Phd5BJW6JZJ0=">
-  
+  <link rel="stylesheet" href="https://vanadium23.me/css/likely.css" integrity="">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -128,6 +117,13 @@ This is because after modifying po, we need to compile it to binary format (know
 What shall we do? Read the <a href="https://docs.djangoproject.com/en/1.10/topics/i18n/translation/#how-django-discovers-translations">manual</a>.
 So we need to rename namespace from default to django, but also django realize <a href="https://github.com/django/django/blob/1.10.3/django/utils/translation/trans_real.py#L90">own class</a>, so insted of using gettext.translation.ugettext you need to use <em>django.utils.translation</em> one.
 Full example can be found in <a href="https://github.com/vanadium23/py-hello-l10n">repository</a>.</p>
+  <div class="likely likely-big" data-url="https://vanadium23.me/l10n-in-python/">
+    <div class="twitter" data-via="vanadium23">Tweet</div>
+    <div class="facebook">Share</div>
+    <div class="vkontakte">Share</div>
+    <div class="telegram">Send</div>
+</div>
+
   
 <footer>
   <ul class="Tags">
@@ -175,6 +171,7 @@ Full example can be found in <a href="https://github.com/vanadium23/py-hello-l10
   </div>
 </footer>
   
+  <script type="text/javascript" src="https://vanadium23.me/js/likely.js" integrity=""></script>
   <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
