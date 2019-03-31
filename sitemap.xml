@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://vanadium23.me/jedi-book-experiments/</loc>
+    <lastmod>2019-03-31T15:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://vanadium23.me/migrating-to-hugo/</loc>
     <lastmod>2019-03-24T14:00:00+03:00</lastmod>
   </url>
@@ -93,13 +98,13 @@
   
   <url>
     <loc>https://vanadium23.me/tags/blog/</loc>
-    <lastmod>2019-03-24T14:00:00+03:00</lastmod>
+    <lastmod>2019-03-31T15:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vanadium23.me/tags/books/</loc>
-    <lastmod>2019-03-15T17:00:00+03:00</lastmod>
+    <loc>https://vanadium23.me/tags/book/</loc>
+    <lastmod>2019-03-31T15:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -147,13 +152,13 @@
   
   <url>
     <loc>https://vanadium23.me/posts/</loc>
-    <lastmod>2019-03-24T14:00:00+03:00</lastmod>
+    <lastmod>2019-03-31T15:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://vanadium23.me/tags/productivity/</loc>
-    <lastmod>2019-02-23T17:00:00+03:00</lastmod>
+    <lastmod>2019-03-31T15:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -183,7 +188,7 @@
   
   <url>
     <loc>https://vanadium23.me/tags/</loc>
-    <lastmod>2019-03-24T14:00:00+03:00</lastmod>
+    <lastmod>2019-03-31T15:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -201,7 +206,7 @@
   
   <url>
     <loc>https://vanadium23.me/</loc>
-    <lastmod>2019-03-24T14:00:00+03:00</lastmod>
+    <lastmod>2019-03-31T15:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
