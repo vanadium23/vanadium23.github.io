@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 
 
 
@@ -11,7 +10,7 @@
       <html lang="ru-ru">
         <head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>Blog RSS | vanadium23</title>
+          <title>blog RSS | vanadium23</title>
           <link rel="stylesheet" href="https://vanadium23.me/css/base.min.3c02acd74ba6a1be714a24ba7a6fc0b9edcbfaca1fe3edcf85de41256e89649d.css" integrity="sha256-PAKs10umob5xSiS6em/Aue3L&#43;sof4&#43;3Phd5BJW6JZJ0=" />
         </head>
         <body>
@@ -44,7 +43,7 @@
               <div class="u-padding">
                 <h2 class="Heading-title">
                   
-                  <a class="Heading-link u-clickable" href="https://vanadium23.me/tags/blog/index.xml" rel="bookmark">Blog RSS</a>
+                  <a class="Heading-link u-clickable" href="https://vanadium23.me/tags/blog/index.xml" rel="bookmark">blog RSS</a>
                   
                 </h2>
                 
@@ -68,9 +67,9 @@
     </xsl:template>
   </xsl:stylesheet>
   <channel>
-    <title>Blog on vanadium23</title>
+    <title>blog on vanadium23</title>
     <link>https://vanadium23.me/tags/blog/</link>
-    <description>Recent content in Blog on vanadium23</description>
+    <description>Recent content in blog on vanadium23</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-ru</language>
     <lastBuildDate>Sun, 31 Mar 2019 15:00:00 +0300</lastBuildDate>
@@ -950,29 +949,168 @@
 
 &lt;p&gt;Теперь, когда есть статьи расходов и примерное понимание ежемесячных расходов и доходов, мы можем приступать к составлению бюджета. Составлять их надо два: долговременный (3-5 лет), где происходит накопление больших сумм на список счастья, и кратковременный (в рамках года) в разбивке по категориям. Как это сделать? Долговременный бюджет - это простая табличка:&lt;/p&gt;
 
-&lt;p&gt;| Год | Деньги на начало | Ежемесячный доход | Ежемесячный расход | Большая покупка | Деньги на конец |
-|:&amp;mdash;&amp;mdash;&amp;ndash;|:&amp;mdash;&amp;mdash;-:|&amp;mdash;&amp;mdash;&amp;ndash;:|
-| 2018 | A | B | C | D | A+B*12-C*12-D |
-| 2019 | A&amp;rsquo; (A+B*12-C*12-D) | B | C | D&amp;rsquo; | A*+B*12-C*12-F
-| 2020 | и так далее&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;Год&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Деньги на начало&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Ежемесячный доход&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Ежемесячный расход&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Большая покупка&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Деньги на конец&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2018&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;A&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;B&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;C&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;D&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;A+B*12-C*12-D&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2019&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;A&amp;rsquo; (A+B*12-C*12-D)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;B&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;C&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;D&amp;rsquo;&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;A*+B*12-C*12-F&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;2020&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;и так далее&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;p&gt;Надо ли учитывать инфляцию? В книге сказано, что нет, потому что это слишком сложно. Лучше правильно хранить/инвестировать деньги, чтобы она (инфляция) нивелировалась.
 Надо ли менять сумму доходов и расходов, потому что откуда я знаю, что меня ждёт в будущем? Скажем так, можно сделать три плана: пессимистичный (снижение доходов, рост расходов), реалистичный (рост доходов, рост расходов), оптимистичный (рост доходов, снижение расходов). И немножечко здравого смысла, например: если вы взяли ипотеку, то ежемесячные расходы вряд ли останутся на том же уровне. Поиграться можно всё в той же &lt;a href=&#34;https://docs.google.com/spreadsheets/d/1MhqNS_4oLu9cxt_FfpCptAUOEGiU965EM-mnnwQJ-vg/edit#gid=1836030765&#34;&gt;табличке&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Краткосрочный бюджет - это тоже &lt;em&gt;неожиданно&lt;/em&gt; табличка:&lt;/p&gt;
 
-&lt;p&gt;| Категория | Апрель | Май | Июнь | Июль | Август | и так далее |
-|:&amp;mdash;&amp;mdash;&amp;ndash;|:&amp;mdash;&amp;mdash;-:|&amp;mdash;&amp;mdash;&amp;ndash;:|
-| Доход | A | A | A | A | A | A | A |
-||
-| Расход | B | B | B | B | B | B | B |
-| Питание | C | C | C | C | C | C | C |
-| Досуг | D | D | D | D | D | D | D |
-| и так далее |
-||
-|Накопления|
-|Финансовая подушка| E | E | E | E | E | E|
-| Итого |&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;Категория&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Апрель&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Май&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Июнь&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Июль&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Август&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;и так далее&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Доход&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;A&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;A&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;A&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;A&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;A&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Расход&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;B&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;B&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;B&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;B&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;B&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;B&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Питание&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;C&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;C&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;C&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;C&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;C&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;C&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Досуг&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;D&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;D&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;D&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;D&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;D&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;D&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;и так далее&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Накопления&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Финансовая подушка&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;E&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;E&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;E&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;E&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;E&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;E&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Итого&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;p&gt;Желательно разбивать не только расходы, но и доходы, как минимум на активные и пассивные. К началу пенсии &lt;em&gt;желательно&lt;/em&gt;, чтобы сумма пассивного дохода была чуть больше, чем ваши ежемесячные расходы. Отдельно от категорий расходов стоят накопления. Если ваша финансовая подушка меньше, чем ежемесячные расходы, то первым накоплением должна стать она. Потому что никто не застрахован от непредвиденных ситуаций и лучше иметь план на этот случай.&lt;/p&gt;
 

@@ -19,7 +19,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <meta name="theme-color" content="#008080">
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.55.3" />
 </head>
 <body>
   <nav class="u-background">
@@ -239,29 +239,168 @@
 
 <p>Теперь, когда есть статьи расходов и примерное понимание ежемесячных расходов и доходов, мы можем приступать к составлению бюджета. Составлять их надо два: долговременный (3-5 лет), где происходит накопление больших сумм на список счастья, и кратковременный (в рамках года) в разбивке по категориям. Как это сделать? Долговременный бюджет - это простая табличка:</p>
 
-<p>| Год | Деньги на начало | Ежемесячный доход | Ежемесячный расход | Большая покупка | Деньги на конец |
-|:&mdash;&mdash;&ndash;|:&mdash;&mdash;-:|&mdash;&mdash;&ndash;:|
-| 2018 | A | B | C | D | A+B*12-C*12-D |
-| 2019 | A&rsquo; (A+B*12-C*12-D) | B | C | D&rsquo; | A*+B*12-C*12-F
-| 2020 | и так далее</p>
+<table>
+<thead>
+<tr>
+<th align="left">Год</th>
+<th align="center">Деньги на начало</th>
+<th align="center">Ежемесячный доход</th>
+<th align="center">Ежемесячный расход</th>
+<th align="center">Большая покупка</th>
+<th align="right">Деньги на конец</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">2018</td>
+<td align="center">A</td>
+<td align="center">B</td>
+<td align="center">C</td>
+<td align="center">D</td>
+<td align="right">A+B*12-C*12-D</td>
+</tr>
+
+<tr>
+<td align="left">2019</td>
+<td align="center">A&rsquo; (A+B*12-C*12-D)</td>
+<td align="center">B</td>
+<td align="center">C</td>
+<td align="center">D&rsquo;</td>
+<td align="right">A*+B*12-C*12-F</td>
+</tr>
+
+<tr>
+<td align="left">2020</td>
+<td align="center">и так далее</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
 
 <p>Надо ли учитывать инфляцию? В книге сказано, что нет, потому что это слишком сложно. Лучше правильно хранить/инвестировать деньги, чтобы она (инфляция) нивелировалась.
 Надо ли менять сумму доходов и расходов, потому что откуда я знаю, что меня ждёт в будущем? Скажем так, можно сделать три плана: пессимистичный (снижение доходов, рост расходов), реалистичный (рост доходов, рост расходов), оптимистичный (рост доходов, снижение расходов). И немножечко здравого смысла, например: если вы взяли ипотеку, то ежемесячные расходы вряд ли останутся на том же уровне. Поиграться можно всё в той же <a href="https://docs.google.com/spreadsheets/d/1MhqNS_4oLu9cxt_FfpCptAUOEGiU965EM-mnnwQJ-vg/edit#gid=1836030765">табличке</a>.</p>
 
 <p>Краткосрочный бюджет - это тоже <em>неожиданно</em> табличка:</p>
 
-<p>| Категория | Апрель | Май | Июнь | Июль | Август | и так далее |
-|:&mdash;&mdash;&ndash;|:&mdash;&mdash;-:|&mdash;&mdash;&ndash;:|
-| Доход | A | A | A | A | A | A | A |
-||
-| Расход | B | B | B | B | B | B | B |
-| Питание | C | C | C | C | C | C | C |
-| Досуг | D | D | D | D | D | D | D |
-| и так далее |
-||
-|Накопления|
-|Финансовая подушка| E | E | E | E | E | E|
-| Итого |</p>
+<table>
+<thead>
+<tr>
+<th align="left">Категория</th>
+<th align="center">Апрель</th>
+<th align="center">Май</th>
+<th align="center">Июнь</th>
+<th align="center">Июль</th>
+<th align="center">Август</th>
+<th align="right">и так далее</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">Доход</td>
+<td align="center">A</td>
+<td align="center">A</td>
+<td align="center">A</td>
+<td align="center">A</td>
+<td align="center">A</td>
+<td align="right">A</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+</tr>
+
+<tr>
+<td align="left">Расход</td>
+<td align="center">B</td>
+<td align="center">B</td>
+<td align="center">B</td>
+<td align="center">B</td>
+<td align="center">B</td>
+<td align="right">B</td>
+</tr>
+
+<tr>
+<td align="left">Питание</td>
+<td align="center">C</td>
+<td align="center">C</td>
+<td align="center">C</td>
+<td align="center">C</td>
+<td align="center">C</td>
+<td align="right">C</td>
+</tr>
+
+<tr>
+<td align="left">Досуг</td>
+<td align="center">D</td>
+<td align="center">D</td>
+<td align="center">D</td>
+<td align="center">D</td>
+<td align="center">D</td>
+<td align="right">D</td>
+</tr>
+
+<tr>
+<td align="left">и так далее</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+</tr>
+
+<tr>
+<td align="left">Накопления</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+</tr>
+
+<tr>
+<td align="left">Финансовая подушка</td>
+<td align="center">E</td>
+<td align="center">E</td>
+<td align="center">E</td>
+<td align="center">E</td>
+<td align="center">E</td>
+<td align="right">E</td>
+</tr>
+
+<tr>
+<td align="left">Итого</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
 
 <p>Желательно разбивать не только расходы, но и доходы, как минимум на активные и пассивные. К началу пенсии <em>желательно</em>, чтобы сумма пассивного дохода была чуть больше, чем ваши ежемесячные расходы. Отдельно от категорий расходов стоят накопления. Если ваша финансовая подушка меньше, чем ежемесячные расходы, то первым накоплением должна стать она. Потому что никто не застрахован от непредвиденных ситуаций и лучше иметь план на этот случай.</p>
 

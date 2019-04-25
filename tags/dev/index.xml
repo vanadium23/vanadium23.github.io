@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 
 
 
@@ -11,7 +10,7 @@
       <html lang="ru-ru">
         <head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>Dev RSS | vanadium23</title>
+          <title>dev RSS | vanadium23</title>
           <link rel="stylesheet" href="https://vanadium23.me/css/base.min.3c02acd74ba6a1be714a24ba7a6fc0b9edcbfaca1fe3edcf85de41256e89649d.css" integrity="sha256-PAKs10umob5xSiS6em/Aue3L&#43;sof4&#43;3Phd5BJW6JZJ0=" />
         </head>
         <body>
@@ -44,7 +43,7 @@
               <div class="u-padding">
                 <h2 class="Heading-title">
                   
-                  <a class="Heading-link u-clickable" href="https://vanadium23.me/tags/dev/index.xml" rel="bookmark">Dev RSS</a>
+                  <a class="Heading-link u-clickable" href="https://vanadium23.me/tags/dev/index.xml" rel="bookmark">dev RSS</a>
                   
                 </h2>
                 
@@ -68,9 +67,9 @@
     </xsl:template>
   </xsl:stylesheet>
   <channel>
-    <title>Dev on vanadium23</title>
+    <title>dev on vanadium23</title>
     <link>https://vanadium23.me/tags/dev/</link>
-    <description>Recent content in Dev on vanadium23</description>
+    <description>Recent content in dev on vanadium23</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-ru</language>
     <lastBuildDate>Fri, 15 Dec 2017 17:00:00 +0300</lastBuildDate>
