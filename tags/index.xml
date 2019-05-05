@@ -11,30 +11,31 @@
         <head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <title>Tags RSS | vanadium23</title>
-          <link rel="stylesheet" href="https://vanadium23.me/css/base.min.334544a90175194c3fe4801dd6c8f5a97a439c71d03fcf175f06ec3566ac4364.css" integrity="sha256-M0VEqQF1GUw/5IAd1sj1qXpDnHHQP88XXwbsNWasQ2Q=" />
+          <link rel="stylesheet" href="https://vanadium23.me/css/base.min.f814fca8b9f74ba220895be908ea8f5d19754055e8e83bd55dfb25bf7115c2b8.css" integrity="sha256-&#43;BT8qLn3S6IgiVvpCOqPXRl1QFXo6DvVXfslv3EVwrg=" />
         </head>
         <body>
           <nav class="u-background">
-    <div class="u-wrapper">
+    <div class="u-wrapper Banner">
+        <a class="Banner-link u-clickable" href="https://vanadium23.me/">
+            vanadium23
+        </a>
         <ul class="Banner">
-            <li class="Banner-item Banner-item--title">
-                <a class="Banner-link u-clickable" href="https://vanadium23.me/">
-                    vanadium23
-                </a>
-            </li>
         
         <li class="Banner-item">
             <a class="Banner-link u-clickable" href="https://vanadium23.me/tags/dev/">Dev (Eng)</a>
-        </li>
+        </li class="Banner-item">
         
         <li class="Banner-item">
             <a class="Banner-link u-clickable" href="https://vanadium23.me/about/">About</a>
-        </li>
+        </li class="Banner-item">
         
         <li class="Banner-item">
             <a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a>
-        </li>
+        </li class="Banner-item">
         
+        <li>
+            <a id="themeSwitch" class="theme-switcher"></a>
+        </li>
         </ul>
     </div>
 </nav>
