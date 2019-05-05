@@ -11,7 +11,7 @@
         <head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <title>RSS | vanadium23</title>
-          <link rel="stylesheet" href="https://vanadium23.me/css/base.min.dea32f813ade30b975573b4a345e4bb49e3d2c1dd90db627919bbdd56eadd8a6.css" integrity="sha256-3qMvgTreMLl1VztKNF5LtJ49LB3ZDbYnkZu91W6t2KY=" />
+          <link rel="stylesheet" href="https://vanadium23.me/css/base.min.334544a90175194c3fe4801dd6c8f5a97a439c71d03fcf175f06ec3566ac4364.css" integrity="sha256-M0VEqQF1GUw/5IAd1sj1qXpDnHHQP88XXwbsNWasQ2Q=" />
         </head>
         <body>
           <nav class="u-background">
@@ -59,6 +59,7 @@
         <a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"></i></a>
         <a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"></i></a>
         <a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"></i></a>
+        <a href="https://goodreads.com/vanadium23"><i class="svg-icon goodreads"></i></a>
     </div>
   </div>
 </footer>
