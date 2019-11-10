@@ -4,30 +4,46 @@
   
   <url>
     <loc>https://vanadium23.me/posts/</loc>
-    <lastmod>2019-05-03T12:00:00+03:00</lastmod>
+    <lastmod>2019-11-10T12:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://vanadium23.me/tags/</loc>
-    <lastmod>2019-05-03T12:00:00+03:00</lastmod>
+    <lastmod>2019-11-10T12:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://vanadium23.me/tags/blog/</loc>
-    <lastmod>2019-05-03T12:00:00+03:00</lastmod>
+    <lastmod>2019-11-10T12:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vanadium23.me/tags/travel/</loc>
-    <lastmod>2019-05-03T12:00:00+03:00</lastmod>
+    <loc>https://vanadium23.me/tags/productivity/</loc>
+    <lastmod>2019-11-10T12:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://vanadium23.me/</loc>
+    <lastmod>2019-11-10T12:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/para/</loc>
+    <lastmod>2019-11-10T12:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/wishlist-2019/</loc>
+    <lastmod>2019-09-05T17:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/tags/travel/</loc>
     <lastmod>2019-05-03T12:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
@@ -39,12 +55,6 @@
   
   <url>
     <loc>https://vanadium23.me/tags/book/</loc>
-    <lastmod>2019-03-31T15:00:00+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://vanadium23.me/tags/productivity/</loc>
     <lastmod>2019-03-31T15:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
@@ -77,6 +87,11 @@
   <url>
     <loc>https://vanadium23.me/thailand/</loc>
     <lastmod>2019-01-19T17:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/wishlist-2018/</loc>
+    <lastmod>2018-09-09T17:00:00+03:00</lastmod>
   </url>
   
   <url>
@@ -149,6 +164,11 @@
     <loc>https://vanadium23.me/tags/video/</loc>
     <lastmod>2017-12-15T17:00:00+03:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/wishlist-2017/</loc>
+    <lastmod>2017-09-05T17:00:00+03:00</lastmod>
   </url>
   
   <url>
