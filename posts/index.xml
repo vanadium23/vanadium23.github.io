@@ -74,8 +74,18 @@
     <description>Recent content in Posts on vanadium23</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Sat, 23 Nov 2019 12:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 30 Nov 2019 12:00:00 +0300</lastBuildDate>
     <atom:link href="https://vanadium23.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mission teams</title>
+      <link>https://vanadium23.me/mission-teams/</link>
+      <pubDate>Sat, 30 Nov 2019 12:00:00 +0300</pubDate>
+      <guid>https://vanadium23.me/mission-teams/</guid>
+      <description>&lt;p&gt;My presentation about crossfunctional teams from IndexTech 2019 @ Technopolis.&lt;/p&gt;
+
+&lt;p&gt;Video is in russian:
+&lt;iframe width=&#34;640&#34; height=&#34;360&#34; src=&#34;https://www.youtube.com/embed/EuvtmH6TA-M&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Заметки по поездке в Лондон</title>
       <link>https://vanadium23.me/london/</link>
