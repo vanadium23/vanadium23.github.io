@@ -3,20 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://vanadium23.me/mission-teams/</loc>
-    <lastmod>2019-11-30T12:00:00+03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://vanadium23.me/posts/</loc>
-    <lastmod>2019-11-30T12:00:00+03:00</lastmod>
+    <lastmod>2019-12-16T12:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://vanadium23.me/tags/</loc>
-    <lastmod>2019-11-30T12:00:00+03:00</lastmod>
+    <lastmod>2019-12-16T12:00:00+03:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/ticktick/</loc>
+    <lastmod>2019-12-16T12:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/tags/blog/</loc>
+    <lastmod>2019-12-16T12:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/tags/productivity/</loc>
+    <lastmod>2019-12-16T12:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/</loc>
+    <lastmod>2019-12-16T12:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/mission-teams/</loc>
+    <lastmod>2019-11-30T12:00:00+03:00</lastmod>
   </url>
   
   <url>
@@ -32,20 +55,8 @@
   </url>
   
   <url>
-    <loc>https://vanadium23.me/</loc>
-    <lastmod>2019-11-30T12:00:00+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://vanadium23.me/tags/video/</loc>
     <lastmod>2019-11-30T12:00:00+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://vanadium23.me/tags/blog/</loc>
-    <lastmod>2019-11-23T12:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -58,12 +69,6 @@
   <url>
     <loc>https://vanadium23.me/london/</loc>
     <lastmod>2019-11-23T12:00:00+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://vanadium23.me/tags/productivity/</loc>
-    <lastmod>2019-11-10T12:00:00+03:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
