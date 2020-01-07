@@ -3,6 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://vanadium23.me/about/</loc>
+    <lastmod>2019-12-20T17:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/</loc>
+    <lastmod>2019-12-20T17:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://vanadium23.me/posts/</loc>
     <lastmod>2019-12-16T12:00:00+03:00</lastmod>
     <priority>0</priority>
@@ -27,12 +38,6 @@
   
   <url>
     <loc>https://vanadium23.me/tags/productivity/</loc>
-    <lastmod>2019-12-16T12:00:00+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://vanadium23.me/</loc>
     <lastmod>2019-12-16T12:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
@@ -244,14 +249,6 @@
     <loc>https://vanadium23.me/tags/django/</loc>
     <lastmod>2016-11-20T17:00:00+03:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://vanadium23.me/about/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vanadium23.me/projects/</loc>
   </url>
   
 </urlset>

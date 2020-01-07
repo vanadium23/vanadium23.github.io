@@ -22,10 +22,6 @@
         <ul class="Banner">
         
         <li class="Banner-item">
-            <a class="Banner-link u-clickable" href="https://vanadium23.me/projects/">Projects</a>
-        </li class="Banner-item">
-        
-        <li class="Banner-item">
             <a class="Banner-link u-clickable" href="https://vanadium23.me/about/">About</a>
         </li class="Banner-item">
         
@@ -74,7 +70,7 @@
     <description>Recent content on vanadium23</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Mon, 16 Dec 2019 12:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 20 Dec 2019 17:00:00 +0300</lastBuildDate>
     <atom:link href="https://vanadium23.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TickTick</title>
