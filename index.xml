@@ -70,8 +70,56 @@
     <description>Recent content on vanadium23</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Sun, 12 Jan 2020 16:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jan 2020 11:00:00 +0300</lastBuildDate>
     <atom:link href="https://vanadium23.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PaperWM для Gnome</title>
+      <link>https://vanadium23.me/gnome-paperwm/</link>
+      <pubDate>Sun, 19 Jan 2020 11:00:00 +0300</pubDate>
+      <guid>https://vanadium23.me/gnome-paperwm/</guid>
+      <description>
+
+&lt;p&gt;Среди всех рабочих окружений, мой выбор остановился на Gnome 3. Использую его уже около четырёх лет, с переменным успехом пробую другие оконные менеджеры и окружения.После первого релиза Gnome 3, его не ругал только ленивый: новый интерфейс тормозил, требовал кучу ресурсов, да и к тому же сломал обратную совместимость с расширениями вторых версий. Но спустя 34 релиза, перехода Ubuntu со своей надстройки на чистый Gnome, можно смело утвержать, что он победил.&lt;/p&gt;
+
+&lt;p&gt;Если размышлять почему, то ответом окажется комбайн с GUI. Всё в рабочем окружение имеет интерфейс для настройки мышкой, что так непривычно для пользователей Linux: от сети (спасибо, NetworkManager) до онлайн аккаунтов (для синхронизации календаря-почты) и принтеров.На этом плюсы не заканчиваются, потому что его можно расширять с помощью js. Зайдите на сайт &lt;a href=&#34;https://extensions.gnome.org/&#34;&gt;extensions.gnome.org&lt;/a&gt;, чтобы посмотреть доступные. Ниже опишу какими пользуюсь сейчас.&lt;/p&gt;
+
+&lt;h2 id=&#34;paperwm-https-github-com-paperwm-paperwm&#34;&gt;&lt;a href=&#34;https://github.com/paperwm/PaperWM&#34;&gt;PaperWM&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://github.com/paperwm/media/raw/master/tiling.png&#34; alt=&#34;PaperWM&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Расширение для Gnome, которое делает отображение окон тайловым.Я несколько раз пробовал для себя тайловые менеджеры окон: это был и &lt;a href=&#34;https://github.com/vanadium23/awesome-config&#34;&gt;awesome&lt;/a&gt;, и &lt;a href=&#34;https://github.com/vanadium23/dotfiles/blob/master/.config/i3/config&#34;&gt;i3&lt;/a&gt;, но каждый раз немного бездумно копировал чужие конфиги, после чего путался в комбинации клавиш. PaperWM у меня прижился больше, потому что он просто расширяет известные комбинации. Зачем использовать тайловые менеджеры? С помощью них, можно распологать окна в пропорциях экрана, а не только 50-50, как в дефолтном гноме.&lt;/p&gt;
+
+&lt;h2 id=&#34;auto-move-windows&#34;&gt;Auto move windows&lt;/h2&gt;
+
+&lt;p&gt;Второй плюс, если вы не хотите помнить, где какое окно располагается, то можно настроить правила для их расположения.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/automove.png&#34; alt=&#34;Auto move&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;В моём случае получается 3 рабочих стола:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Рабочий хром с рабочими аккаунтами, и если что-то окрывается из загрузок, то оно идёт туда.&lt;/li&gt;
+&lt;li&gt;VS Code + Terminal &amp;ndash;&amp;gt; рабочий стол для разработки.&lt;/li&gt;
+&lt;li&gt;Firefox + telegram &amp;ndash;&amp;gt; личное пространство.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Заодно, в PaperWM они были раскрашены в разные цвета, что отражается на границах приложений.&lt;/p&gt;
+
+&lt;h2 id=&#34;switcher-https-github-com-daniellandau-switcher&#34;&gt;&lt;a href=&#34;https://github.com/daniellandau/switcher&#34;&gt;Switcher&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Нет, нет, это не Ведьмак на switch. Это расширение на Gnome, который позволяет переключаться между приложениями по заголовку. Полезно когда находишься в рабочем пространстве, а надо уйти на телеграм по тем или иным причинам.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://github.com/daniellandau/switcher/raw/master/running.gif&#34; alt=&#34;Switcher&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;dash-to-dock-https-micheleg-github-io-dash-to-dock&#34;&gt;&lt;a href=&#34;https://micheleg.github.io/dash-to-dock/&#34;&gt;Dash to dock&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Ладно, надо было в статью вставить что-то, что косит под MacOS. Выбор пал на dash to dock, который переносит панель любимых и запущенных приложений вниз экрана.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://github.com/micheleg/dash-to-dock/raw/master/media/screenshot.jpg&#34; alt=&#34;Dash to dock&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Кроме того, появляется быстрые комбинации формата Super + число для переключения на эти приложения.Активно пользуюсь только при старте ноутбука, чтобы всё нужное запустить, хотя осталось немного чтобы воткнуть это всё в автозагрузку.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Выдержка из книги &#34;Digital minimalism&#34;</title>
       <link>https://vanadium23.me/digital-minimalism/</link>
