@@ -70,8 +70,55 @@
     <description>Recent content in Posts on vanadium23</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Sun, 19 Jan 2020 11:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jan 2020 16:00:00 +0300</lastBuildDate>
     <atom:link href="https://vanadium23.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Выдержка из книги &#34;Просто космос&#34;</title>
+      <link>https://vanadium23.me/just-space/</link>
+      <pubDate>Sun, 26 Jan 2020 16:00:00 +0300</pubDate>
+      <guid>https://vanadium23.me/just-space/</guid>
+      <description>&lt;p&gt;&amp;ldquo;Манн, Иванов и Фербер&amp;rdquo; - хитрое издательство. К каждой покупке они не только прикладывают вкладыш с описаниями последних новинок, но и вставляют в начало по пять книг, которые дополняют только что полученную книжку. Так и произошло с книгой &amp;ldquo;Просто космос&amp;rdquo;, которая была рекомендована в &amp;ldquo;Путь джедая&amp;rdquo; Дорофеева. Более того, в одной из сносок Дорофеев уже сам напомнил об этой книге.
+Книга хороша подходит для новичков, кто хочет систематизировать свою жизнь, но ничего нового по сравнению с &lt;a href=&#34;https://vanadium23.me/jedi-book-experiments/&#34;&gt;&amp;ldquo;Джедайскими техниками&amp;rdquo;&lt;/a&gt; вы там не найдёте. Вместо покупки книги, лучше купить ежедневник от автора Катерины Ленгольд, поскольку больше подтолкнёт к применению свежих навыков.
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;p&gt;Итак, что нам пишут в книге:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Ставим цели на спринт длинной в 9 недель.
+
+&lt;ol&gt;
+&lt;li&gt;9 недель выбранны, потому что это не слишком мало, но и не слишком много.&lt;/li&gt;
+&lt;li&gt;Достаточно детальная цель: не &amp;ldquo;заняться здоровьем&amp;rdquo;, а &amp;ldquo;обойти 6 врачей и сдать показатели крови&amp;rdquo;.&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;Выбираем себе морковки, то есть мотивируем себя ценным вознаграждением.
+
+&lt;ol&gt;
+&lt;li&gt;Тут предлагается упражнение по тому, чтобы их придумать себе в большом количестве.&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;Планируем день и неделю
+
+&lt;ol&gt;
+&lt;li&gt;Вместо ToDo листов разбиваем день на 4 блока по 4 часа: утро, день до обеда, после обеда и вечера.&lt;/li&gt;
+&lt;li&gt;Разбиваем задачи на помидорки и понимаем, что времени не так много. Важные дела стараемся делать в первой половине дня.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Учимся говорить &amp;ldquo;нет&amp;rdquo;&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Аналогично стараемся более крупными мазками распланировать неделю&lt;/li&gt;
+&lt;li&gt;В конце недели идёт обязательное отслеживание прогресса по пункту 1.1&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;Составьте список полезной прокрастинации
+
+&lt;ol&gt;
+&lt;li&gt;Одна из немногих полезных глав в книге, не поленился поискать чужие аналогичные &lt;a href=&#34;https://www.reddit.com/r/productivity/comments/eh5o6j/my_procrastination_cheatsheet/&#34;&gt;списки&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;Формируйте полезные привычки и избавляйтесь от вредных&lt;/li&gt;
+&lt;li&gt;Хорошо спите и не забывайте отдыхать&lt;/li&gt;
+&lt;li&gt;Хорошо и правильно питайтесь&lt;/li&gt;
+&lt;li&gt;Не забывайте про свои эмоции&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;На этом всё.
+Общая оценка: круто, что всё по делу, но где же ты была раньше.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>PaperWM для Gnome</title>
       <link>https://vanadium23.me/gnome-paperwm/</link>
