@@ -70,8 +70,44 @@
     <description>Recent content in dev on vanadium23</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Sat, 30 Nov 2019 12:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 15 Feb 2020 09:00:00 +0300</lastBuildDate>
     <atom:link href="https://vanadium23.me/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Переезд с Google analytics на Cloudflare workers</title>
+      <link>https://vanadium23.me/remove-google-analytics/</link>
+      <pubDate>Sat, 15 Feb 2020 09:00:00 +0300</pubDate>
+      <guid>https://vanadium23.me/remove-google-analytics/</guid>
+      <description>
+
+&lt;p&gt;Прошёл почти год с того момента, как &lt;a href=&#34;https://vanadium23.me/migrating-to-hugo/&#34;&gt;я перевёз этот блог с jekyll на hugo&lt;/a&gt;. В той статье всё закончилось на том, что половина веса страницы занимает гугл аналитика. Меня это немножко волновало, но потом я добавил скрипт для шаринга в соцсети и понеслось. Напоминает занятие по уборке дома, сколько раз тебе это не сделать, то рано или поздно придёться к этому вернуться.&lt;/p&gt;
+
+&lt;p&gt;Не смотря на то, что в этот блог заходит не так много людей, терять числа куда и сколько не очень хотелось. Самым простым вариантом было бы расположить блог на личной VDS и смотреть в логи nginx, но не хотелось отказываться от бесплатного хостинга Github Pages.
+Поэтому я перевёл блог за Cloudflare, что немножко шило на мыло, но в нём есть дашборд с заходами.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/cloudflare-analytics.png&#34; alt=&#34;Cloudflare analytics&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Всё что она показывает - это количество заходов в разбивке по странам, а хочется смотреть за хитами по страницам. И тут вспомнил, что в прошлом году Cloudflare представили свой новый продукт Workers.&lt;/p&gt;
+
+&lt;h3 id=&#34;как-он-работает&#34;&gt;Как он работает?&lt;/h3&gt;
+
+&lt;p&gt;Cloudflare Workers - это javascript (или Rust) код, который они деплоят в свои датацентры и вызывают на каждый запрос домена, который находится за CDN. Наверное, можно это отнести к классу serverless. Бесплатный тариф не очень большой: 100000 запросов в месяц и один бесплатный поддомен в зоне workers.dev, но для начала вполне хватит. Помимо кода, есть Key-Value хранилище в которое можно положить какие-то данные.
+Если вы ещё не смотрели на них, то можете посмотреть их &lt;a href=&#34;https://developers.cloudflare.com/workers/tutorials/build-a-todo-list/&#34;&gt;руководства&lt;/a&gt;, может что-нибудь понравиться.&lt;/p&gt;
+
+&lt;h3 id=&#34;influxdb-grafana-3&#34;&gt;InfluxDB + Grafana = &amp;lt;3&lt;/h3&gt;
+
+&lt;p&gt;Дело оставалось за малым, складывать все запросы в какую-нибудь TSDB. На работе мы вовсю используем InfluxDB, поэтому выбор остался за ней. Она имеет довольно простой протокол по массовой записи в базу с помощью &lt;a href=&#34;https://docs.influxdata.com/influxdb/v1.7/tools/api/#examples-6&#34;&gt;HTTP API&lt;/a&gt;. За вечер был написан код на js, который на каждый входящий запрос проксировал его ниже, а также писал метрику. Около 3 часов было убито на то, почему в редакторе Cloudflare метрики отправляются, а на блоге нет. Оказалось, что worker может работать только с определенными портами и порт по умолчанию InfluxDB не входит в этот список. Пришлось перезапустить его на стандартном http порту. Естевственно, когда вся схема заработала, захотелось посчитать не приносит ли это большого оверхеда и цифры оказались в районе 50-150 ms. Если честно, по сравнению с первоначальным ответом - это очень много, с другой стороны мы удаляем 40 кб js скриптов с клиента, поэтому решил что это приемлемо. В запасе остаётся вариант, что его можно уменьшить за счёт переписывания кода на Rust.&lt;/p&gt;
+
+&lt;p&gt;Финальный дашборд в графане выглядит так:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/grafana-blog.png&#34; alt=&#34;Grafana blog&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Если у вас похожий стек, то можете подключить себе этого же воркера из репозитория &lt;a href=&#34;https://github.com/vanadium23/cf-metrics&#34;&gt;cf-metrics&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;P.s. с удивленим обнаружил, что мой перевод по Laravel ещё жив и раздаётся с &lt;a href=&#34;http://www.laravelbestpractices.com/&#34;&gt;www.laravelbestpractices.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;P.p.s. В скрипте учитываю заголовок Do Not Track, просто потому что захотелось.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Mission teams</title>
       <link>https://vanadium23.me/mission-teams/</link>
@@ -81,6 +117,58 @@
 
 &lt;p&gt;Video is in Russian:
 &lt;iframe width=&#34;640&#34; height=&#34;360&#34; src=&#34;https://www.youtube.com/embed/EuvtmH6TA-M&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Переезд блога с jekyll на hugo</title>
+      <link>https://vanadium23.me/migrating-to-hugo/</link>
+      <pubDate>Sun, 24 Mar 2019 14:00:00 +0300</pubDate>
+      <guid>https://vanadium23.me/migrating-to-hugo/</guid>
+      <description>&lt;p&gt;Недавно прочитал статью про &lt;a href=&#34;https://dev.to/winduptoy/a-javascript-free-frontend-2d3e&#34;&gt;фронтенд без javascript&amp;rsquo;a&lt;/a&gt; и решил, что пора переделать бложик на старый манер: только html, только css. А раз начну переделывать, то заодно можно съехать с jekyll.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt;: страница блога похудела в 3 раза: было 237 килобайт, стало 83. Можно порезать гуглоаналитику и станет ещё в 2 раза легче.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/pagespeed100.png&#34; alt=&#34;PageSpeed 100&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;причины-большого-веса-страниц&#34;&gt;Причины большого веса страниц.&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Грузил никому ненужную аватарку прямиком с гитхаба.&lt;/li&gt;
+&lt;li&gt;Подключал highlight js, хотя это можно делать на этапе сборки странички.&lt;/li&gt;
+&lt;li&gt;Использовал стороннюю тему и там было много всего, хотя сейчас есть flex и CSS grid, поэтому можно половину выкинуть.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;причины-миграции-на-hugo-вместо-jekyll&#34;&gt;Причины миграции на hugo вместо jekyll.&lt;/h3&gt;
+
+&lt;p&gt;Плюсы:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hugo использует бонус golang в виде компиляции в один бинарник, и не надо мучаться с настройкой rvm-ruby-bundler-jekyll.&lt;/li&gt;
+&lt;li&gt;Hugo умеет импортировать jekyll репозиторий: &lt;code&gt;hugo import jekyll /path/to/src&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Hugo получил поддержку общества, поэтому уже есть и темы, и всякие ништячки локализации.&lt;/li&gt;
+&lt;li&gt;В hugo &lt;a href=&#34;https://gohugo.io/content-management/&#34;&gt;много настроек&lt;/a&gt; и &lt;a href=&#34;https://gohugo.io/hugo-pipes/bundling/&#34;&gt;собирает css/js&lt;/a&gt; самостоятельно без помощи внешних утилит.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Минусы:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go templates - это худший шаблонизатор в мире. Уверен, что кто пользовались jinja2 сразу поймут боль.&lt;/li&gt;
+&lt;li&gt;Слишком много настроек из-за чего иногда сложно найти, как сделать что-то простое.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;подводные-камни-при-переезде&#34;&gt;Подводные камни при переезде.&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Если вы используете Github User Page, а не Github Project Page, то вам не повезло и папку docs/ в репозитории вы использовать не можете. Вместо этого придеться в репозиторий &lt;username&gt;.github.io класть сразу сгенерированную статику. То есть, необходимо создать ещё один репозиторий, где будет hugo, а предыдущий подключить в качестве сабмодуля гита.&lt;/li&gt;
+&lt;li&gt;Если вы мигрируете с jekyll, то не забудьте удалить предыдущий config.yaml из репозитория, иначе gihub будет считать, что это jekyll репозиторий и попробует его собрать.&lt;/li&gt;
+&lt;li&gt;По-умолчанию, jekyll использует название файла в качестве пути, а hugo повторяет иерархию папок. Для того, чтобы повторить поведение, можно в config.yaml прописать опцию permalinks, или же в каждом файле использовать опцию alias.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;доделки-доделочки&#34;&gt;Доделки-доделочки.&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Надо отказаться от google analytics, так как это от лукавого. Сначала думал сделать свой пиксель, а сейчас думаю зачем мне трекать кто читает?&lt;/li&gt;
+&lt;li&gt;Добавить переключалку на ночную тему. Задача со звёздочкой сделать это без js :)&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     <item>
       <title>PipEnv, Pipfile, pip... what?!</title>

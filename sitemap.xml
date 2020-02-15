@@ -4,30 +4,41 @@
   
   <url>
     <loc>https://vanadium23.me/posts/</loc>
-    <lastmod>2020-02-02T09:00:00+03:00</lastmod>
+    <lastmod>2020-02-15T09:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://vanadium23.me/tags/</loc>
-    <lastmod>2020-02-02T09:00:00+03:00</lastmod>
+    <lastmod>2020-02-15T09:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://vanadium23.me/tags/blog/</loc>
-    <lastmod>2020-02-02T09:00:00+03:00</lastmod>
+    <lastmod>2020-02-15T09:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://vanadium23.me/tags/book/</loc>
-    <lastmod>2020-02-02T09:00:00+03:00</lastmod>
+    <loc>https://vanadium23.me/tags/dev/</loc>
+    <lastmod>2020-02-15T09:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://vanadium23.me/</loc>
+    <lastmod>2020-02-15T09:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/remove-google-analytics/</loc>
+    <lastmod>2020-02-15T09:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/tags/book/</loc>
     <lastmod>2020-02-02T09:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
@@ -77,12 +88,6 @@
   <url>
     <loc>https://vanadium23.me/mission-teams/</loc>
     <lastmod>2019-11-30T12:00:00+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://vanadium23.me/tags/dev/</loc>
-    <lastmod>2019-11-30T12:00:00+03:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

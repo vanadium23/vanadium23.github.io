@@ -1,0 +1,153 @@
+
+  
+  
+<!DOCTYPE html>
+<html lang="ru-ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Переезд с Google analytics на Cloudflare workers | vanadium23</title>
+  <meta name="author" content="vanadium23" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:creator" content="@vanadium23" />
+    <meta property="og:title" content="Переезд с Google analytics на Cloudflare workers" />
+    <meta property="twitter:title" content="Переезд с Google analytics на Cloudflare workers" />
+    <meta name="description" content="Прошёл почти год с того момента, как я перевёз этот блог с jekyll на hugo. В той статье всё закончилось на том, что половина веса страницы занимает гугл аналитика. Меня это немножко волновало, но потом я добавил скрипт для шаринга в соцсети и понеслось. Напоминает занятие по уборке дома, сколько раз тебе это не сделать, то рано или поздно придёться к этому вернуться.
+Не смотря на то, что в этот блог заходит не так много людей, терять числа куда и сколько не очень хотелось.">
+    <meta property="og:description" content="Прошёл почти год с того момента, как я перевёз этот блог с jekyll на hugo. В той статье всё закончилось на том, что половина веса страницы занимает гугл аналитика. Меня это немножко волновало, но потом я добавил скрипт для шаринга в соцсети и понеслось. Напоминает занятие по уборке дома, сколько раз тебе это не сделать, то рано или поздно придёться к этому вернуться.
+Не смотря на то, что в этот блог заходит не так много людей, терять числа куда и сколько не очень хотелось." />
+    
+  <link rel="stylesheet" href="https://vanadium23.me/css/base.min.ea8be235bf3e01535d2b74ac2aecaccb8c8b2b5a9fb8ff9d0fb03cc1b690e30f.css" integrity="sha256-6oviNb8&#43;AVNdK3SsKuysy4yLK1qfuP&#43;dD7A8wbaQ4w8=">
+  <link rel="stylesheet" href="https://vanadium23.me/css/likely.css" integrity="">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <meta name="generator" content="Hugo 0.55.3" />
+</head>
+<body>
+  <nav class="u-background">
+    <div class="u-wrapper Banner">
+        <a class="Banner-link u-clickable" href="https://vanadium23.me/">
+            vanadium23
+        </a>
+        <ul class="Banner">
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/about/">About</a>
+        </li class="Banner-item">
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a>
+        </li class="Banner-item">
+        
+        <li>
+            <a id="themeSwitch" class="theme-switcher"></a>
+        </li>
+        </ul>
+    </div>
+</nav>
+  <main >
+    <div class="u-wrapper">
+      <div class="u-padding">
+        
+
+<article>
+  <header class="Heading">
+  <h2 class="Heading-title">
+    <a class="Heading-link u-clickable" href="https://vanadium23.me/remove-google-analytics/" rel="bookmark">Переезд с Google analytics на Cloudflare workers</a>
+  </h2>
+  <div class="Heading-additional">
+    
+    <time datetime="2020-02-15T09:00:00&#43;03:00">
+      15 February, 2020
+    </time>&middot;
+    
+  
+  <span>3 min read</span>
+  
+  </div>
+</header>
+  
+
+<p>Прошёл почти год с того момента, как <a href="/migrating-to-hugo/">я перевёз этот блог с jekyll на hugo</a>. В той статье всё закончилось на том, что половина веса страницы занимает гугл аналитика. Меня это немножко волновало, но потом я добавил скрипт для шаринга в соцсети и понеслось. Напоминает занятие по уборке дома, сколько раз тебе это не сделать, то рано или поздно придёться к этому вернуться.</p>
+
+<p>Не смотря на то, что в этот блог заходит не так много людей, терять числа куда и сколько не очень хотелось. Самым простым вариантом было бы расположить блог на личной VDS и смотреть в логи nginx, но не хотелось отказываться от бесплатного хостинга Github Pages.
+Поэтому я перевёл блог за Cloudflare, что немножко шило на мыло, но в нём есть дашборд с заходами.</p>
+
+<p><img src="/images/cloudflare-analytics.png" alt="Cloudflare analytics" /></p>
+
+<p>Всё что она показывает - это количество заходов в разбивке по странам, а хочется смотреть за хитами по страницам. И тут вспомнил, что в прошлом году Cloudflare представили свой новый продукт Workers.</p>
+
+<h3 id="как-он-работает">Как он работает?</h3>
+
+<p>Cloudflare Workers - это javascript (или Rust) код, который они деплоят в свои датацентры и вызывают на каждый запрос домена, который находится за CDN. Наверное, можно это отнести к классу serverless. Бесплатный тариф не очень большой: 100000 запросов в месяц и один бесплатный поддомен в зоне workers.dev, но для начала вполне хватит. Помимо кода, есть Key-Value хранилище в которое можно положить какие-то данные.
+Если вы ещё не смотрели на них, то можете посмотреть их <a href="https://developers.cloudflare.com/workers/tutorials/build-a-todo-list/">руководства</a>, может что-нибудь понравиться.</p>
+
+<h3 id="influxdb-grafana-3">InfluxDB + Grafana = &lt;3</h3>
+
+<p>Дело оставалось за малым, складывать все запросы в какую-нибудь TSDB. На работе мы вовсю используем InfluxDB, поэтому выбор остался за ней. Она имеет довольно простой протокол по массовой записи в базу с помощью <a href="https://docs.influxdata.com/influxdb/v1.7/tools/api/#examples-6">HTTP API</a>. За вечер был написан код на js, который на каждый входящий запрос проксировал его ниже, а также писал метрику. Около 3 часов было убито на то, почему в редакторе Cloudflare метрики отправляются, а на блоге нет. Оказалось, что worker может работать только с определенными портами и порт по умолчанию InfluxDB не входит в этот список. Пришлось перезапустить его на стандартном http порту. Естевственно, когда вся схема заработала, захотелось посчитать не приносит ли это большого оверхеда и цифры оказались в районе 50-150 ms. Если честно, по сравнению с первоначальным ответом - это очень много, с другой стороны мы удаляем 40 кб js скриптов с клиента, поэтому решил что это приемлемо. В запасе остаётся вариант, что его можно уменьшить за счёт переписывания кода на Rust.</p>
+
+<p>Финальный дашборд в графане выглядит так:</p>
+
+<p><img src="/images/grafana-blog.png" alt="Grafana blog" /></p>
+
+<p>Если у вас похожий стек, то можете подключить себе этого же воркера из репозитория <a href="https://github.com/vanadium23/cf-metrics">cf-metrics</a>.</p>
+
+<p>P.s. с удивленим обнаружил, что мой перевод по Laravel ещё жив и раздаётся с <a href="http://www.laravelbestpractices.com/">www.laravelbestpractices.com</a>.</p>
+
+<p>P.p.s. В скрипте учитываю заголовок Do Not Track, просто потому что захотелось.</p>
+
+  
+    <div class="likely likely-big" data-url="https://vanadium23.me/remove-google-analytics/">
+    <div class="twitter" data-via="vanadium23">Tweet</div>
+    <div class="facebook">Share</div>
+    <div class="vkontakte">Share</div>
+    <div class="telegram">Send</div>
+</div>
+
+  
+  
+<footer>
+  <ul class="Tags">
+    
+    
+    
+    <li class="Tags-item u-background">
+      <a class="Tags-link u-clickable" href="https://vanadium23.me/tags/blog/" rel="tag">blog</a>
+    </li>
+    
+    
+    
+    
+    <li class="Tags-item u-background">
+      <a class="Tags-link u-clickable" href="https://vanadium23.me/tags/dev/" rel="tag">dev</a>
+    </li>
+    
+    
+  </ul>
+</footer>
+
+</article>
+
+
+      </div>
+    </div>
+  </main>
+  <footer class="Footer">
+  <div class="u-wrapper">
+    <div class="u-padding">
+        
+        <a href="https://github.com/vanadium23"><i class="svg-icon github"></i></a>
+        <a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"></i></a>
+        <a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"></i></a>
+        <a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"></i></a>
+        <a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"></i></a>
+        <a href="https://goodreads.com/vanadium23"><i class="svg-icon goodreads"></i></a>
+    </div>
+  </div>
+</footer>
+  
+  <script type="text/javascript" src="https://vanadium23.me/js/likely.js" integrity=""></script>
+  <script type="text/javascript" src="https://vanadium23.me/js/themes.js" integrity=""></script>
+</body>
+</html>
