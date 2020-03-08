@@ -4,32 +4,43 @@
   
   <url>
     <loc>https://vanadium23.me/posts/</loc>
-    <lastmod>2020-02-15T09:00:00+03:00</lastmod>
+    <lastmod>2020-03-08T09:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://vanadium23.me/tags/</loc>
-    <lastmod>2020-02-15T09:00:00+03:00</lastmod>
+    <lastmod>2020-03-08T09:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://vanadium23.me/tags/blog/</loc>
-    <lastmod>2020-02-15T09:00:00+03:00</lastmod>
+    <lastmod>2020-03-08T09:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://vanadium23.me/tags/dev/</loc>
-    <lastmod>2020-02-15T09:00:00+03:00</lastmod>
+    <lastmod>2020-03-08T09:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/tags/golang/</loc>
+    <lastmod>2020-03-08T09:00:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://vanadium23.me/</loc>
-    <lastmod>2020-02-15T09:00:00+03:00</lastmod>
+    <lastmod>2020-03-08T09:00:00+03:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/golang-modules/</loc>
+    <lastmod>2020-03-08T09:00:00+03:00</lastmod>
   </url>
   
   <url>
