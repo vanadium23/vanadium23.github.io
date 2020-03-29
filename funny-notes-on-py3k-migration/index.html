@@ -15,12 +15,12 @@
     <meta name="description" content="Python3 is a great pain in python community. It was released on Dec 3, 2008 and brings major breaking changes and also new interpreter was slower, than python2 realization. After long way and five releases, in 2016, it&rsquo;s obvious to start on python 3.5: type hinting, asyncio, same perfomance and gets better in coming python 3.6.">
     <meta property="og:description" content="Python3 is a great pain in python community. It was released on Dec 3, 2008 and brings major breaking changes and also new interpreter was slower, than python2 realization. After long way and five releases, in 2016, it&rsquo;s obvious to start on python 3.5: type hinting, asyncio, same perfomance and gets better in coming python 3.6." />
     
-  <link rel="stylesheet" href="https://vanadium23.me/css/base.min.ea8be235bf3e01535d2b74ac2aecaccb8c8b2b5a9fb8ff9d0fb03cc1b690e30f.css" integrity="sha256-6oviNb8&#43;AVNdK3SsKuysy4yLK1qfuP&#43;dD7A8wbaQ4w8=">
+  <link rel="stylesheet" href="https://vanadium23.me/css/base.min.a3368a1810ce5f531d4379f7ef2a70a442d894fcc461091bac1ea3cfee39833c.css" integrity="sha256-ozaKGBDOX1MdQ3n37ypwpELYlPzEYQkbrB6jz&#43;45gzw=">
   <link rel="stylesheet" href="https://vanadium23.me/css/likely.css" integrity="">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <meta name="generator" content="Hugo 0.55.3" />
+  <meta name="generator" content="Hugo 0.68.3" />
 </head>
 <body>
   <nav class="u-background">
@@ -66,13 +66,10 @@
   </div>
 </header>
   <p>Python3 is a great pain in python community. It was released on Dec 3, 2008 and brings major breaking changes and also new interpreter was slower, than python2 realization. After long way and five releases, in 2016, it&rsquo;s obvious to start on python 3.5: type hinting, asyncio, same perfomance and gets better in coming <a href="https://docs.python.org/3.6/whatsnew/3.6.html">python 3.6</a>.</p>
-
 <p><strong>Warning</strong>: this is not an article about how to migrate to python3, but more about how to catch errors before deploy to prod.
 For python3 migrations, see something like <a href="https://www.toptal.com/python/python-3-is-it-worth-the-switch">this</a> or <a href="http://python3porting.com/strategies.html">this</a>.
 Always remember simple thing: more unit &amp; integrations tests you have =&gt; earlier you detect bugs.</p>
-
 <p>Contents:</p>
-
 <ol>
 <li><a href="#py3k-division">integer division</a></li>
 <li><a href="#py3k-comparations">unorderable types</a></li>
@@ -83,99 +80,70 @@ Always remember simple thing: more unit &amp; integrations tests you have =&gt; 
 <li><a href="#py3k-redispy">changes in work with redis-py</a></li>
 <li><a href="#py3k-django">Note: how to make smaller diff between py2 and py3 version on django</a></li>
 </ol>
-
-<h1 id="a-name-py3k-division-a-division"><a name="py3k-division"></a>Division</h1>
-
+<h1 id="a-namepy3k-divisionadivision"><!-- raw HTML omitted --><!-- raw HTML omitted -->Division</h1>
 <p>Can you guess what kind of exception will be there,
 if hotel.rating is integer.</p>
-
 <pre><code>stars = range(hotel.rating / 10)
-</code></pre>
-
-<p>Correct answer:</p>
-
+</code></pre><p>Correct answer:</p>
 <pre><code>&gt; TypeError: 'float' object cannot be interpreted as an integer
-</code></pre>
-
-<p>Solution:</p>
-
+</code></pre><p>Solution:</p>
 <pre><code># do it before migrations, it works on py2
 from __future__ import division
 stars = range(hotel.rating // 10)
-</code></pre>
-
-<h1 id="a-name-py3k-comparations-a-unorderable-types"><a name="py3k-comparations"></a>Unorderable types</h1>
-
+</code></pre><h1 id="a-namepy3k-comparationsaunorderable-types"><!-- raw HTML omitted --><!-- raw HTML omitted -->Unorderable types</h1>
 <p>So, in python 3 you can&rsquo;t do such things:</p>
-
 <pre><code>None &gt; None
 1 &gt; None
 '1' &gt; 1
 
 &gt; TypeError: unorderable types: int() &gt; NoneType()
-</code></pre>
-
-<p>Because it&rsquo;s more strict for types. How it was found:</p>
-
+</code></pre><p>Because it&rsquo;s more strict for types. How it was found:</p>
 <pre><code>chosen_indexes = Obj.objects.values_list('chosen_index', flat=True)
 ...
 ...
 ...
 max_index = max(chosen_indexes)
-</code></pre>
-
-<p>That&rsquo;s ok code, but if field chosen_index can be null, you will catch TypeError.</p>
-
+</code></pre><p>That&rsquo;s ok code, but if field chosen_index can be null, you will catch TypeError.</p>
 <p>Solution: just filter None values in list, or null in queryset.</p>
-
-<h2 id="a-name-py3k-except-a-except-exception"><a name="py3k-except"></a>except Exception</h2>
-
+<h2 id="a-namepy3k-exceptaexcept-exception"><!-- raw HTML omitted --><!-- raw HTML omitted -->except Exception</h2>
 <p>Pretty much uses external APIs: may be you send letters through MailGun or Mandrill, you can call some other services in your company.
 But you know - sometimes they just fail: connection timeouts, 5xx errors.
 For handling such cases you can make tuple of Exception:</p>
-
-<pre><code class="language-python">from requests.exceptions import (
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> requests.exceptions <span style="color:#f92672">import</span> (
     RequestException,
     HTTPError
 )
 
-NETWORK_EXCEPTIONS = (
+NETWORK_EXCEPTIONS <span style="color:#f92672">=</span> (
     RequestException,
     HTTPException,
 )
 
-try:
-    # some bad code example, but for teach purpose
-    response = requests.get(some_url)
-    result = ujson.loads(response.content)
-except (NETWORK_EXCEPTIONS, ValueError):
-    log.error('some bad thing happend')
-</code></pre>
-
-<p>This code won&rsquo;t work on python3, because interpreter check exception is subclass of BaseException.</p>
-
+<span style="color:#66d9ef">try</span>:
+    <span style="color:#75715e"># some bad code example, but for teach purpose</span>
+    response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(some_url)
+    result <span style="color:#f92672">=</span> ujson<span style="color:#f92672">.</span>loads(response<span style="color:#f92672">.</span>content)
+<span style="color:#66d9ef">except</span> (NETWORK_EXCEPTIONS, <span style="color:#a6e22e">ValueError</span>):
+    log<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#39;some bad thing happend&#39;</span>)
+</code></pre></div><p>This code won&rsquo;t work on python3, because interpreter check exception is subclass of BaseException.</p>
 <p>Solution:</p>
-
-<pre><code class="language-python">from requests.exceptions import (
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> requests.exceptions <span style="color:#f92672">import</span> (
     RequestException,
     HTTPError
 )
 
-NETWORK_EXCEPTIONS = (
+NETWORK_EXCEPTIONS <span style="color:#f92672">=</span> (
     RequestException,
     HTTPException
 )
 
-try:
-    response = requests.get(some_url)
-    result = ujson.loads(response.content)
-except NETWORK_EXCEPTIONS + (ValueError,):
-    log.error('some bad thing happend')
-</code></pre>
-
-<p>Second interesting example is that, except create variable in local scope and its make hard to print/ipdb. (This is some questing during interview, that I love to ask).
+<span style="color:#66d9ef">try</span>:
+    response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(some_url)
+    result <span style="color:#f92672">=</span> ujson<span style="color:#f92672">.</span>loads(response<span style="color:#f92672">.</span>content)
+<span style="color:#66d9ef">except</span> NETWORK_EXCEPTIONS <span style="color:#f92672">+</span> (<span style="color:#a6e22e">ValueError</span>,):
+    log<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#39;some bad thing happend&#39;</span>)
+</code></pre></div><p>Second interesting example is that, except create variable in local scope and its make hard to print/ipdb. (This is some questing during interview, that I love to ask).
 Example:</p>
-
 <pre><code>import json
 
 exc = 'test'
@@ -186,82 +154,54 @@ except ValueError as exc:
 # there will be no exc variable on py3k
 print(exc)
 &gt; NameError: name 'exc' is not defined
-</code></pre>
-
-<h1 id="a-name-py3k-byteswarning-a-bytes-comparison"><a name="py3k-byteswarning"></a>bytes comparison</h1>
-
+</code></pre><h1 id="a-namepy3k-byteswarningabytes-comparison"><!-- raw HTML omitted --><!-- raw HTML omitted -->bytes comparison</h1>
 <p>It&rsquo;s greatest pain in migration. So much pain, I can feel it in my head.
 Next 3 bullets is about it.
 First: no implicit conversion between str and bytes.
 Solution:</p>
-
 <pre><code>python3 -bb your_script.py
-</code></pre>
-
-<p>It throw ByteWarning exception insted of falsing b&rdquo; == &ldquo;.</p>
-
+</code></pre><p>It throw ByteWarning exception insted of falsing b&rsquo;&rsquo; == &lsquo;'.</p>
 <p>Second: some libs expected bytes on input, some text.</p>
-
 <p>Solution: call .decode on bytes &amp; encode on str.</p>
-
-<h1 id="a-name-py3k-ujson-a-just-ujson"><a name="py3k-ujson"></a>just ujson</h1>
-
+<h1 id="a-namepy3k-ujsonajust-ujson"><!-- raw HTML omitted --><!-- raw HTML omitted -->just ujson</h1>
 <p>Json from standart libs expects str on input, ujson can deal with str and bytes.
 Also ujson much faster, see comparasion on <a href="https://github.com/esnme/ultrajson#benchmarks">github</a>.</p>
-
-<h1 id="a-name-py3k-lxml-a-lxml-trap"><a name="py3k-lxml"></a>lxml trap</h1>
-
+<h1 id="a-namepy3k-lxmlalxml-trap"><!-- raw HTML omitted --><!-- raw HTML omitted -->lxml trap</h1>
 <p>Ooops, this was tough one. Some service provides XML API.
 It answers question of life, universe and everything.</p>
-
 <pre><code>&lt;root&gt;
   &lt;answer&gt;42&lt;/answer&gt;
 &lt;/root&gt;
-</code></pre>
+</code></pre><p>You want to parse it using lxml:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> lxml <span style="color:#f92672">import</span> objectify
 
-<p>You want to parse it using lxml:</p>
+xml_answer <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">&lt;root&gt;
+</span><span style="color:#e6db74">  &lt;answer&gt;42&lt;/answer&gt;
+</span><span style="color:#e6db74">&lt;/root&gt;
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+xml <span style="color:#f92672">=</span> objectify<span style="color:#f92672">.</span>parse(buf)<span style="color:#f92672">.</span>getroot()
+</code></pre></div><p>This example works both on py2 and py3, but some little difference:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> lxml <span style="color:#f92672">import</span> objectify
 
-<pre><code class="language-python">from lxml import objectify
-
-xml_answer = &quot;&quot;&quot;
-&lt;root&gt;
-  &lt;answer&gt;42&lt;/answer&gt;
-&lt;/root&gt;
-&quot;&quot;&quot;
-xml = objectify.parse(buf).getroot()
-</code></pre>
-
-<p>This example works both on py2 and py3, but some little difference:</p>
-
-<pre><code class="language-python">from lxml import objectify
-
-xml_answer = &quot;&quot;&quot;&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;root&gt;
-  &lt;answer&gt;42&lt;/answer&gt;
-&lt;/root&gt;
-&quot;&quot;&quot;
-xml = objectify.parse(buf).getroot()
-</code></pre>
-
-<p>Aaaand lxml wants bytes on input instead of string ¯\<em>(ツ)</em>/¯.</p>
-
-<h1 id="a-name-py3k-redispy-a-redis-py-bytes"><a name="py3k-redispy"></a>redis-py bytes</h1>
-
+xml_answer <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;
+</span><span style="color:#e6db74">&lt;root&gt;
+</span><span style="color:#e6db74">  &lt;answer&gt;42&lt;/answer&gt;
+</span><span style="color:#e6db74">&lt;/root&gt;
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+xml <span style="color:#f92672">=</span> objectify<span style="color:#f92672">.</span>parse(buf)<span style="color:#f92672">.</span>getroot()
+</code></pre></div><p>Aaaand lxml wants bytes on input instead of string ¯\<em>(ツ)</em>/¯.</p>
+<h1 id="a-namepy3k-redispyaredis-py-bytes"><!-- raw HTML omitted --><!-- raw HTML omitted -->redis-py bytes</h1>
 <p>All redis action from redispy returns bytes now. So if you use pure redis (not a django.core.cache), you need to explicit call decode. Also pickling objects between python3 and python2 doesn&rsquo;t work, so make sure you make different keys in cache.</p>
-
-<h2 id="a-name-py3k-django-a-note-how-to-make-smaller-diff-between-py2-and-py3-version-on-django"><a name="py3k-django"></a>Note: how to make smaller diff between py2 and py3 version on django</h2>
-
+<h2 id="a-namepy3k-djangoanote-how-to-make-smaller-diff-between-py2-and-py3-version-on-django"><!-- raw HTML omitted --><!-- raw HTML omitted -->Note: how to make smaller diff between py2 and py3 version on django</h2>
 <p>So sums it up with django experience:</p>
-
 <ol>
 <li>use smart_text instead of smart_unicode</li>
 <li>use @python_2_unicode_compatible decorator</li>
 <li>use key_prefix in django.caches, when moving</li>
 </ol>
-
 <p>Thanks for reading.</p>
-
-<p><img src="/images/move-to-py3k.png" alt="keep calm and move to python3" /></p>
+<p><img src="/images/move-to-py3k.png" alt="keep calm and move to python3"></p>
   
     <div class="likely likely-big" data-url="https://vanadium23.me/funny-notes-on-py3k-migration/">
     <div class="twitter" data-via="vanadium23">Tweet</div>

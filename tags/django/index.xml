@@ -11,7 +11,7 @@
         <head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <title>django RSS | vanadium23</title>
-          <link rel="stylesheet" href="https://vanadium23.me/css/base.min.ea8be235bf3e01535d2b74ac2aecaccb8c8b2b5a9fb8ff9d0fb03cc1b690e30f.css" integrity="sha256-6oviNb8&#43;AVNdK3SsKuysy4yLK1qfuP&#43;dD7A8wbaQ4w8=" />
+          <link rel="stylesheet" href="https://vanadium23.me/css/base.min.a3368a1810ce5f531d4379f7ef2a70a442d894fcc461091bac1ea3cfee39833c.css" integrity="sha256-ozaKGBDOX1MdQ3n37ypwpELYlPzEYQkbrB6jz&#43;45gzw=" />
         </head>
         <body>
           <nav class="u-background">
@@ -81,14 +81,11 @@
 For python 2, it is nginx + gunicorn or uwsgi + monkey patching libs, such as gevent or eventlet.
 Generally, I prefer gunicorn + eventlet, but when you switch (or start) django project on latest python 3.5, eventlet can do &lt;a href=&#34;https://github.com/eventlet/eventlet/issues/313&#34;&gt;some bad magic&lt;/a&gt;. And you can switch to a new built-in mechanism, called &lt;em&gt;aiohttp&lt;/em&gt;.
 Based on &lt;a href=&#34;http://docs.gunicorn.org/en/stable/design.html?highlight=gaiohttp#asyncio-workers&#34;&gt;gunicorn docs&lt;/a&gt;, you need simply switch worker to &lt;em&gt;gaiohttp&lt;/em&gt; and that&amp;rsquo;s all.&lt;/p&gt;
-
 &lt;p&gt;Then, something bad happens.
-&lt;img src=&#34;https://vanadium23.me/images/gaiohttp-memory.png&#34; alt=&#34;gaiohttp-memory&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Answer is very simple: &lt;strike&gt;you write some memoryleaking code&lt;/strike&gt; &lt;em&gt;gaiohttp&lt;/em&gt; ignores max_requests option.
+&lt;img src=&#34;https://vanadium23.me/images/gaiohttp-memory.png&#34; alt=&#34;gaiohttp-memory&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Answer is very simple: &lt;!-- raw HTML omitted --&gt;you write some memoryleaking code&lt;!-- raw HTML omitted --&gt; &lt;em&gt;gaiohttp&lt;/em&gt; ignores max_requests option.
 In other words, workers won&amp;rsquo;t be killed after max_requests count. After some search on internet, there is an &lt;a href=&#34;http://asvetlov.blogspot.ru/2014/06/asyncio-aiohttp-gunicorn.html&#34;&gt;article&lt;/a&gt; from asyncio contributor about copy-n-pasting worker from aiohttp repo to gunicorn.
 &lt;a href=&#34;http://aiohttp.readthedocs.io/en/stable/deployment.html#start-gunicorn&#34;&gt;Aiohttp docs&lt;/a&gt; says that you should use &lt;code&gt;aiohttp.worker.GunicornWebWorker&lt;/code&gt;, but when you switch setting there will be error.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;[5898] [ERROR] Exception in worker process
 Traceback (most recent call last):
   File &amp;quot;./gunicorn/arbiter.py&amp;quot;, line 557, in spawn_worker
@@ -101,11 +98,8 @@ Traceback (most recent call last):
     self.loop.run_until_complete(self.wsgi.startup())
 AttributeError:
     &#39;WSGIHandler&#39; object has no attribute &#39;startup&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;So &lt;em&gt;aiohttp.worker.GunicornWebWorker&lt;/em&gt; differs from standart wsgi app for django. Luckily, python community has two packages to overcome these difficulties: &lt;em&gt;aiohttp-wsgi&lt;/em&gt; and &lt;em&gt;aiodjango&lt;/em&gt;, add them to your &lt;em&gt;requirements.txt&lt;/em&gt;.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So &lt;em&gt;aiohttp.worker.GunicornWebWorker&lt;/em&gt; differs from standart wsgi app for django. Luckily, python community has two packages to overcome these difficulties: &lt;em&gt;aiohttp-wsgi&lt;/em&gt; and &lt;em&gt;aiodjango&lt;/em&gt;, add them to your &lt;em&gt;requirements.txt&lt;/em&gt;.
 After this modify your &lt;em&gt;wsgi.py&lt;/em&gt; according to &lt;a href=&#34;http://aiodjango.readthedocs.io/en/latest/usage.html#defining-the-application&#34;&gt;docs&lt;/a&gt;:&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;import os
 
 from django.core.wsgi import get_wsgi_application
@@ -121,9 +115,7 @@ application = get_wsgi_application()
 
 # Build aiohttp application
 app = get_aio_application(application)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;That&amp;rsquo;s all folks.&lt;/p&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;That&amp;rsquo;s all folks.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

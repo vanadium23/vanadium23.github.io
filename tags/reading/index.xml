@@ -11,7 +11,7 @@
         <head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <title>reading RSS | vanadium23</title>
-          <link rel="stylesheet" href="https://vanadium23.me/css/base.min.ea8be235bf3e01535d2b74ac2aecaccb8c8b2b5a9fb8ff9d0fb03cc1b690e30f.css" integrity="sha256-6oviNb8&#43;AVNdK3SsKuysy4yLK1qfuP&#43;dD7A8wbaQ4w8=" />
+          <link rel="stylesheet" href="https://vanadium23.me/css/base.min.a3368a1810ce5f531d4379f7ef2a70a442d894fcc461091bac1ea3cfee39833c.css" integrity="sha256-ozaKGBDOX1MdQ3n37ypwpELYlPzEYQkbrB6jz&#43;45gzw=" />
         </head>
         <body>
           <nav class="u-background">
@@ -78,76 +78,52 @@
       <pubDate>Sat, 31 Mar 2018 17:00:00 +0300</pubDate>
       <guid>https://vanadium23.me/keep-pocket-clean/</guid>
       <description>&lt;p&gt;Ретроспектива о том, как я организовал свой список чтения. (Спойлер: getpocket.com и не только).&lt;/p&gt;
-
 &lt;p&gt;Итак, первый симптом болезни застал меня, когда я увидел следующую картину на рабочем компьютере:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/too-many-tabs.png&#34; alt=&#34;Слишком много вкладок&#34; /&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/too-many-tabs.png&#34; alt=&#34;Слишком много вкладок&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Настолько распространённая ситуация, что даже в мобильном хроме есть шутка на эту тему при 100+ вкладках:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/100-tabs-mobile-only.png&#34; alt=&#34;Слишком много вкладок на мобильном&#34; /&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/100-tabs-mobile-only.png&#34; alt=&#34;Слишком много вкладок на мобильном&#34;&gt;&lt;/p&gt;
 &lt;p&gt;И когда вкладок так много, то вам приходится держать большой контекст в голове где рабочее, а где &lt;em&gt;просто посмотреть&lt;/em&gt;. У кого-то с этим нет проблем, у кого-то есть и я, к сожалению, из второго числа. К этому добавлялось желание не только успевать читать (что, забегая вперед, невозможно и не нужно), но и следить за новостями. И я открыл для себя RSS, а точнее чудесный на тот момент Google Reader:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/greader.png&#34; alt=&#34;Google Reader&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Сервис был дико удобным, т.к. позволял собрать поток со всех сайтов в одну большую ленту к &lt;strike&gt;чтению&lt;/strike&gt; просмотру. Именно просмотру, поскольку большая часть отбрасывалась по заголовку и выдержке. Правда оставались лонгриды или просто тяжелые к прочтению статьи, что возвращало нас к картинке:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/too-many-tabs.png&#34; alt=&#34;Слишком много вкладок&#34; /&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/greader.png&#34; alt=&#34;Google Reader&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Сервис был дико удобным, т.к. позволял собрать поток со всех сайтов в одну большую ленту к &lt;!-- raw HTML omitted --&gt;чтению&lt;!-- raw HTML omitted --&gt; просмотру. Именно просмотру, поскольку большая часть отбрасывалась по заголовку и выдержке. Правда оставались лонгриды или просто тяжелые к прочтению статьи, что возвращало нас к картинке:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/too-many-tabs.png&#34; alt=&#34;Слишком много вкладок&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Дальнейшее исследование этой проблемы привело меня к тому, что есть сервисы по сохранению вкладок. На слуху было два: instapaper и pocket, но первый был только под яблоко, поэтому не подходил. Оставалось решить как туда складывать статьи без копирования ссылок или открытия их в браузере. В feedly (пришедшем на замену Google Reader) такую возможность сделали в Pro-версии, но это не наш путь. Здесь на помощь к нам приходит сервис ifttt.com.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/ifttt.png&#34; alt=&#34;Ifttt - это изолента между сервисами&#34; /&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/ifttt.png&#34; alt=&#34;Ifttt - это изолента между сервисами&#34;&gt;&lt;/p&gt;
 &lt;p&gt;С помощью него мы можем сделать автоматический перенос статей с меткой &amp;ldquo;Saved for later&amp;rdquo; из Feedly в Pocket. И как вишенка на торте, статьи, которые помечены как прочтённые в Pocket, переносились в Evernote.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/read-flow.png&#34; alt=&#34;Поток чтения&#34; /&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/read-flow.png&#34; alt=&#34;Поток чтения&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Вот тут была допущена первая ошибка - не надо было использовать Evernote, хватало самого Pocket&amp;rsquo;a. Внутри него у статьи есть три состояния: к прочтению, в архиве и любимая. Вместо того, чтобы помещать статью в архив, я её удалял, т.к. архивирование засоряло Evernote. И теперь по данным из сервиса невозможно восстановить количество статей в очереди на тот или иной день. Остаются только скриншоты из твиттера. :(
-Не смотря на эту ошибку, схема принесла следующие удобства:
-* статьи обрабатывались для чтения: вырезалась вся вёрстка сайта и оставался только текст
-* оффлайн чтение на планшете
-* уменьшение времени на просмотр статей в Feedly&lt;/p&gt;
-
+Не смотря на эту ошибку, схема принесла следующие удобства:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;статьи обрабатывались для чтения: вырезалась вся вёрстка сайта и оставался только текст&lt;/li&gt;
+&lt;li&gt;оффлайн чтение на планшете&lt;/li&gt;
+&lt;li&gt;уменьшение времени на просмотр статей в Feedly&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;И это было настолько удобно, что добавил ещё несколько правил: различные email weekly (например: &lt;a href=&#34;https://postgresweekly.com/&#34;&gt;https://postgresweekly.com/&lt;/a&gt;) и ссылки из твиттера работали точно так же.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/read-flow-2.png&#34; alt=&#34;Поток чтения 2&#34; /&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/read-flow-2.png&#34; alt=&#34;Поток чтения 2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;К чему это привело, догадаться не трудно. Мы просто перенесли проблему из одного места в другое:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/pocket-first-half-2016.png&#34; alt=&#34;У тебя проблемы&#34; /&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/pocket-first-half-2016.png&#34; alt=&#34;У тебя проблемы&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Сама картинка до боли напоминает схему с производителем и потребителем, которые общаются через очередь.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/producer-consumer.png&#34; alt=&#34;Слишком много производителей&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;С одной стороны, потребителем в этой схеме являюсь я и можно точно сказать, что просто докупить железа не получится. С другой стороны, производителей контента со временем будет только больше. Как закономерный результат, мы и получаем забивание очереди.
-&amp;gt; Что же делать?&lt;/p&gt;
-
-&lt;p&gt;Ничего нового: дисциплинировать себя и больше фильтровать входную информацию.
-&amp;gt; Как это сделать?&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/producer-consumer.png&#34; alt=&#34;Слишком много производителей&#34;&gt;&lt;/p&gt;
+&lt;p&gt;С одной стороны, потребителем в этой схеме являюсь я и можно точно сказать, что просто докупить железа не получится. С другой стороны, производителей контента со временем будет только больше. Как закономерный результат, мы и получаем забивание очереди.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Что же делать?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Ничего нового: дисциплинировать себя и больше фильтровать входную информацию.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Как это сделать?&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Тут уже есть вариации. Для начала можно устроить информационный детокс и перестать читать вообще, чтобы понять чего ты хочешь. После этого сократить количество источников, оставив только девять. Почему девять? Если честно, я не помню, это было в какой-то статье. (:
 Возвращаясь к 2016 году, мне помогло добавление ежедневной задачи &amp;ldquo;разобрать 10 статей&amp;rdquo;. То есть у меня образовалась привычка накопления без прочтения, от которой мне удалось избавиться.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/pocket-second-half-2016.png&#34; alt=&#34;Решились проблемы&#34; /&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/pocket-second-half-2016.png&#34; alt=&#34;Решились проблемы&#34;&gt;&lt;/p&gt;
 &lt;p&gt;На этом хотелось бы закончить историю, но в прошлом году древнее зло пробудилось:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/pocket-second-half-2017.png&#34; alt=&#34;Вернулись проблемы&#34; /&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/pocket-second-half-2017.png&#34; alt=&#34;Вернулись проблемы&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Пришлось изобретать собственную алгоритмическую ленту, о которой расскажу в следующей статье.&lt;/p&gt;
-
-&lt;h2 id=&#34;tl-dr&#34;&gt;TL;DR&lt;/h2&gt;
-
+&lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Если используете очередь чтения статей, держите их количество близким к нулю.&lt;/li&gt;
 &lt;li&gt;Думайте &lt;em&gt;что&lt;/em&gt; и &lt;em&gt;зачем&lt;/em&gt; вы читаете, не усложняйте себе жизнь ненужным.&lt;/li&gt;
 &lt;li&gt;Если ушли в накопительство, не бойтесь выкинуть всё и начать сначала.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;полезные-расширения-для-pocket&#34;&gt;Полезные расширения для Pocket&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/accelereader-power-up-you/ndaldjfflhocdageglcnflfanmdhgfbi&#34;&gt;AcceleReader&lt;/a&gt; для Chrome Desktop&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=dev.emmaguy.pocketwidget&#34;&gt;DashClock Extension for Pocket&lt;/a&gt; для Android&lt;/li&gt;

@@ -15,12 +15,12 @@
     <meta name="description" content="You know you&rsquo;re wrong at database administrating, when&hellip;">
     <meta property="og:description" content="You know you&rsquo;re wrong at database administrating, when&hellip;" />
     
-  <link rel="stylesheet" href="https://vanadium23.me/css/base.min.ea8be235bf3e01535d2b74ac2aecaccb8c8b2b5a9fb8ff9d0fb03cc1b690e30f.css" integrity="sha256-6oviNb8&#43;AVNdK3SsKuysy4yLK1qfuP&#43;dD7A8wbaQ4w8=">
+  <link rel="stylesheet" href="https://vanadium23.me/css/base.min.a3368a1810ce5f531d4379f7ef2a70a442d894fcc461091bac1ea3cfee39833c.css" integrity="sha256-ozaKGBDOX1MdQ3n37ypwpELYlPzEYQkbrB6jz&#43;45gzw=">
   <link rel="stylesheet" href="https://vanadium23.me/css/likely.css" integrity="">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <meta name="generator" content="Hugo 0.55.3" />
+  <meta name="generator" content="Hugo 0.68.3" />
 </head>
 <body>
   <nav class="u-background">
@@ -66,27 +66,16 @@
   </div>
 </header>
   <p>You know you&rsquo;re wrong at database administrating, when&hellip;</p>
-
-<h2 id="1-don-t-monitor-free-space-on-disk">1. Don&rsquo;t monitor free space on disk</h2>
-
+<h2 id="1-dont-monitor-free-space-on-disk">1. Don&rsquo;t monitor free space on disk</h2>
 <p><strong>DO:</strong> Just do it, and not some simple trigger on 10% free left space, but either how many days till day X.</p>
-
-<h2 id="2-don-t-make-check-backups">2. Don&rsquo;t <del>make</del> check backups</h2>
-
+<h2 id="2-dont-make-check-backups">2. Don&rsquo;t <del>make</del> check backups</h2>
 <p>So you use some tools for backing up your database, but when day X comes, you can not restore from it.</p>
-
 <p><strong>DO:</strong> every backup needs to be restored.</p>
-
-<h2 id="3-don-t-monitor-slowest-frequent-queries">3. Don&rsquo;t monitor slowest/frequent queries</h2>
-
+<h2 id="3-dont-monitor-slowestfrequent-queries">3. Don&rsquo;t monitor slowest/frequent queries</h2>
 <p><strong>DO:</strong> there is different approaches for that, but the simplest one is <a href="https://github.com/dalibo/pgbadger">pgBadger</a> with syslog.</p>
-
-<h2 id="4-don-t-use-int4-as-pk-for-append-only-tables">4. Don&rsquo;t use int4 as pk for append-only tables</h2>
-
+<h2 id="4-dont-use-int4-as-pk-for-append-only-tables">4. Don&rsquo;t use int4 as pk for append-only tables</h2>
 <p><strong>DO:</strong> just use bigint. Rails make bigint as default for pk in <a href="http://www.mccartie.com/2016/12/05/rails-5.1.html">5.1</a>. Hopefully, Django will make it in 2.x.</p>
-
-<h2 id="5-don-t-restart-database-on-every-error-you-see">5. Don&rsquo;t restart database on every error you see.</h2>
-
+<h2 id="5-dont-restart-database-on-every-error-you-see">5. Don&rsquo;t restart database on every error you see.</h2>
 <p><strong>DO:</strong> hire DBA (just joking). Try to find a root cause with your monitoring. May be it&rsquo;s just bad statics on table and you need to run <code>ANALYSE table</code>.</p>
   
     <div class="likely likely-big" data-url="https://vanadium23.me/stupid-database-mistakes/">

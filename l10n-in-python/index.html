@@ -17,12 +17,12 @@ But somehow some things just don&rsquo;t connect to each other, and you just stu
     <meta property="og:description" content="In python world, many solutions for trivial problems could be found in standart library: from statistical functions to localization for your package.
 But somehow some things just don&rsquo;t connect to each other, and you just stuck at combining this constructor in right way." />
     
-  <link rel="stylesheet" href="https://vanadium23.me/css/base.min.ea8be235bf3e01535d2b74ac2aecaccb8c8b2b5a9fb8ff9d0fb03cc1b690e30f.css" integrity="sha256-6oviNb8&#43;AVNdK3SsKuysy4yLK1qfuP&#43;dD7A8wbaQ4w8=">
+  <link rel="stylesheet" href="https://vanadium23.me/css/base.min.a3368a1810ce5f531d4379f7ef2a70a442d894fcc461091bac1ea3cfee39833c.css" integrity="sha256-ozaKGBDOX1MdQ3n37ypwpELYlPzEYQkbrB6jz&#43;45gzw=">
   <link rel="stylesheet" href="https://vanadium23.me/css/likely.css" integrity="">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <meta name="generator" content="Hugo 0.55.3" />
+  <meta name="generator" content="Hugo 0.68.3" />
 </head>
 <body>
   <nav class="u-background">
@@ -69,20 +69,14 @@ But somehow some things just don&rsquo;t connect to each other, and you just stu
 </header>
   <p>In python world, many solutions for trivial problems could be found in standart library: from <a href="https://docs.python.org/3/library/statistics.html">statistical functions</a> to <a href="https://docs.python.org/3/library/gettext.html">localization</a> for your package.
 But somehow some things just don&rsquo;t connect to each other, and you just stuck at combining this constructor in right way.</p>
-
 <p>This gifs pretty sums up situation:</p>
-
-<p><img src="/images/modern-development.gif" alt="modern-development" /></p>
-
+<p><img src="/images/modern-development.gif" alt="modern-development"></p>
 <p>Our task:</p>
-
 <ul>
 <li>create python package, that has localized string</li>
 <li>provide this string to django application</li>
 </ul>
-
 <p>First thing, that you find at <a href="https://docs.python.org/3/library/gettext.html">gettext docs</a>:</p>
-
 <pre><code>import gettext
 import os
 
@@ -95,19 +89,13 @@ _ = t.ugettext
 
 message = _('Test!')
 print(message)
-</code></pre>
-
-<p>To change language on your system, you can simply set enviroment variable <em>LANG</em> or <em>LANGUAGE</em>.</p>
-
+</code></pre><p>To change language on your system, you can simply set enviroment variable <em>LANG</em> or <em>LANGUAGE</em>.</p>
 <pre><code>~ export LANG=ru
 ~ python test.py
 Test!
-</code></pre>
-
-<p>This won&rsquo;t work, because you don&rsquo;t have translated phrases in your locale dir. Let&rsquo;s compile them.
+</code></pre><p>This won&rsquo;t work, because you don&rsquo;t have translated phrases in your locale dir. Let&rsquo;s compile them.
 Command pygettext grabs all string in <em>ugettext</em> function and dumps it to pot file.
 After it, you need to init new locale (<em>note:</em> if you need to merge with previos translations use <em>msgmerge</em>).</p>
-
 <pre><code>~ pygettext test.py
 ~ mkdir -p ./locale/{en,ru}/LC_MESSAGES/
 ~ msginit --input=messages.pot --locale=en_US.UTF-8 \
@@ -115,17 +103,12 @@ After it, you need to init new locale (<em>note:</em> if you need to merge with 
 ~ msginit --input=messages.pot --locale=ru_RU.UTF-8 \
 --output=./locale/ru/LC_MESSAGES/default.po
 ~ rm messages.pot
-</code></pre>
-
-<p>Now you can open default.po files with some tools, like <a href="https://poedit.net/">POEdit</a> (<em>note:</em> I prefer Sublime Text for small po).
-Change in ru po msgstr from &lsquo;Test!&rsquo; to &lsquo;Тест!&rsquo;. When you run script again, output will be same (&lsquo;Test!&rsquo;).
+</code></pre><p>Now you can open default.po files with some tools, like <a href="https://poedit.net/">POEdit</a> (<em>note:</em> I prefer Sublime Text for small po).
+Change in ru po msgstr from &lsquo;Test!&rsquo; to &lsquo;Тест!'. When you run script again, output will be same (&lsquo;Test!').
 This is because after modifying po, we need to compile it to binary format (known as mo).</p>
-
 <pre><code>~ msgfmt en/LC_MESSAGES/default.po -o en/LC_MESSAGES/default.mo
 ~ msgfmt ru/LC_MESSAGES/default.po -o ru/LC_MESSAGES/default.mo
-</code></pre>
-
-<p>Woo-hoo, output should be translated now, but it doesn&rsquo;t work with django.
+</code></pre><p>Woo-hoo, output should be translated now, but it doesn&rsquo;t work with django.
 What shall we do? Read the <a href="https://docs.djangoproject.com/en/1.10/topics/i18n/translation/#how-django-discovers-translations">manual</a>.
 So we need to rename namespace from default to django, but also django realize <a href="https://github.com/django/django/blob/1.10.3/django/utils/translation/trans_real.py#L90">own class</a>, so insted of using gettext.translation.ugettext you need to use <em>django.utils.translation</em> one.
 Full example can be found in <a href="https://github.com/vanadium23/py-hello-l10n">repository</a>.</p>
