@@ -83,7 +83,7 @@ Generally, I prefer gunicorn + eventlet, but when you switch (or start) django p
 Based on &lt;a href=&#34;http://docs.gunicorn.org/en/stable/design.html?highlight=gaiohttp#asyncio-workers&#34;&gt;gunicorn docs&lt;/a&gt;, you need simply switch worker to &lt;em&gt;gaiohttp&lt;/em&gt; and that&amp;rsquo;s all.&lt;/p&gt;
 &lt;p&gt;Then, something bad happens.
 &lt;img src=&#34;https://vanadium23.me/images/gaiohttp-memory.png&#34; alt=&#34;gaiohttp-memory&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Answer is very simple: &lt;!-- raw HTML omitted --&gt;you write some memoryleaking code&lt;!-- raw HTML omitted --&gt; &lt;em&gt;gaiohttp&lt;/em&gt; ignores max_requests option.
+&lt;p&gt;Answer is very simple: &lt;strike&gt;you write some memoryleaking code&lt;/strike&gt; &lt;em&gt;gaiohttp&lt;/em&gt; ignores max_requests option.
 In other words, workers won&amp;rsquo;t be killed after max_requests count. After some search on internet, there is an &lt;a href=&#34;http://asvetlov.blogspot.ru/2014/06/asyncio-aiohttp-gunicorn.html&#34;&gt;article&lt;/a&gt; from asyncio contributor about copy-n-pasting worker from aiohttp repo to gunicorn.
 &lt;a href=&#34;http://aiohttp.readthedocs.io/en/stable/deployment.html#start-gunicorn&#34;&gt;Aiohttp docs&lt;/a&gt; says that you should use &lt;code&gt;aiohttp.worker.GunicornWebWorker&lt;/code&gt;, but when you switch setting there will be error.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;[5898] [ERROR] Exception in worker process

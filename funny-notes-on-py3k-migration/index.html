@@ -20,7 +20,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.69.2" />
 </head>
 <body>
   <nav class="u-background">
@@ -80,7 +80,7 @@ Always remember simple thing: more unit &amp; integrations tests you have =&gt; 
 <li><a href="#py3k-redispy">changes in work with redis-py</a></li>
 <li><a href="#py3k-django">Note: how to make smaller diff between py2 and py3 version on django</a></li>
 </ol>
-<h1 id="a-namepy3k-divisionadivision"><!-- raw HTML omitted --><!-- raw HTML omitted -->Division</h1>
+<h1 id="a-namepy3k-divisionadivision"><a name="py3k-division"></a>Division</h1>
 <p>Can you guess what kind of exception will be there,
 if hotel.rating is integer.</p>
 <pre><code>stars = range(hotel.rating / 10)
@@ -90,7 +90,7 @@ if hotel.rating is integer.</p>
 <pre><code># do it before migrations, it works on py2
 from __future__ import division
 stars = range(hotel.rating // 10)
-</code></pre><h1 id="a-namepy3k-comparationsaunorderable-types"><!-- raw HTML omitted --><!-- raw HTML omitted -->Unorderable types</h1>
+</code></pre><h1 id="a-namepy3k-comparationsaunorderable-types"><a name="py3k-comparations"></a>Unorderable types</h1>
 <p>So, in python 3 you can&rsquo;t do such things:</p>
 <pre><code>None &gt; None
 1 &gt; None
@@ -105,7 +105,7 @@ stars = range(hotel.rating // 10)
 max_index = max(chosen_indexes)
 </code></pre><p>That&rsquo;s ok code, but if field chosen_index can be null, you will catch TypeError.</p>
 <p>Solution: just filter None values in list, or null in queryset.</p>
-<h2 id="a-namepy3k-exceptaexcept-exception"><!-- raw HTML omitted --><!-- raw HTML omitted -->except Exception</h2>
+<h2 id="a-namepy3k-exceptaexcept-exception"><a name="py3k-except"></a>except Exception</h2>
 <p>Pretty much uses external APIs: may be you send letters through MailGun or Mandrill, you can call some other services in your company.
 But you know - sometimes they just fail: connection timeouts, 5xx errors.
 For handling such cases you can make tuple of Exception:</p>
@@ -154,7 +154,7 @@ except ValueError as exc:
 # there will be no exc variable on py3k
 print(exc)
 &gt; NameError: name 'exc' is not defined
-</code></pre><h1 id="a-namepy3k-byteswarningabytes-comparison"><!-- raw HTML omitted --><!-- raw HTML omitted -->bytes comparison</h1>
+</code></pre><h1 id="a-namepy3k-byteswarningabytes-comparison"><a name="py3k-byteswarning"></a>bytes comparison</h1>
 <p>It&rsquo;s greatest pain in migration. So much pain, I can feel it in my head.
 Next 3 bullets is about it.
 First: no implicit conversion between str and bytes.
@@ -163,10 +163,10 @@ Solution:</p>
 </code></pre><p>It throw ByteWarning exception insted of falsing b&rsquo;&rsquo; == &lsquo;'.</p>
 <p>Second: some libs expected bytes on input, some text.</p>
 <p>Solution: call .decode on bytes &amp; encode on str.</p>
-<h1 id="a-namepy3k-ujsonajust-ujson"><!-- raw HTML omitted --><!-- raw HTML omitted -->just ujson</h1>
+<h1 id="a-namepy3k-ujsonajust-ujson"><a name="py3k-ujson"></a>just ujson</h1>
 <p>Json from standart libs expects str on input, ujson can deal with str and bytes.
 Also ujson much faster, see comparasion on <a href="https://github.com/esnme/ultrajson#benchmarks">github</a>.</p>
-<h1 id="a-namepy3k-lxmlalxml-trap"><!-- raw HTML omitted --><!-- raw HTML omitted -->lxml trap</h1>
+<h1 id="a-namepy3k-lxmlalxml-trap"><a name="py3k-lxml"></a>lxml trap</h1>
 <p>Ooops, this was tough one. Some service provides XML API.
 It answers question of life, universe and everything.</p>
 <pre><code>&lt;root&gt;
@@ -191,9 +191,9 @@ xml_answer <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34
 </span><span style="color:#e6db74">&#34;&#34;&#34;</span>
 xml <span style="color:#f92672">=</span> objectify<span style="color:#f92672">.</span>parse(buf)<span style="color:#f92672">.</span>getroot()
 </code></pre></div><p>Aaaand lxml wants bytes on input instead of string ¯\<em>(ツ)</em>/¯.</p>
-<h1 id="a-namepy3k-redispyaredis-py-bytes"><!-- raw HTML omitted --><!-- raw HTML omitted -->redis-py bytes</h1>
+<h1 id="a-namepy3k-redispyaredis-py-bytes"><a name="py3k-redispy"></a>redis-py bytes</h1>
 <p>All redis action from redispy returns bytes now. So if you use pure redis (not a django.core.cache), you need to explicit call decode. Also pickling objects between python3 and python2 doesn&rsquo;t work, so make sure you make different keys in cache.</p>
-<h2 id="a-namepy3k-djangoanote-how-to-make-smaller-diff-between-py2-and-py3-version-on-django"><!-- raw HTML omitted --><!-- raw HTML omitted -->Note: how to make smaller diff between py2 and py3 version on django</h2>
+<h2 id="a-namepy3k-djangoanote-how-to-make-smaller-diff-between-py2-and-py3-version-on-django"><a name="py3k-django"></a>Note: how to make smaller diff between py2 and py3 version on django</h2>
 <p>So sums it up with django experience:</p>
 <ol>
 <li>use smart_text instead of smart_unicode</li>

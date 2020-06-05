@@ -80,7 +80,7 @@
       <description>&lt;p&gt;У меня есть какая-то непонятная страсть сохранять, складировать и каталогизировать информацией, которую обладаю. Это не какие-нибудь случайные стикеры, прикреплённые к монитору, или бумажки разбросанные по столу.
 В этой заметке (&lt;em&gt;ха-ха&lt;/em&gt;) хочу рассказать, что пробовал и к чему пришёл из цифровых заметочниц.&lt;/p&gt;
 &lt;p&gt;Вдохновление для написания статьи появилось из-за статьи &lt;a href=&#34;https://kortina.nyc/essays/suping-up-vs-code-as-a-markdown-notebook/&#34;&gt;&amp;ldquo;Suping Up VS Code as a Markdown Notebook&amp;rdquo;&lt;/a&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- more --&gt;
 &lt;h2 id=&#34;evernotehttpsevernotecom&#34;&gt;&lt;a href=&#34;https://evernote.com/&#34;&gt;Evernote&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://evernote.com/img/footer/footer-logo.svg&#34; alt=&#34;Evernote logo&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Думаю, что все кто старается делать цифровые заметки сталкивались с этим приложением. До него я вёл дневники или блокноты, которые старательно писал с какого по какой год там лежат заметки. Теперь дневники лежат пыляться на чердаке у бабушки, а Evernote в виде бэкапа на NAS.
@@ -167,7 +167,7 @@
 &lt;p&gt;“Before software can be reusable, it first has to be usable.” – &lt;a href=&#34;https://en.wikipedia.org/wiki/Ralph_Johnson_(computer_scientist)&#34;&gt;Ralph Johnson&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Это статья скорее для себя, нежели чем хотелось чем-то поделиться. Идея её написания висела довольно давно, но сейчас сподвигло её написать статья &lt;a href=&#34;https://fasterthanli.me/blog/2020/i-want-off-mr-golangs-wild-ride/&#34;&gt;&amp;ldquo;I want off Mr. Golang&amp;rsquo;s Wild Ride&amp;rdquo;&lt;/a&gt;. Мысленно можно разделить эту статью на две части: первая, в которой идёт обсуждение объединения или нормализации API между разными операционными системами, и вторая, в которой идёт речь про модули и их реализацию. Russ Cox на &lt;a href=&#34;https://research.swtch.com/&#34;&gt;своём сайте&lt;/a&gt; сделал серию из 11 (!) статей, чтобы объяснить почему модули это не так просто, как казалось. Давайте кратко пройдёмся по истории работы с библиотеками в golang.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- more --&gt;
 &lt;h2 id=&#34;ненавистный-gopath&#34;&gt;Ненавистный GOPATH&lt;/h2&gt;
 &lt;p&gt;Первое, что тебе нужно было сделать прежде, чем начать работу с golang - это установить переменную GOPATH. Она была нужна для того, чтобы команда &lt;code&gt;go get&lt;/code&gt; знала куда складывать пакеты. Сейчас есть значение по умолчанию равное &lt;code&gt;$HOME/go&lt;/code&gt;, что немножко упрощает работу, но не сильно. В качестве неймспейса для всех библиотек используется формат &lt;code&gt;host/namespace/lib&lt;/code&gt;, например: &lt;code&gt;github.com/xo/usql&lt;/code&gt;.
 Пробуем поставить утилиту &lt;code&gt;usql&lt;/code&gt;:&lt;/p&gt;
@@ -218,7 +218,7 @@
 111M	.
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Утилита предназначена для работы с разными базами данных и ожидаемо ей требуется много библиотек-драйверов для работы, но 111 мегабайт и минута на скачивание выглядит, как перебор. Если вам нужна только сама утилита, всегда можно использовать опцию &lt;code&gt;-u&lt;/code&gt;. В защиту такого подхода, хочу сказать что использование прямого соответствия между импортом библиотеки и пути по которому она находится удобно. Так как язык разработал Google, то сразу был сделан вывод о том, что вся эта система работала поверх монорепозитория внутри компании и такое использование было логично. Но как только язык вышел публично, сразу стало понятно что использовать хост сервиса в пути не самое удобное решение. В случае, если проект был перемещён в другое пространство, ничего страшного не происходит, но вот если поменялся хост, то труба. Об этом подумали несколько людей и началась вторая эпоха.&lt;/p&gt;
 &lt;h2 id=&#34;средневековый-vendor&#34;&gt;Средневековый vendor&lt;/h2&gt;
-&lt;p&gt;Когда node.js только набирал популярность (версии 0.8-0.12), шёл довольно большой холивар на тему вендоринга зависимостей. Были люди, которые говорили, что нужно складывать всю папку node_modules в репозиторий и при обновлении комиттить изменения, но в итоге сообщество пришло к тому, что это приносит только лишние расходы и отказались. Как мы все потом знаем, это привело к трагедии &lt;!-- raw HTML omitted --&gt;Дарта Плегаса&lt;!-- raw HTML omitted --&gt; &lt;a href=&#34;https://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm&#34;&gt;leftpad&lt;/a&gt;. В Golang решили пойти тем же путём и появилась папка vendor, правда чтобы её использовать необходимо было перезаписать GOPATH в текущую директорую и тогда начинались пляски с тем, что в директории должна была быть папка src, а в &lt;code&gt;.gitignore&lt;/code&gt; шли директории &lt;code&gt;bin/&lt;/code&gt; и &lt;code&gt;pkg/&lt;/code&gt;. Эту проблему надо было автоматизировать и появились инструменты, чтобы с таким подходом было работать удобно, а именно &lt;a href=&#34;https://github.com/Masterminds/glide&#34;&gt;glider&lt;/a&gt;, а в последствии &lt;a href=&#34;https://github.com/golang/dep&#34;&gt;dep&lt;/a&gt;. Более того, &lt;code&gt;dep&lt;/code&gt; был сделан как официальный эксперимент группы разработки языка, и в итоге именно он дал толчок развитию модулей в go 1.11. Из-за данных инструментов в репозиториях пропали папки &lt;code&gt;vendor&lt;/code&gt;, так как они создавали lock-файлы и можно было воспроизвести среду. А вот проблемы были в том, что каждый инструмент делал свой формат. :(&lt;/p&gt;
+&lt;p&gt;Когда node.js только набирал популярность (версии 0.8-0.12), шёл довольно большой холивар на тему вендоринга зависимостей. Были люди, которые говорили, что нужно складывать всю папку node_modules в репозиторий и при обновлении комиттить изменения, но в итоге сообщество пришло к тому, что это приносит только лишние расходы и отказались. Как мы все потом знаем, это привело к трагедии &lt;strike&gt;Дарта Плегаса&lt;/strike&gt; &lt;a href=&#34;https://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm&#34;&gt;leftpad&lt;/a&gt;. В Golang решили пойти тем же путём и появилась папка vendor, правда чтобы её использовать необходимо было перезаписать GOPATH в текущую директорую и тогда начинались пляски с тем, что в директории должна была быть папка src, а в &lt;code&gt;.gitignore&lt;/code&gt; шли директории &lt;code&gt;bin/&lt;/code&gt; и &lt;code&gt;pkg/&lt;/code&gt;. Эту проблему надо было автоматизировать и появились инструменты, чтобы с таким подходом было работать удобно, а именно &lt;a href=&#34;https://github.com/Masterminds/glide&#34;&gt;glider&lt;/a&gt;, а в последствии &lt;a href=&#34;https://github.com/golang/dep&#34;&gt;dep&lt;/a&gt;. Более того, &lt;code&gt;dep&lt;/code&gt; был сделан как официальный эксперимент группы разработки языка, и в итоге именно он дал толчок развитию модулей в go 1.11. Из-за данных инструментов в репозиториях пропали папки &lt;code&gt;vendor&lt;/code&gt;, так как они создавали lock-файлы и можно было воспроизвести среду. А вот проблемы были в том, что каждый инструмент делал свой формат. :(&lt;/p&gt;
 &lt;h2 id=&#34;современный-gomod&#34;&gt;Современный go.mod&lt;/h2&gt;
 &lt;p&gt;И здесь мы возвращаемся к модулям с которых началась эта статья. В go 1.11 можно было с помощью переменной GO111MODULE=on, а с недавним релизом go 1.14 данное поведение стало по умолчанию. Что нужно сделать для того, чтобы его использовать прекрасно описано в &lt;a href=&#34;https://blog.golang.org/using-go-modules&#34;&gt;The Go Blog&lt;/a&gt; в 4 (!) частях. Здесь бы хотелось сосредоточиться на том, почему это не современная штука.&lt;/p&gt;
 &lt;h3 id=&#34;проблема-1-перейти-надо-всем&#34;&gt;Проблема №1. Перейти надо всем&lt;/h3&gt;
@@ -366,7 +366,7 @@ End-to-end тесты должны писаться отдельно, запус
 &lt;/ul&gt;
 &lt;p&gt;Предусматривайте graceful degradation.
 Лучше отвалиться, чем тормозить и старайтесь знать ограничения сервисов.
-Timeout&#39;ы, пуллинг, идемподентность - наше всё.&lt;/p&gt;
+Timeout&amp;rsquo;ы, пуллинг, идемподентность - наше всё.&lt;/p&gt;
 &lt;p&gt;Не забудьте делать документацию по API!&lt;/p&gt;
 &lt;h2 id=&#34;итого&#34;&gt;Итого&lt;/h2&gt;
 &lt;ul&gt;
@@ -387,7 +387,7 @@ Timeout&#39;ы, пуллинг, идемподентность - наше всё
       <guid>https://vanadium23.me/just-space/</guid>
       <description>&lt;p&gt;&amp;ldquo;Манн, Иванов и Фербер&amp;rdquo; - хитрое издательство. К каждой покупке они не только прикладывают вкладыш с описаниями последних новинок, но и вставляют в начало по пять книг, которые дополняют только что полученную книжку. Так и произошло с книгой &amp;ldquo;Просто космос&amp;rdquo;, которая была рекомендована в &amp;ldquo;Путь джедая&amp;rdquo; Дорофеева. Более того, в одной из сносок Дорофеев уже сам напомнил об этой книге.
 Книга хороша подходит для новичков, кто хочет систематизировать свою жизнь, но ничего нового по сравнению с &lt;a href=&#34;https://vanadium23.me/jedi-book-experiments/&#34;&gt;&amp;ldquo;Джедайскими техниками&amp;rdquo;&lt;/a&gt; вы там не найдёте. Вместо покупки книги, лучше купить ежедневник от автора Катерины Ленгольд, поскольку больше подтолкнёт к применению свежих навыков.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;!-- more --&gt;
 &lt;p&gt;Итак, что нам пишут в книге:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Ставим цели на спринт длинной в 9 недель.
@@ -458,7 +458,7 @@ Timeout&#39;ы, пуллинг, идемподентность - наше всё
       <link>https://vanadium23.me/digital-minimalism/</link>
       <pubDate>Sun, 12 Jan 2020 16:00:00 +0300</pubDate>
       <guid>https://vanadium23.me/digital-minimalism/</guid>
-      <description>&lt;p&gt;В декабре прочитал книжку &amp;ldquo;Цифровой минимализм&amp;rdquo;. Автор чем-то напоминает луддитов и пытается бороться с &lt;!-- raw HTML omitted --&gt;ветряными мельницами&lt;!-- raw HTML omitted --&gt; смартфонами.
+      <description>&lt;p&gt;В декабре прочитал книжку &amp;ldquo;Цифровой минимализм&amp;rdquo;. Автор чем-то напоминает луддитов и пытается бороться с &lt;strike&gt;ветряными мельницами&lt;/strike&gt; смартфонами.
 У себя не чувствую проблему с тем, что телефон отнимает слишком много времени. Социальные сети, на который идёт упор в книге, давно выброшены.
 Остался только Twitter, но им стараюсь пользоваться только на компьютере через tweetdeck. С другой стороны, книга была высоко оценена в голосование goodreads.com за 2019 год: пятое место в жанре нон-фикшн.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/digital-wellbeing.jpg&#34; alt=&#34;Digital wellbeing на андроид телефонах&#34;&gt;&lt;/p&gt;
@@ -571,7 +571,7 @@ Timeout&#39;ы, пуллинг, идемподентность - наше всё
       <guid>https://vanadium23.me/mission-teams/</guid>
       <description>&lt;p&gt;My presentation about cross functional teams from IndexTech 2019 @ Technopolis.&lt;/p&gt;
 &lt;p&gt;Video is in Russian:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;</description>
+&lt;iframe width=&#34;640&#34; height=&#34;360&#34; src=&#34;https://www.youtube.com/embed/EuvtmH6TA-M&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;</description>
     </item>
     <item>
       <title>Заметки по поездке в Лондон</title>
@@ -833,7 +833,7 @@ Timeout&#39;ы, пуллинг, идемподентность - наше всё
 &lt;li&gt;Удалось разгрести старьё, которое лежали мёртвым грузом.&lt;/li&gt;
 &lt;li&gt;Уровень стресса и тревожности стал меньше, потому что вот они задачи - лежат в списочке.&lt;/li&gt;
 &lt;li&gt;Стало проще выкидывать задачи, потому что это не задача, а это не важно.&lt;/li&gt;
-&lt;li&gt;Да, для этого требуется щепетильность, усидчивость &lt;!-- raw HTML omitted --&gt;и задротство&lt;!-- raw HTML omitted --&gt;.&lt;/li&gt;
+&lt;li&gt;Да, для этого требуется щепетильность, усидчивость &lt;strike&gt;и задротство&lt;/strike&gt;.&lt;/li&gt;
 &lt;li&gt;Да, всем этим можно и не заниматься. :)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Вот вам графичек по количеству завершённых задач в Todoist за 3 последних года:
@@ -870,7 +870,7 @@ Timeout&#39;ы, пуллинг, идемподентность - наше всё
 &lt;/ul&gt;
 &lt;h3 id=&#34;подводные-камни-при-переезде&#34;&gt;Подводные камни при переезде.&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;Если вы используете Github User Page, а не Github Project Page, то вам не повезло и папку docs/ в репозитории вы использовать не можете. Вместо этого придеться в репозиторий &lt;!-- raw HTML omitted --&gt;.github.io класть сразу сгенерированную статику. То есть, необходимо создать ещё один репозиторий, где будет hugo, а предыдущий подключить в качестве сабмодуля гита.&lt;/li&gt;
+&lt;li&gt;Если вы используете Github User Page, а не Github Project Page, то вам не повезло и папку docs/ в репозитории вы использовать не можете. Вместо этого придеться в репозиторий &lt;username&gt;.github.io класть сразу сгенерированную статику. То есть, необходимо создать ещё один репозиторий, где будет hugo, а предыдущий подключить в качестве сабмодуля гита.&lt;/li&gt;
 &lt;li&gt;Если вы мигрируете с jekyll, то не забудьте удалить предыдущий config.yaml из репозитория, иначе gihub будет считать, что это jekyll репозиторий и попробует его собрать.&lt;/li&gt;
 &lt;li&gt;По-умолчанию, jekyll использует название файла в качестве пути, а hugo повторяет иерархию папок. Для того, чтобы повторить поведение, можно в config.yaml прописать опцию permalinks, или же в каждом файле использовать опцию alias.&lt;/li&gt;
 &lt;/ol&gt;
@@ -1078,7 +1078,7 @@ Timeout&#39;ы, пуллинг, идемподентность - наше всё
 &lt;li&gt;Выбери рис или рисовую лапшу.&lt;/li&gt;
 &lt;li&gt;Добавьте овощи по выбору.&lt;/li&gt;
 &lt;li&gt;Добавьте мясо: курица, говядина, свинина или морепродукты.&lt;/li&gt;
-&lt;li&gt;&lt;!-- raw HTML omitted --&gt;(опционально) Добавить соус на основе пасты из чили.&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strike&gt;(опционально) Добавить соус на основе пасты из чили.&lt;/strike&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Кроме этого из достойных упоминаний - спринг роллы, тайский омлет с п.3, маленькие шашлычки.
 Если рис в конец надоел, то везде можно найти европейские ресторанчики, но с чуть более высоким ценником.
@@ -1292,7 +1292,7 @@ Timeout&#39;ы, пуллинг, идемподентность - наше всё
 &lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/100-tabs-mobile-only.png&#34; alt=&#34;Слишком много вкладок на мобильном&#34;&gt;&lt;/p&gt;
 &lt;p&gt;И когда вкладок так много, то вам приходится держать большой контекст в голове где рабочее, а где &lt;em&gt;просто посмотреть&lt;/em&gt;. У кого-то с этим нет проблем, у кого-то есть и я, к сожалению, из второго числа. К этому добавлялось желание не только успевать читать (что, забегая вперед, невозможно и не нужно), но и следить за новостями. И я открыл для себя RSS, а точнее чудесный на тот момент Google Reader:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/greader.png&#34; alt=&#34;Google Reader&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Сервис был дико удобным, т.к. позволял собрать поток со всех сайтов в одну большую ленту к &lt;!-- raw HTML omitted --&gt;чтению&lt;!-- raw HTML omitted --&gt; просмотру. Именно просмотру, поскольку большая часть отбрасывалась по заголовку и выдержке. Правда оставались лонгриды или просто тяжелые к прочтению статьи, что возвращало нас к картинке:&lt;/p&gt;
+&lt;p&gt;Сервис был дико удобным, т.к. позволял собрать поток со всех сайтов в одну большую ленту к &lt;strike&gt;чтению&lt;/strike&gt; просмотру. Именно просмотру, поскольку большая часть отбрасывалась по заголовку и выдержке. Правда оставались лонгриды или просто тяжелые к прочтению статьи, что возвращало нас к картинке:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/too-many-tabs.png&#34; alt=&#34;Слишком много вкладок&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Дальнейшее исследование этой проблемы привело меня к тому, что есть сервисы по сохранению вкладок. На слуху было два: instapaper и pocket, но первый был только под яблоко, поэтому не подходил. Оставалось решить как туда складывать статьи без копирования ссылок или открытия их в браузере. В feedly (пришедшем на замену Google Reader) такую возможность сделали в Pro-версии, но это не наш путь. Здесь на помощь к нам приходит сервис ifttt.com.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/ifttt.png&#34; alt=&#34;Ifttt - это изолента между сервисами&#34;&gt;&lt;/p&gt;
@@ -1652,7 +1652,7 @@ Timeout&#39;ы, пуллинг, идемподентность - наше всё
 &lt;p&gt;К чему было это упражнение? Опуская за скобки обсуждение, что пенсионный фонд заморожен, экономика в говне и тому подобное, попробуйте ответить на вопрос, как вы будете обеспечивать себя в старости.
 &lt;img src=&#34;https://cs8.pikabu.ru/post_img/big/2017/12/15/11/1513360876156752562.jpg&#34; alt=&#34;Экономика в огне, ты в огне и всё в оген&#34;&gt;
 Ответ: как минимум откладывайте деньги и переведите свою пенсию в негосударственный фонд.
-Так просто? Нет, ещё на вас может упасть кирпич или случиться инсульт. По здоровью - это не ко мне, а скорее к &lt;a href=&#34;https://vc.ru/26886-personal-biohacking&#34;&gt;&lt;!-- raw HTML omitted --&gt;биохакерам&lt;!-- raw HTML omitted --&gt;&lt;/a&gt; врачам. А вот с риском падения кирпича можно справиться с помощью страхования жизни. Пока эта тема не была мной изучена и поэтому советовать ничего не буду.&lt;/p&gt;
+Так просто? Нет, ещё на вас может упасть кирпич или случиться инсульт. По здоровью - это не ко мне, а скорее к &lt;a href=&#34;https://vc.ru/26886-personal-biohacking&#34;&gt;&lt;strike&gt;биохакерам&lt;/strike&gt;&lt;/a&gt; врачам. А вот с риском падения кирпича можно справиться с помощью страхования жизни. Пока эта тема не была мной изучена и поэтому советовать ничего не буду.&lt;/p&gt;
 &lt;h2 id=&#34;итого&#34;&gt;Итого&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Появилось ощущение контроля финансового потока, а не просто &amp;ldquo;знаю на что потратил&amp;rdquo;&lt;/li&gt;
@@ -1663,7 +1663,7 @@ Timeout&#39;ы, пуллинг, идемподентность - наше всё
 &lt;p&gt;Теперь при покупке в магазинах на чеках распечатывается QR-код, в котором зашиты номер транзакции и юридического лица. С этими данными можно пойти в API nalog.ru и получить наименования пунктов из чека: продуктов в случае магазина, или блюд, если это был ресторан. Счастье в том, что это проинтегрировали в zenmoney и можно смотреть как дорожают те или иные продукты :)&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/zenmoney-qr1.png&#34; alt=&#34;Показать чек&#34;&gt;
 &lt;img src=&#34;https://vanadium23.me/images/zenmoney-qr2.png&#34; alt=&#34;Пункты из чека&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Если вы дочитали до конца и не &lt;!-- raw HTML omitted --&gt;охуели&lt;!-- raw HTML omitted --&gt; испугались, то перед вами открылся дивный новый мир.&lt;/p&gt;</description>
+&lt;p&gt;Если вы дочитали до конца и не &lt;strike&gt;охуели&lt;/strike&gt; испугались, то перед вами открылся дивный новый мир.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Заметки по поездке в Марокко</title>
@@ -1673,7 +1673,7 @@ Timeout&#39;ы, пуллинг, идемподентность - наше всё
       <description>&lt;p&gt;Арааабская ночь&lt;/p&gt;
 &lt;h2 id=&#34;общее&#34;&gt;Общее&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Про города:&lt;/strong&gt; &lt;!-- raw HTML omitted --&gt;все&lt;!-- raw HTML omitted --&gt; большинство городов строится по принципу, что есть медина (крепость), внутри которой всё для туристов и остальной город напоминает типичный жилой город.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Про города:&lt;/strong&gt; &lt;strike&gt;все&lt;/strike&gt; большинство городов строится по принципу, что есть медина (крепость), внутри которой всё для туристов и остальной город напоминает типичный жилой город.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Про еду:&lt;/strong&gt; тажин кефта - мясные шарики в томатном соусе с яйцом. Ничего больше вам не нужно! Если шутки в сторону, то порции &lt;em&gt;очень&lt;/em&gt; большие, поэтому салат/закуску стоит брать одну на двоих.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Про такси:&lt;/strong&gt; единственный вид транспорта по городу, во всех такси есть таксометер. Он там есть и им надо об этом напоминать и говорить сразу. Для маленьких городов есть фикс прайс в 7 дирхам (~50 рублей).&lt;/li&gt;
 &lt;li&gt;Про &lt;strong&gt;культуру:&lt;/strong&gt; надо понимать, что там везде базар, поэтому если вам говорят ценник X, то надо говорить X/4 и где-то в X/2 вы сойдётесь. (Система очень сильно напоминает Kingdom Come: Deliverance)&lt;/li&gt;
@@ -1723,9 +1723,9 @@ Timeout&#39;ы, пуллинг, идемподентность - наше всё
       <guid>https://vanadium23.me/pipenv-pipfile-pip-what/</guid>
       <description>&lt;p&gt;My presentation about PipEnv from &lt;a href=&#34;http://www.moscowpython.ru/meetup/50/&#34;&gt;MoscowPython Meetup #50&lt;/a&gt; @ Rambler HQ.&lt;/p&gt;
 &lt;p&gt;Video is in russian:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;iframe width=&#34;640&#34; height=&#34;360&#34; src=&#34;https://www.youtube.com/embed/2N0phx7WTEI&#34; frameborder=&#34;0&#34; gesture=&#34;media&#34; allow=&#34;encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;p&gt;And slides in english:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;</description>
+&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;a52512c5af6c43a09cba15f23737e449&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;</description>
     </item>
     <item>
       <title>Вишлист на Д.Р. 2017</title>
@@ -1804,9 +1804,9 @@ Timeout&#39;ы, пуллинг, идемподентность - наше всё
       <guid>https://vanadium23.me/ajax-rest-graphql/</guid>
       <description>&lt;p&gt;My presentation about GraphQL from MoscowPython Meetup #47 @ Mail.Ru HQ.&lt;/p&gt;
 &lt;p&gt;Video is in russian:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;iframe width=&#34;640&#34; height=&#34;360&#34; src=&#34;https://www.youtube.com/embed/9JqtlPO78y0&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;p&gt;And slides in english:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;</description>
+&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;3022a498ddc344b4933b4b955dd7c660&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;</description>
     </item>
     <item>
       <title>Заметки по поездке Брюгге-Роттердам-Брюссель</title>
@@ -1897,7 +1897,7 @@ Always remember simple thing: more unit &amp;amp; integrations tests you have =&
 &lt;li&gt;&lt;a href=&#34;#py3k-redispy&#34;&gt;changes in work with redis-py&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#py3k-django&#34;&gt;Note: how to make smaller diff between py2 and py3 version on django&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id=&#34;a-namepy3k-divisionadivision&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Division&lt;/h1&gt;
+&lt;h1 id=&#34;a-namepy3k-divisionadivision&#34;&gt;&lt;a name=&#34;py3k-division&#34;&gt;&lt;/a&gt;Division&lt;/h1&gt;
 &lt;p&gt;Can you guess what kind of exception will be there,
 if hotel.rating is integer.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;stars = range(hotel.rating / 10)
@@ -1907,7 +1907,7 @@ if hotel.rating is integer.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# do it before migrations, it works on py2
 from __future__ import division
 stars = range(hotel.rating // 10)
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;a-namepy3k-comparationsaunorderable-types&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Unorderable types&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;a-namepy3k-comparationsaunorderable-types&#34;&gt;&lt;a name=&#34;py3k-comparations&#34;&gt;&lt;/a&gt;Unorderable types&lt;/h1&gt;
 &lt;p&gt;So, in python 3 you can&amp;rsquo;t do such things:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;None &amp;gt; None
 1 &amp;gt; None
@@ -1922,7 +1922,7 @@ stars = range(hotel.rating // 10)
 max_index = max(chosen_indexes)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;That&amp;rsquo;s ok code, but if field chosen_index can be null, you will catch TypeError.&lt;/p&gt;
 &lt;p&gt;Solution: just filter None values in list, or null in queryset.&lt;/p&gt;
-&lt;h2 id=&#34;a-namepy3k-exceptaexcept-exception&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;except Exception&lt;/h2&gt;
+&lt;h2 id=&#34;a-namepy3k-exceptaexcept-exception&#34;&gt;&lt;a name=&#34;py3k-except&#34;&gt;&lt;/a&gt;except Exception&lt;/h2&gt;
 &lt;p&gt;Pretty much uses external APIs: may be you send letters through MailGun or Mandrill, you can call some other services in your company.
 But you know - sometimes they just fail: connection timeouts, 5xx errors.
 For handling such cases you can make tuple of Exception:&lt;/p&gt;
@@ -1971,7 +1971,7 @@ except ValueError as exc:
 # there will be no exc variable on py3k
 print(exc)
 &amp;gt; NameError: name &#39;exc&#39; is not defined
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;a-namepy3k-byteswarningabytes-comparison&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;bytes comparison&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;a-namepy3k-byteswarningabytes-comparison&#34;&gt;&lt;a name=&#34;py3k-byteswarning&#34;&gt;&lt;/a&gt;bytes comparison&lt;/h1&gt;
 &lt;p&gt;It&amp;rsquo;s greatest pain in migration. So much pain, I can feel it in my head.
 Next 3 bullets is about it.
 First: no implicit conversion between str and bytes.
@@ -1980,10 +1980,10 @@ Solution:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It throw ByteWarning exception insted of falsing b&amp;rsquo;&amp;rsquo; == &amp;lsquo;&#39;.&lt;/p&gt;
 &lt;p&gt;Second: some libs expected bytes on input, some text.&lt;/p&gt;
 &lt;p&gt;Solution: call .decode on bytes &amp;amp; encode on str.&lt;/p&gt;
-&lt;h1 id=&#34;a-namepy3k-ujsonajust-ujson&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;just ujson&lt;/h1&gt;
+&lt;h1 id=&#34;a-namepy3k-ujsonajust-ujson&#34;&gt;&lt;a name=&#34;py3k-ujson&#34;&gt;&lt;/a&gt;just ujson&lt;/h1&gt;
 &lt;p&gt;Json from standart libs expects str on input, ujson can deal with str and bytes.
 Also ujson much faster, see comparasion on &lt;a href=&#34;https://github.com/esnme/ultrajson#benchmarks&#34;&gt;github&lt;/a&gt;.&lt;/p&gt;
-&lt;h1 id=&#34;a-namepy3k-lxmlalxml-trap&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;lxml trap&lt;/h1&gt;
+&lt;h1 id=&#34;a-namepy3k-lxmlalxml-trap&#34;&gt;&lt;a name=&#34;py3k-lxml&#34;&gt;&lt;/a&gt;lxml trap&lt;/h1&gt;
 &lt;p&gt;Ooops, this was tough one. Some service provides XML API.
 It answers question of life, universe and everything.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;root&amp;gt;
@@ -2008,9 +2008,9 @@ xml_answer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span sty
 &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
 xml &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; objectify&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;parse(buf)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;getroot()
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Aaaand lxml wants bytes on input instead of string ¯\&lt;em&gt;(ツ)&lt;/em&gt;/¯.&lt;/p&gt;
-&lt;h1 id=&#34;a-namepy3k-redispyaredis-py-bytes&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;redis-py bytes&lt;/h1&gt;
+&lt;h1 id=&#34;a-namepy3k-redispyaredis-py-bytes&#34;&gt;&lt;a name=&#34;py3k-redispy&#34;&gt;&lt;/a&gt;redis-py bytes&lt;/h1&gt;
 &lt;p&gt;All redis action from redispy returns bytes now. So if you use pure redis (not a django.core.cache), you need to explicit call decode. Also pickling objects between python3 and python2 doesn&amp;rsquo;t work, so make sure you make different keys in cache.&lt;/p&gt;
-&lt;h2 id=&#34;a-namepy3k-djangoanote-how-to-make-smaller-diff-between-py2-and-py3-version-on-django&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Note: how to make smaller diff between py2 and py3 version on django&lt;/h2&gt;
+&lt;h2 id=&#34;a-namepy3k-djangoanote-how-to-make-smaller-diff-between-py2-and-py3-version-on-django&#34;&gt;&lt;a name=&#34;py3k-django&#34;&gt;&lt;/a&gt;Note: how to make smaller diff between py2 and py3 version on django&lt;/h2&gt;
 &lt;p&gt;So sums it up with django experience:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;use smart_text instead of smart_unicode&lt;/li&gt;
@@ -2082,7 +2082,7 @@ Generally, I prefer gunicorn + eventlet, but when you switch (or start) django p
 Based on &lt;a href=&#34;http://docs.gunicorn.org/en/stable/design.html?highlight=gaiohttp#asyncio-workers&#34;&gt;gunicorn docs&lt;/a&gt;, you need simply switch worker to &lt;em&gt;gaiohttp&lt;/em&gt; and that&amp;rsquo;s all.&lt;/p&gt;
 &lt;p&gt;Then, something bad happens.
 &lt;img src=&#34;https://vanadium23.me/images/gaiohttp-memory.png&#34; alt=&#34;gaiohttp-memory&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Answer is very simple: &lt;!-- raw HTML omitted --&gt;you write some memoryleaking code&lt;!-- raw HTML omitted --&gt; &lt;em&gt;gaiohttp&lt;/em&gt; ignores max_requests option.
+&lt;p&gt;Answer is very simple: &lt;strike&gt;you write some memoryleaking code&lt;/strike&gt; &lt;em&gt;gaiohttp&lt;/em&gt; ignores max_requests option.
 In other words, workers won&amp;rsquo;t be killed after max_requests count. After some search on internet, there is an &lt;a href=&#34;http://asvetlov.blogspot.ru/2014/06/asyncio-aiohttp-gunicorn.html&#34;&gt;article&lt;/a&gt; from asyncio contributor about copy-n-pasting worker from aiohttp repo to gunicorn.
 &lt;a href=&#34;http://aiohttp.readthedocs.io/en/stable/deployment.html#start-gunicorn&#34;&gt;Aiohttp docs&lt;/a&gt; says that you should use &lt;code&gt;aiohttp.worker.GunicornWebWorker&lt;/code&gt;, but when you switch setting there will be error.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;[5898] [ERROR] Exception in worker process

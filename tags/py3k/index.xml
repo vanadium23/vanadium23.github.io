@@ -92,7 +92,7 @@ Always remember simple thing: more unit &amp;amp; integrations tests you have =&
 &lt;li&gt;&lt;a href=&#34;#py3k-redispy&#34;&gt;changes in work with redis-py&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#py3k-django&#34;&gt;Note: how to make smaller diff between py2 and py3 version on django&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id=&#34;a-namepy3k-divisionadivision&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Division&lt;/h1&gt;
+&lt;h1 id=&#34;a-namepy3k-divisionadivision&#34;&gt;&lt;a name=&#34;py3k-division&#34;&gt;&lt;/a&gt;Division&lt;/h1&gt;
 &lt;p&gt;Can you guess what kind of exception will be there,
 if hotel.rating is integer.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;stars = range(hotel.rating / 10)
@@ -102,7 +102,7 @@ if hotel.rating is integer.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# do it before migrations, it works on py2
 from __future__ import division
 stars = range(hotel.rating // 10)
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;a-namepy3k-comparationsaunorderable-types&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Unorderable types&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;a-namepy3k-comparationsaunorderable-types&#34;&gt;&lt;a name=&#34;py3k-comparations&#34;&gt;&lt;/a&gt;Unorderable types&lt;/h1&gt;
 &lt;p&gt;So, in python 3 you can&amp;rsquo;t do such things:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;None &amp;gt; None
 1 &amp;gt; None
@@ -117,7 +117,7 @@ stars = range(hotel.rating // 10)
 max_index = max(chosen_indexes)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;That&amp;rsquo;s ok code, but if field chosen_index can be null, you will catch TypeError.&lt;/p&gt;
 &lt;p&gt;Solution: just filter None values in list, or null in queryset.&lt;/p&gt;
-&lt;h2 id=&#34;a-namepy3k-exceptaexcept-exception&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;except Exception&lt;/h2&gt;
+&lt;h2 id=&#34;a-namepy3k-exceptaexcept-exception&#34;&gt;&lt;a name=&#34;py3k-except&#34;&gt;&lt;/a&gt;except Exception&lt;/h2&gt;
 &lt;p&gt;Pretty much uses external APIs: may be you send letters through MailGun or Mandrill, you can call some other services in your company.
 But you know - sometimes they just fail: connection timeouts, 5xx errors.
 For handling such cases you can make tuple of Exception:&lt;/p&gt;
@@ -166,7 +166,7 @@ except ValueError as exc:
 # there will be no exc variable on py3k
 print(exc)
 &amp;gt; NameError: name &#39;exc&#39; is not defined
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;a-namepy3k-byteswarningabytes-comparison&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;bytes comparison&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;a-namepy3k-byteswarningabytes-comparison&#34;&gt;&lt;a name=&#34;py3k-byteswarning&#34;&gt;&lt;/a&gt;bytes comparison&lt;/h1&gt;
 &lt;p&gt;It&amp;rsquo;s greatest pain in migration. So much pain, I can feel it in my head.
 Next 3 bullets is about it.
 First: no implicit conversion between str and bytes.
@@ -175,10 +175,10 @@ Solution:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It throw ByteWarning exception insted of falsing b&amp;rsquo;&amp;rsquo; == &amp;lsquo;&#39;.&lt;/p&gt;
 &lt;p&gt;Second: some libs expected bytes on input, some text.&lt;/p&gt;
 &lt;p&gt;Solution: call .decode on bytes &amp;amp; encode on str.&lt;/p&gt;
-&lt;h1 id=&#34;a-namepy3k-ujsonajust-ujson&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;just ujson&lt;/h1&gt;
+&lt;h1 id=&#34;a-namepy3k-ujsonajust-ujson&#34;&gt;&lt;a name=&#34;py3k-ujson&#34;&gt;&lt;/a&gt;just ujson&lt;/h1&gt;
 &lt;p&gt;Json from standart libs expects str on input, ujson can deal with str and bytes.
 Also ujson much faster, see comparasion on &lt;a href=&#34;https://github.com/esnme/ultrajson#benchmarks&#34;&gt;github&lt;/a&gt;.&lt;/p&gt;
-&lt;h1 id=&#34;a-namepy3k-lxmlalxml-trap&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;lxml trap&lt;/h1&gt;
+&lt;h1 id=&#34;a-namepy3k-lxmlalxml-trap&#34;&gt;&lt;a name=&#34;py3k-lxml&#34;&gt;&lt;/a&gt;lxml trap&lt;/h1&gt;
 &lt;p&gt;Ooops, this was tough one. Some service provides XML API.
 It answers question of life, universe and everything.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;root&amp;gt;
@@ -203,9 +203,9 @@ xml_answer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span sty
 &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
 xml &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; objectify&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;parse(buf)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;getroot()
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Aaaand lxml wants bytes on input instead of string ¯\&lt;em&gt;(ツ)&lt;/em&gt;/¯.&lt;/p&gt;
-&lt;h1 id=&#34;a-namepy3k-redispyaredis-py-bytes&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;redis-py bytes&lt;/h1&gt;
+&lt;h1 id=&#34;a-namepy3k-redispyaredis-py-bytes&#34;&gt;&lt;a name=&#34;py3k-redispy&#34;&gt;&lt;/a&gt;redis-py bytes&lt;/h1&gt;
 &lt;p&gt;All redis action from redispy returns bytes now. So if you use pure redis (not a django.core.cache), you need to explicit call decode. Also pickling objects between python3 and python2 doesn&amp;rsquo;t work, so make sure you make different keys in cache.&lt;/p&gt;
-&lt;h2 id=&#34;a-namepy3k-djangoanote-how-to-make-smaller-diff-between-py2-and-py3-version-on-django&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Note: how to make smaller diff between py2 and py3 version on django&lt;/h2&gt;
+&lt;h2 id=&#34;a-namepy3k-djangoanote-how-to-make-smaller-diff-between-py2-and-py3-version-on-django&#34;&gt;&lt;a name=&#34;py3k-django&#34;&gt;&lt;/a&gt;Note: how to make smaller diff between py2 and py3 version on django&lt;/h2&gt;
 &lt;p&gt;So sums it up with django experience:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;use smart_text instead of smart_unicode&lt;/li&gt;

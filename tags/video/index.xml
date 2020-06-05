@@ -79,7 +79,7 @@
       <guid>https://vanadium23.me/mission-teams/</guid>
       <description>&lt;p&gt;My presentation about cross functional teams from IndexTech 2019 @ Technopolis.&lt;/p&gt;
 &lt;p&gt;Video is in Russian:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;</description>
+&lt;iframe width=&#34;640&#34; height=&#34;360&#34; src=&#34;https://www.youtube.com/embed/EuvtmH6TA-M&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;</description>
     </item>
     <item>
       <title>PipEnv, Pipfile, pip... what?!</title>
@@ -88,9 +88,9 @@
       <guid>https://vanadium23.me/pipenv-pipfile-pip-what/</guid>
       <description>&lt;p&gt;My presentation about PipEnv from &lt;a href=&#34;http://www.moscowpython.ru/meetup/50/&#34;&gt;MoscowPython Meetup #50&lt;/a&gt; @ Rambler HQ.&lt;/p&gt;
 &lt;p&gt;Video is in russian:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;iframe width=&#34;640&#34; height=&#34;360&#34; src=&#34;https://www.youtube.com/embed/2N0phx7WTEI&#34; frameborder=&#34;0&#34; gesture=&#34;media&#34; allow=&#34;encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;p&gt;And slides in english:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;</description>
+&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;a52512c5af6c43a09cba15f23737e449&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;</description>
     </item>
     <item>
       <title>The Ajax, The REST and The GraphQL</title>
@@ -99,9 +99,9 @@
       <guid>https://vanadium23.me/ajax-rest-graphql/</guid>
       <description>&lt;p&gt;My presentation about GraphQL from MoscowPython Meetup #47 @ Mail.Ru HQ.&lt;/p&gt;
 &lt;p&gt;Video is in russian:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;iframe width=&#34;640&#34; height=&#34;360&#34; src=&#34;https://www.youtube.com/embed/9JqtlPO78y0&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;p&gt;And slides in english:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;</description>
+&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;3022a498ddc344b4933b4b955dd7c660&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;</description>
     </item>
   </channel>
 </rss>
