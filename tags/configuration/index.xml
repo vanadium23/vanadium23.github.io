@@ -1,0 +1,110 @@
+
+
+
+
+<?xml-stylesheet type="text/xsl" href="#stylesheet" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xsl">
+    <xsl:output method="html" doctype-system="about:legacy-compat" />
+    <xsl:template match="/rss">
+      <html lang="ru-ru">
+        <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>configuration RSS | vanadium23</title>
+          <link rel="stylesheet" href="https://vanadium23.me/css/base.min.a3368a1810ce5f531d4379f7ef2a70a442d894fcc461091bac1ea3cfee39833c.css" integrity="sha256-ozaKGBDOX1MdQ3n37ypwpELYlPzEYQkbrB6jz&#43;45gzw=" />
+        </head>
+        <body>
+          <nav class="u-background">
+    <div class="u-wrapper Banner">
+        <a class="Banner-link u-clickable" href="https://vanadium23.me/">
+            vanadium23
+        </a>
+        <ul class="Banner">
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/about/">About</a>
+        </li class="Banner-item">
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a>
+        </li class="Banner-item">
+        
+        <li>
+            <a id="themeSwitch" class="theme-switcher"></a>
+        </li>
+        </ul>
+    </div>
+</nav>
+          <main>
+            <div class="u-wrapper">
+              <div class="u-padding">
+                <h2 class="Heading-title">
+                  
+                  <a class="Heading-link u-clickable" href="https://vanadium23.me/tags/configuration/index.xml" rel="bookmark">configuration RSS</a>
+                  
+                </h2>
+                
+              </div>
+            </div>
+          </main>
+          <footer class="Footer">
+  <div class="u-wrapper">
+    <div class="u-padding">
+        
+        <a href="https://github.com/vanadium23"><i class="svg-icon github"></i></a>
+        <a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"></i></a>
+        <a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"></i></a>
+        <a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"></i></a>
+        <a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"></i></a>
+        <a href="https://goodreads.com/vanadium23"><i class="svg-icon goodreads"></i></a>
+    </div>
+  </div>
+</footer>
+        </body>
+      </html>
+    </xsl:template>
+  </xsl:stylesheet>
+  <channel>
+    <title>configuration on vanadium23</title>
+    <link>https://vanadium23.me/tags/configuration/</link>
+    <description>Recent content in configuration on vanadium23</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Sun, 13 Sep 2020 09:00:00 +0300</lastBuildDate>
+    <atom:link href="https://vanadium23.me/tags/configuration/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Про dotfiles</title>
+      <link>https://vanadium23.me/dotfiles/</link>
+      <pubDate>Sun, 13 Sep 2020 09:00:00 +0300</pubDate>
+      <guid>https://vanadium23.me/dotfiles/</guid>
+      <description>&lt;p&gt;В мире есть два типа людей: те, которые пользуются настройками по умолчанию и те, кто всё настраивают под себя. 
+Первый подход имеет под собой мысль о том, что не важно на каком компьютере ты окажешься - всё для тебя будет привычно, но при этом запоминать всю фантазию авторов приложений.
+С другой стороны, можно организовать окружение так, чтобы максимально быстро сделать его привычным.&lt;/p&gt;
+&lt;p&gt;Можете начать с того, чтобы пойти в &lt;a href=&#34;https://github.com/search?q=dotfiles&#34;&gt;поиск&lt;/a&gt; на github и посмотреть сколько вообще есть таких репозиториев. Стоит на них посмотреть потому, что это хорошая отправная точка для того, чтобы начать писать свои. Почему это называется dotfiles? Всё просто - большинство настроек консольных (и не только) утилит делается с помощью скрытых файлов, которые начинаются с точки.
+Дальше кратко, что можно настроить с кратким описанием.&lt;/p&gt;
+&lt;h3 id=&#34;консоль&#34;&gt;Консоль&lt;/h3&gt;
+&lt;p&gt;Первое надо определиться с шеллом, благо выбора теперь много: bash, zsh, fish и прочая эзотерика.
+Мой выбор остановился на zsh и долго время использовал с oh-my-zsh, потом перешёл на presto, но понял что это всё дико замедляет старт консоли. В итоге, всё выкинул и просто написал с нуля.
+Из полезных мыслей:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Перекрашивать цвет консоли в зависимости по hostname.&lt;/li&gt;
+&lt;li&gt;Иметь source .zshrc_local, чтобы иметь локальные настройки с приватными данными.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;git&#34;&gt;Git&lt;/h3&gt;
+&lt;p&gt;Git из довольно простой утилиты превратился в комбайн на любой случай. Вероятно из-за этого появляется куча обёрток (например, &lt;a href=&#34;https://jonas.github.io/tig/&#34;&gt;tig&lt;/a&gt;) или пользуются встроенным в IDE плагином (иногда не зная как оно работает). Какие проблемы можно выделить? Многословность команд по буковкам, и ещё хуже многословность по смыслам: checkout - и переключение между ветками, и по коммитам, и по рефлогам (не встречались с рефлогами? счастливый человек!). Соответственно, чтобы избежать этих проблем можно настроить себе алиасы в &lt;code&gt;.gitconfig&lt;/code&gt;.
+Из полезных мыслей:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;В gitconfig есть include, то есть тоже можно сделать &lt;code&gt;.gitconfig_local&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;И что более важно есть &lt;a href=&#34;https://git-scm.com/docs/git-config#_conditional_includes&#34;&gt;includeIf&lt;/a&gt;, и можно по пути репозитория подменять ssh-ключи и email.&lt;/li&gt;
+&lt;li&gt;Можно настроить &lt;code&gt;.gitignore_global&lt;/code&gt;, чтобы не добавлять всякие &lt;code&gt;*.swp&lt;/code&gt; в каждый репозиторий.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;config&#34;&gt;.config&lt;/h3&gt;
+&lt;p&gt;GUI приложения начали по аналоги с консольными складывать свои настройки, но так как их может быть много, то вместо одного файла используют папку &lt;code&gt;.config/SOFTNAME/&lt;/code&gt;. Туда можно положить настройки шрифтов, настройки текстового редактора (например, VS Code вместо settings sync который они выкатывали полгода) или используемого window managers.&lt;/p&gt;
+&lt;h3 id=&#34;итого&#34;&gt;Итого&lt;/h3&gt;
+&lt;p&gt;Последняя полезная команда на сегодня, который подсказал коллега на работе ссылаясь на &lt;a href=&#34;https://news.ycombinator.com/item?id=11070797&#34;&gt;статью&lt;/a&gt;, это как устанавливать на новый компьютер:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git --git-dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$HOME/.myconf/ --work-tree&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$HOME
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;На этом всё. (:&lt;/p&gt;
+</description>
+    </item>
+  </channel>
+</rss>

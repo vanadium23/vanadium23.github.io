@@ -1,0 +1,165 @@
+
+  
+  
+<!DOCTYPE html>
+<html lang="ru-ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Про dotfiles | vanadium23</title>
+  <meta name="author" content="vanadium23" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:creator" content="@vanadium23" />
+    <meta property="og:title" content="Про dotfiles" />
+    <meta property="twitter:title" content="Про dotfiles" />
+    <meta name="description" content="В мире есть два типа людей: те, которые пользуются настройками по умолчанию и те, кто всё настраивают под себя. Первый подход имеет под собой мысль о том, что не важно на каком компьютере ты окажешься - всё для тебя будет привычно, но при этом запоминать всю фантазию авторов приложений. С другой стороны, можно организовать окружение так, чтобы максимально быстро сделать его привычным.
+Можете начать с того, чтобы пойти в поиск на github и посмотреть сколько вообще есть таких репозиториев.">
+    <meta property="og:description" content="В мире есть два типа людей: те, которые пользуются настройками по умолчанию и те, кто всё настраивают под себя. Первый подход имеет под собой мысль о том, что не важно на каком компьютере ты окажешься - всё для тебя будет привычно, но при этом запоминать всю фантазию авторов приложений. С другой стороны, можно организовать окружение так, чтобы максимально быстро сделать его привычным.
+Можете начать с того, чтобы пойти в поиск на github и посмотреть сколько вообще есть таких репозиториев." />
+    
+  <link rel="stylesheet" href="https://vanadium23.me/css/base.min.a3368a1810ce5f531d4379f7ef2a70a442d894fcc461091bac1ea3cfee39833c.css" integrity="sha256-ozaKGBDOX1MdQ3n37ypwpELYlPzEYQkbrB6jz&#43;45gzw=">
+  <link rel="stylesheet" href="https://vanadium23.me/css/likely.css" integrity="">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <meta name="generator" content="Hugo 0.73.0" />
+</head>
+<body>
+  <nav class="u-background">
+    <div class="u-wrapper Banner">
+        <a class="Banner-link u-clickable" href="https://vanadium23.me/">
+            vanadium23
+        </a>
+        <ul class="Banner">
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/about/">About</a>
+        </li class="Banner-item">
+        
+        <li class="Banner-item">
+            <a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a>
+        </li class="Banner-item">
+        
+        <li>
+            <a id="themeSwitch" class="theme-switcher"></a>
+        </li>
+        </ul>
+    </div>
+</nav>
+  <main >
+    <div class="u-wrapper">
+      <div class="u-padding">
+        
+
+<article>
+  <header class="Heading">
+  <h2 class="Heading-title">
+    <a class="Heading-link u-clickable" href="https://vanadium23.me/dotfiles/" rel="bookmark">Про dotfiles</a>
+  </h2>
+  <div class="Heading-additional">
+    
+    <time datetime="2020-09-13T09:00:00&#43;03:00">
+      13 September, 2020
+    </time>&middot;
+    
+  
+  <span>2 min read</span>
+  
+  </div>
+</header>
+  <p>В мире есть два типа людей: те, которые пользуются настройками по умолчанию и те, кто всё настраивают под себя. 
+Первый подход имеет под собой мысль о том, что не важно на каком компьютере ты окажешься - всё для тебя будет привычно, но при этом запоминать всю фантазию авторов приложений.
+С другой стороны, можно организовать окружение так, чтобы максимально быстро сделать его привычным.</p>
+<p>Можете начать с того, чтобы пойти в <a href="https://github.com/search?q=dotfiles">поиск</a> на github и посмотреть сколько вообще есть таких репозиториев. Стоит на них посмотреть потому, что это хорошая отправная точка для того, чтобы начать писать свои. Почему это называется dotfiles? Всё просто - большинство настроек консольных (и не только) утилит делается с помощью скрытых файлов, которые начинаются с точки.
+Дальше кратко, что можно настроить с кратким описанием.</p>
+<h3 id="консоль">Консоль</h3>
+<p>Первое надо определиться с шеллом, благо выбора теперь много: bash, zsh, fish и прочая эзотерика.
+Мой выбор остановился на zsh и долго время использовал с oh-my-zsh, потом перешёл на presto, но понял что это всё дико замедляет старт консоли. В итоге, всё выкинул и просто написал с нуля.
+Из полезных мыслей:</p>
+<ul>
+<li>Перекрашивать цвет консоли в зависимости по hostname.</li>
+<li>Иметь source .zshrc_local, чтобы иметь локальные настройки с приватными данными.</li>
+</ul>
+<h3 id="git">Git</h3>
+<p>Git из довольно простой утилиты превратился в комбайн на любой случай. Вероятно из-за этого появляется куча обёрток (например, <a href="https://jonas.github.io/tig/">tig</a>) или пользуются встроенным в IDE плагином (иногда не зная как оно работает). Какие проблемы можно выделить? Многословность команд по буковкам, и ещё хуже многословность по смыслам: checkout - и переключение между ветками, и по коммитам, и по рефлогам (не встречались с рефлогами? счастливый человек!). Соответственно, чтобы избежать этих проблем можно настроить себе алиасы в <code>.gitconfig</code>.
+Из полезных мыслей:</p>
+<ul>
+<li>В gitconfig есть include, то есть тоже можно сделать <code>.gitconfig_local</code>.</li>
+<li>И что более важно есть <a href="https://git-scm.com/docs/git-config#_conditional_includes">includeIf</a>, и можно по пути репозитория подменять ssh-ключи и email.</li>
+<li>Можно настроить <code>.gitignore_global</code>, чтобы не добавлять всякие <code>*.swp</code> в каждый репозиторий.</li>
+</ul>
+<h3 id="config">.config</h3>
+<p>GUI приложения начали по аналоги с консольными складывать свои настройки, но так как их может быть много, то вместо одного файла используют папку <code>.config/SOFTNAME/</code>. Туда можно положить настройки шрифтов, настройки текстового редактора (например, VS Code вместо settings sync который они выкатывали полгода) или используемого window managers.</p>
+<h3 id="итого">Итого</h3>
+<p>Последняя полезная команда на сегодня, который подсказал коллега на работе ссылаясь на <a href="https://news.ycombinator.com/item?id=11070797">статью</a>, это как устанавливать на новый компьютер:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git --git-dir<span style="color:#f92672">=</span>$HOME/.myconf/ --work-tree<span style="color:#f92672">=</span>$HOME
+</code></pre></div><p>На этом всё. (:</p>
+
+  
+    <div class="likely likely-big" data-url="https://vanadium23.me/dotfiles/">
+    <div class="twitter" data-via="vanadium23">Tweet</div>
+    <div class="facebook">Share</div>
+    <div class="vkontakte">Share</div>
+    <div class="telegram">Send</div>
+</div>
+
+  
+  
+<footer>
+  <ul class="Tags">
+    
+    
+    
+    <li class="Tags-item u-background">
+      <a class="Tags-link u-clickable" href="https://vanadium23.me/tags/blog/" rel="tag">blog</a>
+    </li>
+    
+    
+    
+    
+    <li class="Tags-item u-background">
+      <a class="Tags-link u-clickable" href="https://vanadium23.me/tags/software/" rel="tag">software</a>
+    </li>
+    
+    
+    
+    
+    <li class="Tags-item u-background">
+      <a class="Tags-link u-clickable" href="https://vanadium23.me/tags/console/" rel="tag">console</a>
+    </li>
+    
+    
+    
+    
+    <li class="Tags-item u-background">
+      <a class="Tags-link u-clickable" href="https://vanadium23.me/tags/configuration/" rel="tag">configuration</a>
+    </li>
+    
+    
+  </ul>
+</footer>
+
+</article>
+
+
+      </div>
+    </div>
+  </main>
+  <footer class="Footer">
+  <div class="u-wrapper">
+    <div class="u-padding">
+        
+        <a href="https://github.com/vanadium23"><i class="svg-icon github"></i></a>
+        <a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"></i></a>
+        <a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"></i></a>
+        <a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"></i></a>
+        <a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"></i></a>
+        <a href="https://goodreads.com/vanadium23"><i class="svg-icon goodreads"></i></a>
+    </div>
+  </div>
+</footer>
+  
+  <script type="text/javascript" src="https://vanadium23.me/js/likely.js" integrity=""></script>
+  <script type="text/javascript" src="https://vanadium23.me/js/themes.js" integrity=""></script>
+</body>
+</html>
