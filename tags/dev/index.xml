@@ -359,7 +359,7 @@ Next 3 bullets is about it.
 First: no implicit conversion between str and bytes.
 Solution:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;python3 -bb your_script.py
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It throw ByteWarning exception insted of falsing b&amp;rsquo;&amp;rsquo; == &amp;lsquo;&#39;.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It throw ByteWarning exception insted of falsing b&amp;rsquo;&amp;rsquo; == &amp;lsquo;&amp;rsquo;.&lt;/p&gt;
 &lt;p&gt;Second: some libs expected bytes on input, some text.&lt;/p&gt;
 &lt;p&gt;Solution: call .decode on bytes &amp;amp; encode on str.&lt;/p&gt;
 &lt;h1 id=&#34;a-namepy3k-ujsonajust-ujson&#34;&gt;&lt;a name=&#34;py3k-ujson&#34;&gt;&lt;/a&gt;just ujson&lt;/h1&gt;
@@ -444,7 +444,7 @@ After it, you need to init new locale (&lt;em&gt;note:&lt;/em&gt; if you need to
 --output=./locale/ru/LC_MESSAGES/default.po
 ~ rm messages.pot
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now you can open default.po files with some tools, like &lt;a href=&#34;https://poedit.net/&#34;&gt;POEdit&lt;/a&gt; (&lt;em&gt;note:&lt;/em&gt; I prefer Sublime Text for small po).
-Change in ru po msgstr from &amp;lsquo;Test!&amp;rsquo; to &amp;lsquo;Тест!&#39;. When you run script again, output will be same (&amp;lsquo;Test!&#39;).
+Change in ru po msgstr from &amp;lsquo;Test!&amp;rsquo; to &amp;lsquo;Тест!&amp;rsquo;. When you run script again, output will be same (&amp;lsquo;Test!&#39;).
 This is because after modifying po, we need to compile it to binary format (known as mo).&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;~ msgfmt en/LC_MESSAGES/default.po -o en/LC_MESSAGES/default.mo
 ~ msgfmt ru/LC_MESSAGES/default.po -o ru/LC_MESSAGES/default.mo

@@ -70,8 +70,42 @@
     <description>Recent content in software on vanadium23</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Sun, 29 Mar 2020 09:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2020 09:00:00 +0300</lastBuildDate>
     <atom:link href="https://vanadium23.me/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Про dotfiles</title>
+      <link>https://vanadium23.me/dotfiles/</link>
+      <pubDate>Sun, 13 Sep 2020 09:00:00 +0300</pubDate>
+      <guid>https://vanadium23.me/dotfiles/</guid>
+      <description>&lt;p&gt;В мире есть два типа людей: те, которые пользуются настройками по умолчанию и те, кто всё настраивают под себя.
+Первый подход имеет под собой мысль о том, что не важно на каком компьютере ты окажешься - всё для тебя будет привычно, но при этом запоминать всю фантазию авторов приложений.
+С другой стороны, можно организовать окружение так, чтобы максимально быстро сделать его привычным.&lt;/p&gt;
+&lt;p&gt;Можете начать с того, чтобы пойти в &lt;a href=&#34;https://github.com/search?q=dotfiles&#34;&gt;поиск&lt;/a&gt; на github и посмотреть сколько вообще есть таких репозиториев. Стоит на них посмотреть потому, что это хорошая отправная точка для того, чтобы начать писать свои. Почему это называется dotfiles? Всё просто - большинство настроек консольных (и не только) утилит делается с помощью скрытых файлов, которые начинаются с точки.
+Дальше кратко, что можно настроить с кратким описанием.&lt;/p&gt;
+&lt;h3 id=&#34;консоль&#34;&gt;Консоль&lt;/h3&gt;
+&lt;p&gt;Первое надо определиться с шеллом, благо выбора теперь много: bash, zsh, fish и прочая эзотерика.
+Мой выбор остановился на zsh и долго время использовал с oh-my-zsh, потом перешёл на presto, но понял что это всё дико замедляет старт консоли. В итоге, всё выкинул и просто написал с нуля.
+Из полезных мыслей:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Перекрашивать цвет консоли в зависимости по hostname.&lt;/li&gt;
+&lt;li&gt;Иметь source .zshrc_local, чтобы иметь локальные настройки с приватными данными.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;git&#34;&gt;Git&lt;/h3&gt;
+&lt;p&gt;Git из довольно простой утилиты превратился в комбайн на любой случай. Вероятно из-за этого появляется куча обёрток (например, &lt;a href=&#34;https://jonas.github.io/tig/&#34;&gt;tig&lt;/a&gt;) или пользуются встроенным в IDE плагином (иногда не зная как оно работает). Какие проблемы можно выделить? Многословность команд по буковкам, и ещё хуже многословность по смыслам: checkout - и переключение между ветками, и по коммитам, и по рефлогам (не встречались с рефлогами? счастливый человек!). Соответственно, чтобы избежать этих проблем можно настроить себе алиасы в &lt;code&gt;.gitconfig&lt;/code&gt;.
+Из полезных мыслей:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;В gitconfig есть include, то есть тоже можно сделать &lt;code&gt;.gitconfig_local&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;И что более важно есть &lt;a href=&#34;https://git-scm.com/docs/git-config#_conditional_includes&#34;&gt;includeIf&lt;/a&gt;, и можно по пути репозитория подменять ssh-ключи и email.&lt;/li&gt;
+&lt;li&gt;Можно настроить &lt;code&gt;.gitignore_global&lt;/code&gt;, чтобы не добавлять всякие &lt;code&gt;*.swp&lt;/code&gt; в каждый репозиторий.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;config&#34;&gt;.config&lt;/h3&gt;
+&lt;p&gt;GUI приложения начали по аналоги с консольными складывать свои настройки, но так как их может быть много, то вместо одного файла используют папку &lt;code&gt;.config/SOFTNAME/&lt;/code&gt;. Туда можно положить настройки шрифтов, настройки текстового редактора (например, VS Code вместо settings sync который они выкатывали полгода) или используемого window managers.&lt;/p&gt;
+&lt;h3 id=&#34;итого&#34;&gt;Итого&lt;/h3&gt;
+&lt;p&gt;Последняя полезная команда на сегодня, который подсказал коллега на работе ссылаясь на &lt;a href=&#34;https://news.ycombinator.com/item?id=11070797&#34;&gt;статью&lt;/a&gt;, это как устанавливать на новый компьютер:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git --git-dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$HOME/.myconf/ --work-tree&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$HOME
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;На этом всё. (:&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Эволюция заметочниц</title>
       <link>https://vanadium23.me/notes-evolution/</link>

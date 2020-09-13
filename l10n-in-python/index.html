@@ -22,7 +22,7 @@ But somehow some things just don&rsquo;t connect to each other, and you just stu
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <meta name="generator" content="Hugo 0.69.2" />
+  <meta name="generator" content="Hugo 0.74.3" />
 </head>
 <body>
   <nav class="u-background">
@@ -104,7 +104,7 @@ After it, you need to init new locale (<em>note:</em> if you need to merge with 
 --output=./locale/ru/LC_MESSAGES/default.po
 ~ rm messages.pot
 </code></pre><p>Now you can open default.po files with some tools, like <a href="https://poedit.net/">POEdit</a> (<em>note:</em> I prefer Sublime Text for small po).
-Change in ru po msgstr from &lsquo;Test!&rsquo; to &lsquo;Тест!'. When you run script again, output will be same (&lsquo;Test!').
+Change in ru po msgstr from &lsquo;Test!&rsquo; to &lsquo;Тест!&rsquo;. When you run script again, output will be same (&lsquo;Test!').
 This is because after modifying po, we need to compile it to binary format (known as mo).</p>
 <pre><code>~ msgfmt en/LC_MESSAGES/default.po -o en/LC_MESSAGES/default.mo
 ~ msgfmt ru/LC_MESSAGES/default.po -o ru/LC_MESSAGES/default.mo

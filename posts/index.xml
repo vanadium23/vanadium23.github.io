@@ -70,8 +70,72 @@
     <description>Recent content in Posts on vanadium23</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Sun, 29 Mar 2020 09:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2020 09:00:00 +0300</lastBuildDate>
     <atom:link href="https://vanadium23.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Про dotfiles</title>
+      <link>https://vanadium23.me/dotfiles/</link>
+      <pubDate>Sun, 13 Sep 2020 09:00:00 +0300</pubDate>
+      <guid>https://vanadium23.me/dotfiles/</guid>
+      <description>&lt;p&gt;В мире есть два типа людей: те, которые пользуются настройками по умолчанию и те, кто всё настраивают под себя.
+Первый подход имеет под собой мысль о том, что не важно на каком компьютере ты окажешься - всё для тебя будет привычно, но при этом запоминать всю фантазию авторов приложений.
+С другой стороны, можно организовать окружение так, чтобы максимально быстро сделать его привычным.&lt;/p&gt;
+&lt;p&gt;Можете начать с того, чтобы пойти в &lt;a href=&#34;https://github.com/search?q=dotfiles&#34;&gt;поиск&lt;/a&gt; на github и посмотреть сколько вообще есть таких репозиториев. Стоит на них посмотреть потому, что это хорошая отправная точка для того, чтобы начать писать свои. Почему это называется dotfiles? Всё просто - большинство настроек консольных (и не только) утилит делается с помощью скрытых файлов, которые начинаются с точки.
+Дальше кратко, что можно настроить с кратким описанием.&lt;/p&gt;
+&lt;h3 id=&#34;консоль&#34;&gt;Консоль&lt;/h3&gt;
+&lt;p&gt;Первое надо определиться с шеллом, благо выбора теперь много: bash, zsh, fish и прочая эзотерика.
+Мой выбор остановился на zsh и долго время использовал с oh-my-zsh, потом перешёл на presto, но понял что это всё дико замедляет старт консоли. В итоге, всё выкинул и просто написал с нуля.
+Из полезных мыслей:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Перекрашивать цвет консоли в зависимости по hostname.&lt;/li&gt;
+&lt;li&gt;Иметь source .zshrc_local, чтобы иметь локальные настройки с приватными данными.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;git&#34;&gt;Git&lt;/h3&gt;
+&lt;p&gt;Git из довольно простой утилиты превратился в комбайн на любой случай. Вероятно из-за этого появляется куча обёрток (например, &lt;a href=&#34;https://jonas.github.io/tig/&#34;&gt;tig&lt;/a&gt;) или пользуются встроенным в IDE плагином (иногда не зная как оно работает). Какие проблемы можно выделить? Многословность команд по буковкам, и ещё хуже многословность по смыслам: checkout - и переключение между ветками, и по коммитам, и по рефлогам (не встречались с рефлогами? счастливый человек!). Соответственно, чтобы избежать этих проблем можно настроить себе алиасы в &lt;code&gt;.gitconfig&lt;/code&gt;.
+Из полезных мыслей:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;В gitconfig есть include, то есть тоже можно сделать &lt;code&gt;.gitconfig_local&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;И что более важно есть &lt;a href=&#34;https://git-scm.com/docs/git-config#_conditional_includes&#34;&gt;includeIf&lt;/a&gt;, и можно по пути репозитория подменять ssh-ключи и email.&lt;/li&gt;
+&lt;li&gt;Можно настроить &lt;code&gt;.gitignore_global&lt;/code&gt;, чтобы не добавлять всякие &lt;code&gt;*.swp&lt;/code&gt; в каждый репозиторий.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;config&#34;&gt;.config&lt;/h3&gt;
+&lt;p&gt;GUI приложения начали по аналоги с консольными складывать свои настройки, но так как их может быть много, то вместо одного файла используют папку &lt;code&gt;.config/SOFTNAME/&lt;/code&gt;. Туда можно положить настройки шрифтов, настройки текстового редактора (например, VS Code вместо settings sync который они выкатывали полгода) или используемого window managers.&lt;/p&gt;
+&lt;h3 id=&#34;итого&#34;&gt;Итого&lt;/h3&gt;
+&lt;p&gt;Последняя полезная команда на сегодня, который подсказал коллега на работе ссылаясь на &lt;a href=&#34;https://news.ycombinator.com/item?id=11070797&#34;&gt;статью&lt;/a&gt;, это как устанавливать на новый компьютер:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git --git-dir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$HOME/.myconf/ --work-tree&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$HOME
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;На этом всё. (:&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Вишлист на Д.Р. 2020</title>
+      <link>https://vanadium23.me/wishlist-2020/</link>
+      <pubDate>Sun, 06 Sep 2020 17:00:00 +0300</pubDate>
+      <guid>https://vanadium23.me/wishlist-2020/</guid>
+      <description>&lt;h2 id=&#34;wishlist-2019&#34;&gt;Wishlist 2019&lt;/h2&gt;
+&lt;ol start=&#34;0&#34;&gt;
+&lt;li&gt;Термометр с выносным щупом, типа &lt;a href=&#34;https://gsmin.ru/catalog/dom_i_ofis/tovary_dlya_kukhni/kukhonnyy_termometr_so_shchupom_tekhmetr_t_01820_chernyy/&#34;&gt;такого&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://msk.mirbeer.ru/catalog/samogonovarenie/bondarnie_izdeliya/bochka_iz_skalnogo_duba_beervingem_3_l/&#34;&gt;Деревянная бочка 3л&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ikea.com/ru/ru/p/kalasfint-kuvshin-s-kranom-prozrachnoe-steklo-10446307/&#34;&gt;Кувшин с краном&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Сифон для газирования воды - не разобрался пока какой нужен, главное чтобы балончики продавались в России.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.medspros.ru/shop/takasima_olimp_sk_1_2.html&#34;&gt;Коленный стул (чёрный)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://foxpox.ru/shop/UID_1614.html&#34;&gt;Xiaomi Universal IR Remote Controller Hub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.deadbrush.ru/catalog/games/homm3/&#34;&gt;Маечки из героев, лубую кроме оплота и некрополиса (:&lt;/a&gt; &lt;em&gt;размер S&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ifixit.com/Store/Tools/Pro-Tech-Toolkit/IF145-307?o=4&#34;&gt;iFixit toolkit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pretendstore.co/products/pocket-developer&#34;&gt;d&amp;amp;d для разработки&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;старое-доброе&#34;&gt;Старое доброе&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Настолки
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://boardgamegeek.com/boardgame/237182/root&#34;&gt;Root&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tesera.ru/game/no-thanks/&#34;&gt;Нет уж, спасибо.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://boardgamegeek.com/boardgame/244995/illusion&#34;&gt;Illusion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Игра Престолов. Мать драконов&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     <item>
       <title>Эволюция заметочниц</title>
       <link>https://vanadium23.me/notes-evolution/</link>
@@ -1977,7 +2041,7 @@ Next 3 bullets is about it.
 First: no implicit conversion between str and bytes.
 Solution:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;python3 -bb your_script.py
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It throw ByteWarning exception insted of falsing b&amp;rsquo;&amp;rsquo; == &amp;lsquo;&#39;.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It throw ByteWarning exception insted of falsing b&amp;rsquo;&amp;rsquo; == &amp;lsquo;&amp;rsquo;.&lt;/p&gt;
 &lt;p&gt;Second: some libs expected bytes on input, some text.&lt;/p&gt;
 &lt;p&gt;Solution: call .decode on bytes &amp;amp; encode on str.&lt;/p&gt;
 &lt;h1 id=&#34;a-namepy3k-ujsonajust-ujson&#34;&gt;&lt;a name=&#34;py3k-ujson&#34;&gt;&lt;/a&gt;just ujson&lt;/h1&gt;
@@ -2062,7 +2126,7 @@ After it, you need to init new locale (&lt;em&gt;note:&lt;/em&gt; if you need to
 --output=./locale/ru/LC_MESSAGES/default.po
 ~ rm messages.pot
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now you can open default.po files with some tools, like &lt;a href=&#34;https://poedit.net/&#34;&gt;POEdit&lt;/a&gt; (&lt;em&gt;note:&lt;/em&gt; I prefer Sublime Text for small po).
-Change in ru po msgstr from &amp;lsquo;Test!&amp;rsquo; to &amp;lsquo;Тест!&#39;. When you run script again, output will be same (&amp;lsquo;Test!&#39;).
+Change in ru po msgstr from &amp;lsquo;Test!&amp;rsquo; to &amp;lsquo;Тест!&amp;rsquo;. When you run script again, output will be same (&amp;lsquo;Test!&#39;).
 This is because after modifying po, we need to compile it to binary format (known as mo).&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;~ msgfmt en/LC_MESSAGES/default.po -o en/LC_MESSAGES/default.mo
 ~ msgfmt ru/LC_MESSAGES/default.po -o ru/LC_MESSAGES/default.mo
