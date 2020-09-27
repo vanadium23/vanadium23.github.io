@@ -4,7 +4,37 @@
   
   <url>
     <loc>https://vanadium23.me/tags/blog/</loc>
-    <lastmod>2020-09-13T09:00:00+03:00</lastmod>
+    <lastmod>2020-09-27T09:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/tags/evergreen/</loc>
+    <lastmod>2020-09-27T09:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/posts/</loc>
+    <lastmod>2020-09-27T09:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/tags/productivity/</loc>
+    <lastmod>2020-09-27T09:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/tags/</loc>
+    <lastmod>2020-09-27T09:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/</loc>
+    <lastmod>2020-09-27T09:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanadium23.me/adapt-process/</loc>
+    <lastmod>2020-09-27T09:00:00+03:00</lastmod>
   </url>
   
   <url>
@@ -18,22 +48,7 @@
   </url>
   
   <url>
-    <loc>https://vanadium23.me/posts/</loc>
-    <lastmod>2020-09-13T09:00:00+03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://vanadium23.me/tags/software/</loc>
-    <lastmod>2020-09-13T09:00:00+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://vanadium23.me/tags/</loc>
-    <lastmod>2020-09-13T09:00:00+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://vanadium23.me/</loc>
     <lastmod>2020-09-13T09:00:00+03:00</lastmod>
   </url>
   
@@ -110,11 +125,6 @@
   <url>
     <loc>https://vanadium23.me/about/</loc>
     <lastmod>2019-12-20T17:00:00+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://vanadium23.me/tags/productivity/</loc>
-    <lastmod>2019-12-16T12:00:00+03:00</lastmod>
   </url>
   
   <url>

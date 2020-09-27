@@ -20,7 +20,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <meta name="generator" content="Hugo 0.74.3" />
+  <meta name="generator" content="Hugo 0.75.1" />
 </head>
 <body>
   <nav class="u-background">
@@ -160,7 +160,7 @@ Next 3 bullets is about it.
 First: no implicit conversion between str and bytes.
 Solution:</p>
 <pre><code>python3 -bb your_script.py
-</code></pre><p>It throw ByteWarning exception insted of falsing b&rsquo;&rsquo; == &lsquo;&rsquo;.</p>
+</code></pre><p>It throw ByteWarning exception insted of falsing b'' == &lsquo;&rsquo;.</p>
 <p>Second: some libs expected bytes on input, some text.</p>
 <p>Solution: call .decode on bytes &amp; encode on str.</p>
 <h1 id="a-namepy3k-ujsonajust-ujson"><a name="py3k-ujson"></a>just ujson</h1>

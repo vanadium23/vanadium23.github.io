@@ -359,7 +359,7 @@ Next 3 bullets is about it.
 First: no implicit conversion between str and bytes.
 Solution:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;python3 -bb your_script.py
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It throw ByteWarning exception insted of falsing b&amp;rsquo;&amp;rsquo; == &amp;lsquo;&amp;rsquo;.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It throw ByteWarning exception insted of falsing b&#39;&#39; == &amp;lsquo;&amp;rsquo;.&lt;/p&gt;
 &lt;p&gt;Second: some libs expected bytes on input, some text.&lt;/p&gt;
 &lt;p&gt;Solution: call .decode on bytes &amp;amp; encode on str.&lt;/p&gt;
 &lt;h1 id=&#34;a-namepy3k-ujsonajust-ujson&#34;&gt;&lt;a name=&#34;py3k-ujson&#34;&gt;&lt;/a&gt;just ujson&lt;/h1&gt;
