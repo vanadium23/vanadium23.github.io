@@ -3,21 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://vanadium23.me/tags/blog/</loc>
-    <lastmod>2021-07-19T09:00:00+03:00</lastmod>
+    <lastmod>2021-08-03T09:00:00+03:00</lastmod>
+  </url><url>
+    <loc>https://vanadium23.me/tags/book/</loc>
+    <lastmod>2021-08-03T09:00:00+03:00</lastmod>
   </url><url>
     <loc>https://vanadium23.me/tags/learning/</loc>
-    <lastmod>2021-07-19T09:00:00+03:00</lastmod>
+    <lastmod>2021-08-03T09:00:00+03:00</lastmod>
   </url><url>
     <loc>https://vanadium23.me/posts/</loc>
-    <lastmod>2021-07-19T09:00:00+03:00</lastmod>
-  </url><url>
-    <loc>https://vanadium23.me/tags/productivity/</loc>
-    <lastmod>2021-07-19T09:00:00+03:00</lastmod>
+    <lastmod>2021-08-03T09:00:00+03:00</lastmod>
   </url><url>
     <loc>https://vanadium23.me/tags/</loc>
-    <lastmod>2021-07-19T09:00:00+03:00</lastmod>
+    <lastmod>2021-08-03T09:00:00+03:00</lastmod>
   </url><url>
     <loc>https://vanadium23.me/</loc>
+    <lastmod>2021-08-03T09:00:00+03:00</lastmod>
+  </url><url>
+    <loc>https://vanadium23.me/the-myth-of-objective/</loc>
+    <lastmod>2021-08-03T09:00:00+03:00</lastmod>
+  </url><url>
+    <loc>https://vanadium23.me/tags/productivity/</loc>
     <lastmod>2021-07-19T09:00:00+03:00</lastmod>
   </url><url>
     <loc>https://vanadium23.me/consistency-over-mastery/</loc>
@@ -91,9 +97,6 @@
   </url><url>
     <loc>https://vanadium23.me/remove-google-analytics/</loc>
     <lastmod>2020-02-15T09:00:00+03:00</lastmod>
-  </url><url>
-    <loc>https://vanadium23.me/tags/book/</loc>
-    <lastmod>2020-02-02T09:00:00+03:00</lastmod>
   </url><url>
     <loc>https://vanadium23.me/building-microservices/</loc>
     <lastmod>2020-02-02T09:00:00+03:00</lastmod>
