@@ -16,7 +16,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <meta name="generator" content="Hugo 0.83.1" />
+  <meta name="generator" content="Hugo 0.87.0" />
 </head>
 <body>
   <nav class="u-background">
@@ -105,7 +105,7 @@ max_index = max(chosen_indexes)
 <p>Pretty much uses external APIs: may be you send letters through MailGun or Mandrill, you can call some other services in your company.
 But you know - sometimes they just fail: connection timeouts, 5xx errors.
 For handling such cases you can make tuple of Exception:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> requests.exceptions <span style="color:#f92672">import</span> (
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> requests.exceptions <span style="color:#f92672">import</span> (
     RequestException,
     HTTPError
 )
@@ -123,7 +123,7 @@ NETWORK_EXCEPTIONS <span style="color:#f92672">=</span> (
     log<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#39;some bad thing happend&#39;</span>)
 </code></pre></div><p>This code won&rsquo;t work on python3, because interpreter check exception is subclass of BaseException.</p>
 <p>Solution:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> requests.exceptions <span style="color:#f92672">import</span> (
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> requests.exceptions <span style="color:#f92672">import</span> (
     RequestException,
     HTTPError
 )
@@ -169,7 +169,7 @@ It answers question of life, universe and everything.</p>
   &lt;answer&gt;42&lt;/answer&gt;
 &lt;/root&gt;
 </code></pre><p>You want to parse it using lxml:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> lxml <span style="color:#f92672">import</span> objectify
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> lxml <span style="color:#f92672">import</span> objectify
 
 xml_answer <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;
 </span><span style="color:#e6db74">&lt;root&gt;
@@ -178,7 +178,7 @@ xml_answer <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34
 </span><span style="color:#e6db74">&#34;&#34;&#34;</span>
 xml <span style="color:#f92672">=</span> objectify<span style="color:#f92672">.</span>parse(buf)<span style="color:#f92672">.</span>getroot()
 </code></pre></div><p>This example works both on py2 and py3, but some little difference:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> lxml <span style="color:#f92672">import</span> objectify
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> lxml <span style="color:#f92672">import</span> objectify
 
 xml_answer <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;
 </span><span style="color:#e6db74">&lt;root&gt;

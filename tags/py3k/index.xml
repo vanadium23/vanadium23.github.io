@@ -122,7 +122,7 @@ max_index = max(chosen_indexes)
 &lt;p&gt;Pretty much uses external APIs: may be you send letters through MailGun or Mandrill, you can call some other services in your company.
 But you know - sometimes they just fail: connection timeouts, 5xx errors.
 For handling such cases you can make tuple of Exception:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; requests.exceptions &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; (
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; requests.exceptions &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; (
     RequestException,
     HTTPError
 )
@@ -140,7 +140,7 @@ NETWORK_EXCEPTIONS &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (
     log&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;error(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;some bad thing happend&amp;#39;&lt;/span&gt;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This code won&amp;rsquo;t work on python3, because interpreter check exception is subclass of BaseException.&lt;/p&gt;
 &lt;p&gt;Solution:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; requests.exceptions &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; (
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; requests.exceptions &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; (
     RequestException,
     HTTPError
 )
@@ -186,7 +186,7 @@ It answers question of life, universe and everything.&lt;/p&gt;
   &amp;lt;answer&amp;gt;42&amp;lt;/answer&amp;gt;
 &amp;lt;/root&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You want to parse it using lxml:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; lxml &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; objectify
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; lxml &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; objectify
 
 xml_answer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
 &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;lt;root&amp;gt;
@@ -195,7 +195,7 @@ xml_answer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span sty
 &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
 xml &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; objectify&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;parse(buf)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;getroot()
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This example works both on py2 and py3, but some little difference:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; lxml &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; objectify
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; lxml &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; objectify
 
 xml_answer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt;
 &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;lt;root&amp;gt;
