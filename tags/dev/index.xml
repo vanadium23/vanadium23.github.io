@@ -86,7 +86,7 @@
 &lt;h2 id=&#34;ненавистный-gopath&#34;&gt;Ненавистный GOPATH&lt;/h2&gt;
 &lt;p&gt;Первое, что тебе нужно было сделать прежде, чем начать работу с golang - это установить переменную GOPATH. Она была нужна для того, чтобы команда &lt;code&gt;go get&lt;/code&gt; знала куда складывать пакеты. Сейчас есть значение по умолчанию равное &lt;code&gt;$HOME/go&lt;/code&gt;, что немножко упрощает работу, но не сильно. В качестве неймспейса для всех библиотек используется формат &lt;code&gt;host/namespace/lib&lt;/code&gt;, например: &lt;code&gt;github.com/xo/usql&lt;/code&gt;.
 Пробуем поставить утилиту &lt;code&gt;usql&lt;/code&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;% time go get github.com/xo/usql
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;% time go get github.com/xo/usql
 56.93s user 6.39s system 85% cpu 1:13.98 total
 
 % tree -d -L 3 ~/go/src
@@ -283,22 +283,22 @@ Always remember simple thing: more unit &amp;amp; integrations tests you have =&
 &lt;h1 id=&#34;a-namepy3k-divisionadivision&#34;&gt;&lt;a name=&#34;py3k-division&#34;&gt;&lt;/a&gt;Division&lt;/h1&gt;
 &lt;p&gt;Can you guess what kind of exception will be there,
 if hotel.rating is integer.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;stars = range(hotel.rating / 10)
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;stars = range(hotel.rating / 10)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Correct answer:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt; TypeError: &#39;float&#39; object cannot be interpreted as an integer
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;gt; TypeError: &#39;float&#39; object cannot be interpreted as an integer
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Solution:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# do it before migrations, it works on py2
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# do it before migrations, it works on py2
 from __future__ import division
 stars = range(hotel.rating // 10)
 &lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;a-namepy3k-comparationsaunorderable-types&#34;&gt;&lt;a name=&#34;py3k-comparations&#34;&gt;&lt;/a&gt;Unorderable types&lt;/h1&gt;
 &lt;p&gt;So, in python 3 you can&amp;rsquo;t do such things:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;None &amp;gt; None
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;None &amp;gt; None
 1 &amp;gt; None
 &#39;1&#39; &amp;gt; 1
 
 &amp;gt; TypeError: unorderable types: int() &amp;gt; NoneType()
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Because it&amp;rsquo;s more strict for types. How it was found:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;chosen_indexes = Obj.objects.values_list(&#39;chosen_index&#39;, flat=True)
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;chosen_indexes = Obj.objects.values_list(&#39;chosen_index&#39;, flat=True)
 ...
 ...
 ...
@@ -344,7 +344,7 @@ NETWORK_EXCEPTIONS &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (
     log&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;error(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;some bad thing happend&amp;#39;&lt;/span&gt;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Second interesting example is that, except create variable in local scope and its make hard to print/ipdb. (This is some questing during interview, that I love to ask).
 Example:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;import json
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import json
 
 exc = &#39;test&#39;
 try:
@@ -359,7 +359,7 @@ print(exc)
 Next 3 bullets is about it.
 First: no implicit conversion between str and bytes.
 Solution:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;python3 -bb your_script.py
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;python3 -bb your_script.py
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It throw ByteWarning exception insted of falsing b&#39;&#39; == &amp;lsquo;&amp;rsquo;.&lt;/p&gt;
 &lt;p&gt;Second: some libs expected bytes on input, some text.&lt;/p&gt;
 &lt;p&gt;Solution: call .decode on bytes &amp;amp; encode on str.&lt;/p&gt;
@@ -369,7 +369,7 @@ Also ujson much faster, see comparasion on &lt;a href=&#34;https://github.com/es
 &lt;h1 id=&#34;a-namepy3k-lxmlalxml-trap&#34;&gt;&lt;a name=&#34;py3k-lxml&#34;&gt;&lt;/a&gt;lxml trap&lt;/h1&gt;
 &lt;p&gt;Ooops, this was tough one. Some service provides XML API.
 It answers question of life, universe and everything.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;root&amp;gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;root&amp;gt;
   &amp;lt;answer&amp;gt;42&amp;lt;/answer&amp;gt;
 &amp;lt;/root&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You want to parse it using lxml:&lt;/p&gt;
@@ -418,7 +418,7 @@ But somehow some things just don&amp;rsquo;t connect to each other, and you just
 &lt;li&gt;provide this string to django application&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;First thing, that you find at &lt;a href=&#34;https://docs.python.org/3/library/gettext.html&#34;&gt;gettext docs&lt;/a&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;import gettext
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import gettext
 import os
 
 BASE_DIR = os.path.dirname(__file__)
@@ -431,13 +431,13 @@ _ = t.ugettext
 message = _(&#39;Test!&#39;)
 print(message)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To change language on your system, you can simply set enviroment variable &lt;em&gt;LANG&lt;/em&gt; or &lt;em&gt;LANGUAGE&lt;/em&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;~ export LANG=ru
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;~ export LANG=ru
 ~ python test.py
 Test!
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This won&amp;rsquo;t work, because you don&amp;rsquo;t have translated phrases in your locale dir. Let&amp;rsquo;s compile them.
 Command pygettext grabs all string in &lt;em&gt;ugettext&lt;/em&gt; function and dumps it to pot file.
 After it, you need to init new locale (&lt;em&gt;note:&lt;/em&gt; if you need to merge with previos translations use &lt;em&gt;msgmerge&lt;/em&gt;).&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;~ pygettext test.py
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;~ pygettext test.py
 ~ mkdir -p ./locale/{en,ru}/LC_MESSAGES/
 ~ msginit --input=messages.pot --locale=en_US.UTF-8 \
 --output=./locale/en/LC_MESSAGES/default.po
@@ -447,7 +447,7 @@ After it, you need to init new locale (&lt;em&gt;note:&lt;/em&gt; if you need to
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now you can open default.po files with some tools, like &lt;a href=&#34;https://poedit.net/&#34;&gt;POEdit&lt;/a&gt; (&lt;em&gt;note:&lt;/em&gt; I prefer Sublime Text for small po).
 Change in ru po msgstr from &amp;lsquo;Test!&amp;rsquo; to &amp;lsquo;Тест!&amp;rsquo;. When you run script again, output will be same (&amp;lsquo;Test!&#39;).
 This is because after modifying po, we need to compile it to binary format (known as mo).&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;~ msgfmt en/LC_MESSAGES/default.po -o en/LC_MESSAGES/default.mo
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;~ msgfmt en/LC_MESSAGES/default.po -o en/LC_MESSAGES/default.mo
 ~ msgfmt ru/LC_MESSAGES/default.po -o ru/LC_MESSAGES/default.mo
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Woo-hoo, output should be translated now, but it doesn&amp;rsquo;t work with django.
 What shall we do? Read the &lt;a href=&#34;https://docs.djangoproject.com/en/1.10/topics/i18n/translation/#how-django-discovers-translations&#34;&gt;manual&lt;/a&gt;.
@@ -468,7 +468,7 @@ Based on &lt;a href=&#34;http://docs.gunicorn.org/en/stable/design.html?highligh
 &lt;p&gt;Answer is very simple: &lt;strike&gt;you write some memoryleaking code&lt;/strike&gt; &lt;em&gt;gaiohttp&lt;/em&gt; ignores max_requests option.
 In other words, workers won&amp;rsquo;t be killed after max_requests count. After some search on internet, there is an &lt;a href=&#34;http://asvetlov.blogspot.ru/2014/06/asyncio-aiohttp-gunicorn.html&#34;&gt;article&lt;/a&gt; from asyncio contributor about copy-n-pasting worker from aiohttp repo to gunicorn.
 &lt;a href=&#34;http://aiohttp.readthedocs.io/en/stable/deployment.html#start-gunicorn&#34;&gt;Aiohttp docs&lt;/a&gt; says that you should use &lt;code&gt;aiohttp.worker.GunicornWebWorker&lt;/code&gt;, but when you switch setting there will be error.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[5898] [ERROR] Exception in worker process
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[5898] [ERROR] Exception in worker process
 Traceback (most recent call last):
   File &amp;quot;./gunicorn/arbiter.py&amp;quot;, line 557, in spawn_worker
     worker.init_process()
@@ -482,7 +482,7 @@ AttributeError:
     &#39;WSGIHandler&#39; object has no attribute &#39;startup&#39;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So &lt;em&gt;aiohttp.worker.GunicornWebWorker&lt;/em&gt; differs from standart wsgi app for django. Luckily, python community has two packages to overcome these difficulties: &lt;em&gt;aiohttp-wsgi&lt;/em&gt; and &lt;em&gt;aiodjango&lt;/em&gt;, add them to your &lt;em&gt;requirements.txt&lt;/em&gt;.
 After this modify your &lt;em&gt;wsgi.py&lt;/em&gt; according to &lt;a href=&#34;http://aiodjango.readthedocs.io/en/latest/usage.html#defining-the-application&#34;&gt;docs&lt;/a&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;import os
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import os
 
 from django.core.wsgi import get_wsgi_application
 

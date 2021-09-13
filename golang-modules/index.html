@@ -18,7 +18,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <meta name="generator" content="Hugo 0.87.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
 </head>
 <body>
   <nav class="u-background">
@@ -71,7 +71,7 @@
 <h2 id="ненавистный-gopath">Ненавистный GOPATH</h2>
 <p>Первое, что тебе нужно было сделать прежде, чем начать работу с golang - это установить переменную GOPATH. Она была нужна для того, чтобы команда <code>go get</code> знала куда складывать пакеты. Сейчас есть значение по умолчанию равное <code>$HOME/go</code>, что немножко упрощает работу, но не сильно. В качестве неймспейса для всех библиотек используется формат <code>host/namespace/lib</code>, например: <code>github.com/xo/usql</code>.
 Пробуем поставить утилиту <code>usql</code>:</p>
-<pre><code>% time go get github.com/xo/usql
+<pre tabindex="0"><code>% time go get github.com/xo/usql
 56.93s user 6.39s system 85% cpu 1:13.98 total
 
 % tree -d -L 3 ~/go/src

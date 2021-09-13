@@ -86,7 +86,7 @@
 &lt;h2 id=&#34;ненавистный-gopath&#34;&gt;Ненавистный GOPATH&lt;/h2&gt;
 &lt;p&gt;Первое, что тебе нужно было сделать прежде, чем начать работу с golang - это установить переменную GOPATH. Она была нужна для того, чтобы команда &lt;code&gt;go get&lt;/code&gt; знала куда складывать пакеты. Сейчас есть значение по умолчанию равное &lt;code&gt;$HOME/go&lt;/code&gt;, что немножко упрощает работу, но не сильно. В качестве неймспейса для всех библиотек используется формат &lt;code&gt;host/namespace/lib&lt;/code&gt;, например: &lt;code&gt;github.com/xo/usql&lt;/code&gt;.
 Пробуем поставить утилиту &lt;code&gt;usql&lt;/code&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;% time go get github.com/xo/usql
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;% time go get github.com/xo/usql
 56.93s user 6.39s system 85% cpu 1:13.98 total
 
 % tree -d -L 3 ~/go/src

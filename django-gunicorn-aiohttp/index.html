@@ -22,7 +22,7 @@ Based on gunicorn docs, you need simply switch worker to gaiohttp and that&rsquo
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <meta name="generator" content="Hugo 0.87.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
 </head>
 <body>
   <nav class="u-background">
@@ -76,7 +76,7 @@ Based on <a href="http://docs.gunicorn.org/en/stable/design.html?highlight=gaioh
 <p>Answer is very simple: <strike>you write some memoryleaking code</strike> <em>gaiohttp</em> ignores max_requests option.
 In other words, workers won&rsquo;t be killed after max_requests count. After some search on internet, there is an <a href="http://asvetlov.blogspot.ru/2014/06/asyncio-aiohttp-gunicorn.html">article</a> from asyncio contributor about copy-n-pasting worker from aiohttp repo to gunicorn.
 <a href="http://aiohttp.readthedocs.io/en/stable/deployment.html#start-gunicorn">Aiohttp docs</a> says that you should use <code>aiohttp.worker.GunicornWebWorker</code>, but when you switch setting there will be error.</p>
-<pre><code>[5898] [ERROR] Exception in worker process
+<pre tabindex="0"><code>[5898] [ERROR] Exception in worker process
 Traceback (most recent call last):
   File &quot;./gunicorn/arbiter.py&quot;, line 557, in spawn_worker
     worker.init_process()
@@ -90,7 +90,7 @@ AttributeError:
     'WSGIHandler' object has no attribute 'startup'
 </code></pre><p>So <em>aiohttp.worker.GunicornWebWorker</em> differs from standart wsgi app for django. Luckily, python community has two packages to overcome these difficulties: <em>aiohttp-wsgi</em> and <em>aiodjango</em>, add them to your <em>requirements.txt</em>.
 After this modify your <em>wsgi.py</em> according to <a href="http://aiodjango.readthedocs.io/en/latest/usage.html#defining-the-application">docs</a>:</p>
-<pre><code>import os
+<pre tabindex="0"><code>import os
 
 from django.core.wsgi import get_wsgi_application
 

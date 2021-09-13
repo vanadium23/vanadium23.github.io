@@ -96,22 +96,22 @@ Always remember simple thing: more unit &amp;amp; integrations tests you have =&
 &lt;h1 id=&#34;a-namepy3k-divisionadivision&#34;&gt;&lt;a name=&#34;py3k-division&#34;&gt;&lt;/a&gt;Division&lt;/h1&gt;
 &lt;p&gt;Can you guess what kind of exception will be there,
 if hotel.rating is integer.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;stars = range(hotel.rating / 10)
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;stars = range(hotel.rating / 10)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Correct answer:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt; TypeError: &#39;float&#39; object cannot be interpreted as an integer
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;gt; TypeError: &#39;float&#39; object cannot be interpreted as an integer
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Solution:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# do it before migrations, it works on py2
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# do it before migrations, it works on py2
 from __future__ import division
 stars = range(hotel.rating // 10)
 &lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;a-namepy3k-comparationsaunorderable-types&#34;&gt;&lt;a name=&#34;py3k-comparations&#34;&gt;&lt;/a&gt;Unorderable types&lt;/h1&gt;
 &lt;p&gt;So, in python 3 you can&amp;rsquo;t do such things:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;None &amp;gt; None
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;None &amp;gt; None
 1 &amp;gt; None
 &#39;1&#39; &amp;gt; 1
 
 &amp;gt; TypeError: unorderable types: int() &amp;gt; NoneType()
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Because it&amp;rsquo;s more strict for types. How it was found:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;chosen_indexes = Obj.objects.values_list(&#39;chosen_index&#39;, flat=True)
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;chosen_indexes = Obj.objects.values_list(&#39;chosen_index&#39;, flat=True)
 ...
 ...
 ...
@@ -157,7 +157,7 @@ NETWORK_EXCEPTIONS &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (
     log&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;error(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;some bad thing happend&amp;#39;&lt;/span&gt;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Second interesting example is that, except create variable in local scope and its make hard to print/ipdb. (This is some questing during interview, that I love to ask).
 Example:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;import json
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import json
 
 exc = &#39;test&#39;
 try:
@@ -172,7 +172,7 @@ print(exc)
 Next 3 bullets is about it.
 First: no implicit conversion between str and bytes.
 Solution:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;python3 -bb your_script.py
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;python3 -bb your_script.py
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It throw ByteWarning exception insted of falsing b&#39;&#39; == &amp;lsquo;&amp;rsquo;.&lt;/p&gt;
 &lt;p&gt;Second: some libs expected bytes on input, some text.&lt;/p&gt;
 &lt;p&gt;Solution: call .decode on bytes &amp;amp; encode on str.&lt;/p&gt;
@@ -182,7 +182,7 @@ Also ujson much faster, see comparasion on &lt;a href=&#34;https://github.com/es
 &lt;h1 id=&#34;a-namepy3k-lxmlalxml-trap&#34;&gt;&lt;a name=&#34;py3k-lxml&#34;&gt;&lt;/a&gt;lxml trap&lt;/h1&gt;
 &lt;p&gt;Ooops, this was tough one. Some service provides XML API.
 It answers question of life, universe and everything.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;root&amp;gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;root&amp;gt;
   &amp;lt;answer&amp;gt;42&amp;lt;/answer&amp;gt;
 &amp;lt;/root&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You want to parse it using lxml:&lt;/p&gt;

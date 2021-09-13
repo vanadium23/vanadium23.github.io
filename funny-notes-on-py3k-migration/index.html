@@ -16,7 +16,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <meta name="generator" content="Hugo 0.87.0" />
+  <meta name="generator" content="Hugo 0.88.1" />
 </head>
 <body>
   <nav class="u-background">
@@ -79,22 +79,22 @@ Always remember simple thing: more unit &amp; integrations tests you have =&gt; 
 <h1 id="a-namepy3k-divisionadivision"><a name="py3k-division"></a>Division</h1>
 <p>Can you guess what kind of exception will be there,
 if hotel.rating is integer.</p>
-<pre><code>stars = range(hotel.rating / 10)
+<pre tabindex="0"><code>stars = range(hotel.rating / 10)
 </code></pre><p>Correct answer:</p>
-<pre><code>&gt; TypeError: 'float' object cannot be interpreted as an integer
+<pre tabindex="0"><code>&gt; TypeError: 'float' object cannot be interpreted as an integer
 </code></pre><p>Solution:</p>
-<pre><code># do it before migrations, it works on py2
+<pre tabindex="0"><code># do it before migrations, it works on py2
 from __future__ import division
 stars = range(hotel.rating // 10)
 </code></pre><h1 id="a-namepy3k-comparationsaunorderable-types"><a name="py3k-comparations"></a>Unorderable types</h1>
 <p>So, in python 3 you can&rsquo;t do such things:</p>
-<pre><code>None &gt; None
+<pre tabindex="0"><code>None &gt; None
 1 &gt; None
 '1' &gt; 1
 
 &gt; TypeError: unorderable types: int() &gt; NoneType()
 </code></pre><p>Because it&rsquo;s more strict for types. How it was found:</p>
-<pre><code>chosen_indexes = Obj.objects.values_list('chosen_index', flat=True)
+<pre tabindex="0"><code>chosen_indexes = Obj.objects.values_list('chosen_index', flat=True)
 ...
 ...
 ...
@@ -140,7 +140,7 @@ NETWORK_EXCEPTIONS <span style="color:#f92672">=</span> (
     log<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#39;some bad thing happend&#39;</span>)
 </code></pre></div><p>Second interesting example is that, except create variable in local scope and its make hard to print/ipdb. (This is some questing during interview, that I love to ask).
 Example:</p>
-<pre><code>import json
+<pre tabindex="0"><code>import json
 
 exc = 'test'
 try:
@@ -155,7 +155,7 @@ print(exc)
 Next 3 bullets is about it.
 First: no implicit conversion between str and bytes.
 Solution:</p>
-<pre><code>python3 -bb your_script.py
+<pre tabindex="0"><code>python3 -bb your_script.py
 </code></pre><p>It throw ByteWarning exception insted of falsing b'' == &lsquo;&rsquo;.</p>
 <p>Second: some libs expected bytes on input, some text.</p>
 <p>Solution: call .decode on bytes &amp; encode on str.</p>
@@ -165,7 +165,7 @@ Also ujson much faster, see comparasion on <a href="https://github.com/esnme/ult
 <h1 id="a-namepy3k-lxmlalxml-trap"><a name="py3k-lxml"></a>lxml trap</h1>
 <p>Ooops, this was tough one. Some service provides XML API.
 It answers question of life, universe and everything.</p>
-<pre><code>&lt;root&gt;
+<pre tabindex="0"><code>&lt;root&gt;
   &lt;answer&gt;42&lt;/answer&gt;
 &lt;/root&gt;
 </code></pre><p>You want to parse it using lxml:</p>
