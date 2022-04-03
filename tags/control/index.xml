@@ -248,7 +248,7 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;2019&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;A&#39; (A+B*12-C*12-D)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;A&amp;rsquo; (A+B*12-C*12-D)&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;B&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;C&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;D&#39;&lt;/td&gt;

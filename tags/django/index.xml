@@ -89,16 +89,16 @@ In other words, workers won&amp;rsquo;t be killed after max_requests count. Afte
 &lt;a href=&#34;http://aiohttp.readthedocs.io/en/stable/deployment.html#start-gunicorn&#34;&gt;Aiohttp docs&lt;/a&gt; says that you should use &lt;code&gt;aiohttp.worker.GunicornWebWorker&lt;/code&gt;, but when you switch setting there will be error.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[5898] [ERROR] Exception in worker process
 Traceback (most recent call last):
-  File &amp;quot;./gunicorn/arbiter.py&amp;quot;, line 557, in spawn_worker
+  File &amp;#34;./gunicorn/arbiter.py&amp;#34;, line 557, in spawn_worker
     worker.init_process()
-  File &amp;quot;./aiohttp/worker.py&amp;quot;, line 37, in init_process
+  File &amp;#34;./aiohttp/worker.py&amp;#34;, line 37, in init_process
     super().init_process()
-  File &amp;quot;./gunicorn/workers/base.py&amp;quot;, line 132, in init_process
+  File &amp;#34;./gunicorn/workers/base.py&amp;#34;, line 132, in init_process
     self.run()
-  File &amp;quot;./aiohttp/worker.py&amp;quot;, line 40, in run
+  File &amp;#34;./aiohttp/worker.py&amp;#34;, line 40, in run
     self.loop.run_until_complete(self.wsgi.startup())
 AttributeError:
-    &#39;WSGIHandler&#39; object has no attribute &#39;startup&#39;
+    &amp;#39;WSGIHandler&amp;#39; object has no attribute &amp;#39;startup&amp;#39;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So &lt;em&gt;aiohttp.worker.GunicornWebWorker&lt;/em&gt; differs from standart wsgi app for django. Luckily, python community has two packages to overcome these difficulties: &lt;em&gt;aiohttp-wsgi&lt;/em&gt; and &lt;em&gt;aiodjango&lt;/em&gt;, add them to your &lt;em&gt;requirements.txt&lt;/em&gt;.
 After this modify your &lt;em&gt;wsgi.py&lt;/em&gt; according to &lt;a href=&#34;http://aiodjango.readthedocs.io/en/latest/usage.html#defining-the-application&#34;&gt;docs&lt;/a&gt;:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import os
@@ -108,7 +108,7 @@ from django.core.wsgi import get_wsgi_application
 from aiodjango import get_aio_application
 
 
-os.environ.setdefault(&#39;DJANGO_SETTINGS_MODULE&#39;, &#39;settings&#39;)
+os.environ.setdefault(&amp;#39;DJANGO_SETTINGS_MODULE&amp;#39;, &amp;#39;settings&amp;#39;)
 
 # Build WSGI application
 # Any WSGI middleware would be added here

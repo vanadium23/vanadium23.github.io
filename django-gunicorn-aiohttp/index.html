@@ -22,7 +22,7 @@ Based on gunicorn docs, you need simply switch worker to gaiohttp and that&rsquo
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <meta name="generator" content="Hugo 0.92.0" />
+  <meta name="generator" content="Hugo 0.96.0" />
 </head>
 <body>
   <nav class="u-background">
@@ -78,16 +78,16 @@ In other words, workers won&rsquo;t be killed after max_requests count. After so
 <a href="http://aiohttp.readthedocs.io/en/stable/deployment.html#start-gunicorn">Aiohttp docs</a> says that you should use <code>aiohttp.worker.GunicornWebWorker</code>, but when you switch setting there will be error.</p>
 <pre tabindex="0"><code>[5898] [ERROR] Exception in worker process
 Traceback (most recent call last):
-  File &quot;./gunicorn/arbiter.py&quot;, line 557, in spawn_worker
+  File &#34;./gunicorn/arbiter.py&#34;, line 557, in spawn_worker
     worker.init_process()
-  File &quot;./aiohttp/worker.py&quot;, line 37, in init_process
+  File &#34;./aiohttp/worker.py&#34;, line 37, in init_process
     super().init_process()
-  File &quot;./gunicorn/workers/base.py&quot;, line 132, in init_process
+  File &#34;./gunicorn/workers/base.py&#34;, line 132, in init_process
     self.run()
-  File &quot;./aiohttp/worker.py&quot;, line 40, in run
+  File &#34;./aiohttp/worker.py&#34;, line 40, in run
     self.loop.run_until_complete(self.wsgi.startup())
 AttributeError:
-    'WSGIHandler' object has no attribute 'startup'
+    &#39;WSGIHandler&#39; object has no attribute &#39;startup&#39;
 </code></pre><p>So <em>aiohttp.worker.GunicornWebWorker</em> differs from standart wsgi app for django. Luckily, python community has two packages to overcome these difficulties: <em>aiohttp-wsgi</em> and <em>aiodjango</em>, add them to your <em>requirements.txt</em>.
 After this modify your <em>wsgi.py</em> according to <a href="http://aiodjango.readthedocs.io/en/latest/usage.html#defining-the-application">docs</a>:</p>
 <pre tabindex="0"><code>import os
@@ -97,7 +97,7 @@ from django.core.wsgi import get_wsgi_application
 from aiodjango import get_aio_application
 
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'settings')
+os.environ.setdefault(&#39;DJANGO_SETTINGS_MODULE&#39;, &#39;settings&#39;)
 
 # Build WSGI application
 # Any WSGI middleware would be added here

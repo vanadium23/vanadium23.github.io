@@ -16,7 +16,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <meta name="generator" content="Hugo 0.92.0" />
+  <meta name="generator" content="Hugo 0.96.0" />
 </head>
 <body>
   <nav class="u-background">
@@ -81,7 +81,7 @@ Always remember simple thing: more unit &amp; integrations tests you have =&gt; 
 if hotel.rating is integer.</p>
 <pre tabindex="0"><code>stars = range(hotel.rating / 10)
 </code></pre><p>Correct answer:</p>
-<pre tabindex="0"><code>&gt; TypeError: 'float' object cannot be interpreted as an integer
+<pre tabindex="0"><code>&gt; TypeError: &#39;float&#39; object cannot be interpreted as an integer
 </code></pre><p>Solution:</p>
 <pre tabindex="0"><code># do it before migrations, it works on py2
 from __future__ import division
@@ -90,11 +90,11 @@ stars = range(hotel.rating // 10)
 <p>So, in python 3 you can&rsquo;t do such things:</p>
 <pre tabindex="0"><code>None &gt; None
 1 &gt; None
-'1' &gt; 1
+&#39;1&#39; &gt; 1
 
 &gt; TypeError: unorderable types: int() &gt; NoneType()
 </code></pre><p>Because it&rsquo;s more strict for types. How it was found:</p>
-<pre tabindex="0"><code>chosen_indexes = Obj.objects.values_list('chosen_index', flat=True)
+<pre tabindex="0"><code>chosen_indexes = Obj.objects.values_list(&#39;chosen_index&#39;, flat=True)
 ...
 ...
 ...
@@ -105,58 +105,58 @@ max_index = max(chosen_indexes)
 <p>Pretty much uses external APIs: may be you send letters through MailGun or Mandrill, you can call some other services in your company.
 But you know - sometimes they just fail: connection timeouts, 5xx errors.
 For handling such cases you can make tuple of Exception:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> requests.exceptions <span style="color:#f92672">import</span> (
-    RequestException,
-    HTTPError
-)
-
-NETWORK_EXCEPTIONS <span style="color:#f92672">=</span> (
-    RequestException,
-    HTTPException,
-)
-
-<span style="color:#66d9ef">try</span>:
-    <span style="color:#75715e"># some bad code example, but for teach purpose</span>
-    response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(some_url)
-    result <span style="color:#f92672">=</span> ujson<span style="color:#f92672">.</span>loads(response<span style="color:#f92672">.</span>content)
-<span style="color:#66d9ef">except</span> (NETWORK_EXCEPTIONS, <span style="color:#a6e22e">ValueError</span>):
-    log<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#39;some bad thing happend&#39;</span>)
-</code></pre></div><p>This code won&rsquo;t work on python3, because interpreter check exception is subclass of BaseException.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> requests.exceptions <span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>    RequestException,
+</span></span><span style="display:flex;"><span>    HTTPError
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>NETWORK_EXCEPTIONS <span style="color:#f92672">=</span> (
+</span></span><span style="display:flex;"><span>    RequestException,
+</span></span><span style="display:flex;"><span>    HTTPException,
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># some bad code example, but for teach purpose</span>
+</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(some_url)
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> ujson<span style="color:#f92672">.</span>loads(response<span style="color:#f92672">.</span>content)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> (NETWORK_EXCEPTIONS, <span style="color:#a6e22e">ValueError</span>):
+</span></span><span style="display:flex;"><span>    log<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#39;some bad thing happend&#39;</span>)
+</span></span></code></pre></div><p>This code won&rsquo;t work on python3, because interpreter check exception is subclass of BaseException.</p>
 <p>Solution:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> requests.exceptions <span style="color:#f92672">import</span> (
-    RequestException,
-    HTTPError
-)
-
-NETWORK_EXCEPTIONS <span style="color:#f92672">=</span> (
-    RequestException,
-    HTTPException
-)
-
-<span style="color:#66d9ef">try</span>:
-    response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(some_url)
-    result <span style="color:#f92672">=</span> ujson<span style="color:#f92672">.</span>loads(response<span style="color:#f92672">.</span>content)
-<span style="color:#66d9ef">except</span> NETWORK_EXCEPTIONS <span style="color:#f92672">+</span> (<span style="color:#a6e22e">ValueError</span>,):
-    log<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#39;some bad thing happend&#39;</span>)
-</code></pre></div><p>Second interesting example is that, except create variable in local scope and its make hard to print/ipdb. (This is some questing during interview, that I love to ask).
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> requests.exceptions <span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>    RequestException,
+</span></span><span style="display:flex;"><span>    HTTPError
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>NETWORK_EXCEPTIONS <span style="color:#f92672">=</span> (
+</span></span><span style="display:flex;"><span>    RequestException,
+</span></span><span style="display:flex;"><span>    HTTPException
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(some_url)
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> ujson<span style="color:#f92672">.</span>loads(response<span style="color:#f92672">.</span>content)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> NETWORK_EXCEPTIONS <span style="color:#f92672">+</span> (<span style="color:#a6e22e">ValueError</span>,):
+</span></span><span style="display:flex;"><span>    log<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#39;some bad thing happend&#39;</span>)
+</span></span></code></pre></div><p>Second interesting example is that, except create variable in local scope and its make hard to print/ipdb. (This is some questing during interview, that I love to ask).
 Example:</p>
 <pre tabindex="0"><code>import json
 
-exc = 'test'
+exc = &#39;test&#39;
 try:
-    result = json.loads('{test}')
+    result = json.loads(&#39;{test}&#39;)
 except ValueError as exc:
     pass
 # there will be no exc variable on py3k
 print(exc)
-&gt; NameError: name 'exc' is not defined
+&gt; NameError: name &#39;exc&#39; is not defined
 </code></pre><h1 id="a-namepy3k-byteswarningabytes-comparison"><a name="py3k-byteswarning"></a>bytes comparison</h1>
 <p>It&rsquo;s greatest pain in migration. So much pain, I can feel it in my head.
 Next 3 bullets is about it.
 First: no implicit conversion between str and bytes.
 Solution:</p>
 <pre tabindex="0"><code>python3 -bb your_script.py
-</code></pre><p>It throw ByteWarning exception insted of falsing b'' == &lsquo;&rsquo;.</p>
+</code></pre><p>It throw ByteWarning exception insted of falsing b&rsquo;&rsquo; == &lsquo;&rsquo;.</p>
 <p>Second: some libs expected bytes on input, some text.</p>
 <p>Solution: call .decode on bytes &amp; encode on str.</p>
 <h1 id="a-namepy3k-ujsonajust-ujson"><a name="py3k-ujson"></a>just ujson</h1>
@@ -169,24 +169,24 @@ It answers question of life, universe and everything.</p>
   &lt;answer&gt;42&lt;/answer&gt;
 &lt;/root&gt;
 </code></pre><p>You want to parse it using lxml:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> lxml <span style="color:#f92672">import</span> objectify
-
-xml_answer <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;
-</span><span style="color:#e6db74">&lt;root&gt;
-</span><span style="color:#e6db74">  &lt;answer&gt;42&lt;/answer&gt;
-</span><span style="color:#e6db74">&lt;/root&gt;
-</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
-xml <span style="color:#f92672">=</span> objectify<span style="color:#f92672">.</span>parse(buf)<span style="color:#f92672">.</span>getroot()
-</code></pre></div><p>This example works both on py2 and py3, but some little difference:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> lxml <span style="color:#f92672">import</span> objectify
-
-xml_answer <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;
-</span><span style="color:#e6db74">&lt;root&gt;
-</span><span style="color:#e6db74">  &lt;answer&gt;42&lt;/answer&gt;
-</span><span style="color:#e6db74">&lt;/root&gt;
-</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
-xml <span style="color:#f92672">=</span> objectify<span style="color:#f92672">.</span>parse(buf)<span style="color:#f92672">.</span>getroot()
-</code></pre></div><p>Aaaand lxml wants bytes on input instead of string ¯\<em>(ツ)</em>/¯.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> lxml <span style="color:#f92672">import</span> objectify
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>xml_answer <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;root&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &lt;answer&gt;42&lt;/answer&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;/root&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>xml <span style="color:#f92672">=</span> objectify<span style="color:#f92672">.</span>parse(buf)<span style="color:#f92672">.</span>getroot()
+</span></span></code></pre></div><p>This example works both on py2 and py3, but some little difference:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> lxml <span style="color:#f92672">import</span> objectify
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>xml_answer <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;root&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &lt;answer&gt;42&lt;/answer&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;/root&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>xml <span style="color:#f92672">=</span> objectify<span style="color:#f92672">.</span>parse(buf)<span style="color:#f92672">.</span>getroot()
+</span></span></code></pre></div><p>Aaaand lxml wants bytes on input instead of string ¯\<em>(ツ)</em>/¯.</p>
 <h1 id="a-namepy3k-redispyaredis-py-bytes"><a name="py3k-redispy"></a>redis-py bytes</h1>
 <p>All redis action from redispy returns bytes now. So if you use pure redis (not a django.core.cache), you need to explicit call decode. Also pickling objects between python3 and python2 doesn&rsquo;t work, so make sure you make different keys in cache.</p>
 <h2 id="a-namepy3k-djangoanote-how-to-make-smaller-diff-between-py2-and-py3-version-on-django"><a name="py3k-django"></a>Note: how to make smaller diff between py2 and py3 version on django</h2>

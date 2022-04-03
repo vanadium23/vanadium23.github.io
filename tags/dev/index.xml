@@ -285,7 +285,7 @@ Always remember simple thing: more unit &amp;amp; integrations tests you have =&
 if hotel.rating is integer.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;stars = range(hotel.rating / 10)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Correct answer:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;gt; TypeError: &#39;float&#39; object cannot be interpreted as an integer
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;gt; TypeError: &amp;#39;float&amp;#39; object cannot be interpreted as an integer
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Solution:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# do it before migrations, it works on py2
 from __future__ import division
@@ -294,11 +294,11 @@ stars = range(hotel.rating // 10)
 &lt;p&gt;So, in python 3 you can&amp;rsquo;t do such things:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;None &amp;gt; None
 1 &amp;gt; None
-&#39;1&#39; &amp;gt; 1
+&amp;#39;1&amp;#39; &amp;gt; 1
 
 &amp;gt; TypeError: unorderable types: int() &amp;gt; NoneType()
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Because it&amp;rsquo;s more strict for types. How it was found:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;chosen_indexes = Obj.objects.values_list(&#39;chosen_index&#39;, flat=True)
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;chosen_indexes = Obj.objects.values_list(&amp;#39;chosen_index&amp;#39;, flat=True)
 ...
 ...
 ...
@@ -309,58 +309,58 @@ max_index = max(chosen_indexes)
 &lt;p&gt;Pretty much uses external APIs: may be you send letters through MailGun or Mandrill, you can call some other services in your company.
 But you know - sometimes they just fail: connection timeouts, 5xx errors.
 For handling such cases you can make tuple of Exception:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; requests.exceptions &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; (
-    RequestException,
-    HTTPError
-)
-
-NETWORK_EXCEPTIONS &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (
-    RequestException,
-    HTTPException,
-)
-
-&lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt;:
-    &lt;span style=&#34;color:#75715e&#34;&gt;# some bad code example, but for teach purpose&lt;/span&gt;
-    response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; requests&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;get(some_url)
-    result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; ujson&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;loads(response&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;content)
-&lt;span style=&#34;color:#66d9ef&#34;&gt;except&lt;/span&gt; (NETWORK_EXCEPTIONS, &lt;span style=&#34;color:#a6e22e&#34;&gt;ValueError&lt;/span&gt;):
-    log&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;error(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;some bad thing happend&amp;#39;&lt;/span&gt;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This code won&amp;rsquo;t work on python3, because interpreter check exception is subclass of BaseException.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; requests.exceptions &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; (
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    RequestException,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    HTTPError
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;NETWORK_EXCEPTIONS &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    RequestException,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    HTTPException,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# some bad code example, but for teach purpose&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; requests&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;get(some_url)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; ujson&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;loads(response&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;content)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;except&lt;/span&gt; (NETWORK_EXCEPTIONS, &lt;span style=&#34;color:#a6e22e&#34;&gt;ValueError&lt;/span&gt;):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    log&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;error(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;some bad thing happend&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This code won&amp;rsquo;t work on python3, because interpreter check exception is subclass of BaseException.&lt;/p&gt;
 &lt;p&gt;Solution:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; requests.exceptions &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; (
-    RequestException,
-    HTTPError
-)
-
-NETWORK_EXCEPTIONS &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (
-    RequestException,
-    HTTPException
-)
-
-&lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt;:
-    response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; requests&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;get(some_url)
-    result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; ujson&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;loads(response&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;content)
-&lt;span style=&#34;color:#66d9ef&#34;&gt;except&lt;/span&gt; NETWORK_EXCEPTIONS &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;ValueError&lt;/span&gt;,):
-    log&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;error(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;some bad thing happend&amp;#39;&lt;/span&gt;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Second interesting example is that, except create variable in local scope and its make hard to print/ipdb. (This is some questing during interview, that I love to ask).
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; requests.exceptions &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; (
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    RequestException,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    HTTPError
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;NETWORK_EXCEPTIONS &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    RequestException,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    HTTPException
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; requests&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;get(some_url)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; ujson&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;loads(response&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;content)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;except&lt;/span&gt; NETWORK_EXCEPTIONS &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;ValueError&lt;/span&gt;,):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    log&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;error(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;some bad thing happend&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Second interesting example is that, except create variable in local scope and its make hard to print/ipdb. (This is some questing during interview, that I love to ask).
 Example:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import json
 
-exc = &#39;test&#39;
+exc = &amp;#39;test&amp;#39;
 try:
-    result = json.loads(&#39;{test}&#39;)
+    result = json.loads(&amp;#39;{test}&amp;#39;)
 except ValueError as exc:
     pass
 # there will be no exc variable on py3k
 print(exc)
-&amp;gt; NameError: name &#39;exc&#39; is not defined
+&amp;gt; NameError: name &amp;#39;exc&amp;#39; is not defined
 &lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;a-namepy3k-byteswarningabytes-comparison&#34;&gt;&lt;a name=&#34;py3k-byteswarning&#34;&gt;&lt;/a&gt;bytes comparison&lt;/h1&gt;
 &lt;p&gt;It&amp;rsquo;s greatest pain in migration. So much pain, I can feel it in my head.
 Next 3 bullets is about it.
 First: no implicit conversion between str and bytes.
 Solution:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;python3 -bb your_script.py
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It throw ByteWarning exception insted of falsing b&#39;&#39; == &amp;lsquo;&amp;rsquo;.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It throw ByteWarning exception insted of falsing b&amp;rsquo;&amp;rsquo; == &amp;lsquo;&amp;rsquo;.&lt;/p&gt;
 &lt;p&gt;Second: some libs expected bytes on input, some text.&lt;/p&gt;
 &lt;p&gt;Solution: call .decode on bytes &amp;amp; encode on str.&lt;/p&gt;
 &lt;h1 id=&#34;a-namepy3k-ujsonajust-ujson&#34;&gt;&lt;a name=&#34;py3k-ujson&#34;&gt;&lt;/a&gt;just ujson&lt;/h1&gt;
@@ -373,24 +373,24 @@ It answers question of life, universe and everything.&lt;/p&gt;
   &amp;lt;answer&amp;gt;42&amp;lt;/answer&amp;gt;
 &amp;lt;/root&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You want to parse it using lxml:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; lxml &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; objectify
-
-xml_answer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;lt;root&amp;gt;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  &amp;lt;answer&amp;gt;42&amp;lt;/answer&amp;gt;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;lt;/root&amp;gt;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
-xml &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; objectify&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;parse(buf)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;getroot()
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This example works both on py2 and py3, but some little difference:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; lxml &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; objectify
-
-xml_answer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;lt;root&amp;gt;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  &amp;lt;answer&amp;gt;42&amp;lt;/answer&amp;gt;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;lt;/root&amp;gt;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
-xml &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; objectify&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;parse(buf)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;getroot()
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Aaaand lxml wants bytes on input instead of string ¯\&lt;em&gt;(ツ)&lt;/em&gt;/¯.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; lxml &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; objectify
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xml_answer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;lt;root&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  &amp;lt;answer&amp;gt;42&amp;lt;/answer&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;lt;/root&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xml &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; objectify&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;parse(buf)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;getroot()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This example works both on py2 and py3, but some little difference:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; lxml &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; objectify
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xml_answer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;lt;root&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  &amp;lt;answer&amp;gt;42&amp;lt;/answer&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;lt;/root&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xml &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; objectify&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;parse(buf)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;getroot()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Aaaand lxml wants bytes on input instead of string ¯\&lt;em&gt;(ツ)&lt;/em&gt;/¯.&lt;/p&gt;
 &lt;h1 id=&#34;a-namepy3k-redispyaredis-py-bytes&#34;&gt;&lt;a name=&#34;py3k-redispy&#34;&gt;&lt;/a&gt;redis-py bytes&lt;/h1&gt;
 &lt;p&gt;All redis action from redispy returns bytes now. So if you use pure redis (not a django.core.cache), you need to explicit call decode. Also pickling objects between python3 and python2 doesn&amp;rsquo;t work, so make sure you make different keys in cache.&lt;/p&gt;
 &lt;h2 id=&#34;a-namepy3k-djangoanote-how-to-make-smaller-diff-between-py2-and-py3-version-on-django&#34;&gt;&lt;a name=&#34;py3k-django&#34;&gt;&lt;/a&gt;Note: how to make smaller diff between py2 and py3 version on django&lt;/h2&gt;
@@ -422,13 +422,13 @@ But somehow some things just don&amp;rsquo;t connect to each other, and you just
 import os
 
 BASE_DIR = os.path.dirname(__file__)
-LOCALE_DIR = os.path.join(BASE_DIR, &#39;locale&#39;)
+LOCALE_DIR = os.path.join(BASE_DIR, &amp;#39;locale&amp;#39;)
 
 # try to set param fallback to False
-t = gettext.translation(&#39;default&#39;, LOCALE_DIR, fallback=True)
+t = gettext.translation(&amp;#39;default&amp;#39;, LOCALE_DIR, fallback=True)
 _ = t.ugettext
 
-message = _(&#39;Test!&#39;)
+message = _(&amp;#39;Test!&amp;#39;)
 print(message)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To change language on your system, you can simply set enviroment variable &lt;em&gt;LANG&lt;/em&gt; or &lt;em&gt;LANGUAGE&lt;/em&gt;.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;~ export LANG=ru
@@ -445,7 +445,7 @@ After it, you need to init new locale (&lt;em&gt;note:&lt;/em&gt; if you need to
 --output=./locale/ru/LC_MESSAGES/default.po
 ~ rm messages.pot
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now you can open default.po files with some tools, like &lt;a href=&#34;https://poedit.net/&#34;&gt;POEdit&lt;/a&gt; (&lt;em&gt;note:&lt;/em&gt; I prefer Sublime Text for small po).
-Change in ru po msgstr from &amp;lsquo;Test!&amp;rsquo; to &amp;lsquo;Тест!&amp;rsquo;. When you run script again, output will be same (&amp;lsquo;Test!&#39;).
+Change in ru po msgstr from &amp;lsquo;Test!&amp;rsquo; to &amp;lsquo;Тест!&amp;rsquo;. When you run script again, output will be same (&amp;lsquo;Test!&amp;rsquo;).
 This is because after modifying po, we need to compile it to binary format (known as mo).&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;~ msgfmt en/LC_MESSAGES/default.po -o en/LC_MESSAGES/default.mo
 ~ msgfmt ru/LC_MESSAGES/default.po -o ru/LC_MESSAGES/default.mo
@@ -470,16 +470,16 @@ In other words, workers won&amp;rsquo;t be killed after max_requests count. Afte
 &lt;a href=&#34;http://aiohttp.readthedocs.io/en/stable/deployment.html#start-gunicorn&#34;&gt;Aiohttp docs&lt;/a&gt; says that you should use &lt;code&gt;aiohttp.worker.GunicornWebWorker&lt;/code&gt;, but when you switch setting there will be error.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[5898] [ERROR] Exception in worker process
 Traceback (most recent call last):
-  File &amp;quot;./gunicorn/arbiter.py&amp;quot;, line 557, in spawn_worker
+  File &amp;#34;./gunicorn/arbiter.py&amp;#34;, line 557, in spawn_worker
     worker.init_process()
-  File &amp;quot;./aiohttp/worker.py&amp;quot;, line 37, in init_process
+  File &amp;#34;./aiohttp/worker.py&amp;#34;, line 37, in init_process
     super().init_process()
-  File &amp;quot;./gunicorn/workers/base.py&amp;quot;, line 132, in init_process
+  File &amp;#34;./gunicorn/workers/base.py&amp;#34;, line 132, in init_process
     self.run()
-  File &amp;quot;./aiohttp/worker.py&amp;quot;, line 40, in run
+  File &amp;#34;./aiohttp/worker.py&amp;#34;, line 40, in run
     self.loop.run_until_complete(self.wsgi.startup())
 AttributeError:
-    &#39;WSGIHandler&#39; object has no attribute &#39;startup&#39;
+    &amp;#39;WSGIHandler&amp;#39; object has no attribute &amp;#39;startup&amp;#39;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So &lt;em&gt;aiohttp.worker.GunicornWebWorker&lt;/em&gt; differs from standart wsgi app for django. Luckily, python community has two packages to overcome these difficulties: &lt;em&gt;aiohttp-wsgi&lt;/em&gt; and &lt;em&gt;aiodjango&lt;/em&gt;, add them to your &lt;em&gt;requirements.txt&lt;/em&gt;.
 After this modify your &lt;em&gt;wsgi.py&lt;/em&gt; according to &lt;a href=&#34;http://aiodjango.readthedocs.io/en/latest/usage.html#defining-the-application&#34;&gt;docs&lt;/a&gt;:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import os
@@ -489,7 +489,7 @@ from django.core.wsgi import get_wsgi_application
 from aiodjango import get_aio_application
 
 
-os.environ.setdefault(&#39;DJANGO_SETTINGS_MODULE&#39;, &#39;settings&#39;)
+os.environ.setdefault(&amp;#39;DJANGO_SETTINGS_MODULE&amp;#39;, &amp;#39;settings&amp;#39;)
 
 # Build WSGI application
 # Any WSGI middleware would be added here
