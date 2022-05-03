@@ -1,0 +1,33 @@
+baseURL: 'https://vanadium23.me/'
+languageCode: ru-ru
+title: vanadium23
+
+Params:
+  rss: false
+  color: "#008080"
+  CloudflareInsights: 7507913639b540edbde55792995b90d8
+  description: Junior CTO
+  Logo:
+    title: vanadium23
+
+permalinks:
+  posts: '/:slug/'
+
+taxonomies:
+  tag: tags
+
+menu:
+  nav:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 2
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

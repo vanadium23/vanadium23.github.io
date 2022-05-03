@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+{{ partial "heading.html" . }}
+{{ .Content }}
+<ul class="Tags">
+  {{ range $.Site.Taxonomies.tags.ByCount }}
+  <li class="Tags-item u-background">
+      <a class="Tags-link u-clickable" href="/tags/{{ .Name }}">{{ .Name }} <small>{{ .Count }}</small></a>
+    </li>
+    {{ end }}
+</ul>
+
+{{ end }}

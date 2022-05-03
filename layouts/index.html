@@ -1,0 +1,23 @@
+{{ define "preload" }}
+
+{{ where .Site.Pages "Type" "in" site.Params.mainSections | .Paginate | .Scratch.Set "paginator" }}
+{{ range (.Scratch.Get "paginator").Pages }}
+{{ with .Content }}{{ end }}
+{{ end }}
+
+{{ end }}
+
+{{ define "main" }}
+
+{{ range .Site.RegularPages.GroupByPublishDate "2006" }}
+<h3>{{ .Key }}</h3>
+<ul>
+  {{ range .Pages }}
+  {{ if not .Params.private }}
+  <li>{{ .PublishDate.Format "2006-01-02" }} – <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+  {{ end }}
+  {{ end }}
+</ul>
+{{ end }}
+
+{{ end }}
