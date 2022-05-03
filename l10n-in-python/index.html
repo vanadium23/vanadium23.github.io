@@ -1,79 +1,9 @@
-<!DOCTYPE html>
-<html lang="ru-ru">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Say hello to l10n in python | vanadium23</title>
-  <meta name="author" content="vanadium23" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:creator" content="@vanadium23" />
-    <meta property="og:title" content="Say hello to l10n in python" />
-    <meta property="twitter:title" content="Say hello to l10n in python" />
-    <meta name="description" content="In python world, many solutions for trivial problems could be found in standart library: from statistical functions to localization for your package.
-But somehow some things just don&rsquo;t connect to each other, and you just stuck at combining this constructor in right way.">
-    <meta property="og:description" content="In python world, many solutions for trivial problems could be found in standart library: from statistical functions to localization for your package.
-But somehow some things just don&rsquo;t connect to each other, and you just stuck at combining this constructor in right way." />
-    
-  <link rel="stylesheet" href="https://vanadium23.me/css/base.min.b6dfa31f93118b56b5ca227e268bbe1c1d592be9ccd7b4664981bca6f0352f99.css" integrity="sha256-tt&#43;jH5MRi1a1yiJ&#43;Jou&#43;HB1ZK&#43;nM17RmSYG8pvA1L5k=">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <meta name="generator" content="Hugo 0.96.0" />
-</head>
-<body>
-  <nav class="u-background">
-    <div class="u-wrapper Banner">
-        <a class="Banner-link u-clickable" href="https://vanadium23.me/">
-            vanadium23
-        </a>
-        <ul class="Banner">
-        
-        <li class="Banner-item">
-            <a class="Banner-link u-clickable" href="https://vanadium23.me/about/">About</a>
-        </li class="Banner-item">
-        
-        <li class="Banner-item">
-            <a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a>
-        </li class="Banner-item">
-        
-        <li>
-            <a id="themeSwitch" class="theme-switcher"></a>
-        </li>
-        </ul>
-    </div>
-</nav>
-  <main >
-    <div class="u-wrapper">
-      <div class="u-padding">
-        
-
-<article>
-  <header class="Heading">
-  <h2 class="Heading-title">
-    <a class="Heading-link u-clickable" href="https://vanadium23.me/l10n-in-python/" rel="bookmark">Say hello to l10n in python</a>
-  </h2>
-  <div class="Heading-additional">
-    
-    <time datetime="2016-11-26T17:00:00&#43;03:00">
-      26 November, 2016
-    </time>&middot;
-    
-  
-  <span>2 min read</span>
-  
-  </div>
-</header>
-  <p>In python world, many solutions for trivial problems could be found in standart library: from <a href="https://docs.python.org/3/library/statistics.html">statistical functions</a> to <a href="https://docs.python.org/3/library/gettext.html">localization</a> for your package.
-But somehow some things just don&rsquo;t connect to each other, and you just stuck at combining this constructor in right way.</p>
-<p>This gifs pretty sums up situation:</p>
-<p><img src="/images/modern-development.gif" alt="modern-development"></p>
-<p>Our task:</p>
-<ul>
-<li>create python package, that has localized string</li>
-<li>provide this string to django application</li>
-</ul>
-<p>First thing, that you find at <a href="https://docs.python.org/3/library/gettext.html">gettext docs</a>:</p>
-<pre tabindex="0"><code>import gettext
+<!doctype html><html lang=ru-ru><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Say hello to l10n in python | vanadium23</title><meta name=author content="vanadium23"><meta name=twitter:card content="summary"><meta name=twitter:creator content="@vanadium23"><meta property="og:title" content="Say hello to l10n in python"><meta property="twitter:title" content="Say hello to l10n in python"><meta name=description content="In python world, many solutions for trivial problems could be found in standart library: from statistical functions to localization for your package.
+But somehow some things just don&rsquo;t connect to each other, and you just stuck at combining this constructor in right way."><meta property="og:description" content="In python world, many solutions for trivial problems could be found in standart library: from statistical functions to localization for your package.
+But somehow some things just don&rsquo;t connect to each other, and you just stuck at combining this constructor in right way."><link rel=stylesheet href=https://vanadium23.me/css/base.min.ede35a5a6f0822c8ed4e62a02aaaead5a369281f08df87a8547512ed5449222f.css integrity="sha256-7eNaWm8IIsjtTmKgKqrq1aNpKB8I34eoVHUS7VRJIi8="><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><meta name=generator content="Hugo 0.98.0"></head><body><nav class=u-background><div class="u-wrapper Banner"><a class="Banner-link u-clickable" href=https://vanadium23.me/>vanadium23</a><ul class=Banner><li class=Banner-item><a class="Banner-link u-clickable" href=https://vanadium23.me/about/>About</a></li class="banner-item"><li class=Banner-item><a class="Banner-link u-clickable" href=https://vanadium23.me/tags/>Tags</a></li class="banner-item"><li><a id=themeSwitch class=theme-switcher></a></li></ul></div></nav><main><div class=u-wrapper><div class=u-padding><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://vanadium23.me/l10n-in-python/ rel=bookmark>Say hello to l10n in python</a></h2><div class=Heading-additional><time datetime=2016-11-26T17:00:00+03:00>26 November, 2016
+</time>&#183;
+<span>2 min read</span></div></header><p>In python world, many solutions for trivial problems could be found in standart library: from <a href=https://docs.python.org/3/library/statistics.html>statistical functions</a> to <a href=https://docs.python.org/3/library/gettext.html>localization</a> for your package.
+But somehow some things just don&rsquo;t connect to each other, and you just stuck at combining this constructor in right way.</p><p>This gifs pretty sums up situation:</p><p><img src=/images/modern-development.gif alt=modern-development></p><p>Our task:</p><ul><li>create python package, that has localized string</li><li>provide this string to django application</li></ul><p>First thing, that you find at <a href=https://docs.python.org/3/library/gettext.html>gettext docs</a>:</p><pre tabindex=0><code>import gettext
 import os
 
 BASE_DIR = os.path.dirname(__file__)
@@ -85,79 +15,30 @@ _ = t.ugettext
 
 message = _(&#39;Test!&#39;)
 print(message)
-</code></pre><p>To change language on your system, you can simply set enviroment variable <em>LANG</em> or <em>LANGUAGE</em>.</p>
-<pre tabindex="0"><code>~ export LANG=ru
+</code></pre><p>To change language on your system, you can simply set enviroment variable <em>LANG</em> or <em>LANGUAGE</em>.</p><pre tabindex=0><code>~ export LANG=ru
 ~ python test.py
 Test!
 </code></pre><p>This won&rsquo;t work, because you don&rsquo;t have translated phrases in your locale dir. Let&rsquo;s compile them.
 Command pygettext grabs all string in <em>ugettext</em> function and dumps it to pot file.
-After it, you need to init new locale (<em>note:</em> if you need to merge with previos translations use <em>msgmerge</em>).</p>
-<pre tabindex="0"><code>~ pygettext test.py
+After it, you need to init new locale (<em>note:</em> if you need to merge with previos translations use <em>msgmerge</em>).</p><pre tabindex=0><code>~ pygettext test.py
 ~ mkdir -p ./locale/{en,ru}/LC_MESSAGES/
 ~ msginit --input=messages.pot --locale=en_US.UTF-8 \
 --output=./locale/en/LC_MESSAGES/default.po
 ~ msginit --input=messages.pot --locale=ru_RU.UTF-8 \
 --output=./locale/ru/LC_MESSAGES/default.po
 ~ rm messages.pot
-</code></pre><p>Now you can open default.po files with some tools, like <a href="https://poedit.net/">POEdit</a> (<em>note:</em> I prefer Sublime Text for small po).
+</code></pre><p>Now you can open default.po files with some tools, like <a href=https://poedit.net/>POEdit</a> (<em>note:</em> I prefer Sublime Text for small po).
 Change in ru po msgstr from &lsquo;Test!&rsquo; to &lsquo;Тест!&rsquo;. When you run script again, output will be same (&lsquo;Test!&rsquo;).
-This is because after modifying po, we need to compile it to binary format (known as mo).</p>
-<pre tabindex="0"><code>~ msgfmt en/LC_MESSAGES/default.po -o en/LC_MESSAGES/default.mo
+This is because after modifying po, we need to compile it to binary format (known as mo).</p><pre tabindex=0><code>~ msgfmt en/LC_MESSAGES/default.po -o en/LC_MESSAGES/default.mo
 ~ msgfmt ru/LC_MESSAGES/default.po -o ru/LC_MESSAGES/default.mo
 </code></pre><p>Woo-hoo, output should be translated now, but it doesn&rsquo;t work with django.
-What shall we do? Read the <a href="https://docs.djangoproject.com/en/1.10/topics/i18n/translation/#how-django-discovers-translations">manual</a>.
-So we need to rename namespace from default to django, but also django realize <a href="https://github.com/django/django/blob/1.10.3/django/utils/translation/trans_real.py#L90">own class</a>, so insted of using gettext.translation.ugettext you need to use <em>django.utils.translation</em> one.
-Full example can be found in <a href="https://github.com/vanadium23/py-hello-l10n">repository</a>.</p>
-  
-<footer>
-  <ul class="Tags">
-    
-    
-    
-    <li class="Tags-item u-background">
-      <a class="Tags-link u-clickable" href="https://vanadium23.me/tags/dev/" rel="tag">dev</a>
-    </li>
-    
-    
-    
-    
-    <li class="Tags-item u-background">
-      <a class="Tags-link u-clickable" href="https://vanadium23.me/tags/l10n/" rel="tag">l10n</a>
-    </li>
-    
-    
-    
-    
-    <li class="Tags-item u-background">
-      <a class="Tags-link u-clickable" href="https://vanadium23.me/tags/python/" rel="tag">python</a>
-    </li>
-    
-    
-  </ul>
-</footer>
-
-</article>
-
-
-      </div>
-    </div>
-  </main>
-  <footer class="Footer">
-  <div class="u-wrapper">
-    <div class="u-padding">
-        
-        <a href="https://github.com/vanadium23"><i class="svg-icon github"></i></a>
-        <a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"></i></a>
-        <a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"></i></a>
-        <a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"></i></a>
-        <a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"></i></a>
-        <a href="https://goodreads.com/vanadium23"><i class="svg-icon goodreads"></i></a>
-        <a href="https://t.me/chernov_sharit"><i class="svg-icon telegram"></i></a>
-    </div>
-  </div>
-</footer>
-  
-  <script type="text/javascript" src="https://vanadium23.me/js/themes.js" integrity=""></script>
-  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7507913639b540edbde55792995b90d8"}'></script>
-</body>
-</html>
+What shall we do? Read the <a href=https://docs.djangoproject.com/en/1.10/topics/i18n/translation/#how-django-discovers-translations>manual</a>.
+So we need to rename namespace from default to django, but also django realize <a href=https://github.com/django/django/blob/1.10.3/django/utils/translation/trans_real.py#L90>own class</a>, so insted of using gettext.translation.ugettext you need to use <em>django.utils.translation</em> one.
+Full example can be found in <a href=https://github.com/vanadium23/py-hello-l10n>repository</a>.</p><footer><ul class=Tags><li class="Tags-item u-background"><a class="Tags-link u-clickable" href=https://vanadium23.me/tags/dev/ rel=tag>dev</a></li><li class="Tags-item u-background"><a class="Tags-link u-clickable" href=https://vanadium23.me/tags/l10n/ rel=tag>l10n</a></li><li class="Tags-item u-background"><a class="Tags-link u-clickable" href=https://vanadium23.me/tags/python/ rel=tag>python</a></li></ul></footer></article></div></div></main><footer class=Footer><div class=u-wrapper><div class=u-padding><a href=https://github.com/vanadium23><i class="svg-icon github"></i></a>
+<a href=https://www.linkedin.com/in/vanadium23><i class="svg-icon linkedin"></i></a>
+<a href=https://www.twitter.com/vanadium23><i class="svg-icon twitter"></i></a>
+<a href=http://stackoverflow.com/users/4809450/vanadium23><i class="svg-icon stackoverflow"></i></a>
+<a href=https://www.codewars.com/users/vanadium23><i class="svg-icon codewars"></i></a>
+<a href=https://goodreads.com/vanadium23><i class="svg-icon goodreads"></i></a>
+<a href=https://t.me/chernov_sharit><i class="svg-icon telegram"></i></a></div></div></footer><script type=text/javascript src=https://vanadium23.me/js/themes.js integrity></script>
+<script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "7507913639b540edbde55792995b90d8"}'></script></body></html>

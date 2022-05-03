@@ -1,512 +1,371 @@
-
-
-
-
-<?xml-stylesheet type="text/xsl" href="#stylesheet" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xsl">
-    <xsl:output method="html" doctype-system="about:legacy-compat" />
-    <xsl:template match="/rss">
-      <html lang="ru-ru">
-        <head>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>productivity RSS | vanadium23</title>
-          <link rel="stylesheet" href="https://vanadium23.me/css/base.min.b6dfa31f93118b56b5ca227e268bbe1c1d592be9ccd7b4664981bca6f0352f99.css" integrity="sha256-tt&#43;jH5MRi1a1yiJ&#43;Jou&#43;HB1ZK&#43;nM17RmSYG8pvA1L5k=" />
-        </head>
-        <body>
-          <nav class="u-background">
-    <div class="u-wrapper Banner">
-        <a class="Banner-link u-clickable" href="https://vanadium23.me/">
-            vanadium23
-        </a>
-        <ul class="Banner">
-        
-        <li class="Banner-item">
-            <a class="Banner-link u-clickable" href="https://vanadium23.me/about/">About</a>
-        </li class="Banner-item">
-        
-        <li class="Banner-item">
-            <a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a>
-        </li class="Banner-item">
-        
-        <li>
-            <a id="themeSwitch" class="theme-switcher"></a>
-        </li>
-        </ul>
-    </div>
-</nav>
-          <main>
-            <div class="u-wrapper">
-              <div class="u-padding">
-                <h2 class="Heading-title">
-                  
-                  <a class="Heading-link u-clickable" href="https://vanadium23.me/tags/productivity/index.xml" rel="bookmark">productivity RSS</a>
-                  
-                </h2>
-                
-              </div>
-            </div>
-          </main>
-          <footer class="Footer">
-  <div class="u-wrapper">
-    <div class="u-padding">
-        
-        <a href="https://github.com/vanadium23"><i class="svg-icon github"></i></a>
-        <a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"></i></a>
-        <a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"></i></a>
-        <a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"></i></a>
-        <a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"></i></a>
-        <a href="https://goodreads.com/vanadium23"><i class="svg-icon goodreads"></i></a>
-        <a href="https://t.me/chernov_sharit"><i class="svg-icon telegram"></i></a>
-    </div>
-  </div>
-</footer>
-        </body>
-      </html>
-    </xsl:template>
-  </xsl:stylesheet>
-  <channel>
-    <title>productivity on vanadium23</title>
-    <link>https://vanadium23.me/tags/productivity/</link>
-    <description>Recent content in productivity on vanadium23</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ru-ru</language>
-    <lastBuildDate>Mon, 19 Jul 2021 09:00:00 +0300</lastBuildDate>
-    <atom:link href="https://vanadium23.me/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Консистентность - необходимое условие для мастерства</title>
-      <link>https://vanadium23.me/consistency-over-mastery/</link>
-      <pubDate>Mon, 19 Jul 2021 09:00:00 +0300</pubDate>
-      <guid>https://vanadium23.me/consistency-over-mastery/</guid>
-      <description>&lt;p&gt;Читая недавно &lt;a href=&#34;https://www.freecodecamp.org/news/lessons-learned-after-11-years-coding/&#34;&gt;заметку о том, что хотелось бы знать на уровне джуна&lt;/a&gt; и параллельно заканчивая курс &amp;ldquo;&lt;a href=&#34;https://system-school.ru/introonline&#34;&gt;Системное саморазвитие&lt;/a&gt;&amp;rdquo;, глаз зацепился за фразу &amp;ldquo;Consistency &amp;gt; hard work&amp;rdquo;. Удивительным образом, именно постоянный подход с постепенным прогрессом приводит тебя к большим результатам с течением времени. И нет, это не очередная статья о том, что надо потратить &lt;a href=&#34;https://www.forbes.ru/forbes/issue/2009-04/7255-pravilo-10000-chasov&#34;&gt;10000 часов&lt;/a&gt;, точнее не только об этом.&lt;/p&gt;
-&lt;p&gt;Для начала необходимо представить картинку с развитием любого навыка, который складывается из четырёх зон по осям некомпетентность и осознанность:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Неосознанная некомпетентность — мы не знаем, что мы не умеем.&lt;/li&gt;
-&lt;li&gt;Осознанная некомпетентность — мы знаем, что мы не умеем, то есть сместили наше внимание на некомпетентность. Обычно на этой стадии приступают к потреблению нужной информации.&lt;/li&gt;
-&lt;li&gt;Осознанная компетентность — мы знаем, что умеем, но для применения нам необходимо внимание. Мы применяем полученные знания, но они требуют медленного мышления.&lt;/li&gt;
-&lt;li&gt;Неосознанная компетентность — мы не знаем, что умеем, так как довели наши действия до автоматизма.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/Pasted%20image%2020210713154713.png&#34; alt=&#34;Квадрат компетенций&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Отсюда следуют два интересных вывода:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Дурак и мастер находятся на одном уровне осознанности, но первый даже не догадывается о количество вложенных часов в реальные проекты, то есть не знает и не осознаёт.&lt;/li&gt;
-&lt;li&gt;Мастера от любителя отличают автоматизмы в наработанном навыке.
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;(лирическое отступление)&lt;/em&gt; Часто это является одной из причин, почему в разработке мало людей пишут статьи или ходят на конференции с выступлениям.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;На основе этой модели, можно понять, что без систематического прикладывания своей головы сначала к потреблению своей информации, потом к осознанию и наконец к её применению трудно освоить любой навык. При этом, есть исключения из этого правила, но они связаны с ранее заложенными знаниями от окружения или правильной наследственностью. Если вы не хотите играть в эту рулетку, то остаётся только вариант с постепенным продвижением.&lt;/p&gt;
-&lt;p&gt;Сама по себе консистентность/систематичность/дисциплина — тоже является компетенцией, а это значит можно пройти тем же путём. Надеюсь, прочтя эти строчки, станет понятно, что вы уже точно не находитесь на первом уровне, значит мы можем пойти дальше. А дальше есть довольно много популярных путей, начиная от прямолинейной (но рабочей) техники Pomodoro до сложносоставных вещей в виде использования Jira для своего планирования. Если ранее не читали, то рекомендую обратить внимание на &lt;a href=&#34;https://vanadium23.me/jedi-book-experiments/&#34;&gt;джедайские техники&lt;/a&gt;, так как относительно недавно они начали проводить &lt;a href=&#34;https://hyls.ru/jedi_max&#34;&gt;марафоны&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;И последнее, но не по важности, компетенция по систематичности необходима для приобретения новых навыков, а не для применения в вакууме. Если вы в какой-то момент попали в ловушку постоянных задач, то сильно рекомендую &lt;a href=&#34;https://vas3k.ru/inside/43/&#34;&gt;статью Вастрик.Инсайд&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;дополнительные-материалы&#34;&gt;Дополнительные материалы&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://typesense.org/blog/the-unreasonable-effectiveness-of-just-showing-up-everyday/&#34;&gt;https://typesense.org/blog/the-unreasonable-effectiveness-of-just-showing-up-everyday/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.deprocrastination.co/blog/put-yourself-on-the-productive-path&#34;&gt;https://www.deprocrastination.co/blog/put-yourself-on-the-productive-path&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.deprocrastination.co/blog/stages-of-self-development&#34;&gt;https://www.deprocrastination.co/blog/stages-of-self-development&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    <item>
-      <title>Что меня реально сейчас бесит</title>
-      <link>https://vanadium23.me/what-really-grinds-me/</link>
-      <pubDate>Fri, 25 Jun 2021 09:00:00 +0300</pubDate>
-      <guid>https://vanadium23.me/what-really-grinds-me/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/20210625195211.png&#34; alt=&#34;Иронично, что это мем про людей, которые дают советы&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Просматривая периодически свои дневники понял, что раз за разом возвращаюсь к одной и той же практике. Решил, что пора описать этот подход.
-Назвал я его &amp;ldquo;Что меня реально сейчас бесит&amp;rdquo; и, частично, он является отражением практики &amp;ldquo;спусковых крючков&amp;rdquo; из &lt;a href=&#34;https://vanadium23.me/jedi-book-experiments/&#34;&gt;джедайских техник&lt;/a&gt;.
-Суть заключается в том, что иногда количество вещей, которые на тебя свалились немного вышли за пределы впихивания в голову/тудушку/заметки, и надо экстренно выгрузить своё негодование. Для этого просто начинаем выписать список вещей, которые тебя бесят не задумываясь на ними:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Бесит, что в спальне жарко.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Дальше мы берём и добавляем к ним вопрос: &amp;ldquo;что я могу с этим сделать?&amp;rdquo;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Бесит, что в спальне жарко.
-&lt;ul&gt;
-&lt;li&gt;Что я могу с этим сделать?
-&lt;ul&gt;
-&lt;li&gt;Установить в спальне кондиционер.&lt;/li&gt;
-&lt;li&gt;Установить в спальне &amp;ldquo;дешевый кондей&amp;rdquo;: вентилятор с ведром.&lt;/li&gt;
-&lt;li&gt;Спать в комнате с кондиционером.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Дальше задаём вопрос [[чтобы что]]?&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Бесит, что в спальне жарко.
-&lt;ul&gt;
-&lt;li&gt;Что я могу с этим сделать?
-&lt;ul&gt;
-&lt;li&gt;Установить в спальне кондиционер.
-&lt;ul&gt;
-&lt;li&gt;Чтобы что: навсегда решить проблемы с температурой в спальне.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Установить в спальне &amp;ldquo;дешевый кондей&amp;rdquo;: вентилятор с ведром.
-&lt;ul&gt;
-&lt;li&gt;Чтобы что: пережить текущую жару.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Спать в комнате с кондиционером.
-&lt;ul&gt;
-&lt;li&gt;Чтобы что: пережить текущую жару.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Дальше можно к каждому решению дописать предполагаемые расходы или минусы:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Бесит, что в спальне жарко.
-&lt;ul&gt;
-&lt;li&gt;Что я могу с этим сделать?
-&lt;ul&gt;
-&lt;li&gt;Установить в спальне кондиционер.
-&lt;ul&gt;
-&lt;li&gt;Чтобы что: навсегда решить проблемы с температурой в спальне.&lt;/li&gt;
-&lt;li&gt;Минусы: только сделали ремонт.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Установить в спальне &amp;ldquo;дешевый кондей&amp;rdquo;: вентилятор с тазиком.
-&lt;ul&gt;
-&lt;li&gt;Чтобы что: пережить текущую жару.&lt;/li&gt;
-&lt;li&gt;Минусы: надо купить тазик, и повышается влажность.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Спать в комнате с кондиционером.
-&lt;ul&gt;
-&lt;li&gt;Чтобы что: пережить текущую жару.&lt;/li&gt;
-&lt;li&gt;Минусы: не такая удобная постель.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;И финальный штрих написать вывод и что делаем дальше:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Бесит, что в спальне жарко.
-&lt;ul&gt;
-&lt;li&gt;Что я могу с этим сделать?
-&lt;ul&gt;
-&lt;li&gt;Установить в спальне кондиционер.
-&lt;ul&gt;
-&lt;li&gt;Чтобы что: навсегда решить проблемы с температурой в спальне.&lt;/li&gt;
-&lt;li&gt;Минусы: только сделали ремонт.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Установить в спальне &amp;ldquo;дешевый кондей&amp;rdquo;: вентилятор с тазиком.
-&lt;ul&gt;
-&lt;li&gt;Чтобы что: пережить текущую жару.&lt;/li&gt;
-&lt;li&gt;Минусы: надо купить тазик, и повышается влажность.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Спать в комнате с кондиционером.
-&lt;ul&gt;
-&lt;li&gt;Чтобы что: пережить текущую жару.&lt;/li&gt;
-&lt;li&gt;Минусы: не такая удобная постель.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Вывод:&lt;/strong&gt; спим в комнате, чтобы пережить текущую жару. При следующей итерации ремонта обязательно ставить кондиционер в спальню.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Если проделать такую работу со всеми пунктами, которые прям сейчас торчат в голове, то получится снизить уровень стресса, иметь первоначальный план, а также чуть более ясную голову.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Адаптация подходов под себя</title>
-      <link>https://vanadium23.me/adapt-process/</link>
-      <pubDate>Sun, 27 Sep 2020 09:00:00 +0300</pubDate>
-      <guid>https://vanadium23.me/adapt-process/</guid>
-      <description>&lt;p&gt;Это первая заметка, которая попадает из приватной заметочницы в блог. Недавно допрошёл курс &amp;ldquo;Образование для образованных&amp;rdquo; и ознакомился с &lt;a href=&#34;https://en.wikipedia.org/wiki/Constructionism_(learning_theory)&#34;&gt;теорией конструкционизма&lt;/a&gt;. В рамках него знание, которое не было написано, не может считаться выученным. Все заметки, которые будут так попадать, будут иметь тег evergreen по имени &lt;a href=&#34;https://notes.andymatuschak.org/&#34;&gt;одноимённой методики&lt;/a&gt;. Можно считать это моей адаптаций данного подхода.&lt;/p&gt;
-&lt;p&gt;Люди очень хотят быть продуктивными, но при этом не хотят тратить на это время. В итоге, вместо того, чтобы отделять важное от неважного, они ждут что это за них сделает программа. Часть из них уже и так дошла до этого, например в amazing marvin есть &amp;ldquo;стратегия&amp;rdquo;, которая даёт рандомную задачу из списка дел на сегодня.&lt;/p&gt;
-&lt;p&gt;Более правильным подходом было бы осмысленние описаных дисциплин в переложение на себя или более простым языком метод проб и ошибок. Главное в этом не скатываться опять в крайности: перепроверять очевидные вещи раз за разом - не нравится ходить в спортзал, найдите более интересный спорт.&lt;/p&gt;
-&lt;p&gt;Для себя решил вести дневники экспериментов, когда пытаюсь попробовать что-то новое:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;в них всегда есть проблема, цель и сроки эксперимента.&lt;/li&gt;
-&lt;li&gt;дневник с описанием что удобно-неудобно и почему.&lt;/li&gt;
-&lt;li&gt;в конце написаны выводы и либо внедряется, либо выбрасывается и пишется почему.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Выглядит вся эта система как продуктовый подход к себе, но нет. В данном случае не хватает метрик, да и думаю что никому  они особо не нужны.
-Скорее это всё направлено на накопления опыта и попытка сделать на основе него что-то новое при помещение известного в неизвестный контекст.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>TickTick</title>
-      <link>https://vanadium23.me/ticktick/</link>
-      <pubDate>Mon, 16 Dec 2019 12:00:00 +0300</pubDate>
-      <guid>https://vanadium23.me/ticktick/</guid>
-      <description>&lt;p&gt;Около двух месяцев назад Todoist разродился глобальным обновлением, которое явно направлено на уход в корпоративный сегмент. Выглядит так, что они хотят вытеснить Asana с позиции Todo-листов для команд. Поэтому пришло время снова вернутся к выбору инструмента.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; важен не инструмент, а подход. Приложение не решает никакую проблему, но задротство вокруг этого может приносить некое удовольствие.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Вместо использования Google решил спросить чем пользуются народ и получился такой список:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Notion&lt;/li&gt;
-&lt;li&gt;Microsoft To Do (он же Wunderlist)&lt;/li&gt;
-&lt;li&gt;Things 3&lt;/li&gt;
-&lt;li&gt;TickTick&lt;/li&gt;
-&lt;li&gt;MeisterTask&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Немного посмотрев на превью приложений, выбрал TickTick, сразу оплатил премиум на месяц и пошёл его изучать.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; Todoist - простой, TickTick - комбайн, выбирайте сами.&lt;/p&gt;
-&lt;h2 id=&#34;плюсы&#34;&gt;Плюсы&lt;/h2&gt;
-&lt;p&gt;Todoist имеет типичную современную вёрстку, когда контент идёт узкой полоской посередине с двумя полосками по бокам. TickTick же выглядит как отличный рабочий стол, в котором тот же список растянули на 2/3 экрана и добавили ещё большое белое место под описание задач:
-&lt;img src=&#34;https://vanadium23.me/images/ticktick.png&#34; alt=&#34;Desktop view&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Рассмотрим, что у них получилось сделать из-за этого хорошо:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Можно подключить внешний календарь и он попадает не в виде задач. У них стоит маленький значок, того что это событие и есть встроенный вид календаря. Он сильно помогает при планировании дня.&lt;/li&gt;
-&lt;li&gt;Вместо проектов в TickTick есть списки и объединяются они в папки. Выглядят как проекты в Todoist, но мы знаем что именование одна из двух проблем программирования. Поэтому их приятней раскладывать по &lt;a href=&#34;https://vanadium23.me/para/&#34;&gt;P.A.R.A&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Снизу есть кнопка Summary, где можно сразу посмотреть сделанное за день, неделю или месяц. Это очень удобно для проведения обзора, что было сделано. В Todoist использовал Google Spreadsheet через IFTTT для этого.&lt;/li&gt;
-&lt;li&gt;И в левом нижнем углу есть таймер помидорок. Помимо этого, можно ткнуть правой кнопкой и начать помидорку на конкретной задачи, и после этого увидеть сколько времени было потрачено.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Помимо удобство связанных с рабочий столом, есть другие удачные вещи:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Встроенная статистика: можно смотреть неделя к неделе количество задачек, считать помидорки, много всего. Очень приятно, что успеваемость за неделю они считают по формуле - количество сделанного поделить на запланированное, даже с учётом перенесенных задач.&lt;/li&gt;
-&lt;li&gt;Чеклисты внутри задач - это бомба, которой так не хватает Todoist. Они не отображаются как подзадачи в общем списке дел, и при отметке пункта как выполненного, то отмечается как прогресс 1/N.&lt;/li&gt;
-&lt;li&gt;Любой список (проект) можно перевести в вид канбан доски. Не знаю зачем, но некоторые ведут задачи в Trello и это важная функциональность.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/ticktick-stats.png&#34; alt=&#34;Пример встроенной статистики&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;минусы&#34;&gt;Минусы&lt;/h2&gt;
-&lt;p&gt;Первую неделя была эйфория, которая &lt;em&gt;конечно&lt;/em&gt; сменилась разочарованием от некоторых элементов:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Всё (большинство) надо делать через правую кнопку мыши. Для браузера - это спорное решение, пару миллиметров выше или ниже и уже выпадет контекстное меню.&lt;/li&gt;
-&lt;li&gt;Умный разбор строки с задачей: даты, теги и списки. Оказалось, что всё можно сделать только при добавлении задачи, а дальше уже меняй через меню по правой клавише мыши.&lt;/li&gt;
-&lt;li&gt;В мобильном приложении можно стряхнуть событие из календаря, чтобы не мешало. В браузере так сделать нельзя, и этого сильно не хватает.&lt;/li&gt;
-&lt;li&gt;Горячие клавиши через TAB, вот уж где Asana меня настигла. Не стоит говорить, что браузер начинает скакать по элементам.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;выводы&#34;&gt;Выводы&lt;/h2&gt;
-&lt;p&gt;Вернусь обратно на Todoist, потому что сложно перебить их разбор строчки задания - в своём роде, это хорошая командная строка. И надо ныть в поддержку о добавлении чеклистов.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Методология P.A.R.A.</title>
-      <link>https://vanadium23.me/para/</link>
-      <pubDate>Sun, 10 Nov 2019 12:00:00 +0300</pubDate>
-      <guid>https://vanadium23.me/para/</guid>
-      <description>&lt;p&gt;Наткнулся в твиттере на статью про организацию структуры папок на компьютере с помощью &lt;a href=&#34;https://johnnydecimal.com/&#34;&gt;десятичной системы&lt;/a&gt; и решил поделиться ещё одним способом. Частично - это &lt;a href=&#34;https://praxis.fortelabs.co/the-p-a-r-a-method-a-universal-system-for-organizing-digital-information-75a9da8bfb37/&#34;&gt;пересказ статьи&lt;/a&gt; с личными комментариями на практике.&lt;/p&gt;
-&lt;h2 id=&#34;para-в-двух-словах&#34;&gt;P.A.R.A в двух словах&lt;/h2&gt;
-&lt;p&gt;Начнём с расшифровки, в которой и кроется система организации:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Projects - проекты, которые сейчас в работе. Важно, чтобы у них был дедлайн и конечная цель.&lt;/li&gt;
-&lt;li&gt;Areas - зона ответственности (или образ жизни, если знакомы с джедайскими техниками). Отличие от проекта в том, что тут нет конечной цели, например: здоровье или у меня есть раздел Work: People.&lt;/li&gt;
-&lt;li&gt;Resources - зона идей и/или база знаний. Здесь должно находиться всё, что может пригодиться или вы хотите изучить.&lt;/li&gt;
-&lt;li&gt;Archive - архив: завершенные проекты, выброшенные идеи и прочее.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Главная суть заключается в том, что по этой системе необходимо организовать все места: от Todo-листа до папок. Тогда при переходе с личного компьютера в условный Google Drive вам не надо будет вспомнить куда вы положили очередную заметку.&lt;/p&gt;
-&lt;h2 id=&#34;процесс-внедрения&#34;&gt;Процесс внедрения&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Выбираем место с которого хотим начать - это может быть Documents, рабочий стол, какое-нибудь облако, заметки в Evernote, любое цифровое место, где можете пока сломать.&lt;/li&gt;
-&lt;li&gt;Создаём четыре новых папки/блокнота: 1-projects, 2-areas, 3-resources, 4-archive. Цифры нужны, чтобы сортировка была верная.&lt;/li&gt;
-&lt;li&gt;Всё что было до этого перемещаем в 4-archive. Пока нет никаких проблем, потому что когда нужно что-то найти мы всегда идём в архив.&lt;/li&gt;
-&lt;li&gt;Когда идём в архив, начинаем думать к какому проекту или зоне относится данная заметка и добавляем новые блокноты по мере необходимости.&lt;/li&gt;
-&lt;li&gt;Можно сесть и за один момент всё разобрать, но практика показала, что это плохой подход.&lt;/li&gt;
-&lt;li&gt;???&lt;/li&gt;
-&lt;li&gt;PROFIT&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/PARA.png&#34; alt=&#34;Пример P.A.R.A&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;личные-заметки&#34;&gt;Личные заметки&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Заметки не должны оставаться в одном и том же месте всё время. Проект может перерасти в зону, зона может уйти в архив, а какая-нибудь идея проектом. Не бойтесь перекладывать (:&lt;/li&gt;
-&lt;li&gt;Когда система раскатается везде, то ориентироваться становится суперлегко, но если честно напоминает задротство с cabelporn.&lt;/li&gt;
-&lt;li&gt;Никто не запрещает делать сколь угодно большую вложенность. Но если с этим есть проблемы (например, Evernote) придётся придумывать костыли. Я привык делать, как в Todoist: #Project.&lt;/li&gt;
-&lt;li&gt;В Areas можно попробовать использовать &lt;a href=&#34;https://codescale.wordpress.com/2017/04/27/wheel-of-life/&#34;&gt;колесо жизни&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Выглядит это как впихивание жизни в некое дерево, но она гораздо разнообразнее. Хотелось бы иметь тегирование везде, но на уровне дефолтных FS проблемы пока не решили.&lt;/li&gt;
-&lt;li&gt;Полностью сломался список дел в Todoist. Настолько сломался, что пришлось только в ней откатиться обратно.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Если подвести итог, то скорее переход был положительным, хоть и не без проблем.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Эксперименты на основе книги &#34;Джедайские техники&#34;</title>
-      <link>https://vanadium23.me/jedi-book-experiments/</link>
-      <pubDate>Sun, 31 Mar 2019 15:00:00 +0300</pubDate>
-      <guid>https://vanadium23.me/jedi-book-experiments/</guid>
-      <description>&lt;p&gt;Последние два месяца внедряю в жизнь &amp;ldquo;Джедайские техники&amp;rdquo;. Не скажу что успешно, из-за чего делюсь заметками, где пошло не по плану.
-Если хотите краткий пересказ книги, то посмотрите &lt;a href=&#34;https://www.mindmeister.com/426089298/&#34;&gt;мыслекарту автора&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Для начала, схема техник из книги для понимания контекста:
-&lt;img src=&#34;https://vanadium23.me/images/thinking-economy.png&#34; alt=&#34;Схема экономии мыслетоплива&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;обработка-входящих-aka-инбоксы&#34;&gt;Обработка входящих (a.k.a инбоксы)&lt;/h2&gt;
-&lt;h3 id=&#34;предлагается&#34;&gt;Предлагается:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Не использовать фильтры почты, если это не справочная информация. Если используете фильтры, то отмечайте письма как прочитанные, чтобы не отвлекаться лишний раз.&lt;/li&gt;
-&lt;li&gt;Не использовать входящую почту, как ещё один список задач.&lt;/li&gt;
-&lt;li&gt;Отключить уведомления, кроме особо важных.&lt;/li&gt;
-&lt;li&gt;Добавить в список дел регулярную задачу по обработке входящих.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;работает&#34;&gt;Работает:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Собирать почту скопом.&lt;/li&gt;
-&lt;li&gt;Отключение уведомлений.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;не-работает&#34;&gt;Не работает:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Не придумал, что делать со слаком: dnd не меняет счётчик сообщений, а ещё люди приучились к мгновенному ответу в нём.&lt;/li&gt;
-&lt;li&gt;Фильтры в почте искоренить не удалось. А если проставлять прочитанное, то копиться слишком много и не хочется уже разбирать.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;список-задач&#34;&gt;Список задач&lt;/h2&gt;
-&lt;h3 id=&#34;предлагается-1&#34;&gt;Предлагается:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Формулировать задачи так, чтобы понял любой человек.&lt;/li&gt;
-&lt;li&gt;Формулировка должна содержать детальный следующий шаг.&lt;/li&gt;
-&lt;li&gt;Запрещено использовать слова &amp;ldquo;придумать&amp;rdquo;, &amp;ldquo;подумать&amp;rdquo;, &amp;ldquo;понять&amp;rdquo;.&lt;/li&gt;
-&lt;li&gt;Иметь понятную и простую систему приоритезации, какую задачу брать следующей.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;желательно&lt;/em&gt; Вести личный и рабочие дела в одном списке задач, чтобы понимать баланс между ними.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;работает-1&#34;&gt;Работает:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Да, и ещё раз да на запрет слов &amp;ldquo;подумать&amp;rdquo; и &amp;ldquo;придумать&amp;rdquo;. Сразу работает голова, какой же первый шаг для решения задачи.&lt;/li&gt;
-&lt;li&gt;Формулировка задач нарабатывается с трудом. Но когда входишь во вкус становится приятно потратить 15-30 секунд и записать полностью мысль, чтобы не думать потом несколько раз.&lt;/li&gt;
-&lt;li&gt;Начал использовать приоритеты в Todoist.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;не-работает-1&#34;&gt;Не работает:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Непонятно, где держать приблизительный план по проекту. :(&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;_лирическое-отступление_&#34;&gt;&lt;em&gt;Лирическое отступление&lt;/em&gt;&lt;/h3&gt;
-&lt;p&gt;Важно уточнить, что в книге провели границу между следующими вещами:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Список задач - последовательность точных действий.&lt;/li&gt;
-&lt;li&gt;Проект - конечная во времени цель, которую известно  &lt;em&gt;как примерно&lt;/em&gt; достичь.&lt;/li&gt;
-&lt;li&gt;Образ жизни - бесконечная во времени цель, например: здоровье, язык, спорт.&lt;/li&gt;
-&lt;li&gt;Справочная информация - ссылочки, мыслекарты, заметки и прочее.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;У меня была смесь из всех пунктов в Todoist, из-за чего копились задачи и вызывало тревожность.&lt;/p&gt;
-&lt;h2 id=&#34;обзор-системы&#34;&gt;Обзор системы&lt;/h2&gt;
-&lt;h3 id=&#34;предлагается-2&#34;&gt;Предлагается:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Делать ежедневный обзор по выполненным задачам и планировать завтра.&lt;/li&gt;
-&lt;li&gt;Делать еженедельный обзор с просмотром движения по проектам и планировать следующие шаги.&lt;/li&gt;
-&lt;li&gt;Спонтанные обзоры для выявления узких частей.&lt;/li&gt;
-&lt;li&gt;Для идей без плана использовать схему по аналогии с вещами: шкаф-балкон-дача.&lt;/li&gt;
-&lt;li&gt;Брать меньше задач, чтобы потом либо отдыхать, либо что-то брать из следующих на неделю.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;работает-2&#34;&gt;Работает:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Проблем не обнаружено. :)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;случайные-факты&#34;&gt;Случайные факты&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Удалось разгрести старьё, которое лежали мёртвым грузом.&lt;/li&gt;
-&lt;li&gt;Уровень стресса и тревожности стал меньше, потому что вот они задачи - лежат в списочке.&lt;/li&gt;
-&lt;li&gt;Стало проще выкидывать задачи, потому что это не задача, а это не важно.&lt;/li&gt;
-&lt;li&gt;Да, для этого требуется щепетильность, усидчивость &lt;strike&gt;и задротство&lt;/strike&gt;.&lt;/li&gt;
-&lt;li&gt;Да, всем этим можно и не заниматься. :)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Вот вам графичек по количеству завершённых задач в Todoist за 3 последних года:
-&lt;img src=&#34;https://vanadium23.me/images/tasks-count-by-month-q1-2019.png&#34; alt=&#34;Количество тасочек по месяцам&#34;&gt;
-Надеюсь, что тенденцию последних двух лет с помощью новых техник удастся побороть.&lt;/p&gt;
-&lt;p&gt;P.S. прикрутил тут кнопочки для того, чтобы пошарить статью, поэтому если понравилось поделитесь статьёй. :)&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Календарь в списке задач</title>
-      <link>https://vanadium23.me/calendar-in-tasklist/</link>
-      <pubDate>Sat, 23 Feb 2019 17:00:00 +0300</pubDate>
-      <guid>https://vanadium23.me/calendar-in-tasklist/</guid>
-      <description>&lt;p&gt;Для понимая проблемы прочитайте прошлую &lt;a href=&#34;https://vanadium23.me/calendar-as-tasklist/&#34;&gt;статью&lt;/a&gt;. Эта статья об обратной ситуации, когда календарь, точнее встречи, копируются в список задач.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; &lt;em&gt;ещё раз&lt;/em&gt; используйте календарь, как календарь, а список дел, как список дел. Нет ничего плохого в том, что они лежат в двух разных системах.&lt;/p&gt;
-&lt;p&gt;Итак, мы просыпаемся утром и пытаемся распланировать день. Исходя из предыдущей, мы начинаем не расставлять время, когда что будем делать, но в списке задач у нас уже висит 2-3-5 задач со временем.
+<?xml-stylesheet type="text/xsl" href="#stylesheet"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xsl"><xsl:output method="html" doctype-system="about:legacy-compat"/><xsl:template match="/rss"><html lang="ru-ru"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>productivity RSS | vanadium23</title><link rel="stylesheet" href="https://vanadium23.me/css/base.min.ede35a5a6f0822c8ed4e62a02aaaead5a369281f08df87a8547512ed5449222f.css" integrity="sha256-7eNaWm8IIsjtTmKgKqrq1aNpKB8I34eoVHUS7VRJIi8="/></head><body><nav class="u-background"><div class="u-wrapper Banner"><a class="Banner-link u-clickable" href="https://vanadium23.me/">
+vanadium23</a><ul class="Banner"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/about/">About</a></li class="Banner-item"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a></li class="Banner-item"><li><a id="themeSwitch" class="theme-switcher"/></li></ul></div></nav><main><div class="u-wrapper"><div class="u-padding"><h2 class="Heading-title"><a class="Heading-link u-clickable" href="https://vanadium23.me/tags/productivity/index.xml" rel="bookmark">productivity RSS</a></h2></div></div></main><footer class="Footer"><div class="u-wrapper"><div class="u-padding"><a href="https://github.com/vanadium23"><i class="svg-icon github"/></a><a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"/></a><a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"/></a><a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"/></a><a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"/></a><a href="https://goodreads.com/vanadium23"><i class="svg-icon goodreads"/></a><a href="https://t.me/chernov_sharit"><i class="svg-icon telegram"/></a></div></div></footer></body></html></xsl:template></xsl:stylesheet><channel><title>productivity on vanadium23</title><link>https://vanadium23.me/tags/productivity/</link><description>Recent content in productivity on vanadium23</description><generator>Hugo -- gohugo.io</generator><language>ru-ru</language><lastBuildDate>Mon, 19 Jul 2021 09:00:00 +0300</lastBuildDate><atom:link href="https://vanadium23.me/tags/productivity/index.xml" rel="self" type="application/rss+xml"/><item><title>Консистентность - необходимое условие для мастерства</title><link>https://vanadium23.me/consistency-over-mastery/</link><pubDate>Mon, 19 Jul 2021 09:00:00 +0300</pubDate><guid>https://vanadium23.me/consistency-over-mastery/</guid><description>&lt;p>Читая недавно &lt;a href="https://www.freecodecamp.org/news/lessons-learned-after-11-years-coding/">заметку о том, что хотелось бы знать на уровне джуна&lt;/a> и параллельно заканчивая курс &amp;ldquo;&lt;a href="https://system-school.ru/introonline">Системное саморазвитие&lt;/a>&amp;rdquo;, глаз зацепился за фразу &amp;ldquo;Consistency &amp;gt; hard work&amp;rdquo;. Удивительным образом, именно постоянный подход с постепенным прогрессом приводит тебя к большим результатам с течением времени. И нет, это не очередная статья о том, что надо потратить &lt;a href="https://www.forbes.ru/forbes/issue/2009-04/7255-pravilo-10000-chasov">10000 часов&lt;/a>, точнее не только об этом.&lt;/p>
+&lt;p>Для начала необходимо представить картинку с развитием любого навыка, который складывается из четырёх зон по осям некомпетентность и осознанность:&lt;/p>
+&lt;ol>
+&lt;li>Неосознанная некомпетентность — мы не знаем, что мы не умеем.&lt;/li>
+&lt;li>Осознанная некомпетентность — мы знаем, что мы не умеем, то есть сместили наше внимание на некомпетентность. Обычно на этой стадии приступают к потреблению нужной информации.&lt;/li>
+&lt;li>Осознанная компетентность — мы знаем, что умеем, но для применения нам необходимо внимание. Мы применяем полученные знания, но они требуют медленного мышления.&lt;/li>
+&lt;li>Неосознанная компетентность — мы не знаем, что умеем, так как довели наши действия до автоматизма.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://vanadium23.me/images/Pasted%20image%2020210713154713.png" alt="Квадрат компетенций">&lt;/p>
+&lt;p>Отсюда следуют два интересных вывода:&lt;/p>
+&lt;ol>
+&lt;li>Дурак и мастер находятся на одном уровне осознанности, но первый даже не догадывается о количество вложенных часов в реальные проекты, то есть не знает и не осознаёт.&lt;/li>
+&lt;li>Мастера от любителя отличают автоматизмы в наработанном навыке.
+&lt;ul>
+&lt;li>&lt;em>(лирическое отступление)&lt;/em> Часто это является одной из причин, почему в разработке мало людей пишут статьи или ходят на конференции с выступлениям.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>На основе этой модели, можно понять, что без систематического прикладывания своей головы сначала к потреблению своей информации, потом к осознанию и наконец к её применению трудно освоить любой навык. При этом, есть исключения из этого правила, но они связаны с ранее заложенными знаниями от окружения или правильной наследственностью. Если вы не хотите играть в эту рулетку, то остаётся только вариант с постепенным продвижением.&lt;/p>
+&lt;p>Сама по себе консистентность/систематичность/дисциплина — тоже является компетенцией, а это значит можно пройти тем же путём. Надеюсь, прочтя эти строчки, станет понятно, что вы уже точно не находитесь на первом уровне, значит мы можем пойти дальше. А дальше есть довольно много популярных путей, начиная от прямолинейной (но рабочей) техники Pomodoro до сложносоставных вещей в виде использования Jira для своего планирования. Если ранее не читали, то рекомендую обратить внимание на &lt;a href="https://vanadium23.me/jedi-book-experiments/">джедайские техники&lt;/a>, так как относительно недавно они начали проводить &lt;a href="https://hyls.ru/jedi_max">марафоны&lt;/a>.&lt;/p>
+&lt;p>И последнее, но не по важности, компетенция по систематичности необходима для приобретения новых навыков, а не для применения в вакууме. Если вы в какой-то момент попали в ловушку постоянных задач, то сильно рекомендую &lt;a href="https://vas3k.ru/inside/43/">статью Вастрик.Инсайд&lt;/a>.&lt;/p>
+&lt;h2 id="дополнительные-материалы">Дополнительные материалы&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://typesense.org/blog/the-unreasonable-effectiveness-of-just-showing-up-everyday/">https://typesense.org/blog/the-unreasonable-effectiveness-of-just-showing-up-everyday/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.deprocrastination.co/blog/put-yourself-on-the-productive-path">https://www.deprocrastination.co/blog/put-yourself-on-the-productive-path&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.deprocrastination.co/blog/stages-of-self-development">https://www.deprocrastination.co/blog/stages-of-self-development&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Что меня реально сейчас бесит</title><link>https://vanadium23.me/what-really-grinds-me/</link><pubDate>Fri, 25 Jun 2021 09:00:00 +0300</pubDate><guid>https://vanadium23.me/what-really-grinds-me/</guid><description>&lt;p>&lt;img src="https://vanadium23.me/images/20210625195211.png" alt="Иронично, что это мем про людей, которые дают советы">&lt;/p>
+&lt;p>Просматривая периодически свои дневники понял, что раз за разом возвращаюсь к одной и той же практике. Решил, что пора описать этот подход.
+Назвал я его &amp;ldquo;Что меня реально сейчас бесит&amp;rdquo; и, частично, он является отражением практики &amp;ldquo;спусковых крючков&amp;rdquo; из &lt;a href="https://vanadium23.me/jedi-book-experiments/">джедайских техник&lt;/a>.
+Суть заключается в том, что иногда количество вещей, которые на тебя свалились немного вышли за пределы впихивания в голову/тудушку/заметки, и надо экстренно выгрузить своё негодование. Для этого просто начинаем выписать список вещей, которые тебя бесят не задумываясь на ними:&lt;/p>
+&lt;ul>
+&lt;li>Бесит, что в спальне жарко.&lt;/li>
+&lt;/ul>
+&lt;p>Дальше мы берём и добавляем к ним вопрос: &amp;ldquo;что я могу с этим сделать?&amp;rdquo;&lt;/p>
+&lt;ul>
+&lt;li>Бесит, что в спальне жарко.
+&lt;ul>
+&lt;li>Что я могу с этим сделать?
+&lt;ul>
+&lt;li>Установить в спальне кондиционер.&lt;/li>
+&lt;li>Установить в спальне &amp;ldquo;дешевый кондей&amp;rdquo;: вентилятор с ведром.&lt;/li>
+&lt;li>Спать в комнате с кондиционером.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Дальше задаём вопрос [[чтобы что]]?&lt;/p>
+&lt;ul>
+&lt;li>Бесит, что в спальне жарко.
+&lt;ul>
+&lt;li>Что я могу с этим сделать?
+&lt;ul>
+&lt;li>Установить в спальне кондиционер.
+&lt;ul>
+&lt;li>Чтобы что: навсегда решить проблемы с температурой в спальне.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Установить в спальне &amp;ldquo;дешевый кондей&amp;rdquo;: вентилятор с ведром.
+&lt;ul>
+&lt;li>Чтобы что: пережить текущую жару.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Спать в комнате с кондиционером.
+&lt;ul>
+&lt;li>Чтобы что: пережить текущую жару.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Дальше можно к каждому решению дописать предполагаемые расходы или минусы:&lt;/p>
+&lt;ul>
+&lt;li>Бесит, что в спальне жарко.
+&lt;ul>
+&lt;li>Что я могу с этим сделать?
+&lt;ul>
+&lt;li>Установить в спальне кондиционер.
+&lt;ul>
+&lt;li>Чтобы что: навсегда решить проблемы с температурой в спальне.&lt;/li>
+&lt;li>Минусы: только сделали ремонт.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Установить в спальне &amp;ldquo;дешевый кондей&amp;rdquo;: вентилятор с тазиком.
+&lt;ul>
+&lt;li>Чтобы что: пережить текущую жару.&lt;/li>
+&lt;li>Минусы: надо купить тазик, и повышается влажность.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Спать в комнате с кондиционером.
+&lt;ul>
+&lt;li>Чтобы что: пережить текущую жару.&lt;/li>
+&lt;li>Минусы: не такая удобная постель.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>И финальный штрих написать вывод и что делаем дальше:&lt;/p>
+&lt;ul>
+&lt;li>Бесит, что в спальне жарко.
+&lt;ul>
+&lt;li>Что я могу с этим сделать?
+&lt;ul>
+&lt;li>Установить в спальне кондиционер.
+&lt;ul>
+&lt;li>Чтобы что: навсегда решить проблемы с температурой в спальне.&lt;/li>
+&lt;li>Минусы: только сделали ремонт.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Установить в спальне &amp;ldquo;дешевый кондей&amp;rdquo;: вентилятор с тазиком.
+&lt;ul>
+&lt;li>Чтобы что: пережить текущую жару.&lt;/li>
+&lt;li>Минусы: надо купить тазик, и повышается влажность.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Спать в комнате с кондиционером.
+&lt;ul>
+&lt;li>Чтобы что: пережить текущую жару.&lt;/li>
+&lt;li>Минусы: не такая удобная постель.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Вывод:&lt;/strong> спим в комнате, чтобы пережить текущую жару. При следующей итерации ремонта обязательно ставить кондиционер в спальню.&lt;/li>
+&lt;/ul>
+&lt;p>Если проделать такую работу со всеми пунктами, которые прям сейчас торчат в голове, то получится снизить уровень стресса, иметь первоначальный план, а также чуть более ясную голову.&lt;/p></description></item><item><title>Адаптация подходов под себя</title><link>https://vanadium23.me/adapt-process/</link><pubDate>Sun, 27 Sep 2020 09:00:00 +0300</pubDate><guid>https://vanadium23.me/adapt-process/</guid><description>&lt;p>Это первая заметка, которая попадает из приватной заметочницы в блог. Недавно допрошёл курс &amp;ldquo;Образование для образованных&amp;rdquo; и ознакомился с &lt;a href="https://en.wikipedia.org/wiki/Constructionism_(learning_theory)">теорией конструкционизма&lt;/a>. В рамках него знание, которое не было написано, не может считаться выученным. Все заметки, которые будут так попадать, будут иметь тег evergreen по имени &lt;a href="https://notes.andymatuschak.org/">одноимённой методики&lt;/a>. Можно считать это моей адаптаций данного подхода.&lt;/p>
+&lt;p>Люди очень хотят быть продуктивными, но при этом не хотят тратить на это время. В итоге, вместо того, чтобы отделять важное от неважного, они ждут что это за них сделает программа. Часть из них уже и так дошла до этого, например в amazing marvin есть &amp;ldquo;стратегия&amp;rdquo;, которая даёт рандомную задачу из списка дел на сегодня.&lt;/p>
+&lt;p>Более правильным подходом было бы осмысленние описаных дисциплин в переложение на себя или более простым языком метод проб и ошибок. Главное в этом не скатываться опять в крайности: перепроверять очевидные вещи раз за разом - не нравится ходить в спортзал, найдите более интересный спорт.&lt;/p>
+&lt;p>Для себя решил вести дневники экспериментов, когда пытаюсь попробовать что-то новое:&lt;/p>
+&lt;ul>
+&lt;li>в них всегда есть проблема, цель и сроки эксперимента.&lt;/li>
+&lt;li>дневник с описанием что удобно-неудобно и почему.&lt;/li>
+&lt;li>в конце написаны выводы и либо внедряется, либо выбрасывается и пишется почему.&lt;/li>
+&lt;/ul>
+&lt;p>Выглядит вся эта система как продуктовый подход к себе, но нет. В данном случае не хватает метрик, да и думаю что никому они особо не нужны.
+Скорее это всё направлено на накопления опыта и попытка сделать на основе него что-то новое при помещение известного в неизвестный контекст.&lt;/p></description></item><item><title>TickTick</title><link>https://vanadium23.me/ticktick/</link><pubDate>Mon, 16 Dec 2019 12:00:00 +0300</pubDate><guid>https://vanadium23.me/ticktick/</guid><description>&lt;p>Около двух месяцев назад Todoist разродился глобальным обновлением, которое явно направлено на уход в корпоративный сегмент. Выглядит так, что они хотят вытеснить Asana с позиции Todo-листов для команд. Поэтому пришло время снова вернутся к выбору инструмента.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Disclaimer:&lt;/strong> важен не инструмент, а подход. Приложение не решает никакую проблему, но задротство вокруг этого может приносить некое удовольствие.&lt;/p>
+&lt;/blockquote>
+&lt;p>Вместо использования Google решил спросить чем пользуются народ и получился такой список:&lt;/p>
+&lt;ul>
+&lt;li>Notion&lt;/li>
+&lt;li>Microsoft To Do (он же Wunderlist)&lt;/li>
+&lt;li>Things 3&lt;/li>
+&lt;li>TickTick&lt;/li>
+&lt;li>MeisterTask&lt;/li>
+&lt;/ul>
+&lt;p>Немного посмотрев на превью приложений, выбрал TickTick, сразу оплатил премиум на месяц и пошёл его изучать.&lt;/p>
+&lt;p>&lt;strong>TL;DR:&lt;/strong> Todoist - простой, TickTick - комбайн, выбирайте сами.&lt;/p>
+&lt;h2 id="плюсы">Плюсы&lt;/h2>
+&lt;p>Todoist имеет типичную современную вёрстку, когда контент идёт узкой полоской посередине с двумя полосками по бокам. TickTick же выглядит как отличный рабочий стол, в котором тот же список растянули на 2/3 экрана и добавили ещё большое белое место под описание задач:
+&lt;img src="https://vanadium23.me/images/ticktick.png" alt="Desktop view">&lt;/p>
+&lt;p>Рассмотрим, что у них получилось сделать из-за этого хорошо:&lt;/p>
+&lt;ol>
+&lt;li>Можно подключить внешний календарь и он попадает не в виде задач. У них стоит маленький значок, того что это событие и есть встроенный вид календаря. Он сильно помогает при планировании дня.&lt;/li>
+&lt;li>Вместо проектов в TickTick есть списки и объединяются они в папки. Выглядят как проекты в Todoist, но мы знаем что именование одна из двух проблем программирования. Поэтому их приятней раскладывать по &lt;a href="https://vanadium23.me/para/">P.A.R.A&lt;/a>.&lt;/li>
+&lt;li>Снизу есть кнопка Summary, где можно сразу посмотреть сделанное за день, неделю или месяц. Это очень удобно для проведения обзора, что было сделано. В Todoist использовал Google Spreadsheet через IFTTT для этого.&lt;/li>
+&lt;li>И в левом нижнем углу есть таймер помидорок. Помимо этого, можно ткнуть правой кнопкой и начать помидорку на конкретной задачи, и после этого увидеть сколько времени было потрачено.&lt;/li>
+&lt;/ol>
+&lt;p>Помимо удобство связанных с рабочий столом, есть другие удачные вещи:&lt;/p>
+&lt;ol>
+&lt;li>Встроенная статистика: можно смотреть неделя к неделе количество задачек, считать помидорки, много всего. Очень приятно, что успеваемость за неделю они считают по формуле - количество сделанного поделить на запланированное, даже с учётом перенесенных задач.&lt;/li>
+&lt;li>Чеклисты внутри задач - это бомба, которой так не хватает Todoist. Они не отображаются как подзадачи в общем списке дел, и при отметке пункта как выполненного, то отмечается как прогресс 1/N.&lt;/li>
+&lt;li>Любой список (проект) можно перевести в вид канбан доски. Не знаю зачем, но некоторые ведут задачи в Trello и это важная функциональность.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://vanadium23.me/images/ticktick-stats.png" alt="Пример встроенной статистики">&lt;/p>
+&lt;h2 id="минусы">Минусы&lt;/h2>
+&lt;p>Первую неделя была эйфория, которая &lt;em>конечно&lt;/em> сменилась разочарованием от некоторых элементов:&lt;/p>
+&lt;ol>
+&lt;li>Всё (большинство) надо делать через правую кнопку мыши. Для браузера - это спорное решение, пару миллиметров выше или ниже и уже выпадет контекстное меню.&lt;/li>
+&lt;li>Умный разбор строки с задачей: даты, теги и списки. Оказалось, что всё можно сделать только при добавлении задачи, а дальше уже меняй через меню по правой клавише мыши.&lt;/li>
+&lt;li>В мобильном приложении можно стряхнуть событие из календаря, чтобы не мешало. В браузере так сделать нельзя, и этого сильно не хватает.&lt;/li>
+&lt;li>Горячие клавиши через TAB, вот уж где Asana меня настигла. Не стоит говорить, что браузер начинает скакать по элементам.&lt;/li>
+&lt;/ol>
+&lt;h2 id="выводы">Выводы&lt;/h2>
+&lt;p>Вернусь обратно на Todoist, потому что сложно перебить их разбор строчки задания - в своём роде, это хорошая командная строка. И надо ныть в поддержку о добавлении чеклистов.&lt;/p></description></item><item><title>Методология P.A.R.A.</title><link>https://vanadium23.me/para/</link><pubDate>Sun, 10 Nov 2019 12:00:00 +0300</pubDate><guid>https://vanadium23.me/para/</guid><description>&lt;p>Наткнулся в твиттере на статью про организацию структуры папок на компьютере с помощью &lt;a href="https://johnnydecimal.com/">десятичной системы&lt;/a> и решил поделиться ещё одним способом. Частично - это &lt;a href="https://praxis.fortelabs.co/the-p-a-r-a-method-a-universal-system-for-organizing-digital-information-75a9da8bfb37/">пересказ статьи&lt;/a> с личными комментариями на практике.&lt;/p>
+&lt;h2 id="para-в-двух-словах">P.A.R.A в двух словах&lt;/h2>
+&lt;p>Начнём с расшифровки, в которой и кроется система организации:&lt;/p>
+&lt;ul>
+&lt;li>Projects - проекты, которые сейчас в работе. Важно, чтобы у них был дедлайн и конечная цель.&lt;/li>
+&lt;li>Areas - зона ответственности (или образ жизни, если знакомы с джедайскими техниками). Отличие от проекта в том, что тут нет конечной цели, например: здоровье или у меня есть раздел Work: People.&lt;/li>
+&lt;li>Resources - зона идей и/или база знаний. Здесь должно находиться всё, что может пригодиться или вы хотите изучить.&lt;/li>
+&lt;li>Archive - архив: завершенные проекты, выброшенные идеи и прочее.&lt;/li>
+&lt;/ul>
+&lt;p>Главная суть заключается в том, что по этой системе необходимо организовать все места: от Todo-листа до папок. Тогда при переходе с личного компьютера в условный Google Drive вам не надо будет вспомнить куда вы положили очередную заметку.&lt;/p>
+&lt;h2 id="процесс-внедрения">Процесс внедрения&lt;/h2>
+&lt;ol>
+&lt;li>Выбираем место с которого хотим начать - это может быть Documents, рабочий стол, какое-нибудь облако, заметки в Evernote, любое цифровое место, где можете пока сломать.&lt;/li>
+&lt;li>Создаём четыре новых папки/блокнота: 1-projects, 2-areas, 3-resources, 4-archive. Цифры нужны, чтобы сортировка была верная.&lt;/li>
+&lt;li>Всё что было до этого перемещаем в 4-archive. Пока нет никаких проблем, потому что когда нужно что-то найти мы всегда идём в архив.&lt;/li>
+&lt;li>Когда идём в архив, начинаем думать к какому проекту или зоне относится данная заметка и добавляем новые блокноты по мере необходимости.&lt;/li>
+&lt;li>Можно сесть и за один момент всё разобрать, но практика показала, что это плохой подход.&lt;/li>
+&lt;li>???&lt;/li>
+&lt;li>PROFIT&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://vanadium23.me/images/PARA.png" alt="Пример P.A.R.A">&lt;/p>
+&lt;h2 id="личные-заметки">Личные заметки&lt;/h2>
+&lt;ul>
+&lt;li>Заметки не должны оставаться в одном и том же месте всё время. Проект может перерасти в зону, зона может уйти в архив, а какая-нибудь идея проектом. Не бойтесь перекладывать (:&lt;/li>
+&lt;li>Когда система раскатается везде, то ориентироваться становится суперлегко, но если честно напоминает задротство с cabelporn.&lt;/li>
+&lt;li>Никто не запрещает делать сколь угодно большую вложенность. Но если с этим есть проблемы (например, Evernote) придётся придумывать костыли. Я привык делать, как в Todoist: #Project.&lt;/li>
+&lt;li>В Areas можно попробовать использовать &lt;a href="https://codescale.wordpress.com/2017/04/27/wheel-of-life/">колесо жизни&lt;/a>.&lt;/li>
+&lt;li>Выглядит это как впихивание жизни в некое дерево, но она гораздо разнообразнее. Хотелось бы иметь тегирование везде, но на уровне дефолтных FS проблемы пока не решили.&lt;/li>
+&lt;li>Полностью сломался список дел в Todoist. Настолько сломался, что пришлось только в ней откатиться обратно.&lt;/li>
+&lt;/ul>
+&lt;p>Если подвести итог, то скорее переход был положительным, хоть и не без проблем.&lt;/p></description></item><item><title>Эксперименты на основе книги "Джедайские техники"</title><link>https://vanadium23.me/jedi-book-experiments/</link><pubDate>Sun, 31 Mar 2019 15:00:00 +0300</pubDate><guid>https://vanadium23.me/jedi-book-experiments/</guid><description>&lt;p>Последние два месяца внедряю в жизнь &amp;ldquo;Джедайские техники&amp;rdquo;. Не скажу что успешно, из-за чего делюсь заметками, где пошло не по плану.
+Если хотите краткий пересказ книги, то посмотрите &lt;a href="https://www.mindmeister.com/426089298/">мыслекарту автора&lt;/a>.&lt;/p>
+&lt;p>Для начала, схема техник из книги для понимания контекста:
+&lt;img src="https://vanadium23.me/images/thinking-economy.png" alt="Схема экономии мыслетоплива">&lt;/p>
+&lt;h2 id="обработка-входящих-aka-инбоксы">Обработка входящих (a.k.a инбоксы)&lt;/h2>
+&lt;h3 id="предлагается">Предлагается:&lt;/h3>
+&lt;ul>
+&lt;li>Не использовать фильтры почты, если это не справочная информация. Если используете фильтры, то отмечайте письма как прочитанные, чтобы не отвлекаться лишний раз.&lt;/li>
+&lt;li>Не использовать входящую почту, как ещё один список задач.&lt;/li>
+&lt;li>Отключить уведомления, кроме особо важных.&lt;/li>
+&lt;li>Добавить в список дел регулярную задачу по обработке входящих.&lt;/li>
+&lt;/ul>
+&lt;h3 id="работает">Работает:&lt;/h3>
+&lt;ul>
+&lt;li>Собирать почту скопом.&lt;/li>
+&lt;li>Отключение уведомлений.&lt;/li>
+&lt;/ul>
+&lt;h3 id="не-работает">Не работает:&lt;/h3>
+&lt;ul>
+&lt;li>Не придумал, что делать со слаком: dnd не меняет счётчик сообщений, а ещё люди приучились к мгновенному ответу в нём.&lt;/li>
+&lt;li>Фильтры в почте искоренить не удалось. А если проставлять прочитанное, то копиться слишком много и не хочется уже разбирать.&lt;/li>
+&lt;/ul>
+&lt;h2 id="список-задач">Список задач&lt;/h2>
+&lt;h3 id="предлагается-1">Предлагается:&lt;/h3>
+&lt;ul>
+&lt;li>Формулировать задачи так, чтобы понял любой человек.&lt;/li>
+&lt;li>Формулировка должна содержать детальный следующий шаг.&lt;/li>
+&lt;li>Запрещено использовать слова &amp;ldquo;придумать&amp;rdquo;, &amp;ldquo;подумать&amp;rdquo;, &amp;ldquo;понять&amp;rdquo;.&lt;/li>
+&lt;li>Иметь понятную и простую систему приоритезации, какую задачу брать следующей.&lt;/li>
+&lt;li>&lt;em>желательно&lt;/em> Вести личный и рабочие дела в одном списке задач, чтобы понимать баланс между ними.&lt;/li>
+&lt;/ul>
+&lt;h3 id="работает-1">Работает:&lt;/h3>
+&lt;ul>
+&lt;li>Да, и ещё раз да на запрет слов &amp;ldquo;подумать&amp;rdquo; и &amp;ldquo;придумать&amp;rdquo;. Сразу работает голова, какой же первый шаг для решения задачи.&lt;/li>
+&lt;li>Формулировка задач нарабатывается с трудом. Но когда входишь во вкус становится приятно потратить 15-30 секунд и записать полностью мысль, чтобы не думать потом несколько раз.&lt;/li>
+&lt;li>Начал использовать приоритеты в Todoist.&lt;/li>
+&lt;/ul>
+&lt;h3 id="не-работает-1">Не работает:&lt;/h3>
+&lt;ul>
+&lt;li>Непонятно, где держать приблизительный план по проекту. :(&lt;/li>
+&lt;/ul>
+&lt;h3 id="_лирическое-отступление_">&lt;em>Лирическое отступление&lt;/em>&lt;/h3>
+&lt;p>Важно уточнить, что в книге провели границу между следующими вещами:&lt;/p>
+&lt;ul>
+&lt;li>Список задач - последовательность точных действий.&lt;/li>
+&lt;li>Проект - конечная во времени цель, которую известно &lt;em>как примерно&lt;/em> достичь.&lt;/li>
+&lt;li>Образ жизни - бесконечная во времени цель, например: здоровье, язык, спорт.&lt;/li>
+&lt;li>Справочная информация - ссылочки, мыслекарты, заметки и прочее.&lt;/li>
+&lt;/ul>
+&lt;p>У меня была смесь из всех пунктов в Todoist, из-за чего копились задачи и вызывало тревожность.&lt;/p>
+&lt;h2 id="обзор-системы">Обзор системы&lt;/h2>
+&lt;h3 id="предлагается-2">Предлагается:&lt;/h3>
+&lt;ul>
+&lt;li>Делать ежедневный обзор по выполненным задачам и планировать завтра.&lt;/li>
+&lt;li>Делать еженедельный обзор с просмотром движения по проектам и планировать следующие шаги.&lt;/li>
+&lt;li>Спонтанные обзоры для выявления узких частей.&lt;/li>
+&lt;li>Для идей без плана использовать схему по аналогии с вещами: шкаф-балкон-дача.&lt;/li>
+&lt;li>Брать меньше задач, чтобы потом либо отдыхать, либо что-то брать из следующих на неделю.&lt;/li>
+&lt;/ul>
+&lt;h3 id="работает-2">Работает:&lt;/h3>
+&lt;ul>
+&lt;li>Проблем не обнаружено. :)&lt;/li>
+&lt;/ul>
+&lt;h2 id="случайные-факты">Случайные факты&lt;/h2>
+&lt;ul>
+&lt;li>Удалось разгрести старьё, которое лежали мёртвым грузом.&lt;/li>
+&lt;li>Уровень стресса и тревожности стал меньше, потому что вот они задачи - лежат в списочке.&lt;/li>
+&lt;li>Стало проще выкидывать задачи, потому что это не задача, а это не важно.&lt;/li>
+&lt;li>Да, для этого требуется щепетильность, усидчивость &lt;strike>и задротство&lt;/strike>.&lt;/li>
+&lt;li>Да, всем этим можно и не заниматься. :)&lt;/li>
+&lt;/ul>
+&lt;p>Вот вам графичек по количеству завершённых задач в Todoist за 3 последних года:
+&lt;img src="https://vanadium23.me/images/tasks-count-by-month-q1-2019.png" alt="Количество тасочек по месяцам">
+Надеюсь, что тенденцию последних двух лет с помощью новых техник удастся побороть.&lt;/p>
+&lt;p>P.S. прикрутил тут кнопочки для того, чтобы пошарить статью, поэтому если понравилось поделитесь статьёй. :)&lt;/p></description></item><item><title>Календарь в списке задач</title><link>https://vanadium23.me/calendar-in-tasklist/</link><pubDate>Sat, 23 Feb 2019 17:00:00 +0300</pubDate><guid>https://vanadium23.me/calendar-in-tasklist/</guid><description>&lt;p>Для понимая проблемы прочитайте прошлую &lt;a href="https://vanadium23.me/calendar-as-tasklist/">статью&lt;/a>. Эта статья об обратной ситуации, когда календарь, точнее встречи, копируются в список задач.&lt;/p>
+&lt;p>&lt;strong>TL;DR:&lt;/strong> &lt;em>ещё раз&lt;/em> используйте календарь, как календарь, а список дел, как список дел. Нет ничего плохого в том, что они лежат в двух разных системах.&lt;/p>
+&lt;p>Итак, мы просыпаемся утром и пытаемся распланировать день. Исходя из предыдущей, мы начинаем не расставлять время, когда что будем делать, но в списке задач у нас уже висит 2-3-5 задач со временем.
 Догадались что это? Это встречи, которые у нас сегодня будут. Может быть я не знаю о какой-то функциональности Todoist&amp;rsquo;a, но неважно какую сортировку выбрать - эти задачи будут выше других.
-Это плохо тем, что они вечно висят перед глазами и уменьшают возможность планирования на сегодня. С одной стороны хорошо, что они перед глазами и не надо сверяться, с другой стороны всё что нужно - это не то сколько у нас встреч и во сколько, а сколько у нас остаётся свободного времени. Для этого достаточно один раз свериться с календарём.&lt;/p&gt;
-&lt;p&gt;В итоге, копирование событий из рабочего календаря в личный было отключено. Более удобной оказалась схема с предоставлением доступа из рабочей почты в личную по ссылке, спасибо гуглокалендарю.
-За последние две недели единственный косяк был найден в том, что уведомления от календаря я могу упустить, но было закостылено с помощью &lt;a href=&#34;https://play.google.com/store/apps/details?id=cz.zdenekhorak.mibandtools&#34;&gt;tools &amp;amp; mi band&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Календарь в качестве списка задач</title>
-      <link>https://vanadium23.me/calendar-as-tasklist/</link>
-      <pubDate>Sat, 16 Feb 2019 17:00:00 +0300</pubDate>
-      <guid>https://vanadium23.me/calendar-as-tasklist/</guid>
-      <description>&lt;p&gt;В прошлом году у меня были странные эксперименты по тому как вести списки дел. В качестве основной платформы последние пару лет остаётся Todoist, но покопавшись в FAQ, обнаружил, что есть двухстороняя синхронизация с &lt;a href=&#34;https://doist.com/blog/google-calendar-todoist-integration/&#34;&gt;гугл календарём&lt;/a&gt; и тут понеслось.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; используйте календарь, как календарь, а список дел, как список дел. Нет ничего плохого в том, что они лежат в двух разных системах.&lt;/p&gt;
-&lt;p&gt;Итак, в какой-то момент времени у вас становится много встреч на неделе, точнее больше чем хотелось бы. Мне их хотелось не больше 2 в день, и не больше 5 в неделю. К сожалению, не всё совпадает с нашими желаниями:
-&lt;img src=&#34;https://vanadium23.me/images/calendar-overflow.png&#34; alt=&#34;Зачееееееем&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Ситуация усугубляется тем, что к каким-то из встреч надо подготовиться. Мне показалось, что хорошим решением будет делать следующее:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Вести встречи в списке дел&lt;/li&gt;
-&lt;li&gt;Пытаться впихнуть остальные дела между этими встречами&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Ручки зачесались и настроили синхронизацию с гугл календарём, и всё заработало из коробки. Надо отметить, что у Todoist хорошо проработана синхронизация: при добавлении задачи со временем, она ставится и в календарь, а если в названии напишешь [25m], то ещё и продолжительность будет корректная. Правда пары вещей мне не хватило:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Он не умеет работать с двумя календарями.&lt;/li&gt;
-&lt;li&gt;Нельзя прописать у уже созданной задачи продолжительность. Оно не синхронизирует по обновлению названия.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;На помощь нам приходит ifttt, знакомый по статье с &lt;a href=&#34;https://vanadium23.me/keep-pocket-clean&#34;&gt;getpocket&lt;/a&gt;. В нём мы можем настроить синхронизацию вновь созданных событий между двумя календарями. &lt;a href=&#34;https://ifttt.com/applets/126824p-copy-events-between-calendars&#34;&gt;тыц&lt;/a&gt;
-Двумя вечерами позднее я был во все оружие и решил, что буду:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Смотреть список задач и теперь встреч каждое утро в тудуисте&lt;/li&gt;
-&lt;li&gt;Расставлять время, когда буду делать задачу между ними&lt;/li&gt;
-&lt;li&gt;Для пущей убедительности буду красить в разные цвета, чтобы не путать встречи и дела.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Выглядело это как-то так:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/calendar-overflow-more.png&#34; alt=&#34;Тут надо было уже понять, что есть проблема&#34;&gt;&lt;/p&gt;
-&lt;p&gt;В таком режиме успел пожить недельку, но пришло осознание, что не хватает контроля всё делать. А если не хватает контроля - надо добавить больше контроля! Проблема заключалась в том, что если откладывать задачу в тудуисте, она откладывалась и в календаре и никак нельзя было сравнить план с фактом. Значит, надо добавить бэкап изначального календарь. Берём и делаем ещё один календарь, который называем Plan и каждое утро в 10 бекапим в него какие у нас были события. Можно было напилить скрипт в крон, но лень взяла вверх и была найдена приложенька &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.applisto.copyevents&#34;&gt;Copy Calendar Events&lt;/a&gt;.
-&lt;img src=&#34;https://vanadium23.me/images/calendar-plan-fact.png&#34; alt=&#34;Всё идёт по плааану&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Синим отмечен план и как сразу можно заметить, в час всё стало идти не по плану. На какие только ухищрения не приходилось идти, чтобы всё сходилось, но жизнь оказалась проще: не надо планировать дела с точностью до минуты, достаточно планировать день с учётом сил и оставлять чуть-чуть для себя любимого. Тогда вы не будет в состояние &amp;ldquo;ох ты, не успел&amp;rdquo;, потом сами себе скажите спасибо.&lt;/p&gt;
-&lt;p&gt;P.s. Копирование встреч в личный календарь + Todoist так и осталось, и это тоже плохая практика. Напишу об этом как-нибудь.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Держи кармашек в чистоте</title>
-      <link>https://vanadium23.me/keep-pocket-clean/</link>
-      <pubDate>Sat, 31 Mar 2018 17:00:00 +0300</pubDate>
-      <guid>https://vanadium23.me/keep-pocket-clean/</guid>
-      <description>&lt;p&gt;Ретроспектива о том, как я организовал свой список чтения. (Спойлер: getpocket.com и не только).&lt;/p&gt;
-&lt;p&gt;Итак, первый симптом болезни застал меня, когда я увидел следующую картину на рабочем компьютере:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/too-many-tabs.png&#34; alt=&#34;Слишком много вкладок&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Настолько распространённая ситуация, что даже в мобильном хроме есть шутка на эту тему при 100+ вкладках:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/100-tabs-mobile-only.png&#34; alt=&#34;Слишком много вкладок на мобильном&#34;&gt;&lt;/p&gt;
-&lt;p&gt;И когда вкладок так много, то вам приходится держать большой контекст в голове где рабочее, а где &lt;em&gt;просто посмотреть&lt;/em&gt;. У кого-то с этим нет проблем, у кого-то есть и я, к сожалению, из второго числа. К этому добавлялось желание не только успевать читать (что, забегая вперед, невозможно и не нужно), но и следить за новостями. И я открыл для себя RSS, а точнее чудесный на тот момент Google Reader:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/greader.png&#34; alt=&#34;Google Reader&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Сервис был дико удобным, т.к. позволял собрать поток со всех сайтов в одну большую ленту к &lt;strike&gt;чтению&lt;/strike&gt; просмотру. Именно просмотру, поскольку большая часть отбрасывалась по заголовку и выдержке. Правда оставались лонгриды или просто тяжелые к прочтению статьи, что возвращало нас к картинке:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/too-many-tabs.png&#34; alt=&#34;Слишком много вкладок&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Дальнейшее исследование этой проблемы привело меня к тому, что есть сервисы по сохранению вкладок. На слуху было два: instapaper и pocket, но первый был только под яблоко, поэтому не подходил. Оставалось решить как туда складывать статьи без копирования ссылок или открытия их в браузере. В feedly (пришедшем на замену Google Reader) такую возможность сделали в Pro-версии, но это не наш путь. Здесь на помощь к нам приходит сервис ifttt.com.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/ifttt.png&#34; alt=&#34;Ifttt - это изолента между сервисами&#34;&gt;&lt;/p&gt;
-&lt;p&gt;С помощью него мы можем сделать автоматический перенос статей с меткой &amp;ldquo;Saved for later&amp;rdquo; из Feedly в Pocket. И как вишенка на торте, статьи, которые помечены как прочтённые в Pocket, переносились в Evernote.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/read-flow.png&#34; alt=&#34;Поток чтения&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Вот тут была допущена первая ошибка - не надо было использовать Evernote, хватало самого Pocket&amp;rsquo;a. Внутри него у статьи есть три состояния: к прочтению, в архиве и любимая. Вместо того, чтобы помещать статью в архив, я её удалял, т.к. архивирование засоряло Evernote. И теперь по данным из сервиса невозможно восстановить количество статей в очереди на тот или иной день. Остаются только скриншоты из твиттера. :(
-Не смотря на эту ошибку, схема принесла следующие удобства:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;статьи обрабатывались для чтения: вырезалась вся вёрстка сайта и оставался только текст&lt;/li&gt;
-&lt;li&gt;оффлайн чтение на планшете&lt;/li&gt;
-&lt;li&gt;уменьшение времени на просмотр статей в Feedly&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;И это было настолько удобно, что добавил ещё несколько правил: различные email weekly (например: &lt;a href=&#34;https://postgresweekly.com/&#34;&gt;https://postgresweekly.com/&lt;/a&gt;) и ссылки из твиттера работали точно так же.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/read-flow-2.png&#34; alt=&#34;Поток чтения 2&#34;&gt;&lt;/p&gt;
-&lt;p&gt;К чему это привело, догадаться не трудно. Мы просто перенесли проблему из одного места в другое:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/pocket-first-half-2016.png&#34; alt=&#34;У тебя проблемы&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Сама картинка до боли напоминает схему с производителем и потребителем, которые общаются через очередь.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/producer-consumer.png&#34; alt=&#34;Слишком много производителей&#34;&gt;&lt;/p&gt;
-&lt;p&gt;С одной стороны, потребителем в этой схеме являюсь я и можно точно сказать, что просто докупить железа не получится. С другой стороны, производителей контента со временем будет только больше. Как закономерный результат, мы и получаем забивание очереди.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Что же делать?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Ничего нового: дисциплинировать себя и больше фильтровать входную информацию.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Как это сделать?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Тут уже есть вариации. Для начала можно устроить информационный детокс и перестать читать вообще, чтобы понять чего ты хочешь. После этого сократить количество источников, оставив только девять. Почему девять? Если честно, я не помню, это было в какой-то статье. (:
-Возвращаясь к 2016 году, мне помогло добавление ежедневной задачи &amp;ldquo;разобрать 10 статей&amp;rdquo;. То есть у меня образовалась привычка накопления без прочтения, от которой мне удалось избавиться.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/pocket-second-half-2016.png&#34; alt=&#34;Решились проблемы&#34;&gt;&lt;/p&gt;
-&lt;p&gt;На этом хотелось бы закончить историю, но в прошлом году древнее зло пробудилось:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/pocket-second-half-2017.png&#34; alt=&#34;Вернулись проблемы&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Пришлось изобретать собственную алгоритмическую ленту, о которой расскажу в следующей статье.&lt;/p&gt;
-&lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Если используете очередь чтения статей, держите их количество близким к нулю.&lt;/li&gt;
-&lt;li&gt;Думайте &lt;em&gt;что&lt;/em&gt; и &lt;em&gt;зачем&lt;/em&gt; вы читаете, не усложняйте себе жизнь ненужным.&lt;/li&gt;
-&lt;li&gt;Если ушли в накопительство, не бойтесь выкинуть всё и начать сначала.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;полезные-расширения-для-pocket&#34;&gt;Полезные расширения для Pocket&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/accelereader-power-up-you/ndaldjfflhocdageglcnflfanmdhgfbi&#34;&gt;AcceleReader&lt;/a&gt; для Chrome Desktop&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=dev.emmaguy.pocketwidget&#34;&gt;DashClock Extension for Pocket&lt;/a&gt; для Android&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gist.github.com/vanadium23/d9ea3b7c2e8f3265ff209cb7358127fb&#34;&gt;Мой скрипт&lt;/a&gt; для TamperMonkey, чтобы показывать статистику в разрезе дня/недели/всего&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-  </channel>
-</rss>
+Это плохо тем, что они вечно висят перед глазами и уменьшают возможность планирования на сегодня. С одной стороны хорошо, что они перед глазами и не надо сверяться, с другой стороны всё что нужно - это не то сколько у нас встреч и во сколько, а сколько у нас остаётся свободного времени. Для этого достаточно один раз свериться с календарём.&lt;/p>
+&lt;p>В итоге, копирование событий из рабочего календаря в личный было отключено. Более удобной оказалась схема с предоставлением доступа из рабочей почты в личную по ссылке, спасибо гуглокалендарю.
+За последние две недели единственный косяк был найден в том, что уведомления от календаря я могу упустить, но было закостылено с помощью &lt;a href="https://play.google.com/store/apps/details?id=cz.zdenekhorak.mibandtools">tools &amp;amp; mi band&lt;/a>.&lt;/p></description></item><item><title>Календарь в качестве списка задач</title><link>https://vanadium23.me/calendar-as-tasklist/</link><pubDate>Sat, 16 Feb 2019 17:00:00 +0300</pubDate><guid>https://vanadium23.me/calendar-as-tasklist/</guid><description>&lt;p>В прошлом году у меня были странные эксперименты по тому как вести списки дел. В качестве основной платформы последние пару лет остаётся Todoist, но покопавшись в FAQ, обнаружил, что есть двухстороняя синхронизация с &lt;a href="https://doist.com/blog/google-calendar-todoist-integration/">гугл календарём&lt;/a> и тут понеслось.&lt;/p>
+&lt;p>&lt;strong>TL;DR:&lt;/strong> используйте календарь, как календарь, а список дел, как список дел. Нет ничего плохого в том, что они лежат в двух разных системах.&lt;/p>
+&lt;p>Итак, в какой-то момент времени у вас становится много встреч на неделе, точнее больше чем хотелось бы. Мне их хотелось не больше 2 в день, и не больше 5 в неделю. К сожалению, не всё совпадает с нашими желаниями:
+&lt;img src="https://vanadium23.me/images/calendar-overflow.png" alt="Зачееееееем">&lt;/p>
+&lt;p>Ситуация усугубляется тем, что к каким-то из встреч надо подготовиться. Мне показалось, что хорошим решением будет делать следующее:&lt;/p>
+&lt;ol>
+&lt;li>Вести встречи в списке дел&lt;/li>
+&lt;li>Пытаться впихнуть остальные дела между этими встречами&lt;/li>
+&lt;/ol>
+&lt;p>Ручки зачесались и настроили синхронизацию с гугл календарём, и всё заработало из коробки. Надо отметить, что у Todoist хорошо проработана синхронизация: при добавлении задачи со временем, она ставится и в календарь, а если в названии напишешь [25m], то ещё и продолжительность будет корректная. Правда пары вещей мне не хватило:&lt;/p>
+&lt;ol>
+&lt;li>Он не умеет работать с двумя календарями.&lt;/li>
+&lt;li>Нельзя прописать у уже созданной задачи продолжительность. Оно не синхронизирует по обновлению названия.&lt;/li>
+&lt;/ol>
+&lt;p>На помощь нам приходит ifttt, знакомый по статье с &lt;a href="https://vanadium23.me/keep-pocket-clean">getpocket&lt;/a>. В нём мы можем настроить синхронизацию вновь созданных событий между двумя календарями. &lt;a href="https://ifttt.com/applets/126824p-copy-events-between-calendars">тыц&lt;/a>
+Двумя вечерами позднее я был во все оружие и решил, что буду:&lt;/p>
+&lt;ol>
+&lt;li>Смотреть список задач и теперь встреч каждое утро в тудуисте&lt;/li>
+&lt;li>Расставлять время, когда буду делать задачу между ними&lt;/li>
+&lt;li>Для пущей убедительности буду красить в разные цвета, чтобы не путать встречи и дела.&lt;/li>
+&lt;/ol>
+&lt;p>Выглядело это как-то так:&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/calendar-overflow-more.png" alt="Тут надо было уже понять, что есть проблема">&lt;/p>
+&lt;p>В таком режиме успел пожить недельку, но пришло осознание, что не хватает контроля всё делать. А если не хватает контроля - надо добавить больше контроля! Проблема заключалась в том, что если откладывать задачу в тудуисте, она откладывалась и в календаре и никак нельзя было сравнить план с фактом. Значит, надо добавить бэкап изначального календарь. Берём и делаем ещё один календарь, который называем Plan и каждое утро в 10 бекапим в него какие у нас были события. Можно было напилить скрипт в крон, но лень взяла вверх и была найдена приложенька &lt;a href="https://play.google.com/store/apps/details?id=com.applisto.copyevents">Copy Calendar Events&lt;/a>.
+&lt;img src="https://vanadium23.me/images/calendar-plan-fact.png" alt="Всё идёт по плааану">&lt;/p>
+&lt;p>Синим отмечен план и как сразу можно заметить, в час всё стало идти не по плану. На какие только ухищрения не приходилось идти, чтобы всё сходилось, но жизнь оказалась проще: не надо планировать дела с точностью до минуты, достаточно планировать день с учётом сил и оставлять чуть-чуть для себя любимого. Тогда вы не будет в состояние &amp;ldquo;ох ты, не успел&amp;rdquo;, потом сами себе скажите спасибо.&lt;/p>
+&lt;p>P.s. Копирование встреч в личный календарь + Todoist так и осталось, и это тоже плохая практика. Напишу об этом как-нибудь.&lt;/p></description></item><item><title>Держи кармашек в чистоте</title><link>https://vanadium23.me/keep-pocket-clean/</link><pubDate>Sat, 31 Mar 2018 17:00:00 +0300</pubDate><guid>https://vanadium23.me/keep-pocket-clean/</guid><description>&lt;p>Ретроспектива о том, как я организовал свой список чтения. (Спойлер: getpocket.com и не только).&lt;/p>
+&lt;p>Итак, первый симптом болезни застал меня, когда я увидел следующую картину на рабочем компьютере:&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/too-many-tabs.png" alt="Слишком много вкладок">&lt;/p>
+&lt;p>Настолько распространённая ситуация, что даже в мобильном хроме есть шутка на эту тему при 100+ вкладках:&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/100-tabs-mobile-only.png" alt="Слишком много вкладок на мобильном">&lt;/p>
+&lt;p>И когда вкладок так много, то вам приходится держать большой контекст в голове где рабочее, а где &lt;em>просто посмотреть&lt;/em>. У кого-то с этим нет проблем, у кого-то есть и я, к сожалению, из второго числа. К этому добавлялось желание не только успевать читать (что, забегая вперед, невозможно и не нужно), но и следить за новостями. И я открыл для себя RSS, а точнее чудесный на тот момент Google Reader:&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/greader.png" alt="Google Reader">&lt;/p>
+&lt;p>Сервис был дико удобным, т.к. позволял собрать поток со всех сайтов в одну большую ленту к &lt;strike>чтению&lt;/strike> просмотру. Именно просмотру, поскольку большая часть отбрасывалась по заголовку и выдержке. Правда оставались лонгриды или просто тяжелые к прочтению статьи, что возвращало нас к картинке:&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/too-many-tabs.png" alt="Слишком много вкладок">&lt;/p>
+&lt;p>Дальнейшее исследование этой проблемы привело меня к тому, что есть сервисы по сохранению вкладок. На слуху было два: instapaper и pocket, но первый был только под яблоко, поэтому не подходил. Оставалось решить как туда складывать статьи без копирования ссылок или открытия их в браузере. В feedly (пришедшем на замену Google Reader) такую возможность сделали в Pro-версии, но это не наш путь. Здесь на помощь к нам приходит сервис ifttt.com.&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/ifttt.png" alt="Ifttt - это изолента между сервисами">&lt;/p>
+&lt;p>С помощью него мы можем сделать автоматический перенос статей с меткой &amp;ldquo;Saved for later&amp;rdquo; из Feedly в Pocket. И как вишенка на торте, статьи, которые помечены как прочтённые в Pocket, переносились в Evernote.&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/read-flow.png" alt="Поток чтения">&lt;/p>
+&lt;p>Вот тут была допущена первая ошибка - не надо было использовать Evernote, хватало самого Pocket&amp;rsquo;a. Внутри него у статьи есть три состояния: к прочтению, в архиве и любимая. Вместо того, чтобы помещать статью в архив, я её удалял, т.к. архивирование засоряло Evernote. И теперь по данным из сервиса невозможно восстановить количество статей в очереди на тот или иной день. Остаются только скриншоты из твиттера. :(
+Не смотря на эту ошибку, схема принесла следующие удобства:&lt;/p>
+&lt;ul>
+&lt;li>статьи обрабатывались для чтения: вырезалась вся вёрстка сайта и оставался только текст&lt;/li>
+&lt;li>оффлайн чтение на планшете&lt;/li>
+&lt;li>уменьшение времени на просмотр статей в Feedly&lt;/li>
+&lt;/ul>
+&lt;p>И это было настолько удобно, что добавил ещё несколько правил: различные email weekly (например: &lt;a href="https://postgresweekly.com/">https://postgresweekly.com/&lt;/a>) и ссылки из твиттера работали точно так же.&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/read-flow-2.png" alt="Поток чтения 2">&lt;/p>
+&lt;p>К чему это привело, догадаться не трудно. Мы просто перенесли проблему из одного места в другое:&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/pocket-first-half-2016.png" alt="У тебя проблемы">&lt;/p>
+&lt;p>Сама картинка до боли напоминает схему с производителем и потребителем, которые общаются через очередь.&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/producer-consumer.png" alt="Слишком много производителей">&lt;/p>
+&lt;p>С одной стороны, потребителем в этой схеме являюсь я и можно точно сказать, что просто докупить железа не получится. С другой стороны, производителей контента со временем будет только больше. Как закономерный результат, мы и получаем забивание очереди.&lt;/p>
+&lt;blockquote>
+&lt;p>Что же делать?&lt;/p>
+&lt;/blockquote>
+&lt;p>Ничего нового: дисциплинировать себя и больше фильтровать входную информацию.&lt;/p>
+&lt;blockquote>
+&lt;p>Как это сделать?&lt;/p>
+&lt;/blockquote>
+&lt;p>Тут уже есть вариации. Для начала можно устроить информационный детокс и перестать читать вообще, чтобы понять чего ты хочешь. После этого сократить количество источников, оставив только девять. Почему девять? Если честно, я не помню, это было в какой-то статье. (:
+Возвращаясь к 2016 году, мне помогло добавление ежедневной задачи &amp;ldquo;разобрать 10 статей&amp;rdquo;. То есть у меня образовалась привычка накопления без прочтения, от которой мне удалось избавиться.&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/pocket-second-half-2016.png" alt="Решились проблемы">&lt;/p>
+&lt;p>На этом хотелось бы закончить историю, но в прошлом году древнее зло пробудилось:&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/pocket-second-half-2017.png" alt="Вернулись проблемы">&lt;/p>
+&lt;p>Пришлось изобретать собственную алгоритмическую ленту, о которой расскажу в следующей статье.&lt;/p>
+&lt;h2 id="tldr">TL;DR&lt;/h2>
+&lt;ul>
+&lt;li>Если используете очередь чтения статей, держите их количество близким к нулю.&lt;/li>
+&lt;li>Думайте &lt;em>что&lt;/em> и &lt;em>зачем&lt;/em> вы читаете, не усложняйте себе жизнь ненужным.&lt;/li>
+&lt;li>Если ушли в накопительство, не бойтесь выкинуть всё и начать сначала.&lt;/li>
+&lt;/ul>
+&lt;h2 id="полезные-расширения-для-pocket">Полезные расширения для Pocket&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/accelereader-power-up-you/ndaldjfflhocdageglcnflfanmdhgfbi">AcceleReader&lt;/a> для Chrome Desktop&lt;/li>
+&lt;li>&lt;a href="https://play.google.com/store/apps/details?id=dev.emmaguy.pocketwidget">DashClock Extension for Pocket&lt;/a> для Android&lt;/li>
+&lt;li>&lt;a href="https://gist.github.com/vanadium23/d9ea3b7c2e8f3265ff209cb7358127fb">Мой скрипт&lt;/a> для TamperMonkey, чтобы показывать статистику в разрезе дня/недели/всего&lt;/li>
+&lt;/ul></description></item></channel></rss>

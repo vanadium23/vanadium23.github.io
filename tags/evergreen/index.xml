@@ -1,95 +1,12 @@
-
-
-
-
-<?xml-stylesheet type="text/xsl" href="#stylesheet" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xsl">
-    <xsl:output method="html" doctype-system="about:legacy-compat" />
-    <xsl:template match="/rss">
-      <html lang="ru-ru">
-        <head>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>evergreen RSS | vanadium23</title>
-          <link rel="stylesheet" href="https://vanadium23.me/css/base.min.b6dfa31f93118b56b5ca227e268bbe1c1d592be9ccd7b4664981bca6f0352f99.css" integrity="sha256-tt&#43;jH5MRi1a1yiJ&#43;Jou&#43;HB1ZK&#43;nM17RmSYG8pvA1L5k=" />
-        </head>
-        <body>
-          <nav class="u-background">
-    <div class="u-wrapper Banner">
-        <a class="Banner-link u-clickable" href="https://vanadium23.me/">
-            vanadium23
-        </a>
-        <ul class="Banner">
-        
-        <li class="Banner-item">
-            <a class="Banner-link u-clickable" href="https://vanadium23.me/about/">About</a>
-        </li class="Banner-item">
-        
-        <li class="Banner-item">
-            <a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a>
-        </li class="Banner-item">
-        
-        <li>
-            <a id="themeSwitch" class="theme-switcher"></a>
-        </li>
-        </ul>
-    </div>
-</nav>
-          <main>
-            <div class="u-wrapper">
-              <div class="u-padding">
-                <h2 class="Heading-title">
-                  
-                  <a class="Heading-link u-clickable" href="https://vanadium23.me/tags/evergreen/index.xml" rel="bookmark">evergreen RSS</a>
-                  
-                </h2>
-                
-              </div>
-            </div>
-          </main>
-          <footer class="Footer">
-  <div class="u-wrapper">
-    <div class="u-padding">
-        
-        <a href="https://github.com/vanadium23"><i class="svg-icon github"></i></a>
-        <a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"></i></a>
-        <a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"></i></a>
-        <a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"></i></a>
-        <a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"></i></a>
-        <a href="https://goodreads.com/vanadium23"><i class="svg-icon goodreads"></i></a>
-        <a href="https://t.me/chernov_sharit"><i class="svg-icon telegram"></i></a>
-    </div>
-  </div>
-</footer>
-        </body>
-      </html>
-    </xsl:template>
-  </xsl:stylesheet>
-  <channel>
-    <title>evergreen on vanadium23</title>
-    <link>https://vanadium23.me/tags/evergreen/</link>
-    <description>Recent content in evergreen on vanadium23</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ru-ru</language>
-    <lastBuildDate>Sun, 27 Sep 2020 09:00:00 +0300</lastBuildDate>
-    <atom:link href="https://vanadium23.me/tags/evergreen/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Адаптация подходов под себя</title>
-      <link>https://vanadium23.me/adapt-process/</link>
-      <pubDate>Sun, 27 Sep 2020 09:00:00 +0300</pubDate>
-      <guid>https://vanadium23.me/adapt-process/</guid>
-      <description>&lt;p&gt;Это первая заметка, которая попадает из приватной заметочницы в блог. Недавно допрошёл курс &amp;ldquo;Образование для образованных&amp;rdquo; и ознакомился с &lt;a href=&#34;https://en.wikipedia.org/wiki/Constructionism_(learning_theory)&#34;&gt;теорией конструкционизма&lt;/a&gt;. В рамках него знание, которое не было написано, не может считаться выученным. Все заметки, которые будут так попадать, будут иметь тег evergreen по имени &lt;a href=&#34;https://notes.andymatuschak.org/&#34;&gt;одноимённой методики&lt;/a&gt;. Можно считать это моей адаптаций данного подхода.&lt;/p&gt;
-&lt;p&gt;Люди очень хотят быть продуктивными, но при этом не хотят тратить на это время. В итоге, вместо того, чтобы отделять важное от неважного, они ждут что это за них сделает программа. Часть из них уже и так дошла до этого, например в amazing marvin есть &amp;ldquo;стратегия&amp;rdquo;, которая даёт рандомную задачу из списка дел на сегодня.&lt;/p&gt;
-&lt;p&gt;Более правильным подходом было бы осмысленние описаных дисциплин в переложение на себя или более простым языком метод проб и ошибок. Главное в этом не скатываться опять в крайности: перепроверять очевидные вещи раз за разом - не нравится ходить в спортзал, найдите более интересный спорт.&lt;/p&gt;
-&lt;p&gt;Для себя решил вести дневники экспериментов, когда пытаюсь попробовать что-то новое:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;в них всегда есть проблема, цель и сроки эксперимента.&lt;/li&gt;
-&lt;li&gt;дневник с описанием что удобно-неудобно и почему.&lt;/li&gt;
-&lt;li&gt;в конце написаны выводы и либо внедряется, либо выбрасывается и пишется почему.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Выглядит вся эта система как продуктовый подход к себе, но нет. В данном случае не хватает метрик, да и думаю что никому  они особо не нужны.
-Скорее это всё направлено на накопления опыта и попытка сделать на основе него что-то новое при помещение известного в неизвестный контекст.&lt;/p&gt;
-</description>
-    </item>
-  </channel>
-</rss>
+<?xml-stylesheet type="text/xsl" href="#stylesheet"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xsl"><xsl:output method="html" doctype-system="about:legacy-compat"/><xsl:template match="/rss"><html lang="ru-ru"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>evergreen RSS | vanadium23</title><link rel="stylesheet" href="https://vanadium23.me/css/base.min.ede35a5a6f0822c8ed4e62a02aaaead5a369281f08df87a8547512ed5449222f.css" integrity="sha256-7eNaWm8IIsjtTmKgKqrq1aNpKB8I34eoVHUS7VRJIi8="/></head><body><nav class="u-background"><div class="u-wrapper Banner"><a class="Banner-link u-clickable" href="https://vanadium23.me/">
+vanadium23</a><ul class="Banner"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/about/">About</a></li class="Banner-item"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a></li class="Banner-item"><li><a id="themeSwitch" class="theme-switcher"/></li></ul></div></nav><main><div class="u-wrapper"><div class="u-padding"><h2 class="Heading-title"><a class="Heading-link u-clickable" href="https://vanadium23.me/tags/evergreen/index.xml" rel="bookmark">evergreen RSS</a></h2></div></div></main><footer class="Footer"><div class="u-wrapper"><div class="u-padding"><a href="https://github.com/vanadium23"><i class="svg-icon github"/></a><a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"/></a><a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"/></a><a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"/></a><a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"/></a><a href="https://goodreads.com/vanadium23"><i class="svg-icon goodreads"/></a><a href="https://t.me/chernov_sharit"><i class="svg-icon telegram"/></a></div></div></footer></body></html></xsl:template></xsl:stylesheet><channel><title>evergreen on vanadium23</title><link>https://vanadium23.me/tags/evergreen/</link><description>Recent content in evergreen on vanadium23</description><generator>Hugo -- gohugo.io</generator><language>ru-ru</language><lastBuildDate>Sun, 27 Sep 2020 09:00:00 +0300</lastBuildDate><atom:link href="https://vanadium23.me/tags/evergreen/index.xml" rel="self" type="application/rss+xml"/><item><title>Адаптация подходов под себя</title><link>https://vanadium23.me/adapt-process/</link><pubDate>Sun, 27 Sep 2020 09:00:00 +0300</pubDate><guid>https://vanadium23.me/adapt-process/</guid><description>&lt;p>Это первая заметка, которая попадает из приватной заметочницы в блог. Недавно допрошёл курс &amp;ldquo;Образование для образованных&amp;rdquo; и ознакомился с &lt;a href="https://en.wikipedia.org/wiki/Constructionism_(learning_theory)">теорией конструкционизма&lt;/a>. В рамках него знание, которое не было написано, не может считаться выученным. Все заметки, которые будут так попадать, будут иметь тег evergreen по имени &lt;a href="https://notes.andymatuschak.org/">одноимённой методики&lt;/a>. Можно считать это моей адаптаций данного подхода.&lt;/p>
+&lt;p>Люди очень хотят быть продуктивными, но при этом не хотят тратить на это время. В итоге, вместо того, чтобы отделять важное от неважного, они ждут что это за них сделает программа. Часть из них уже и так дошла до этого, например в amazing marvin есть &amp;ldquo;стратегия&amp;rdquo;, которая даёт рандомную задачу из списка дел на сегодня.&lt;/p>
+&lt;p>Более правильным подходом было бы осмысленние описаных дисциплин в переложение на себя или более простым языком метод проб и ошибок. Главное в этом не скатываться опять в крайности: перепроверять очевидные вещи раз за разом - не нравится ходить в спортзал, найдите более интересный спорт.&lt;/p>
+&lt;p>Для себя решил вести дневники экспериментов, когда пытаюсь попробовать что-то новое:&lt;/p>
+&lt;ul>
+&lt;li>в них всегда есть проблема, цель и сроки эксперимента.&lt;/li>
+&lt;li>дневник с описанием что удобно-неудобно и почему.&lt;/li>
+&lt;li>в конце написаны выводы и либо внедряется, либо выбрасывается и пишется почему.&lt;/li>
+&lt;/ul>
+&lt;p>Выглядит вся эта система как продуктовый подход к себе, но нет. В данном случае не хватает метрик, да и думаю что никому они особо не нужны.
+Скорее это всё направлено на накопления опыта и попытка сделать на основе него что-то новое при помещение известного в неизвестный контекст.&lt;/p></description></item></channel></rss>

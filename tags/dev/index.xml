@@ -1,94 +1,14 @@
-
-
-
-
-<?xml-stylesheet type="text/xsl" href="#stylesheet" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xsl">
-    <xsl:output method="html" doctype-system="about:legacy-compat" />
-    <xsl:template match="/rss">
-      <html lang="ru-ru">
-        <head>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>dev RSS | vanadium23</title>
-          <link rel="stylesheet" href="https://vanadium23.me/css/base.min.b6dfa31f93118b56b5ca227e268bbe1c1d592be9ccd7b4664981bca6f0352f99.css" integrity="sha256-tt&#43;jH5MRi1a1yiJ&#43;Jou&#43;HB1ZK&#43;nM17RmSYG8pvA1L5k=" />
-        </head>
-        <body>
-          <nav class="u-background">
-    <div class="u-wrapper Banner">
-        <a class="Banner-link u-clickable" href="https://vanadium23.me/">
-            vanadium23
-        </a>
-        <ul class="Banner">
-        
-        <li class="Banner-item">
-            <a class="Banner-link u-clickable" href="https://vanadium23.me/about/">About</a>
-        </li class="Banner-item">
-        
-        <li class="Banner-item">
-            <a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a>
-        </li class="Banner-item">
-        
-        <li>
-            <a id="themeSwitch" class="theme-switcher"></a>
-        </li>
-        </ul>
-    </div>
-</nav>
-          <main>
-            <div class="u-wrapper">
-              <div class="u-padding">
-                <h2 class="Heading-title">
-                  
-                  <a class="Heading-link u-clickable" href="https://vanadium23.me/tags/dev/index.xml" rel="bookmark">dev RSS</a>
-                  
-                </h2>
-                
-              </div>
-            </div>
-          </main>
-          <footer class="Footer">
-  <div class="u-wrapper">
-    <div class="u-padding">
-        
-        <a href="https://github.com/vanadium23"><i class="svg-icon github"></i></a>
-        <a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"></i></a>
-        <a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"></i></a>
-        <a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"></i></a>
-        <a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"></i></a>
-        <a href="https://goodreads.com/vanadium23"><i class="svg-icon goodreads"></i></a>
-        <a href="https://t.me/chernov_sharit"><i class="svg-icon telegram"></i></a>
-    </div>
-  </div>
-</footer>
-        </body>
-      </html>
-    </xsl:template>
-  </xsl:stylesheet>
-  <channel>
-    <title>dev on vanadium23</title>
-    <link>https://vanadium23.me/tags/dev/</link>
-    <description>Recent content in dev on vanadium23</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ru-ru</language>
-    <lastBuildDate>Sun, 08 Mar 2020 09:00:00 +0300</lastBuildDate>
-    <atom:link href="https://vanadium23.me/tags/dev/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Немножко про модули в golang</title>
-      <link>https://vanadium23.me/golang-modules/</link>
-      <pubDate>Sun, 08 Mar 2020 09:00:00 +0300</pubDate>
-      <guid>https://vanadium23.me/golang-modules/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;“Before software can be reusable, it first has to be usable.” – &lt;a href=&#34;https://en.wikipedia.org/wiki/Ralph_Johnson_(computer_scientist)&#34;&gt;Ralph Johnson&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Это статья скорее для себя, нежели чем хотелось чем-то поделиться. Идея её написания висела довольно давно, но сейчас сподвигло её написать статья &lt;a href=&#34;https://fasterthanli.me/blog/2020/i-want-off-mr-golangs-wild-ride/&#34;&gt;&amp;ldquo;I want off Mr. Golang&amp;rsquo;s Wild Ride&amp;rdquo;&lt;/a&gt;. Мысленно можно разделить эту статью на две части: первая, в которой идёт обсуждение объединения или нормализации API между разными операционными системами, и вторая, в которой идёт речь про модули и их реализацию. Russ Cox на &lt;a href=&#34;https://research.swtch.com/&#34;&gt;своём сайте&lt;/a&gt; сделал серию из 11 (!) статей, чтобы объяснить почему модули это не так просто, как казалось. Давайте кратко пройдёмся по истории работы с библиотеками в golang.&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;h2 id=&#34;ненавистный-gopath&#34;&gt;Ненавистный GOPATH&lt;/h2&gt;
-&lt;p&gt;Первое, что тебе нужно было сделать прежде, чем начать работу с golang - это установить переменную GOPATH. Она была нужна для того, чтобы команда &lt;code&gt;go get&lt;/code&gt; знала куда складывать пакеты. Сейчас есть значение по умолчанию равное &lt;code&gt;$HOME/go&lt;/code&gt;, что немножко упрощает работу, но не сильно. В качестве неймспейса для всех библиотек используется формат &lt;code&gt;host/namespace/lib&lt;/code&gt;, например: &lt;code&gt;github.com/xo/usql&lt;/code&gt;.
-Пробуем поставить утилиту &lt;code&gt;usql&lt;/code&gt;:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;% time go get github.com/xo/usql
+<?xml-stylesheet type="text/xsl" href="#stylesheet"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xsl"><xsl:output method="html" doctype-system="about:legacy-compat"/><xsl:template match="/rss"><html lang="ru-ru"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>dev RSS | vanadium23</title><link rel="stylesheet" href="https://vanadium23.me/css/base.min.ede35a5a6f0822c8ed4e62a02aaaead5a369281f08df87a8547512ed5449222f.css" integrity="sha256-7eNaWm8IIsjtTmKgKqrq1aNpKB8I34eoVHUS7VRJIi8="/></head><body><nav class="u-background"><div class="u-wrapper Banner"><a class="Banner-link u-clickable" href="https://vanadium23.me/">
+vanadium23</a><ul class="Banner"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/about/">About</a></li class="Banner-item"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a></li class="Banner-item"><li><a id="themeSwitch" class="theme-switcher"/></li></ul></div></nav><main><div class="u-wrapper"><div class="u-padding"><h2 class="Heading-title"><a class="Heading-link u-clickable" href="https://vanadium23.me/tags/dev/index.xml" rel="bookmark">dev RSS</a></h2></div></div></main><footer class="Footer"><div class="u-wrapper"><div class="u-padding"><a href="https://github.com/vanadium23"><i class="svg-icon github"/></a><a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"/></a><a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"/></a><a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"/></a><a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"/></a><a href="https://goodreads.com/vanadium23"><i class="svg-icon goodreads"/></a><a href="https://t.me/chernov_sharit"><i class="svg-icon telegram"/></a></div></div></footer></body></html></xsl:template></xsl:stylesheet><channel><title>dev on vanadium23</title><link>https://vanadium23.me/tags/dev/</link><description>Recent content in dev on vanadium23</description><generator>Hugo -- gohugo.io</generator><language>ru-ru</language><lastBuildDate>Sun, 08 Mar 2020 09:00:00 +0300</lastBuildDate><atom:link href="https://vanadium23.me/tags/dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Немножко про модули в golang</title><link>https://vanadium23.me/golang-modules/</link><pubDate>Sun, 08 Mar 2020 09:00:00 +0300</pubDate><guid>https://vanadium23.me/golang-modules/</guid><description>&lt;blockquote>
+&lt;p>“Before software can be reusable, it first has to be usable.” – &lt;a href="https://en.wikipedia.org/wiki/Ralph_Johnson_(computer_scientist)">Ralph Johnson&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>Это статья скорее для себя, нежели чем хотелось чем-то поделиться. Идея её написания висела довольно давно, но сейчас сподвигло её написать статья &lt;a href="https://fasterthanli.me/blog/2020/i-want-off-mr-golangs-wild-ride/">&amp;ldquo;I want off Mr. Golang&amp;rsquo;s Wild Ride&amp;rdquo;&lt;/a>. Мысленно можно разделить эту статью на две части: первая, в которой идёт обсуждение объединения или нормализации API между разными операционными системами, и вторая, в которой идёт речь про модули и их реализацию. Russ Cox на &lt;a href="https://research.swtch.com/">своём сайте&lt;/a> сделал серию из 11 (!) статей, чтобы объяснить почему модули это не так просто, как казалось. Давайте кратко пройдёмся по истории работы с библиотеками в golang.&lt;/p>
+&lt;!-- more -->
+&lt;h2 id="ненавистный-gopath">Ненавистный GOPATH&lt;/h2>
+&lt;p>Первое, что тебе нужно было сделать прежде, чем начать работу с golang - это установить переменную GOPATH. Она была нужна для того, чтобы команда &lt;code>go get&lt;/code> знала куда складывать пакеты. Сейчас есть значение по умолчанию равное &lt;code>$HOME/go&lt;/code>, что немножко упрощает работу, но не сильно. В качестве неймспейса для всех библиотек используется формат &lt;code>host/namespace/lib&lt;/code>, например: &lt;code>github.com/xo/usql&lt;/code>.
+Пробуем поставить утилиту &lt;code>usql&lt;/code>:&lt;/p>
+&lt;pre tabindex="0">&lt;code>% time go get github.com/xo/usql
 56.93s user 6.39s system 85% cpu 1:13.98 total
-
 % tree -d -L 3 ~/go/src
 ├── github.com
 │   ├── alecthomas
@@ -121,383 +41,303 @@
 │   │   ├── usql
 │   │   └── xoutil
 │   └── zaf
-│       └── temp
+│   └── temp
 └── golang.org
-    └── x
-        ├── crypto
-        └── sys
-
+└── x
+├── crypto
+└── sys
 % du -h --max-depth=1 ~/go/src/
-77M	./github.com
-35M	./golang.org
-111M	.
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Утилита предназначена для работы с разными базами данных и ожидаемо ей требуется много библиотек-драйверов для работы, но 111 мегабайт и минута на скачивание выглядит, как перебор. Если вам нужна только сама утилита, всегда можно использовать опцию &lt;code&gt;-u&lt;/code&gt;. В защиту такого подхода, хочу сказать что использование прямого соответствия между импортом библиотеки и пути по которому она находится удобно. Так как язык разработал Google, то сразу был сделан вывод о том, что вся эта система работала поверх монорепозитория внутри компании и такое использование было логично. Но как только язык вышел публично, сразу стало понятно что использовать хост сервиса в пути не самое удобное решение. В случае, если проект был перемещён в другое пространство, ничего страшного не происходит, но вот если поменялся хост, то труба. Об этом подумали несколько людей и началась вторая эпоха.&lt;/p&gt;
-&lt;h2 id=&#34;средневековый-vendor&#34;&gt;Средневековый vendor&lt;/h2&gt;
-&lt;p&gt;Когда node.js только набирал популярность (версии 0.8-0.12), шёл довольно большой холивар на тему вендоринга зависимостей. Были люди, которые говорили, что нужно складывать всю папку node_modules в репозиторий и при обновлении комиттить изменения, но в итоге сообщество пришло к тому, что это приносит только лишние расходы и отказались. Как мы все потом знаем, это привело к трагедии &lt;strike&gt;Дарта Плегаса&lt;/strike&gt; &lt;a href=&#34;https://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm&#34;&gt;leftpad&lt;/a&gt;. В Golang решили пойти тем же путём и появилась папка vendor, правда чтобы её использовать необходимо было перезаписать GOPATH в текущую директорую и тогда начинались пляски с тем, что в директории должна была быть папка src, а в &lt;code&gt;.gitignore&lt;/code&gt; шли директории &lt;code&gt;bin/&lt;/code&gt; и &lt;code&gt;pkg/&lt;/code&gt;. Эту проблему надо было автоматизировать и появились инструменты, чтобы с таким подходом было работать удобно, а именно &lt;a href=&#34;https://github.com/Masterminds/glide&#34;&gt;glider&lt;/a&gt;, а в последствии &lt;a href=&#34;https://github.com/golang/dep&#34;&gt;dep&lt;/a&gt;. Более того, &lt;code&gt;dep&lt;/code&gt; был сделан как официальный эксперимент группы разработки языка, и в итоге именно он дал толчок развитию модулей в go 1.11. Из-за данных инструментов в репозиториях пропали папки &lt;code&gt;vendor&lt;/code&gt;, так как они создавали lock-файлы и можно было воспроизвести среду. А вот проблемы были в том, что каждый инструмент делал свой формат. :(&lt;/p&gt;
-&lt;h2 id=&#34;современный-gomod&#34;&gt;Современный go.mod&lt;/h2&gt;
-&lt;p&gt;И здесь мы возвращаемся к модулям с которых началась эта статья. В go 1.11 можно было с помощью переменной GO111MODULE=on, а с недавним релизом go 1.14 данное поведение стало по умолчанию. Что нужно сделать для того, чтобы его использовать прекрасно описано в &lt;a href=&#34;https://blog.golang.org/using-go-modules&#34;&gt;The Go Blog&lt;/a&gt; в 4 (!) частях. Здесь бы хотелось сосредоточиться на том, почему это не современная штука.&lt;/p&gt;
-&lt;h3 id=&#34;проблема-1-перейти-надо-всем&#34;&gt;Проблема №1. Перейти надо всем&lt;/h3&gt;
-&lt;p&gt;Разработчики golang молодцы, что дали 3 минорные версии для того, чтобы авторы библиотек могли перейти на go.mod и судя по тому, что из &lt;a href=&#34;https://github.com/search?q=go.mod&amp;amp;type=Issues&#34;&gt;21000 открытых issues&lt;/a&gt; на гитхабе закрыто 18000 все были нацелены на использование данного инструмента.&lt;/p&gt;
-&lt;h3 id=&#34;проблема-2-формат-mod-в-gomod&#34;&gt;Проблема №2. Формат mod в go.mod&lt;/h3&gt;
-&lt;p&gt;Долго бомбило после прочтения &lt;a href=&#34;https://www.python.org/dev/peps/pep-0518/&#34;&gt;PEP 518&lt;/a&gt;, что выбрали формат toml. Главное, что его выбрали потому что json слишком вербозный, а yaml имеет слишком сложную спецификацию. В golang решили просто пойти своим путём и сделать формат, который надо парсить. Можете пойти почитать, как он устроен &lt;a href=&#34;https://github.com/golang/go/wiki/Modules#gomod&#34;&gt;тут&lt;/a&gt;. Уверен, что выбор был сделан исходя из принципа упрощения: зачем брать известное, если можно сделать своё простое? Более того, этот файл нельзя трогать руками. Всё взаимодействие с ним идёт через команду &lt;code&gt;go get&lt;/code&gt;, так что частично мы откатились к прежнему решению с GOPATH, просто теперь все пакеты лежат в &lt;code&gt;GOPATH/pkg&lt;/code&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;проблема-3-версионирование&#34;&gt;Проблема №3. Версионирование&lt;/h3&gt;
-&lt;p&gt;Все мы оказывались в ситуации, когда автор библиотеки не удосужился указать версии своих зависимостей и занимаешься бинарным поиском совместимых пакетов. В golang решили пойти дальше и сказать, что изменение мажорной версии должно приводить к изменении путей. Тема хорошая, но реализация полагается на рациональность людей, который будут эту мажорную версию менять. А как мы знаем, у этой проблему есть две крайности: Chrome,который имеет 80 версию на данный момент, и PostgresQL, который долгое время жил на 9.x номенклатуре и утверждал, что вторая цифра - это тоже мажорный релиз. Справился ли подход golang с тем, чтобы пакеты всегда собирались при обновлении пакетов? Нет, для примера вы можете взять обновление пакета &lt;a href=&#34;https://github.com/mbobakov/grpc-consul-resolver/issues/15&#34;&gt;grpc-consul-resolver&lt;/a&gt; из-за того, что в минорной версии сменился интерфейс, и это библиотека от google.&lt;/p&gt;
-&lt;h3 id=&#34;проблема-4-настройки&#34;&gt;Проблема №4. Настройки&lt;/h3&gt;
-&lt;p&gt;Ладно, тут я просто напишу GOSUMDB=off, GOPRIVATE=*example.com* и обязательно GO111MODULE=on.&lt;/p&gt;
-&lt;h2 id=&#34;итого&#34;&gt;Итого&lt;/h2&gt;
-&lt;p&gt;Немножко грустно от того, что в мире уже десяток популярных языков программирования, а понятной и простой системы по работе с пакетами так до сих пор и изобретают с нуля.&lt;/p&gt;
-&lt;p&gt;P.s. а может быть и не с нуля, но осадочек остался.&lt;/p&gt;
-&lt;p&gt;P.p.s. кстати, с модулями не отказались от вендоринга, даже комманду сделали для этого &lt;code&gt;go mod vendor&lt;/code&gt;.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Переезд с Google analytics на Cloudflare workers</title>
-      <link>https://vanadium23.me/remove-google-analytics/</link>
-      <pubDate>Sat, 15 Feb 2020 09:00:00 +0300</pubDate>
-      <guid>https://vanadium23.me/remove-google-analytics/</guid>
-      <description>&lt;p&gt;Прошёл почти год с того момента, как &lt;a href=&#34;https://vanadium23.me/migrating-to-hugo/&#34;&gt;я перевёз этот блог с jekyll на hugo&lt;/a&gt;. В той статье всё закончилось на том, что половина веса страницы занимает гугл аналитика. Меня это немножко волновало, но потом я добавил скрипт для шаринга в соцсети и понеслось. Напоминает занятие по уборке дома, сколько раз тебе это не сделать, то рано или поздно придёться к этому вернуться.&lt;/p&gt;
-&lt;p&gt;Не смотря на то, что в этот блог заходит не так много людей, терять числа куда и сколько не очень хотелось. Самым простым вариантом было бы расположить блог на личной VDS и смотреть в логи nginx, но не хотелось отказываться от бесплатного хостинга Github Pages.
-Поэтому я перевёл блог за Cloudflare, что немножко шило на мыло, но в нём есть дашборд с заходами.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/cloudflare-analytics.png&#34; alt=&#34;Cloudflare analytics&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Всё что она показывает - это количество заходов в разбивке по странам, а хочется смотреть за хитами по страницам. И тут вспомнил, что в прошлом году Cloudflare представили свой новый продукт Workers.&lt;/p&gt;
-&lt;h3 id=&#34;как-он-работает&#34;&gt;Как он работает?&lt;/h3&gt;
-&lt;p&gt;Cloudflare Workers - это javascript (или Rust) код, который они деплоят в свои датацентры и вызывают на каждый запрос домена, который находится за CDN. Наверное, можно это отнести к классу serverless. Бесплатный тариф не очень большой: 100000 запросов в месяц и один бесплатный поддомен в зоне workers.dev, но для начала вполне хватит. Помимо кода, есть Key-Value хранилище в которое можно положить какие-то данные.
-Если вы ещё не смотрели на них, то можете посмотреть их &lt;a href=&#34;https://developers.cloudflare.com/workers/tutorials/build-a-todo-list/&#34;&gt;руководства&lt;/a&gt;, может что-нибудь понравиться.&lt;/p&gt;
-&lt;h3 id=&#34;influxdb--grafana--3&#34;&gt;InfluxDB + Grafana = &amp;lt;3&lt;/h3&gt;
-&lt;p&gt;Дело оставалось за малым, складывать все запросы в какую-нибудь TSDB. На работе мы вовсю используем InfluxDB, поэтому выбор остался за ней. Она имеет довольно простой протокол по массовой записи в базу с помощью &lt;a href=&#34;https://docs.influxdata.com/influxdb/v1.7/tools/api/#examples-6&#34;&gt;HTTP API&lt;/a&gt;. За вечер был написан код на js, который на каждый входящий запрос проксировал его ниже, а также писал метрику. Около 3 часов было убито на то, почему в редакторе Cloudflare метрики отправляются, а на блоге нет. Оказалось, что worker может работать только с определенными портами и порт по умолчанию InfluxDB не входит в этот список. Пришлось перезапустить его на стандартном http порту. Естевственно, когда вся схема заработала, захотелось посчитать не приносит ли это большого оверхеда и цифры оказались в районе 50-150 ms. Если честно, по сравнению с первоначальным ответом - это очень много, с другой стороны мы удаляем 40 кб js скриптов с клиента, поэтому решил что это приемлемо. В запасе остаётся вариант, что его можно уменьшить за счёт переписывания кода на Rust.&lt;/p&gt;
-&lt;p&gt;Финальный дашборд в графане выглядит так:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/grafana-blog.png&#34; alt=&#34;Grafana blog&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Если у вас похожий стек, то можете подключить себе этого же воркера из репозитория &lt;a href=&#34;https://github.com/vanadium23/cf-metrics&#34;&gt;cf-metrics&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;P.s. с удивленим обнаружил, что мой перевод по Laravel ещё жив и раздаётся с &lt;a href=&#34;http://www.laravelbestpractices.com/&#34;&gt;www.laravelbestpractices.com&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;P.p.s. В скрипте учитываю заголовок Do Not Track, просто потому что захотелось.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Mission teams</title>
-      <link>https://vanadium23.me/mission-teams/</link>
-      <pubDate>Sat, 30 Nov 2019 12:00:00 +0300</pubDate>
-      <guid>https://vanadium23.me/mission-teams/</guid>
-      <description>&lt;p&gt;My presentation about cross functional teams from IndexTech 2019 @ Technopolis.&lt;/p&gt;
-&lt;p&gt;Video is in Russian:&lt;/p&gt;
-&lt;iframe width=&#34;640&#34; height=&#34;360&#34; src=&#34;https://www.youtube.com/embed/EuvtmH6TA-M&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;</description>
-    </item>
-    <item>
-      <title>Переезд блога с jekyll на hugo</title>
-      <link>https://vanadium23.me/migrating-to-hugo/</link>
-      <pubDate>Sun, 24 Mar 2019 14:00:00 +0300</pubDate>
-      <guid>https://vanadium23.me/migrating-to-hugo/</guid>
-      <description>&lt;p&gt;Недавно прочитал статью про &lt;a href=&#34;https://dev.to/winduptoy/a-javascript-free-frontend-2d3e&#34;&gt;фронтенд без javascript&amp;rsquo;a&lt;/a&gt; и решил, что пора переделать бложик на старый манер: только html, только css. А раз начну переделывать, то заодно можно съехать с jekyll.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt;: страница блога похудела в 3 раза: было 237 килобайт, стало 83. Можно порезать гуглоаналитику и станет ещё в 2 раза легче.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/pagespeed100.png&#34; alt=&#34;PageSpeed 100&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;причины-большого-веса-страниц&#34;&gt;Причины большого веса страниц.&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Грузил никому ненужную аватарку прямиком с гитхаба.&lt;/li&gt;
-&lt;li&gt;Подключал highlight js, хотя это можно делать на этапе сборки странички.&lt;/li&gt;
-&lt;li&gt;Использовал стороннюю тему и там было много всего, хотя сейчас есть flex и CSS grid, поэтому можно половину выкинуть.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;причины-миграции-на-hugo-вместо-jekyll&#34;&gt;Причины миграции на hugo вместо jekyll.&lt;/h3&gt;
-&lt;p&gt;Плюсы:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Hugo использует бонус golang в виде компиляции в один бинарник, и не надо мучаться с настройкой rvm-ruby-bundler-jekyll.&lt;/li&gt;
-&lt;li&gt;Hugo умеет импортировать jekyll репозиторий: &lt;code&gt;hugo import jekyll /path/to/src&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Hugo получил поддержку общества, поэтому уже есть и темы, и всякие ништячки локализации.&lt;/li&gt;
-&lt;li&gt;В hugo &lt;a href=&#34;https://gohugo.io/content-management/&#34;&gt;много настроек&lt;/a&gt; и &lt;a href=&#34;https://gohugo.io/hugo-pipes/bundling/&#34;&gt;собирает css/js&lt;/a&gt; самостоятельно без помощи внешних утилит.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Минусы:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Go templates - это худший шаблонизатор в мире. Уверен, что кто пользовались jinja2 сразу поймут боль.&lt;/li&gt;
-&lt;li&gt;Слишком много настроек из-за чего иногда сложно найти, как сделать что-то простое.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;подводные-камни-при-переезде&#34;&gt;Подводные камни при переезде.&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Если вы используете Github User Page, а не Github Project Page, то вам не повезло и папку docs/ в репозитории вы использовать не можете. Вместо этого придеться в репозиторий &lt;username&gt;.github.io класть сразу сгенерированную статику. То есть, необходимо создать ещё один репозиторий, где будет hugo, а предыдущий подключить в качестве сабмодуля гита.&lt;/li&gt;
-&lt;li&gt;Если вы мигрируете с jekyll, то не забудьте удалить предыдущий config.yaml из репозитория, иначе gihub будет считать, что это jekyll репозиторий и попробует его собрать.&lt;/li&gt;
-&lt;li&gt;По-умолчанию, jekyll использует название файла в качестве пути, а hugo повторяет иерархию папок. Для того, чтобы повторить поведение, можно в config.yaml прописать опцию permalinks, или же в каждом файле использовать опцию alias.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;доделки-доделочки&#34;&gt;Доделки-доделочки.&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Надо отказаться от google analytics, так как это от лукавого. Сначала думал сделать свой пиксель, а сейчас думаю зачем мне трекать кто читает?&lt;/li&gt;
-&lt;li&gt;Добавить переключалку на ночную тему. Задача со звёздочкой сделать это без js :)&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>PipEnv, Pipfile, pip... what?!</title>
-      <link>https://vanadium23.me/pipenv-pipfile-pip-what/</link>
-      <pubDate>Fri, 15 Dec 2017 17:00:00 +0300</pubDate>
-      <guid>https://vanadium23.me/pipenv-pipfile-pip-what/</guid>
-      <description>&lt;p&gt;My presentation about PipEnv from &lt;a href=&#34;http://www.moscowpython.ru/meetup/50/&#34;&gt;MoscowPython Meetup #50&lt;/a&gt; @ Rambler HQ.&lt;/p&gt;
-&lt;p&gt;Video is in russian:&lt;/p&gt;
-&lt;iframe width=&#34;640&#34; height=&#34;360&#34; src=&#34;https://www.youtube.com/embed/2N0phx7WTEI&#34; frameborder=&#34;0&#34; gesture=&#34;media&#34; allow=&#34;encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;p&gt;And slides in english:&lt;/p&gt;
-&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;a52512c5af6c43a09cba15f23737e449&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;</description>
-    </item>
-    <item>
-      <title>Stupid mistakes with database</title>
-      <link>https://vanadium23.me/stupid-database-mistakes/</link>
-      <pubDate>Sat, 02 Sep 2017 17:00:00 +0300</pubDate>
-      <guid>https://vanadium23.me/stupid-database-mistakes/</guid>
-      <description>&lt;p&gt;You know you&amp;rsquo;re wrong at database administrating, when&amp;hellip;&lt;/p&gt;
-&lt;h2 id=&#34;1-dont-monitor-free-space-on-disk&#34;&gt;1. Don&amp;rsquo;t monitor free space on disk&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;DO:&lt;/strong&gt; Just do it, and not some simple trigger on 10% free left space, but either how many days till day X.&lt;/p&gt;
-&lt;h2 id=&#34;2-dont-make-check-backups&#34;&gt;2. Don&amp;rsquo;t &lt;del&gt;make&lt;/del&gt; check backups&lt;/h2&gt;
-&lt;p&gt;So you use some tools for backing up your database, but when day X comes, you can not restore from it.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;DO:&lt;/strong&gt; every backup needs to be restored.&lt;/p&gt;
-&lt;h2 id=&#34;3-dont-monitor-slowestfrequent-queries&#34;&gt;3. Don&amp;rsquo;t monitor slowest/frequent queries&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;DO:&lt;/strong&gt; there is different approaches for that, but the simplest one is &lt;a href=&#34;https://github.com/dalibo/pgbadger&#34;&gt;pgBadger&lt;/a&gt; with syslog.&lt;/p&gt;
-&lt;h2 id=&#34;4-dont-use-int4-as-pk-for-append-only-tables&#34;&gt;4. Don&amp;rsquo;t use int4 as pk for append-only tables&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;DO:&lt;/strong&gt; just use bigint. Rails make bigint as default for pk in &lt;a href=&#34;http://www.mccartie.com/2016/12/05/rails-5.1.html&#34;&gt;5.1&lt;/a&gt;. Hopefully, Django will make it in 2.x.&lt;/p&gt;
-&lt;h2 id=&#34;5-dont-restart-database-on-every-error-you-see&#34;&gt;5. Don&amp;rsquo;t restart database on every error you see.&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;DO:&lt;/strong&gt; hire DBA (just joking). Try to find a root cause with your monitoring. May be it&amp;rsquo;s just bad statics on table and you need to run &lt;code&gt;ANALYSE table&lt;/code&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The Ajax, The REST and The GraphQL</title>
-      <link>https://vanadium23.me/ajax-rest-graphql/</link>
-      <pubDate>Fri, 18 Aug 2017 17:00:00 +0300</pubDate>
-      <guid>https://vanadium23.me/ajax-rest-graphql/</guid>
-      <description>&lt;p&gt;My presentation about GraphQL from MoscowPython Meetup #47 @ Mail.Ru HQ.&lt;/p&gt;
-&lt;p&gt;Video is in russian:&lt;/p&gt;
-&lt;iframe width=&#34;640&#34; height=&#34;360&#34; src=&#34;https://www.youtube.com/embed/9JqtlPO78y0&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;p&gt;And slides in english:&lt;/p&gt;
-&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;3022a498ddc344b4933b4b955dd7c660&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;</description>
-    </item>
-    <item>
-      <title>Funny notes on migration to python3</title>
-      <link>https://vanadium23.me/funny-notes-on-py3k-migration/</link>
-      <pubDate>Fri, 09 Dec 2016 17:00:00 +0300</pubDate>
-      <guid>https://vanadium23.me/funny-notes-on-py3k-migration/</guid>
-      <description>&lt;p&gt;Python3 is a great pain in python community. It was released on Dec 3, 2008 and brings major breaking changes and also new interpreter was slower, than python2 realization. After long way and five releases, in 2016, it&amp;rsquo;s obvious to start on python 3.5: type hinting, asyncio, same perfomance and gets better in coming &lt;a href=&#34;https://docs.python.org/3.6/whatsnew/3.6.html&#34;&gt;python 3.6&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;: this is not an article about how to migrate to python3, but more about how to catch errors before deploy to prod.
-For python3 migrations, see something like &lt;a href=&#34;https://www.toptal.com/python/python-3-is-it-worth-the-switch&#34;&gt;this&lt;/a&gt; or &lt;a href=&#34;http://python3porting.com/strategies.html&#34;&gt;this&lt;/a&gt;.
-Always remember simple thing: more unit &amp;amp; integrations tests you have =&amp;gt; earlier you detect bugs.&lt;/p&gt;
-&lt;p&gt;Contents:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;#py3k-division&#34;&gt;integer division&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#py3k-comparations&#34;&gt;unorderable types&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#py3k-except&#34;&gt;except Exception&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#py3k-byteswarning&#34;&gt;bytes comparison&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#py3k-ujson&#34;&gt;special thanks to ujson&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#py3k-lxml&#34;&gt;lxml trap&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#py3k-redispy&#34;&gt;changes in work with redis-py&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#py3k-django&#34;&gt;Note: how to make smaller diff between py2 and py3 version on django&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;a-namepy3k-divisionadivision&#34;&gt;&lt;a name=&#34;py3k-division&#34;&gt;&lt;/a&gt;Division&lt;/h1&gt;
-&lt;p&gt;Can you guess what kind of exception will be there,
-if hotel.rating is integer.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;stars = range(hotel.rating / 10)
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Correct answer:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;gt; TypeError: &amp;#39;float&amp;#39; object cannot be interpreted as an integer
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Solution:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# do it before migrations, it works on py2
+77M ./github.com
+35M ./golang.org
+111M .
+&lt;/code>&lt;/pre>&lt;p>Утилита предназначена для работы с разными базами данных и ожидаемо ей требуется много библиотек-драйверов для работы, но 111 мегабайт и минута на скачивание выглядит, как перебор. Если вам нужна только сама утилита, всегда можно использовать опцию &lt;code>-u&lt;/code>. В защиту такого подхода, хочу сказать что использование прямого соответствия между импортом библиотеки и пути по которому она находится удобно. Так как язык разработал Google, то сразу был сделан вывод о том, что вся эта система работала поверх монорепозитория внутри компании и такое использование было логично. Но как только язык вышел публично, сразу стало понятно что использовать хост сервиса в пути не самое удобное решение. В случае, если проект был перемещён в другое пространство, ничего страшного не происходит, но вот если поменялся хост, то труба. Об этом подумали несколько людей и началась вторая эпоха.&lt;/p>
+&lt;h2 id="средневековый-vendor">Средневековый vendor&lt;/h2>
+&lt;p>Когда node.js только набирал популярность (версии 0.8-0.12), шёл довольно большой холивар на тему вендоринга зависимостей. Были люди, которые говорили, что нужно складывать всю папку node_modules в репозиторий и при обновлении комиттить изменения, но в итоге сообщество пришло к тому, что это приносит только лишние расходы и отказались. Как мы все потом знаем, это привело к трагедии &lt;strike>Дарта Плегаса&lt;/strike> &lt;a href="https://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm">leftpad&lt;/a>. В Golang решили пойти тем же путём и появилась папка vendor, правда чтобы её использовать необходимо было перезаписать GOPATH в текущую директорую и тогда начинались пляски с тем, что в директории должна была быть папка src, а в &lt;code>.gitignore&lt;/code> шли директории &lt;code>bin/&lt;/code> и &lt;code>pkg/&lt;/code>. Эту проблему надо было автоматизировать и появились инструменты, чтобы с таким подходом было работать удобно, а именно &lt;a href="https://github.com/Masterminds/glide">glider&lt;/a>, а в последствии &lt;a href="https://github.com/golang/dep">dep&lt;/a>. Более того, &lt;code>dep&lt;/code> был сделан как официальный эксперимент группы разработки языка, и в итоге именно он дал толчок развитию модулей в go 1.11. Из-за данных инструментов в репозиториях пропали папки &lt;code>vendor&lt;/code>, так как они создавали lock-файлы и можно было воспроизвести среду. А вот проблемы были в том, что каждый инструмент делал свой формат. :(&lt;/p>
+&lt;h2 id="современный-gomod">Современный go.mod&lt;/h2>
+&lt;p>И здесь мы возвращаемся к модулям с которых началась эта статья. В go 1.11 можно было с помощью переменной GO111MODULE=on, а с недавним релизом go 1.14 данное поведение стало по умолчанию. Что нужно сделать для того, чтобы его использовать прекрасно описано в &lt;a href="https://blog.golang.org/using-go-modules">The Go Blog&lt;/a> в 4 (!) частях. Здесь бы хотелось сосредоточиться на том, почему это не современная штука.&lt;/p>
+&lt;h3 id="проблема-1-перейти-надо-всем">Проблема №1. Перейти надо всем&lt;/h3>
+&lt;p>Разработчики golang молодцы, что дали 3 минорные версии для того, чтобы авторы библиотек могли перейти на go.mod и судя по тому, что из &lt;a href="https://github.com/search?q=go.mod&amp;amp;type=Issues">21000 открытых issues&lt;/a> на гитхабе закрыто 18000 все были нацелены на использование данного инструмента.&lt;/p>
+&lt;h3 id="проблема-2-формат-mod-в-gomod">Проблема №2. Формат mod в go.mod&lt;/h3>
+&lt;p>Долго бомбило после прочтения &lt;a href="https://www.python.org/dev/peps/pep-0518/">PEP 518&lt;/a>, что выбрали формат toml. Главное, что его выбрали потому что json слишком вербозный, а yaml имеет слишком сложную спецификацию. В golang решили просто пойти своим путём и сделать формат, который надо парсить. Можете пойти почитать, как он устроен &lt;a href="https://github.com/golang/go/wiki/Modules#gomod">тут&lt;/a>. Уверен, что выбор был сделан исходя из принципа упрощения: зачем брать известное, если можно сделать своё простое? Более того, этот файл нельзя трогать руками. Всё взаимодействие с ним идёт через команду &lt;code>go get&lt;/code>, так что частично мы откатились к прежнему решению с GOPATH, просто теперь все пакеты лежат в &lt;code>GOPATH/pkg&lt;/code>.&lt;/p>
+&lt;h3 id="проблема-3-версионирование">Проблема №3. Версионирование&lt;/h3>
+&lt;p>Все мы оказывались в ситуации, когда автор библиотеки не удосужился указать версии своих зависимостей и занимаешься бинарным поиском совместимых пакетов. В golang решили пойти дальше и сказать, что изменение мажорной версии должно приводить к изменении путей. Тема хорошая, но реализация полагается на рациональность людей, который будут эту мажорную версию менять. А как мы знаем, у этой проблему есть две крайности: Chrome,который имеет 80 версию на данный момент, и PostgresQL, который долгое время жил на 9.x номенклатуре и утверждал, что вторая цифра - это тоже мажорный релиз. Справился ли подход golang с тем, чтобы пакеты всегда собирались при обновлении пакетов? Нет, для примера вы можете взять обновление пакета &lt;a href="https://github.com/mbobakov/grpc-consul-resolver/issues/15">grpc-consul-resolver&lt;/a> из-за того, что в минорной версии сменился интерфейс, и это библиотека от google.&lt;/p>
+&lt;h3 id="проблема-4-настройки">Проблема №4. Настройки&lt;/h3>
+&lt;p>Ладно, тут я просто напишу GOSUMDB=off, GOPRIVATE=*example.com* и обязательно GO111MODULE=on.&lt;/p>
+&lt;h2 id="итого">Итого&lt;/h2>
+&lt;p>Немножко грустно от того, что в мире уже десяток популярных языков программирования, а понятной и простой системы по работе с пакетами так до сих пор и изобретают с нуля.&lt;/p>
+&lt;p>P.s. а может быть и не с нуля, но осадочек остался.&lt;/p>
+&lt;p>P.p.s. кстати, с модулями не отказались от вендоринга, даже комманду сделали для этого &lt;code>go mod vendor&lt;/code>.&lt;/p></description></item><item><title>Переезд с Google analytics на Cloudflare workers</title><link>https://vanadium23.me/remove-google-analytics/</link><pubDate>Sat, 15 Feb 2020 09:00:00 +0300</pubDate><guid>https://vanadium23.me/remove-google-analytics/</guid><description>&lt;p>Прошёл почти год с того момента, как &lt;a href="https://vanadium23.me/migrating-to-hugo/">я перевёз этот блог с jekyll на hugo&lt;/a>. В той статье всё закончилось на том, что половина веса страницы занимает гугл аналитика. Меня это немножко волновало, но потом я добавил скрипт для шаринга в соцсети и понеслось. Напоминает занятие по уборке дома, сколько раз тебе это не сделать, то рано или поздно придёться к этому вернуться.&lt;/p>
+&lt;p>Не смотря на то, что в этот блог заходит не так много людей, терять числа куда и сколько не очень хотелось. Самым простым вариантом было бы расположить блог на личной VDS и смотреть в логи nginx, но не хотелось отказываться от бесплатного хостинга Github Pages.
+Поэтому я перевёл блог за Cloudflare, что немножко шило на мыло, но в нём есть дашборд с заходами.&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/cloudflare-analytics.png" alt="Cloudflare analytics">&lt;/p>
+&lt;p>Всё что она показывает - это количество заходов в разбивке по странам, а хочется смотреть за хитами по страницам. И тут вспомнил, что в прошлом году Cloudflare представили свой новый продукт Workers.&lt;/p>
+&lt;h3 id="как-он-работает">Как он работает?&lt;/h3>
+&lt;p>Cloudflare Workers - это javascript (или Rust) код, который они деплоят в свои датацентры и вызывают на каждый запрос домена, который находится за CDN. Наверное, можно это отнести к классу serverless. Бесплатный тариф не очень большой: 100000 запросов в месяц и один бесплатный поддомен в зоне workers.dev, но для начала вполне хватит. Помимо кода, есть Key-Value хранилище в которое можно положить какие-то данные.
+Если вы ещё не смотрели на них, то можете посмотреть их &lt;a href="https://developers.cloudflare.com/workers/tutorials/build-a-todo-list/">руководства&lt;/a>, может что-нибудь понравиться.&lt;/p>
+&lt;h3 id="influxdb--grafana--3">InfluxDB + Grafana = &amp;lt;3&lt;/h3>
+&lt;p>Дело оставалось за малым, складывать все запросы в какую-нибудь TSDB. На работе мы вовсю используем InfluxDB, поэтому выбор остался за ней. Она имеет довольно простой протокол по массовой записи в базу с помощью &lt;a href="https://docs.influxdata.com/influxdb/v1.7/tools/api/#examples-6">HTTP API&lt;/a>. За вечер был написан код на js, который на каждый входящий запрос проксировал его ниже, а также писал метрику. Около 3 часов было убито на то, почему в редакторе Cloudflare метрики отправляются, а на блоге нет. Оказалось, что worker может работать только с определенными портами и порт по умолчанию InfluxDB не входит в этот список. Пришлось перезапустить его на стандартном http порту. Естевственно, когда вся схема заработала, захотелось посчитать не приносит ли это большого оверхеда и цифры оказались в районе 50-150 ms. Если честно, по сравнению с первоначальным ответом - это очень много, с другой стороны мы удаляем 40 кб js скриптов с клиента, поэтому решил что это приемлемо. В запасе остаётся вариант, что его можно уменьшить за счёт переписывания кода на Rust.&lt;/p>
+&lt;p>Финальный дашборд в графане выглядит так:&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/grafana-blog.png" alt="Grafana blog">&lt;/p>
+&lt;p>Если у вас похожий стек, то можете подключить себе этого же воркера из репозитория &lt;a href="https://github.com/vanadium23/cf-metrics">cf-metrics&lt;/a>.&lt;/p>
+&lt;p>P.s. с удивленим обнаружил, что мой перевод по Laravel ещё жив и раздаётся с &lt;a href="http://www.laravelbestpractices.com/">www.laravelbestpractices.com&lt;/a>.&lt;/p>
+&lt;p>P.p.s. В скрипте учитываю заголовок Do Not Track, просто потому что захотелось.&lt;/p></description></item><item><title>Mission teams</title><link>https://vanadium23.me/mission-teams/</link><pubDate>Sat, 30 Nov 2019 12:00:00 +0300</pubDate><guid>https://vanadium23.me/mission-teams/</guid><description>&lt;p>My presentation about cross functional teams from IndexTech 2019 @ Technopolis.&lt;/p>
+&lt;p>Video is in Russian:&lt;/p>
+&lt;iframe width="640" height="360" src="https://www.youtube.com/embed/EuvtmH6TA-M" frameborder="0" allowfullscreen>&lt;/iframe></description></item><item><title>Переезд блога с jekyll на hugo</title><link>https://vanadium23.me/migrating-to-hugo/</link><pubDate>Sun, 24 Mar 2019 14:00:00 +0300</pubDate><guid>https://vanadium23.me/migrating-to-hugo/</guid><description>&lt;p>Недавно прочитал статью про &lt;a href="https://dev.to/winduptoy/a-javascript-free-frontend-2d3e">фронтенд без javascript&amp;rsquo;a&lt;/a> и решил, что пора переделать бложик на старый манер: только html, только css. А раз начну переделывать, то заодно можно съехать с jekyll.&lt;/p>
+&lt;p>&lt;strong>TL;DR&lt;/strong>: страница блога похудела в 3 раза: было 237 килобайт, стало 83. Можно порезать гуглоаналитику и станет ещё в 2 раза легче.&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/pagespeed100.png" alt="PageSpeed 100">&lt;/p>
+&lt;h3 id="причины-большого-веса-страниц">Причины большого веса страниц.&lt;/h3>
+&lt;ul>
+&lt;li>Грузил никому ненужную аватарку прямиком с гитхаба.&lt;/li>
+&lt;li>Подключал highlight js, хотя это можно делать на этапе сборки странички.&lt;/li>
+&lt;li>Использовал стороннюю тему и там было много всего, хотя сейчас есть flex и CSS grid, поэтому можно половину выкинуть.&lt;/li>
+&lt;/ul>
+&lt;h3 id="причины-миграции-на-hugo-вместо-jekyll">Причины миграции на hugo вместо jekyll.&lt;/h3>
+&lt;p>Плюсы:&lt;/p>
+&lt;ul>
+&lt;li>Hugo использует бонус golang в виде компиляции в один бинарник, и не надо мучаться с настройкой rvm-ruby-bundler-jekyll.&lt;/li>
+&lt;li>Hugo умеет импортировать jekyll репозиторий: &lt;code>hugo import jekyll /path/to/src&lt;/code>.&lt;/li>
+&lt;li>Hugo получил поддержку общества, поэтому уже есть и темы, и всякие ништячки локализации.&lt;/li>
+&lt;li>В hugo &lt;a href="https://gohugo.io/content-management/">много настроек&lt;/a> и &lt;a href="https://gohugo.io/hugo-pipes/bundling/">собирает css/js&lt;/a> самостоятельно без помощи внешних утилит.&lt;/li>
+&lt;/ul>
+&lt;p>Минусы:&lt;/p>
+&lt;ul>
+&lt;li>Go templates - это худший шаблонизатор в мире. Уверен, что кто пользовались jinja2 сразу поймут боль.&lt;/li>
+&lt;li>Слишком много настроек из-за чего иногда сложно найти, как сделать что-то простое.&lt;/li>
+&lt;/ul>
+&lt;h3 id="подводные-камни-при-переезде">Подводные камни при переезде.&lt;/h3>
+&lt;ol>
+&lt;li>Если вы используете Github User Page, а не Github Project Page, то вам не повезло и папку docs/ в репозитории вы использовать не можете. Вместо этого придеться в репозиторий &lt;username>.github.io класть сразу сгенерированную статику. То есть, необходимо создать ещё один репозиторий, где будет hugo, а предыдущий подключить в качестве сабмодуля гита.&lt;/li>
+&lt;li>Если вы мигрируете с jekyll, то не забудьте удалить предыдущий config.yaml из репозитория, иначе gihub будет считать, что это jekyll репозиторий и попробует его собрать.&lt;/li>
+&lt;li>По-умолчанию, jekyll использует название файла в качестве пути, а hugo повторяет иерархию папок. Для того, чтобы повторить поведение, можно в config.yaml прописать опцию permalinks, или же в каждом файле использовать опцию alias.&lt;/li>
+&lt;/ol>
+&lt;h3 id="доделки-доделочки">Доделки-доделочки.&lt;/h3>
+&lt;ul>
+&lt;li>Надо отказаться от google analytics, так как это от лукавого. Сначала думал сделать свой пиксель, а сейчас думаю зачем мне трекать кто читает?&lt;/li>
+&lt;li>Добавить переключалку на ночную тему. Задача со звёздочкой сделать это без js :)&lt;/li>
+&lt;/ul></description></item><item><title>PipEnv, Pipfile, pip... what?!</title><link>https://vanadium23.me/pipenv-pipfile-pip-what/</link><pubDate>Fri, 15 Dec 2017 17:00:00 +0300</pubDate><guid>https://vanadium23.me/pipenv-pipfile-pip-what/</guid><description>&lt;p>My presentation about PipEnv from &lt;a href="http://www.moscowpython.ru/meetup/50/">MoscowPython Meetup #50&lt;/a> @ Rambler HQ.&lt;/p>
+&lt;p>Video is in russian:&lt;/p>
+&lt;iframe width="640" height="360" src="https://www.youtube.com/embed/2N0phx7WTEI" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>&lt;/iframe>
+&lt;p>And slides in english:&lt;/p>
+&lt;script async class="speakerdeck-embed" data-id="a52512c5af6c43a09cba15f23737e449" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js">&lt;/script></description></item><item><title>Stupid mistakes with database</title><link>https://vanadium23.me/stupid-database-mistakes/</link><pubDate>Sat, 02 Sep 2017 17:00:00 +0300</pubDate><guid>https://vanadium23.me/stupid-database-mistakes/</guid><description>&lt;p>You know you&amp;rsquo;re wrong at database administrating, when&amp;hellip;&lt;/p>
+&lt;h2 id="1-dont-monitor-free-space-on-disk">1. Don&amp;rsquo;t monitor free space on disk&lt;/h2>
+&lt;p>&lt;strong>DO:&lt;/strong> Just do it, and not some simple trigger on 10% free left space, but either how many days till day X.&lt;/p>
+&lt;h2 id="2-dont-make-check-backups">2. Don&amp;rsquo;t &lt;del>make&lt;/del> check backups&lt;/h2>
+&lt;p>So you use some tools for backing up your database, but when day X comes, you can not restore from it.&lt;/p>
+&lt;p>&lt;strong>DO:&lt;/strong> every backup needs to be restored.&lt;/p>
+&lt;h2 id="3-dont-monitor-slowestfrequent-queries">3. Don&amp;rsquo;t monitor slowest/frequent queries&lt;/h2>
+&lt;p>&lt;strong>DO:&lt;/strong> there is different approaches for that, but the simplest one is &lt;a href="https://github.com/dalibo/pgbadger">pgBadger&lt;/a> with syslog.&lt;/p>
+&lt;h2 id="4-dont-use-int4-as-pk-for-append-only-tables">4. Don&amp;rsquo;t use int4 as pk for append-only tables&lt;/h2>
+&lt;p>&lt;strong>DO:&lt;/strong> just use bigint. Rails make bigint as default for pk in &lt;a href="http://www.mccartie.com/2016/12/05/rails-5.1.html">5.1&lt;/a>. Hopefully, Django will make it in 2.x.&lt;/p>
+&lt;h2 id="5-dont-restart-database-on-every-error-you-see">5. Don&amp;rsquo;t restart database on every error you see.&lt;/h2>
+&lt;p>&lt;strong>DO:&lt;/strong> hire DBA (just joking). Try to find a root cause with your monitoring. May be it&amp;rsquo;s just bad statics on table and you need to run &lt;code>ANALYSE table&lt;/code>.&lt;/p></description></item><item><title>The Ajax, The REST and The GraphQL</title><link>https://vanadium23.me/ajax-rest-graphql/</link><pubDate>Fri, 18 Aug 2017 17:00:00 +0300</pubDate><guid>https://vanadium23.me/ajax-rest-graphql/</guid><description>&lt;p>My presentation about GraphQL from MoscowPython Meetup #47 @ Mail.Ru HQ.&lt;/p>
+&lt;p>Video is in russian:&lt;/p>
+&lt;iframe width="640" height="360" src="https://www.youtube.com/embed/9JqtlPO78y0" frameborder="0" allowfullscreen>&lt;/iframe>
+&lt;p>And slides in english:&lt;/p>
+&lt;script async class="speakerdeck-embed" data-id="3022a498ddc344b4933b4b955dd7c660" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js">&lt;/script></description></item><item><title>Funny notes on migration to python3</title><link>https://vanadium23.me/funny-notes-on-py3k-migration/</link><pubDate>Fri, 09 Dec 2016 17:00:00 +0300</pubDate><guid>https://vanadium23.me/funny-notes-on-py3k-migration/</guid><description>&lt;p>Python3 is a great pain in python community. It was released on Dec 3, 2008 and brings major breaking changes and also new interpreter was slower, than python2 realization. After long way and five releases, in 2016, it&amp;rsquo;s obvious to start on python 3.5: type hinting, asyncio, same perfomance and gets better in coming &lt;a href="https://docs.python.org/3.6/whatsnew/3.6.html">python 3.6&lt;/a>.&lt;/p>
+&lt;p>&lt;strong>Warning&lt;/strong>: this is not an article about how to migrate to python3, but more about how to catch errors before deploy to prod.
+For python3 migrations, see something like &lt;a href="https://www.toptal.com/python/python-3-is-it-worth-the-switch">this&lt;/a> or &lt;a href="http://python3porting.com/strategies.html">this&lt;/a>.
+Always remember simple thing: more unit &amp;amp; integrations tests you have =&amp;gt; earlier you detect bugs.&lt;/p>
+&lt;p>Contents:&lt;/p>
+&lt;ol>
+&lt;li>&lt;a href="#py3k-division">integer division&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#py3k-comparations">unorderable types&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#py3k-except">except Exception&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#py3k-byteswarning">bytes comparison&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#py3k-ujson">special thanks to ujson&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#py3k-lxml">lxml trap&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#py3k-redispy">changes in work with redis-py&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#py3k-django">Note: how to make smaller diff between py2 and py3 version on django&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;h1 id="a-namepy3k-divisionadivision">&lt;a name="py3k-division">&lt;/a>Division&lt;/h1>
+&lt;p>Can you guess what kind of exception will be there,
+if hotel.rating is integer.&lt;/p>
+&lt;pre tabindex="0">&lt;code>stars = range(hotel.rating / 10)
+&lt;/code>&lt;/pre>&lt;p>Correct answer:&lt;/p>
+&lt;pre tabindex="0">&lt;code>&amp;gt; TypeError: &amp;#39;float&amp;#39; object cannot be interpreted as an integer
+&lt;/code>&lt;/pre>&lt;p>Solution:&lt;/p>
+&lt;pre tabindex="0">&lt;code># do it before migrations, it works on py2
 from __future__ import division
 stars = range(hotel.rating // 10)
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;a-namepy3k-comparationsaunorderable-types&#34;&gt;&lt;a name=&#34;py3k-comparations&#34;&gt;&lt;/a&gt;Unorderable types&lt;/h1&gt;
-&lt;p&gt;So, in python 3 you can&amp;rsquo;t do such things:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;None &amp;gt; None
+&lt;/code>&lt;/pre>&lt;h1 id="a-namepy3k-comparationsaunorderable-types">&lt;a name="py3k-comparations">&lt;/a>Unorderable types&lt;/h1>
+&lt;p>So, in python 3 you can&amp;rsquo;t do such things:&lt;/p>
+&lt;pre tabindex="0">&lt;code>None &amp;gt; None
 1 &amp;gt; None
 &amp;#39;1&amp;#39; &amp;gt; 1
-
 &amp;gt; TypeError: unorderable types: int() &amp;gt; NoneType()
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Because it&amp;rsquo;s more strict for types. How it was found:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;chosen_indexes = Obj.objects.values_list(&amp;#39;chosen_index&amp;#39;, flat=True)
+&lt;/code>&lt;/pre>&lt;p>Because it&amp;rsquo;s more strict for types. How it was found:&lt;/p>
+&lt;pre tabindex="0">&lt;code>chosen_indexes = Obj.objects.values_list(&amp;#39;chosen_index&amp;#39;, flat=True)
 ...
 ...
 ...
 max_index = max(chosen_indexes)
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;That&amp;rsquo;s ok code, but if field chosen_index can be null, you will catch TypeError.&lt;/p&gt;
-&lt;p&gt;Solution: just filter None values in list, or null in queryset.&lt;/p&gt;
-&lt;h2 id=&#34;a-namepy3k-exceptaexcept-exception&#34;&gt;&lt;a name=&#34;py3k-except&#34;&gt;&lt;/a&gt;except Exception&lt;/h2&gt;
-&lt;p&gt;Pretty much uses external APIs: may be you send letters through MailGun or Mandrill, you can call some other services in your company.
+&lt;/code>&lt;/pre>&lt;p>That&amp;rsquo;s ok code, but if field chosen_index can be null, you will catch TypeError.&lt;/p>
+&lt;p>Solution: just filter None values in list, or null in queryset.&lt;/p>
+&lt;h2 id="a-namepy3k-exceptaexcept-exception">&lt;a name="py3k-except">&lt;/a>except Exception&lt;/h2>
+&lt;p>Pretty much uses external APIs: may be you send letters through MailGun or Mandrill, you can call some other services in your company.
 But you know - sometimes they just fail: connection timeouts, 5xx errors.
-For handling such cases you can make tuple of Exception:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; requests.exceptions &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; (
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    RequestException,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    HTTPError
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;NETWORK_EXCEPTIONS &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    RequestException,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    HTTPException,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# some bad code example, but for teach purpose&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; requests&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;get(some_url)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; ujson&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;loads(response&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;content)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;except&lt;/span&gt; (NETWORK_EXCEPTIONS, &lt;span style=&#34;color:#a6e22e&#34;&gt;ValueError&lt;/span&gt;):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    log&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;error(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;some bad thing happend&amp;#39;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This code won&amp;rsquo;t work on python3, because interpreter check exception is subclass of BaseException.&lt;/p&gt;
-&lt;p&gt;Solution:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; requests.exceptions &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; (
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    RequestException,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    HTTPError
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;NETWORK_EXCEPTIONS &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    RequestException,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    HTTPException
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; requests&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;get(some_url)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; ujson&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;loads(response&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;content)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;except&lt;/span&gt; NETWORK_EXCEPTIONS &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;ValueError&lt;/span&gt;,):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    log&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;error(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;some bad thing happend&amp;#39;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Second interesting example is that, except create variable in local scope and its make hard to print/ipdb. (This is some questing during interview, that I love to ask).
-Example:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import json
-
+For handling such cases you can make tuple of Exception:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> requests.exceptions &lt;span style="color:#f92672">import&lt;/span> (
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> RequestException,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> HTTPError
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>NETWORK_EXCEPTIONS &lt;span style="color:#f92672">=&lt;/span> (
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> RequestException,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> HTTPException,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">try&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e"># some bad code example, but for teach purpose&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> response &lt;span style="color:#f92672">=&lt;/span> requests&lt;span style="color:#f92672">.&lt;/span>get(some_url)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> result &lt;span style="color:#f92672">=&lt;/span> ujson&lt;span style="color:#f92672">.&lt;/span>loads(response&lt;span style="color:#f92672">.&lt;/span>content)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">except&lt;/span> (NETWORK_EXCEPTIONS, &lt;span style="color:#a6e22e">ValueError&lt;/span>):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> log&lt;span style="color:#f92672">.&lt;/span>error(&lt;span style="color:#e6db74">&amp;#39;some bad thing happend&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This code won&amp;rsquo;t work on python3, because interpreter check exception is subclass of BaseException.&lt;/p>
+&lt;p>Solution:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> requests.exceptions &lt;span style="color:#f92672">import&lt;/span> (
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> RequestException,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> HTTPError
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>NETWORK_EXCEPTIONS &lt;span style="color:#f92672">=&lt;/span> (
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> RequestException,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> HTTPException
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">try&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> response &lt;span style="color:#f92672">=&lt;/span> requests&lt;span style="color:#f92672">.&lt;/span>get(some_url)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> result &lt;span style="color:#f92672">=&lt;/span> ujson&lt;span style="color:#f92672">.&lt;/span>loads(response&lt;span style="color:#f92672">.&lt;/span>content)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">except&lt;/span> NETWORK_EXCEPTIONS &lt;span style="color:#f92672">+&lt;/span> (&lt;span style="color:#a6e22e">ValueError&lt;/span>,):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> log&lt;span style="color:#f92672">.&lt;/span>error(&lt;span style="color:#e6db74">&amp;#39;some bad thing happend&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Second interesting example is that, except create variable in local scope and its make hard to print/ipdb. (This is some questing during interview, that I love to ask).
+Example:&lt;/p>
+&lt;pre tabindex="0">&lt;code>import json
 exc = &amp;#39;test&amp;#39;
 try:
-    result = json.loads(&amp;#39;{test}&amp;#39;)
+result = json.loads(&amp;#39;{test}&amp;#39;)
 except ValueError as exc:
-    pass
+pass
 # there will be no exc variable on py3k
 print(exc)
 &amp;gt; NameError: name &amp;#39;exc&amp;#39; is not defined
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;a-namepy3k-byteswarningabytes-comparison&#34;&gt;&lt;a name=&#34;py3k-byteswarning&#34;&gt;&lt;/a&gt;bytes comparison&lt;/h1&gt;
-&lt;p&gt;It&amp;rsquo;s greatest pain in migration. So much pain, I can feel it in my head.
+&lt;/code>&lt;/pre>&lt;h1 id="a-namepy3k-byteswarningabytes-comparison">&lt;a name="py3k-byteswarning">&lt;/a>bytes comparison&lt;/h1>
+&lt;p>It&amp;rsquo;s greatest pain in migration. So much pain, I can feel it in my head.
 Next 3 bullets is about it.
 First: no implicit conversion between str and bytes.
-Solution:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;python3 -bb your_script.py
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It throw ByteWarning exception insted of falsing b&amp;rsquo;&amp;rsquo; == &amp;lsquo;&amp;rsquo;.&lt;/p&gt;
-&lt;p&gt;Second: some libs expected bytes on input, some text.&lt;/p&gt;
-&lt;p&gt;Solution: call .decode on bytes &amp;amp; encode on str.&lt;/p&gt;
-&lt;h1 id=&#34;a-namepy3k-ujsonajust-ujson&#34;&gt;&lt;a name=&#34;py3k-ujson&#34;&gt;&lt;/a&gt;just ujson&lt;/h1&gt;
-&lt;p&gt;Json from standart libs expects str on input, ujson can deal with str and bytes.
-Also ujson much faster, see comparasion on &lt;a href=&#34;https://github.com/esnme/ultrajson#benchmarks&#34;&gt;github&lt;/a&gt;.&lt;/p&gt;
-&lt;h1 id=&#34;a-namepy3k-lxmlalxml-trap&#34;&gt;&lt;a name=&#34;py3k-lxml&#34;&gt;&lt;/a&gt;lxml trap&lt;/h1&gt;
-&lt;p&gt;Ooops, this was tough one. Some service provides XML API.
-It answers question of life, universe and everything.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;root&amp;gt;
-  &amp;lt;answer&amp;gt;42&amp;lt;/answer&amp;gt;
+Solution:&lt;/p>
+&lt;pre tabindex="0">&lt;code>python3 -bb your_script.py
+&lt;/code>&lt;/pre>&lt;p>It throw ByteWarning exception insted of falsing b&amp;rsquo;&amp;rsquo; == &amp;lsquo;&amp;rsquo;.&lt;/p>
+&lt;p>Second: some libs expected bytes on input, some text.&lt;/p>
+&lt;p>Solution: call .decode on bytes &amp;amp; encode on str.&lt;/p>
+&lt;h1 id="a-namepy3k-ujsonajust-ujson">&lt;a name="py3k-ujson">&lt;/a>just ujson&lt;/h1>
+&lt;p>Json from standart libs expects str on input, ujson can deal with str and bytes.
+Also ujson much faster, see comparasion on &lt;a href="https://github.com/esnme/ultrajson#benchmarks">github&lt;/a>.&lt;/p>
+&lt;h1 id="a-namepy3k-lxmlalxml-trap">&lt;a name="py3k-lxml">&lt;/a>lxml trap&lt;/h1>
+&lt;p>Ooops, this was tough one. Some service provides XML API.
+It answers question of life, universe and everything.&lt;/p>
+&lt;pre tabindex="0">&lt;code>&amp;lt;root&amp;gt;
+&amp;lt;answer&amp;gt;42&amp;lt;/answer&amp;gt;
 &amp;lt;/root&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You want to parse it using lxml:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; lxml &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; objectify
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xml_answer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;lt;root&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  &amp;lt;answer&amp;gt;42&amp;lt;/answer&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;lt;/root&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xml &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; objectify&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;parse(buf)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;getroot()
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This example works both on py2 and py3, but some little difference:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; lxml &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; objectify
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xml_answer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;lt;root&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  &amp;lt;answer&amp;gt;42&amp;lt;/answer&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;lt;/root&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xml &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; objectify&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;parse(buf)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;getroot()
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Aaaand lxml wants bytes on input instead of string ¯\&lt;em&gt;(ツ)&lt;/em&gt;/¯.&lt;/p&gt;
-&lt;h1 id=&#34;a-namepy3k-redispyaredis-py-bytes&#34;&gt;&lt;a name=&#34;py3k-redispy&#34;&gt;&lt;/a&gt;redis-py bytes&lt;/h1&gt;
-&lt;p&gt;All redis action from redispy returns bytes now. So if you use pure redis (not a django.core.cache), you need to explicit call decode. Also pickling objects between python3 and python2 doesn&amp;rsquo;t work, so make sure you make different keys in cache.&lt;/p&gt;
-&lt;h2 id=&#34;a-namepy3k-djangoanote-how-to-make-smaller-diff-between-py2-and-py3-version-on-django&#34;&gt;&lt;a name=&#34;py3k-django&#34;&gt;&lt;/a&gt;Note: how to make smaller diff between py2 and py3 version on django&lt;/h2&gt;
-&lt;p&gt;So sums it up with django experience:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;use smart_text instead of smart_unicode&lt;/li&gt;
-&lt;li&gt;use @python_2_unicode_compatible decorator&lt;/li&gt;
-&lt;li&gt;use key_prefix in django.caches, when moving&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Thanks for reading.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/move-to-py3k.png&#34; alt=&#34;keep calm and move to python3&#34;&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Say hello to l10n in python</title>
-      <link>https://vanadium23.me/l10n-in-python/</link>
-      <pubDate>Sat, 26 Nov 2016 17:00:00 +0300</pubDate>
-      <guid>https://vanadium23.me/l10n-in-python/</guid>
-      <description>&lt;p&gt;In python world, many solutions for trivial problems could be found in standart library: from &lt;a href=&#34;https://docs.python.org/3/library/statistics.html&#34;&gt;statistical functions&lt;/a&gt; to &lt;a href=&#34;https://docs.python.org/3/library/gettext.html&#34;&gt;localization&lt;/a&gt; for your package.
-But somehow some things just don&amp;rsquo;t connect to each other, and you just stuck at combining this constructor in right way.&lt;/p&gt;
-&lt;p&gt;This gifs pretty sums up situation:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://vanadium23.me/images/modern-development.gif&#34; alt=&#34;modern-development&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Our task:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;create python package, that has localized string&lt;/li&gt;
-&lt;li&gt;provide this string to django application&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;First thing, that you find at &lt;a href=&#34;https://docs.python.org/3/library/gettext.html&#34;&gt;gettext docs&lt;/a&gt;:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import gettext
+&lt;/code>&lt;/pre>&lt;p>You want to parse it using lxml:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> lxml &lt;span style="color:#f92672">import&lt;/span> objectify
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>xml_answer &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;lt;root&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> &amp;lt;answer&amp;gt;42&amp;lt;/answer&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;lt;/root&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>xml &lt;span style="color:#f92672">=&lt;/span> objectify&lt;span style="color:#f92672">.&lt;/span>parse(buf)&lt;span style="color:#f92672">.&lt;/span>getroot()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This example works both on py2 and py3, but some little difference:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> lxml &lt;span style="color:#f92672">import&lt;/span> objectify
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>xml_answer &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;lt;root&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> &amp;lt;answer&amp;gt;42&amp;lt;/answer&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;lt;/root&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>xml &lt;span style="color:#f92672">=&lt;/span> objectify&lt;span style="color:#f92672">.&lt;/span>parse(buf)&lt;span style="color:#f92672">.&lt;/span>getroot()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Aaaand lxml wants bytes on input instead of string ¯\&lt;em>(ツ)&lt;/em>/¯.&lt;/p>
+&lt;h1 id="a-namepy3k-redispyaredis-py-bytes">&lt;a name="py3k-redispy">&lt;/a>redis-py bytes&lt;/h1>
+&lt;p>All redis action from redispy returns bytes now. So if you use pure redis (not a django.core.cache), you need to explicit call decode. Also pickling objects between python3 and python2 doesn&amp;rsquo;t work, so make sure you make different keys in cache.&lt;/p>
+&lt;h2 id="a-namepy3k-djangoanote-how-to-make-smaller-diff-between-py2-and-py3-version-on-django">&lt;a name="py3k-django">&lt;/a>Note: how to make smaller diff between py2 and py3 version on django&lt;/h2>
+&lt;p>So sums it up with django experience:&lt;/p>
+&lt;ol>
+&lt;li>use smart_text instead of smart_unicode&lt;/li>
+&lt;li>use @python_2_unicode_compatible decorator&lt;/li>
+&lt;li>use key_prefix in django.caches, when moving&lt;/li>
+&lt;/ol>
+&lt;p>Thanks for reading.&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/move-to-py3k.png" alt="keep calm and move to python3">&lt;/p></description></item><item><title>Say hello to l10n in python</title><link>https://vanadium23.me/l10n-in-python/</link><pubDate>Sat, 26 Nov 2016 17:00:00 +0300</pubDate><guid>https://vanadium23.me/l10n-in-python/</guid><description>&lt;p>In python world, many solutions for trivial problems could be found in standart library: from &lt;a href="https://docs.python.org/3/library/statistics.html">statistical functions&lt;/a> to &lt;a href="https://docs.python.org/3/library/gettext.html">localization&lt;/a> for your package.
+But somehow some things just don&amp;rsquo;t connect to each other, and you just stuck at combining this constructor in right way.&lt;/p>
+&lt;p>This gifs pretty sums up situation:&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/modern-development.gif" alt="modern-development">&lt;/p>
+&lt;p>Our task:&lt;/p>
+&lt;ul>
+&lt;li>create python package, that has localized string&lt;/li>
+&lt;li>provide this string to django application&lt;/li>
+&lt;/ul>
+&lt;p>First thing, that you find at &lt;a href="https://docs.python.org/3/library/gettext.html">gettext docs&lt;/a>:&lt;/p>
+&lt;pre tabindex="0">&lt;code>import gettext
 import os
-
 BASE_DIR = os.path.dirname(__file__)
 LOCALE_DIR = os.path.join(BASE_DIR, &amp;#39;locale&amp;#39;)
-
 # try to set param fallback to False
 t = gettext.translation(&amp;#39;default&amp;#39;, LOCALE_DIR, fallback=True)
 _ = t.ugettext
-
 message = _(&amp;#39;Test!&amp;#39;)
 print(message)
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To change language on your system, you can simply set enviroment variable &lt;em&gt;LANG&lt;/em&gt; or &lt;em&gt;LANGUAGE&lt;/em&gt;.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;~ export LANG=ru
+&lt;/code>&lt;/pre>&lt;p>To change language on your system, you can simply set enviroment variable &lt;em>LANG&lt;/em> or &lt;em>LANGUAGE&lt;/em>.&lt;/p>
+&lt;pre tabindex="0">&lt;code>~ export LANG=ru
 ~ python test.py
 Test!
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This won&amp;rsquo;t work, because you don&amp;rsquo;t have translated phrases in your locale dir. Let&amp;rsquo;s compile them.
-Command pygettext grabs all string in &lt;em&gt;ugettext&lt;/em&gt; function and dumps it to pot file.
-After it, you need to init new locale (&lt;em&gt;note:&lt;/em&gt; if you need to merge with previos translations use &lt;em&gt;msgmerge&lt;/em&gt;).&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;~ pygettext test.py
+&lt;/code>&lt;/pre>&lt;p>This won&amp;rsquo;t work, because you don&amp;rsquo;t have translated phrases in your locale dir. Let&amp;rsquo;s compile them.
+Command pygettext grabs all string in &lt;em>ugettext&lt;/em> function and dumps it to pot file.
+After it, you need to init new locale (&lt;em>note:&lt;/em> if you need to merge with previos translations use &lt;em>msgmerge&lt;/em>).&lt;/p>
+&lt;pre tabindex="0">&lt;code>~ pygettext test.py
 ~ mkdir -p ./locale/{en,ru}/LC_MESSAGES/
 ~ msginit --input=messages.pot --locale=en_US.UTF-8 \
 --output=./locale/en/LC_MESSAGES/default.po
 ~ msginit --input=messages.pot --locale=ru_RU.UTF-8 \
 --output=./locale/ru/LC_MESSAGES/default.po
 ~ rm messages.pot
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now you can open default.po files with some tools, like &lt;a href=&#34;https://poedit.net/&#34;&gt;POEdit&lt;/a&gt; (&lt;em&gt;note:&lt;/em&gt; I prefer Sublime Text for small po).
+&lt;/code>&lt;/pre>&lt;p>Now you can open default.po files with some tools, like &lt;a href="https://poedit.net/">POEdit&lt;/a> (&lt;em>note:&lt;/em> I prefer Sublime Text for small po).
 Change in ru po msgstr from &amp;lsquo;Test!&amp;rsquo; to &amp;lsquo;Тест!&amp;rsquo;. When you run script again, output will be same (&amp;lsquo;Test!&amp;rsquo;).
-This is because after modifying po, we need to compile it to binary format (known as mo).&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;~ msgfmt en/LC_MESSAGES/default.po -o en/LC_MESSAGES/default.mo
+This is because after modifying po, we need to compile it to binary format (known as mo).&lt;/p>
+&lt;pre tabindex="0">&lt;code>~ msgfmt en/LC_MESSAGES/default.po -o en/LC_MESSAGES/default.mo
 ~ msgfmt ru/LC_MESSAGES/default.po -o ru/LC_MESSAGES/default.mo
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Woo-hoo, output should be translated now, but it doesn&amp;rsquo;t work with django.
-What shall we do? Read the &lt;a href=&#34;https://docs.djangoproject.com/en/1.10/topics/i18n/translation/#how-django-discovers-translations&#34;&gt;manual&lt;/a&gt;.
-So we need to rename namespace from default to django, but also django realize &lt;a href=&#34;https://github.com/django/django/blob/1.10.3/django/utils/translation/trans_real.py#L90&#34;&gt;own class&lt;/a&gt;, so insted of using gettext.translation.ugettext you need to use &lt;em&gt;django.utils.translation&lt;/em&gt; one.
-Full example can be found in &lt;a href=&#34;https://github.com/vanadium23/py-hello-l10n&#34;&gt;repository&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cook django with aiohttp workers</title>
-      <link>https://vanadium23.me/django-gunicorn-aiohttp/</link>
-      <pubDate>Sun, 20 Nov 2016 17:00:00 +0300</pubDate>
-      <guid>https://vanadium23.me/django-gunicorn-aiohttp/</guid>
-      <description>&lt;p&gt;There is some standart stack to run django in production.
+&lt;/code>&lt;/pre>&lt;p>Woo-hoo, output should be translated now, but it doesn&amp;rsquo;t work with django.
+What shall we do? Read the &lt;a href="https://docs.djangoproject.com/en/1.10/topics/i18n/translation/#how-django-discovers-translations">manual&lt;/a>.
+So we need to rename namespace from default to django, but also django realize &lt;a href="https://github.com/django/django/blob/1.10.3/django/utils/translation/trans_real.py#L90">own class&lt;/a>, so insted of using gettext.translation.ugettext you need to use &lt;em>django.utils.translation&lt;/em> one.
+Full example can be found in &lt;a href="https://github.com/vanadium23/py-hello-l10n">repository&lt;/a>.&lt;/p></description></item><item><title>Cook django with aiohttp workers</title><link>https://vanadium23.me/django-gunicorn-aiohttp/</link><pubDate>Sun, 20 Nov 2016 17:00:00 +0300</pubDate><guid>https://vanadium23.me/django-gunicorn-aiohttp/</guid><description>&lt;p>There is some standart stack to run django in production.
 For python 2, it is nginx + gunicorn or uwsgi + monkey patching libs, such as gevent or eventlet.
-Generally, I prefer gunicorn + eventlet, but when you switch (or start) django project on latest python 3.5, eventlet can do &lt;a href=&#34;https://github.com/eventlet/eventlet/issues/313&#34;&gt;some bad magic&lt;/a&gt;. And you can switch to a new built-in mechanism, called &lt;em&gt;aiohttp&lt;/em&gt;.
-Based on &lt;a href=&#34;http://docs.gunicorn.org/en/stable/design.html?highlight=gaiohttp#asyncio-workers&#34;&gt;gunicorn docs&lt;/a&gt;, you need simply switch worker to &lt;em&gt;gaiohttp&lt;/em&gt; and that&amp;rsquo;s all.&lt;/p&gt;
-&lt;p&gt;Then, something bad happens.
-&lt;img src=&#34;https://vanadium23.me/images/gaiohttp-memory.png&#34; alt=&#34;gaiohttp-memory&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Answer is very simple: &lt;strike&gt;you write some memoryleaking code&lt;/strike&gt; &lt;em&gt;gaiohttp&lt;/em&gt; ignores max_requests option.
-In other words, workers won&amp;rsquo;t be killed after max_requests count. After some search on internet, there is an &lt;a href=&#34;http://asvetlov.blogspot.ru/2014/06/asyncio-aiohttp-gunicorn.html&#34;&gt;article&lt;/a&gt; from asyncio contributor about copy-n-pasting worker from aiohttp repo to gunicorn.
-&lt;a href=&#34;http://aiohttp.readthedocs.io/en/stable/deployment.html#start-gunicorn&#34;&gt;Aiohttp docs&lt;/a&gt; says that you should use &lt;code&gt;aiohttp.worker.GunicornWebWorker&lt;/code&gt;, but when you switch setting there will be error.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[5898] [ERROR] Exception in worker process
+Generally, I prefer gunicorn + eventlet, but when you switch (or start) django project on latest python 3.5, eventlet can do &lt;a href="https://github.com/eventlet/eventlet/issues/313">some bad magic&lt;/a>. And you can switch to a new built-in mechanism, called &lt;em>aiohttp&lt;/em>.
+Based on &lt;a href="http://docs.gunicorn.org/en/stable/design.html?highlight=gaiohttp#asyncio-workers">gunicorn docs&lt;/a>, you need simply switch worker to &lt;em>gaiohttp&lt;/em> and that&amp;rsquo;s all.&lt;/p>
+&lt;p>Then, something bad happens.
+&lt;img src="https://vanadium23.me/images/gaiohttp-memory.png" alt="gaiohttp-memory">&lt;/p>
+&lt;p>Answer is very simple: &lt;strike>you write some memoryleaking code&lt;/strike> &lt;em>gaiohttp&lt;/em> ignores max_requests option.
+In other words, workers won&amp;rsquo;t be killed after max_requests count. After some search on internet, there is an &lt;a href="http://asvetlov.blogspot.ru/2014/06/asyncio-aiohttp-gunicorn.html">article&lt;/a> from asyncio contributor about copy-n-pasting worker from aiohttp repo to gunicorn.
+&lt;a href="http://aiohttp.readthedocs.io/en/stable/deployment.html#start-gunicorn">Aiohttp docs&lt;/a> says that you should use &lt;code>aiohttp.worker.GunicornWebWorker&lt;/code>, but when you switch setting there will be error.&lt;/p>
+&lt;pre tabindex="0">&lt;code>[5898] [ERROR] Exception in worker process
 Traceback (most recent call last):
-  File &amp;#34;./gunicorn/arbiter.py&amp;#34;, line 557, in spawn_worker
-    worker.init_process()
-  File &amp;#34;./aiohttp/worker.py&amp;#34;, line 37, in init_process
-    super().init_process()
-  File &amp;#34;./gunicorn/workers/base.py&amp;#34;, line 132, in init_process
-    self.run()
-  File &amp;#34;./aiohttp/worker.py&amp;#34;, line 40, in run
-    self.loop.run_until_complete(self.wsgi.startup())
+File &amp;#34;./gunicorn/arbiter.py&amp;#34;, line 557, in spawn_worker
+worker.init_process()
+File &amp;#34;./aiohttp/worker.py&amp;#34;, line 37, in init_process
+super().init_process()
+File &amp;#34;./gunicorn/workers/base.py&amp;#34;, line 132, in init_process
+self.run()
+File &amp;#34;./aiohttp/worker.py&amp;#34;, line 40, in run
+self.loop.run_until_complete(self.wsgi.startup())
 AttributeError:
-    &amp;#39;WSGIHandler&amp;#39; object has no attribute &amp;#39;startup&amp;#39;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So &lt;em&gt;aiohttp.worker.GunicornWebWorker&lt;/em&gt; differs from standart wsgi app for django. Luckily, python community has two packages to overcome these difficulties: &lt;em&gt;aiohttp-wsgi&lt;/em&gt; and &lt;em&gt;aiodjango&lt;/em&gt;, add them to your &lt;em&gt;requirements.txt&lt;/em&gt;.
-After this modify your &lt;em&gt;wsgi.py&lt;/em&gt; according to &lt;a href=&#34;http://aiodjango.readthedocs.io/en/latest/usage.html#defining-the-application&#34;&gt;docs&lt;/a&gt;:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import os
-
+&amp;#39;WSGIHandler&amp;#39; object has no attribute &amp;#39;startup&amp;#39;
+&lt;/code>&lt;/pre>&lt;p>So &lt;em>aiohttp.worker.GunicornWebWorker&lt;/em> differs from standart wsgi app for django. Luckily, python community has two packages to overcome these difficulties: &lt;em>aiohttp-wsgi&lt;/em> and &lt;em>aiodjango&lt;/em>, add them to your &lt;em>requirements.txt&lt;/em>.
+After this modify your &lt;em>wsgi.py&lt;/em> according to &lt;a href="http://aiodjango.readthedocs.io/en/latest/usage.html#defining-the-application">docs&lt;/a>:&lt;/p>
+&lt;pre tabindex="0">&lt;code>import os
 from django.core.wsgi import get_wsgi_application
-
 from aiodjango import get_aio_application
-
-
 os.environ.setdefault(&amp;#39;DJANGO_SETTINGS_MODULE&amp;#39;, &amp;#39;settings&amp;#39;)
-
 # Build WSGI application
 # Any WSGI middleware would be added here
 application = get_wsgi_application()
-
 # Build aiohttp application
 app = get_aio_application(application)
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;That&amp;rsquo;s all folks.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;/code>&lt;/pre>&lt;p>That&amp;rsquo;s all folks.&lt;/p></description></item></channel></rss>

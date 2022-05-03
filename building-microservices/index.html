@@ -1,228 +1,32 @@
-<!DOCTYPE html>
-<html lang="ru-ru">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Выдержка из книги &#34;Building microservices&#34; | vanadium23</title>
-  <meta name="author" content="vanadium23" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:creator" content="@vanadium23" />
-    <meta property="og:title" content="Выдержка из книги &#34;Building microservices&#34;" />
-    <meta property="twitter:title" content="Выдержка из книги &#34;Building microservices&#34;" />
-    <meta name="description" content="Книга разбирает типовой способ разбора монолитов на микросервисы. Ничего супер нового не рассказывает, скорее объединяет все известные практики при написаниии микросервисов. Понравилось разделение по главам и их слабая связь, можно открыть любую и читать рецепты. С другой стороны, все рецепты опять написаны про типичный магазин и разные сложности с обратной совместимостью или миграциями были задвинуты на второй план. Далее краткий пересказ каждой главы.
-Microservices Микросервис - маленький сервис, который делает один бизнес домен и делает его хорошо.">
-    <meta property="og:description" content="Книга разбирает типовой способ разбора монолитов на микросервисы. Ничего супер нового не рассказывает, скорее объединяет все известные практики при написаниии микросервисов. Понравилось разделение по главам и их слабая связь, можно открыть любую и читать рецепты. С другой стороны, все рецепты опять написаны про типичный магазин и разные сложности с обратной совместимостью или миграциями были задвинуты на второй план. Далее краткий пересказ каждой главы.
-Microservices Микросервис - маленький сервис, который делает один бизнес домен и делает его хорошо." />
-    
-  <link rel="stylesheet" href="https://vanadium23.me/css/base.min.b6dfa31f93118b56b5ca227e268bbe1c1d592be9ccd7b4664981bca6f0352f99.css" integrity="sha256-tt&#43;jH5MRi1a1yiJ&#43;Jou&#43;HB1ZK&#43;nM17RmSYG8pvA1L5k=">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <meta name="generator" content="Hugo 0.96.0" />
-</head>
-<body>
-  <nav class="u-background">
-    <div class="u-wrapper Banner">
-        <a class="Banner-link u-clickable" href="https://vanadium23.me/">
-            vanadium23
-        </a>
-        <ul class="Banner">
-        
-        <li class="Banner-item">
-            <a class="Banner-link u-clickable" href="https://vanadium23.me/about/">About</a>
-        </li class="Banner-item">
-        
-        <li class="Banner-item">
-            <a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a>
-        </li class="Banner-item">
-        
-        <li>
-            <a id="themeSwitch" class="theme-switcher"></a>
-        </li>
-        </ul>
-    </div>
-</nav>
-  <main >
-    <div class="u-wrapper">
-      <div class="u-padding">
-        
-
-<article>
-  <header class="Heading">
-  <h2 class="Heading-title">
-    <a class="Heading-link u-clickable" href="https://vanadium23.me/building-microservices/" rel="bookmark">Выдержка из книги &#34;Building microservices&#34;</a>
-  </h2>
-  <div class="Heading-additional">
-    
-    <time datetime="2020-02-02T09:00:00&#43;03:00">
-      2 February, 2020
-    </time>&middot;
-    
-  
-  <span>5 min read</span>
-  
-  </div>
-</header>
-  <p>Книга разбирает типовой способ разбора монолитов на микросервисы. Ничего супер нового не рассказывает, скорее объединяет все известные практики при написаниии микросервисов. Понравилось разделение по главам и их слабая связь, можно открыть любую и читать рецепты. С другой стороны, все рецепты опять написаны про типичный магазин и разные сложности с обратной совместимостью или миграциями были задвинуты на второй план. Далее краткий пересказ каждой главы.</p>
-<h2 id="microservices">Microservices</h2>
-<p>Микросервис - маленький сервис, который делает один бизнес домен и делает его хорошо.
-При этом команда должна быть максимально автономной. Их делают чтобы:</p>
-<ul>
-<li>выбрать наиболее подходящую технологию</li>
-<li>независимо разрабатывать/деплоить</li>
-<li>отваливась только часть функциональность</li>
-<li>независимо маштабировать</li>
-</ul>
-<p>В чем разница с SOA?</p>
-<ul>
-<li>SOA была хорошей идеей, но она не прижилась. (<strong>Примечание: спорное утверждение</strong>)</li>
-</ul>
-<p>Другие способы распила:</p>
-<ul>
-<li>Шаренные либы - путь в никуда, не можем менять технологию</li>
-<li>Модули - отличие от либ, что можно делать hot-reloads, e.g.: Erlang modules. Но такой же путь вникуда.</li>
-</ul>
-<h2 id="the-evolutionary-architect">The Evolutionary Architect</h2>
-<p>Архитектура происходит из стратегии. Если у вас нет стратегии развития, то и хорошей архитектуры не построить.
-Чтобы сделать хорошую архитектуру на основе стратегии необходимо:</p>
-<ul>
-<li>Предоставить принципы, с помощью которых идёт выбор технических решений</li>
-<li>Сделать набор практик на основе этих принципов</li>
-<li>Создать команду &ldquo;управления&rdquo;, которая следит что выбранные практики и принципы применяются в системах.</li>
-</ul>
-<p>При этом нужно не забывать, что мы хотим автономности и команды могут расширять практики, если требуется.
-Если слишком много команд не используют практики или принципы - их необходимо пересмотреть.</p>
-<h2 id="how-to-model-service">How to model service</h2>
-<p>В качестве примера предложили MusicCorp - онлайн-магазин по продаже музыкальных альбомов.
+<!doctype html><html lang=ru-ru><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Выдержка из книги "Building microservices" | vanadium23</title><meta name=author content="vanadium23"><meta name=twitter:card content="summary"><meta name=twitter:creator content="@vanadium23"><meta property="og:title" content="Выдержка из книги &#34;Building microservices&#34;"><meta property="twitter:title" content="Выдержка из книги &#34;Building microservices&#34;"><meta name=description content="Книга разбирает типовой способ разбора монолитов на микросервисы. Ничего супер нового не рассказывает, скорее объединяет все известные практики при написаниии микросервисов. Понравилось разделение по главам и их слабая связь, можно открыть любую и читать рецепты. С другой стороны, все рецепты опять написаны про типичный магазин и разные сложности с обратной совместимостью или миграциями были задвинуты на второй план. Далее краткий пересказ каждой главы.
+Microservices Микросервис - маленький сервис, который делает один бизнес домен и делает его хорошо."><meta property="og:description" content="Книга разбирает типовой способ разбора монолитов на микросервисы. Ничего супер нового не рассказывает, скорее объединяет все известные практики при написаниии микросервисов. Понравилось разделение по главам и их слабая связь, можно открыть любую и читать рецепты. С другой стороны, все рецепты опять написаны про типичный магазин и разные сложности с обратной совместимостью или миграциями были задвинуты на второй план. Далее краткий пересказ каждой главы.
+Microservices Микросервис - маленький сервис, который делает один бизнес домен и делает его хорошо."><link rel=stylesheet href=https://vanadium23.me/css/base.min.ede35a5a6f0822c8ed4e62a02aaaead5a369281f08df87a8547512ed5449222f.css integrity="sha256-7eNaWm8IIsjtTmKgKqrq1aNpKB8I34eoVHUS7VRJIi8="><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><meta name=generator content="Hugo 0.98.0"></head><body><nav class=u-background><div class="u-wrapper Banner"><a class="Banner-link u-clickable" href=https://vanadium23.me/>vanadium23</a><ul class=Banner><li class=Banner-item><a class="Banner-link u-clickable" href=https://vanadium23.me/about/>About</a></li class="banner-item"><li class=Banner-item><a class="Banner-link u-clickable" href=https://vanadium23.me/tags/>Tags</a></li class="banner-item"><li><a id=themeSwitch class=theme-switcher></a></li></ul></div></nav><main><div class=u-wrapper><div class=u-padding><article><header class=Heading><h2 class=Heading-title><a class="Heading-link u-clickable" href=https://vanadium23.me/building-microservices/ rel=bookmark>Выдержка из книги "Building microservices"</a></h2><div class=Heading-additional><time datetime=2020-02-02T09:00:00+03:00>2 February, 2020
+</time>&#183;
+<span>5 min read</span></div></header><p>Книга разбирает типовой способ разбора монолитов на микросервисы. Ничего супер нового не рассказывает, скорее объединяет все известные практики при написаниии микросервисов. Понравилось разделение по главам и их слабая связь, можно открыть любую и читать рецепты. С другой стороны, все рецепты опять написаны про типичный магазин и разные сложности с обратной совместимостью или миграциями были задвинуты на второй план. Далее краткий пересказ каждой главы.</p><h2 id=microservices>Microservices</h2><p>Микросервис - маленький сервис, который делает один бизнес домен и делает его хорошо.
+При этом команда должна быть максимально автономной. Их делают чтобы:</p><ul><li>выбрать наиболее подходящую технологию</li><li>независимо разрабатывать/деплоить</li><li>отваливась только часть функциональность</li><li>независимо маштабировать</li></ul><p>В чем разница с SOA?</p><ul><li>SOA была хорошей идеей, но она не прижилась. (<strong>Примечание: спорное утверждение</strong>)</li></ul><p>Другие способы распила:</p><ul><li>Шаренные либы - путь в никуда, не можем менять технологию</li><li>Модули - отличие от либ, что можно делать hot-reloads, e.g.: Erlang modules. Но такой же путь вникуда.</li></ul><h2 id=the-evolutionary-architect>The Evolutionary Architect</h2><p>Архитектура происходит из стратегии. Если у вас нет стратегии развития, то и хорошей архитектуры не построить.
+Чтобы сделать хорошую архитектуру на основе стратегии необходимо:</p><ul><li>Предоставить принципы, с помощью которых идёт выбор технических решений</li><li>Сделать набор практик на основе этих принципов</li><li>Создать команду &ldquo;управления&rdquo;, которая следит что выбранные практики и принципы применяются в системах.</li></ul><p>При этом нужно не забывать, что мы хотим автономности и команды могут расширять практики, если требуется.
+Если слишком много команд не используют практики или принципы - их необходимо пересмотреть.</p><h2 id=how-to-model-service>How to model service</h2><p>В качестве примера предложили MusicCorp - онлайн-магазин по продаже музыкальных альбомов.
 Сервисы должны быть слабо связаными (loose coupling) между собой, высоко сцепленными (high cohesion) внутри себя.
 Магазин разбили на две части: склад и финансы.
 Склад поделили на три микросервиса: заказы, логистика, инвентарь.
-Дальше ситуации:</p>
-<ul>
-<li>Финансы лезут в базу инвентаря - всё плохо, протекло</li>
-<li>Финансы получают сообщения из склада - всё плохо, одна и та же модель значит разное для сервисов.</li>
-<li>Финансы идут в API микросервиса инвентаря - всё плохо, склад потерял свои границы.</li>
-</ul>
-<p>Предложенный вариант строить фасад перед складом, тогда будет проще тестить, проще следить что во воне и т.д.</p>
-<h2 id="integration">Integration</h2>
-<p>Как можно между собой микросервисы интегрировать:</p>
-<ul>
-<li>Шаренная база данных - никогда так не делайте, изменения одного микросервиса сломают остальные.</li>
-<li>RPC - сервис посылает запрос на выполнение команды. Провоцирует каскадные падения :(</li>
-<li>Event-based - сервис создаёт события в шины, остальные сервисы подписываются и делают нужное. Низкая связность, но сложно тестировать.</li>
-</ul>
-<p>Как жить фронту при этом?</p>
-<ul>
-<li>Один фронт используют несколько API при построение страницы</li>
-<li>Фронты пилят виджеты, которые могут встраиваться и каждый использует своё API</li>
-<li>Ставим API gateway для всех</li>
-<li>Ставим API gateway под каждого консьюмера - BFF</li>
-</ul>
-<p>Рекомендую прочитать эту главу целиком, если доберётесь до книжки.</p>
-<h2 id="splitting-the-monolith">Splitting the Monolith</h2>
-<p>Находим куски кода, которые могут работать максимально независимо (seams, см. Working with legacy code).
+Дальше ситуации:</p><ul><li>Финансы лезут в базу инвентаря - всё плохо, протекло</li><li>Финансы получают сообщения из склада - всё плохо, одна и та же модель значит разное для сервисов.</li><li>Финансы идут в API микросервиса инвентаря - всё плохо, склад потерял свои границы.</li></ul><p>Предложенный вариант строить фасад перед складом, тогда будет проще тестить, проще следить что во воне и т.д.</p><h2 id=integration>Integration</h2><p>Как можно между собой микросервисы интегрировать:</p><ul><li>Шаренная база данных - никогда так не делайте, изменения одного микросервиса сломают остальные.</li><li>RPC - сервис посылает запрос на выполнение команды. Провоцирует каскадные падения :(</li><li>Event-based - сервис создаёт события в шины, остальные сервисы подписываются и делают нужное. Низкая связность, но сложно тестировать.</li></ul><p>Как жить фронту при этом?</p><ul><li>Один фронт используют несколько API при построение страницы</li><li>Фронты пилят виджеты, которые могут встраиваться и каждый использует своё API</li><li>Ставим API gateway для всех</li><li>Ставим API gateway под каждого консьюмера - BFF</li></ul><p>Рекомендую прочитать эту главу целиком, если доберётесь до книжки.</p><h2 id=splitting-the-monolith>Splitting the Monolith</h2><p>Находим куски кода, которые могут работать максимально независимо (seams, см. Working with legacy code).
 Для начала мы можем разнести их в разную схему базы данных, но живут они в монолите. Каждый модуль может ходить в свою схему.
-MusicCorp разбили на customers, finance, inventory. Плюс остался reporting, который может ходить везде.</p>
-<p>Дальше начинаются пляски с reporting, варианты:</p>
-<ul>
-<li>Репортинг использует реплику базы - плохой путь, потому что шаренные модели</li>
-<li>Кастомеры делают дамп в своём формате для репортинга - вполне норм, но могут быть не реалтайм данные.</li>
-<li>Кастомеры делают API, которая делает дамп ondemand - лучший вариант, при этом много говорилось как его праивльно запроектировать.</li>
-<li>Последний вариант, кастомеры пишут все изменения в шину и есть сервис который аггрерует это для репортинга.</li>
-</ul>
-<h2 id="deployment">Deployment</h2>
-<p>CI/CD, билды, образы, контейнеры. Скорее всего и так всё знаете.</p>
-<h2 id="testing">Testing</h2>
-<p>Пирамида тестирования - юнитов как можно больше, UI как можно меньше.
+MusicCorp разбили на customers, finance, inventory. Плюс остался reporting, который может ходить везде.</p><p>Дальше начинаются пляски с reporting, варианты:</p><ul><li>Репортинг использует реплику базы - плохой путь, потому что шаренные модели</li><li>Кастомеры делают дамп в своём формате для репортинга - вполне норм, но могут быть не реалтайм данные.</li><li>Кастомеры делают API, которая делает дамп ondemand - лучший вариант, при этом много говорилось как его праивльно запроектировать.</li><li>Последний вариант, кастомеры пишут все изменения в шину и есть сервис который аггрерует это для репортинга.</li></ul><h2 id=deployment>Deployment</h2><p>CI/CD, билды, образы, контейнеры. Скорее всего и так всё знаете.</p><h2 id=testing>Testing</h2><p>Пирамида тестирования - юнитов как можно больше, UI как можно меньше.
 Владельцы микросервисов должны писать юнит и сервис тесты с моками/стаббами сервисов, которые он использует.
 End-to-end тесты должны писаться отдельно, запускаться отдельно и тестировать все микросервисы вживую.
-Если тесты часто падают либо чиним, либо выкидываем.</p>
-<p>Со стабами можно очень сильно прогореть, поэтому лучше инвертировать зависимость, чтобы клиенты писали стабы для сервера.
-Тогда будут готовые сервис-тесты для сервера, которые отдаёт данные. Подробнее смотри <a href="https://docs.pact.io/">PACT</a>.</p>
-<h2 id="monitoring">Monitoring</h2>
-<ul>
-<li>Сначала собирайте низкоуровневые метрики: request rate, response timing, потом переходите на уровень приложения</li>
-<li>Трекайте что нижележащие сервисы живы, используйте circuit breakers.</li>
-<li>Стандартизируйте как вы собираете метрики.</li>
-<li>Все должны логировать в стандартное место. Так как их потом надо аггрегировать, то ещё и в стандартном формате</li>
-<li>Мониторьте всё что ниже приложения: OS, CPU, MEM.</li>
-<li>Делайте дашборды и call-to-action алерты.</li>
-<li>Прокидывайте ID между сервисами.</li>
-</ul>
-<h2 id="security">Security</h2>
-<p>Api ключи
+Если тесты часто падают либо чиним, либо выкидываем.</p><p>Со стабами можно очень сильно прогореть, поэтому лучше инвертировать зависимость, чтобы клиенты писали стабы для сервера.
+Тогда будут готовые сервис-тесты для сервера, которые отдаёт данные. Подробнее смотри <a href=https://docs.pact.io/>PACT</a>.</p><h2 id=monitoring>Monitoring</h2><ul><li>Сначала собирайте низкоуровневые метрики: request rate, response timing, потом переходите на уровень приложения</li><li>Трекайте что нижележащие сервисы живы, используйте circuit breakers.</li><li>Стандартизируйте как вы собираете метрики.</li><li>Все должны логировать в стандартное место. Так как их потом надо аггрегировать, то ещё и в стандартном формате</li><li>Мониторьте всё что ниже приложения: OS, CPU, MEM.</li><li>Делайте дашборды и call-to-action алерты.</li><li>Прокидывайте ID между сервисами.</li></ul><h2 id=security>Security</h2><p>Api ключи
 Клиентские сертификаты
 Разделение по сеткам
-Для пользователей SSO</p>
-<h2 id="conways-law">Conway&rsquo;s law</h2>
-<p><strong>Trivia</strong>: Windows Vista получилось такой какой есть, потому что там были feature based команды. Не делайти команды по фичам, делайте по доменам.
+Для пользователей SSO</p><h2 id=conways-law>Conway&rsquo;s law</h2><p><strong>Trivia</strong>: Windows Vista получилось такой какой есть, потому что там были feature based команды. Не делайти команды по фичам, делайте по доменам.
 Ничего не будет работать, если команды будут друг на друга завязаны, или кто-то с кем-то не будет договариваться.
-За один сервис - отвечает одна команда.</p>
-<h2 id="microservices-at-scale">Microservices at Scale</h2>
-<p>Нужно быть готовым к тому, что всё может упасть, поэтому CAP теорема нам в помощь и выбирайте два из трёх:</p>
-<ul>
-<li>Response time/latency</li>
-<li>Availibility</li>
-<li>Durability of data</li>
-</ul>
-<p>Предусматривайте graceful degradation.
+За один сервис - отвечает одна команда.</p><h2 id=microservices-at-scale>Microservices at Scale</h2><p>Нужно быть готовым к тому, что всё может упасть, поэтому CAP теорема нам в помощь и выбирайте два из трёх:</p><ul><li>Response time/latency</li><li>Availibility</li><li>Durability of data</li></ul><p>Предусматривайте graceful degradation.
 Лучше отвалиться, чем тормозить и старайтесь знать ограничения сервисов.
-Timeout&rsquo;ы, пуллинг, идемподентность - наше всё.</p>
-<p>Не забудьте делать документацию по API!</p>
-<h2 id="итого">Итого</h2>
-<ul>
-<li>Моделируйте микросервисы вокруг бизнес-концепта</li>
-<li>Пропогандируйте культуру автоматизации</li>
-<li>Скрывайте сложность внутри: схему базы, язык, фреймворк, всё что можете, - для этого и нужно API</li>
-<li>Децентрилизируйте: предпочитайте тупые миддлвари и умные ручки</li>
-<li>Независимые релизы</li>
-<li>Назависимые падения</li>
-<li>Прозрачность: метрики, логи, вот это вот всё.</li>
-</ul>
-
-  
-<footer>
-  <ul class="Tags">
-    
-    
-    
-    <li class="Tags-item u-background">
-      <a class="Tags-link u-clickable" href="https://vanadium23.me/tags/blog/" rel="tag">blog</a>
-    </li>
-    
-    
-    
-    
-    <li class="Tags-item u-background">
-      <a class="Tags-link u-clickable" href="https://vanadium23.me/tags/book/" rel="tag">book</a>
-    </li>
-    
-    
-  </ul>
-</footer>
-
-</article>
-
-
-      </div>
-    </div>
-  </main>
-  <footer class="Footer">
-  <div class="u-wrapper">
-    <div class="u-padding">
-        
-        <a href="https://github.com/vanadium23"><i class="svg-icon github"></i></a>
-        <a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"></i></a>
-        <a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"></i></a>
-        <a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"></i></a>
-        <a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"></i></a>
-        <a href="https://goodreads.com/vanadium23"><i class="svg-icon goodreads"></i></a>
-        <a href="https://t.me/chernov_sharit"><i class="svg-icon telegram"></i></a>
-    </div>
-  </div>
-</footer>
-  
-  <script type="text/javascript" src="https://vanadium23.me/js/themes.js" integrity=""></script>
-  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7507913639b540edbde55792995b90d8"}'></script>
-</body>
-</html>
+Timeout&rsquo;ы, пуллинг, идемподентность - наше всё.</p><p>Не забудьте делать документацию по API!</p><h2 id=итого>Итого</h2><ul><li>Моделируйте микросервисы вокруг бизнес-концепта</li><li>Пропогандируйте культуру автоматизации</li><li>Скрывайте сложность внутри: схему базы, язык, фреймворк, всё что можете, - для этого и нужно API</li><li>Децентрилизируйте: предпочитайте тупые миддлвари и умные ручки</li><li>Независимые релизы</li><li>Назависимые падения</li><li>Прозрачность: метрики, логи, вот это вот всё.</li></ul><footer><ul class=Tags><li class="Tags-item u-background"><a class="Tags-link u-clickable" href=https://vanadium23.me/tags/blog/ rel=tag>blog</a></li><li class="Tags-item u-background"><a class="Tags-link u-clickable" href=https://vanadium23.me/tags/book/ rel=tag>book</a></li></ul></footer></article></div></div></main><footer class=Footer><div class=u-wrapper><div class=u-padding><a href=https://github.com/vanadium23><i class="svg-icon github"></i></a>
+<a href=https://www.linkedin.com/in/vanadium23><i class="svg-icon linkedin"></i></a>
+<a href=https://www.twitter.com/vanadium23><i class="svg-icon twitter"></i></a>
+<a href=http://stackoverflow.com/users/4809450/vanadium23><i class="svg-icon stackoverflow"></i></a>
+<a href=https://www.codewars.com/users/vanadium23><i class="svg-icon codewars"></i></a>
+<a href=https://goodreads.com/vanadium23><i class="svg-icon goodreads"></i></a>
+<a href=https://t.me/chernov_sharit><i class="svg-icon telegram"></i></a></div></div></footer><script type=text/javascript src=https://vanadium23.me/js/themes.js integrity></script>
+<script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "7507913639b540edbde55792995b90d8"}'></script></body></html>
