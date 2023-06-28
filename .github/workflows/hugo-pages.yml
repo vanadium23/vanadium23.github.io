@@ -14,12 +14,6 @@ jobs:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Optimize images
-        id: optimize-images
-        uses: Doist/optimize-images-action@v2
-        with:
-          input: "static/images/**"
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
