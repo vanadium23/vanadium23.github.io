@@ -18,6 +18,10 @@ taxonomies:
 
 menu:
   nav:
+    - identifier: notes
+      name: Notes
+      url: /openbox/
+      weight: 1
     - identifier: about
       name: About
       url: /about/
