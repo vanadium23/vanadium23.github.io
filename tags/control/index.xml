@@ -34,108 +34,108 @@ vanadium23</a><ul class="Banner"><li class="Banner-item"><a class="Banner-link u
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">Категория&lt;/th>
-&lt;th style="text-align:center">Подкатегория&lt;/th>
-&lt;th style="text-align:center">Процент&lt;/th>
-&lt;th style="text-align:center">Комментарий&lt;/th>
+&lt;th style="text-align: center">Категория&lt;/th>
+&lt;th style="text-align: center">Подкатегория&lt;/th>
+&lt;th style="text-align: center">Процент&lt;/th>
+&lt;th style="text-align: center">Комментарий&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">Счета, связанные с квартирой&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">5%&lt;/td>
-&lt;td style="text-align:center">Оптимизировать сложно&lt;/td>
+&lt;td style="text-align: center">Счета, связанные с квартирой&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">5%&lt;/td>
+&lt;td style="text-align: center">Оптимизировать сложно&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Бытовые&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">10%&lt;/td>
-&lt;td style="text-align:center">Оптимизировать сложно&lt;/td>
+&lt;td style="text-align: center">Бытовые&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">10%&lt;/td>
+&lt;td style="text-align: center">Оптимизировать сложно&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">Телефон/интернет&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">Телефон/интернет&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">Мелкий ремонт&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">Мелкий ремонт&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Питание&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">20-25%&lt;/td>
-&lt;td style="text-align:center">Часто необоснованные траты&lt;/td>
+&lt;td style="text-align: center">Питание&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">20-25%&lt;/td>
+&lt;td style="text-align: center">Часто необоснованные траты&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">Продукты&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">Продукты&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">Рестораны&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">Рестораны&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Лекарства&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">10%&lt;/td>
-&lt;td style="text-align:center">Оптимизировать сложно (и даже опасно)&lt;/td>
+&lt;td style="text-align: center">Лекарства&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">10%&lt;/td>
+&lt;td style="text-align: center">Оптимизировать сложно (и даже опасно)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Транспорт&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">5%&lt;/td>
-&lt;td style="text-align:center">Оптимизировать сложно&lt;/td>
+&lt;td style="text-align: center">Транспорт&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">5%&lt;/td>
+&lt;td style="text-align: center">Оптимизировать сложно&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Вещи&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">10-15%&lt;/td>
-&lt;td style="text-align:center">Часто необоснованные траты&lt;/td>
+&lt;td style="text-align: center">Вещи&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">10-15%&lt;/td>
+&lt;td style="text-align: center">Часто необоснованные траты&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Досуг&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">10-15%&lt;/td>
-&lt;td style="text-align:center">Часто необоснованные траты&lt;/td>
+&lt;td style="text-align: center">Досуг&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">10-15%&lt;/td>
+&lt;td style="text-align: center">Часто необоснованные траты&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">Кино&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">Кино&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">Музеи&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">Музеи&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Образование&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">5%&lt;/td>
-&lt;td style="text-align:center">Оптимизировать сложно&lt;/td>
+&lt;td style="text-align: center">Образование&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">5%&lt;/td>
+&lt;td style="text-align: center">Оптимизировать сложно&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Подарки&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">5%&lt;/td>
-&lt;td style="text-align:center">Оптимизировать сложно&lt;/td>
+&lt;td style="text-align: center">Подарки&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">5%&lt;/td>
+&lt;td style="text-align: center">Оптимизировать сложно&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Крупные расходы&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">20-25%&lt;/td>
-&lt;td style="text-align:center">Часто необоснованные траты&lt;/td>
+&lt;td style="text-align: center">Крупные расходы&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">20-25%&lt;/td>
+&lt;td style="text-align: center">Часто необоснованные траты&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -150,38 +150,38 @@ vanadium23</a><ul class="Banner"><li class="Banner-item"><a class="Banner-link u
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">Год&lt;/th>
-&lt;th style="text-align:center">Деньги на начало&lt;/th>
-&lt;th style="text-align:center">Ежемесячный доход&lt;/th>
-&lt;th style="text-align:center">Ежемесячный расход&lt;/th>
-&lt;th style="text-align:center">Большая покупка&lt;/th>
-&lt;th style="text-align:right">Деньги на конец&lt;/th>
+&lt;th style="text-align: left">Год&lt;/th>
+&lt;th style="text-align: center">Деньги на начало&lt;/th>
+&lt;th style="text-align: center">Ежемесячный доход&lt;/th>
+&lt;th style="text-align: center">Ежемесячный расход&lt;/th>
+&lt;th style="text-align: center">Большая покупка&lt;/th>
+&lt;th style="text-align: right">Деньги на конец&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">2018&lt;/td>
-&lt;td style="text-align:center">A&lt;/td>
-&lt;td style="text-align:center">B&lt;/td>
-&lt;td style="text-align:center">C&lt;/td>
-&lt;td style="text-align:center">D&lt;/td>
-&lt;td style="text-align:right">A+B*12-C*12-D&lt;/td>
+&lt;td style="text-align: left">2018&lt;/td>
+&lt;td style="text-align: center">A&lt;/td>
+&lt;td style="text-align: center">B&lt;/td>
+&lt;td style="text-align: center">C&lt;/td>
+&lt;td style="text-align: center">D&lt;/td>
+&lt;td style="text-align: right">A+B*12-C*12-D&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">2019&lt;/td>
-&lt;td style="text-align:center">A&amp;rsquo; (A+B*12-C*12-D)&lt;/td>
-&lt;td style="text-align:center">B&lt;/td>
-&lt;td style="text-align:center">C&lt;/td>
-&lt;td style="text-align:center">D'&lt;/td>
-&lt;td style="text-align:right">A*+B*12-C*12-F&lt;/td>
+&lt;td style="text-align: left">2019&lt;/td>
+&lt;td style="text-align: center">A&amp;rsquo; (A+B*12-C*12-D)&lt;/td>
+&lt;td style="text-align: center">B&lt;/td>
+&lt;td style="text-align: center">C&lt;/td>
+&lt;td style="text-align: center">D'&lt;/td>
+&lt;td style="text-align: right">A*+B*12-C*12-F&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">2020&lt;/td>
-&lt;td style="text-align:center">и так далее&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">2020&lt;/td>
+&lt;td style="text-align: center">и так далее&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -191,105 +191,105 @@ vanadium23</a><ul class="Banner"><li class="Banner-item"><a class="Banner-link u
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">Категория&lt;/th>
-&lt;th style="text-align:center">Апрель&lt;/th>
-&lt;th style="text-align:center">Май&lt;/th>
-&lt;th style="text-align:center">Июнь&lt;/th>
-&lt;th style="text-align:center">Июль&lt;/th>
-&lt;th style="text-align:center">Август&lt;/th>
-&lt;th style="text-align:right">и так далее&lt;/th>
+&lt;th style="text-align: left">Категория&lt;/th>
+&lt;th style="text-align: center">Апрель&lt;/th>
+&lt;th style="text-align: center">Май&lt;/th>
+&lt;th style="text-align: center">Июнь&lt;/th>
+&lt;th style="text-align: center">Июль&lt;/th>
+&lt;th style="text-align: center">Август&lt;/th>
+&lt;th style="text-align: right">и так далее&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">Доход&lt;/td>
-&lt;td style="text-align:center">A&lt;/td>
-&lt;td style="text-align:center">A&lt;/td>
-&lt;td style="text-align:center">A&lt;/td>
-&lt;td style="text-align:center">A&lt;/td>
-&lt;td style="text-align:center">A&lt;/td>
-&lt;td style="text-align:right">A&lt;/td>
+&lt;td style="text-align: left">Доход&lt;/td>
+&lt;td style="text-align: center">A&lt;/td>
+&lt;td style="text-align: center">A&lt;/td>
+&lt;td style="text-align: center">A&lt;/td>
+&lt;td style="text-align: center">A&lt;/td>
+&lt;td style="text-align: center">A&lt;/td>
+&lt;td style="text-align: right">A&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">Расход&lt;/td>
-&lt;td style="text-align:center">B&lt;/td>
-&lt;td style="text-align:center">B&lt;/td>
-&lt;td style="text-align:center">B&lt;/td>
-&lt;td style="text-align:center">B&lt;/td>
-&lt;td style="text-align:center">B&lt;/td>
-&lt;td style="text-align:right">B&lt;/td>
+&lt;td style="text-align: left">Расход&lt;/td>
+&lt;td style="text-align: center">B&lt;/td>
+&lt;td style="text-align: center">B&lt;/td>
+&lt;td style="text-align: center">B&lt;/td>
+&lt;td style="text-align: center">B&lt;/td>
+&lt;td style="text-align: center">B&lt;/td>
+&lt;td style="text-align: right">B&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">Питание&lt;/td>
-&lt;td style="text-align:center">C&lt;/td>
-&lt;td style="text-align:center">C&lt;/td>
-&lt;td style="text-align:center">C&lt;/td>
-&lt;td style="text-align:center">C&lt;/td>
-&lt;td style="text-align:center">C&lt;/td>
-&lt;td style="text-align:right">C&lt;/td>
+&lt;td style="text-align: left">Питание&lt;/td>
+&lt;td style="text-align: center">C&lt;/td>
+&lt;td style="text-align: center">C&lt;/td>
+&lt;td style="text-align: center">C&lt;/td>
+&lt;td style="text-align: center">C&lt;/td>
+&lt;td style="text-align: center">C&lt;/td>
+&lt;td style="text-align: right">C&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">Досуг&lt;/td>
-&lt;td style="text-align:center">D&lt;/td>
-&lt;td style="text-align:center">D&lt;/td>
-&lt;td style="text-align:center">D&lt;/td>
-&lt;td style="text-align:center">D&lt;/td>
-&lt;td style="text-align:center">D&lt;/td>
-&lt;td style="text-align:right">D&lt;/td>
+&lt;td style="text-align: left">Досуг&lt;/td>
+&lt;td style="text-align: center">D&lt;/td>
+&lt;td style="text-align: center">D&lt;/td>
+&lt;td style="text-align: center">D&lt;/td>
+&lt;td style="text-align: center">D&lt;/td>
+&lt;td style="text-align: center">D&lt;/td>
+&lt;td style="text-align: right">D&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">и так далее&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">и так далее&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">Накопления&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">Накопления&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">Финансовая подушка&lt;/td>
-&lt;td style="text-align:center">E&lt;/td>
-&lt;td style="text-align:center">E&lt;/td>
-&lt;td style="text-align:center">E&lt;/td>
-&lt;td style="text-align:center">E&lt;/td>
-&lt;td style="text-align:center">E&lt;/td>
-&lt;td style="text-align:right">E&lt;/td>
+&lt;td style="text-align: left">Финансовая подушка&lt;/td>
+&lt;td style="text-align: center">E&lt;/td>
+&lt;td style="text-align: center">E&lt;/td>
+&lt;td style="text-align: center">E&lt;/td>
+&lt;td style="text-align: center">E&lt;/td>
+&lt;td style="text-align: center">E&lt;/td>
+&lt;td style="text-align: right">E&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">Итого&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">Итого&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

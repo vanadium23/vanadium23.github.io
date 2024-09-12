@@ -1,5 +1,106 @@
 <?xml-stylesheet type="text/xsl" href="#stylesheet"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xsl"><xsl:output method="html" doctype-system="about:legacy-compat"/><xsl:template match="/rss"><html lang="ru-ru"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Posts RSS | vanadium23</title><link rel="stylesheet" href="https://vanadium23.me/css/base.min.ede35a5a6f0822c8ed4e62a02aaaead5a369281f08df87a8547512ed5449222f.css" integrity="sha256-7eNaWm8IIsjtTmKgKqrq1aNpKB8I34eoVHUS7VRJIi8="/></head><body><nav class="u-background"><div class="u-wrapper Banner"><a class="Banner-link u-clickable" href="https://vanadium23.me/">
-vanadium23</a><ul class="Banner"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/openbox/">Notes</a></li class="Banner-item"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/about/">About</a></li class="Banner-item"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a></li class="Banner-item"><li><a id="themeSwitch" class="theme-switcher"/></li></ul></div></nav><main><div class="u-wrapper"><div class="u-padding"><h2 class="Heading-title"><a class="Heading-link u-clickable" href="https://vanadium23.me/posts/index.xml" rel="bookmark">Posts RSS</a></h2></div></div></main><footer class="Footer"><div class="u-wrapper"><div class="u-padding"><a href="https://github.com/vanadium23"><i class="svg-icon github"/></a><a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"/></a><a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"/></a><a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"/></a><a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"/></a><a href="https://goodreads.com/vanadium23"><i class="svg-icon goodreads"/></a><a href="https://t.me/chernov_sharit"><i class="svg-icon telegram"/></a></div></div></footer></body></html></xsl:template></xsl:stylesheet><channel><title>Posts on vanadium23</title><link>https://vanadium23.me/posts/</link><description>Recent content in Posts on vanadium23</description><generator>Hugo -- gohugo.io</generator><language>ru-ru</language><lastBuildDate>Fri, 02 Aug 2024 22:44:28 +0300</lastBuildDate><atom:link href="https://vanadium23.me/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Вишлист на Д.Р. 2024</title><link>https://vanadium23.me/wishlist-2024/</link><pubDate>Fri, 02 Aug 2024 22:44:28 +0300</pubDate><guid>https://vanadium23.me/wishlist-2024/</guid><description>&lt;p>Дорогое:&lt;/p>
+vanadium23</a><ul class="Banner"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/openbox/">Notes</a></li class="Banner-item"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/about/">About</a></li class="Banner-item"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a></li class="Banner-item"><li><a id="themeSwitch" class="theme-switcher"/></li></ul></div></nav><main><div class="u-wrapper"><div class="u-padding"><h2 class="Heading-title"><a class="Heading-link u-clickable" href="https://vanadium23.me/posts/index.xml" rel="bookmark">Posts RSS</a></h2></div></div></main><footer class="Footer"><div class="u-wrapper"><div class="u-padding"><a href="https://github.com/vanadium23"><i class="svg-icon github"/></a><a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"/></a><a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"/></a><a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"/></a><a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"/></a><a href="https://goodreads.com/vanadium23"><i class="svg-icon goodreads"/></a><a href="https://t.me/chernov_sharit"><i class="svg-icon telegram"/></a></div></div></footer></body></html></xsl:template></xsl:stylesheet><channel><title>Posts on vanadium23</title><link>https://vanadium23.me/posts/</link><description>Recent content in Posts on vanadium23</description><generator>Hugo -- gohugo.io</generator><language>ru-ru</language><lastBuildDate>Thu, 12 Sep 2024 09:00:00 +0300</lastBuildDate><atom:link href="https://vanadium23.me/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>База блоков в Obsidian</title><link>https://vanadium23.me/obsidian-anytype/</link><pubDate>Thu, 12 Sep 2024 09:00:00 +0300</pubDate><guid>https://vanadium23.me/obsidian-anytype/</guid><description>&lt;p>Мой друг, Антон Давыдов, пришел с вопросом: есть ли у меня статья о том, как я веду проекты в Obsidian. А у меня в блоге оказалась статья только о том, что я остановился на &lt;a href="https://vanadium23.me/obsidian/">Obsidian&lt;/a>. Это было уже три года назад, и пора рассказать, что это выросло в целую базу блоков.&lt;/p>
+&lt;!-- more -->
+&lt;h2 id="теория">Теория&lt;/h2>
+&lt;p>Поиск статей в сети по самоорганизации и ведению заметок всегда находит темы, которые близки, но обособлены. Одни люди рассказывают, как организовать персональную базу знаний, а другие — как спроектировать процесс ведения задач. Это разделение является ложным или, корректнее сказать, не актуальным для всех.&lt;/p>
+&lt;p>Суть в том, что существует некий процесс накопления фактов, а затем превращения их в знания. У меня он выстраивается следующим образом:&lt;/p>
+&lt;ol>
+&lt;li>планирование задач с помощью чек-листов;&lt;/li>
+&lt;li>ведение ежедневника;&lt;/li>
+&lt;li>выполнение рабочих проектов и сохранение материалов по ним (да, банально набор ссылок);&lt;/li>
+&lt;li>перенос новых знаний в базу;&lt;/li>
+&lt;li>обновление чек-листов.&lt;/li>
+&lt;/ol>
+&lt;p>Наверное, нагляднее будет показать это на картинке:
+&lt;img src="https://vanadium23.me/images/obsidian-command-center.png" alt="Obsidian command center">&lt;/p>
+&lt;p>Здесь сразу видна цикличность этого процесса. Чем ближе различные элементы располагаются друг к другу, тем выше вероятность того, что мысли начнут взаимно обогащаться. Суть в том, чтобы одновременно и 1000 раз повторить одно и то же, и чтобы 10 разных вещей как бы соединились между собой. Лучше об этом написано в блоге thesephist: &lt;a href="https://thesephist.com/posts/tools/#tasks-and-notes-a-false-dichotomy">https://thesephist.com/posts/tools/#tasks-and-notes-a-false-dichotomy&lt;/a>, который стал моим вдохновением.&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/obsidian-graph.png" alt="Obsidian graph">&lt;/p>
+&lt;h2 id="настройка-obsidian">Настройка Obsidian&lt;/h2>
+&lt;details>
+&lt;summary>Строго для Антона&lt;/summary>
+Комбайны - это круто, потому что они свои.
+&lt;/details>
+&lt;p>Теперь о том, почему именно Obsidian. Его преимущества и недостатки заключаются в двух вещах:&lt;/p>
+&lt;ol>
+&lt;li>он написан на Electron, а значит, можно использовать JavaScript для гибкой настройки;&lt;/li>
+&lt;li>всё работает поверх локальных файлов, так что даже при отсутствии Obsidian контент можно будет восстановить (но не все связи).&lt;/li>
+&lt;/ol>
+&lt;p>Для того чтобы примеры из поста работали, необходим следующий набор плагинов:&lt;/p>
+&lt;ul>
+&lt;li>Dataview&lt;/li>
+&lt;li>Templater&lt;/li>
+&lt;li>MetaEdit&lt;/li>
+&lt;li>Buttons&lt;/li>
+&lt;li>Obsidian Charts&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Dataview&lt;/strong> предоставляет возможность расставлять метаданные по заметкам. Метаданные хранятся в двух местах: в YAML-заголовке или в тексте заметки в формате &lt;code>Key:: value&lt;/code>. На основе этих метаданных Dataview позволяет строить таблицы. Здесь прослеживается аналогия с Notion, только там сначала создаётся таблица, а потом она заполняется контентом. Важное ограничение заключается в том, что редактировать данные в таблицах нельзя. Есть два варианта: либо использовать альтернативы (&lt;a href="https://rafaelgb.github.io/obsidian-db-folder/">folderDB&lt;/a>, &lt;a href="https://github.com/marcusolsson/obsidian-projects">Obsidian Projects&lt;/a>), либо &lt;a href="https://github.com/vanadium23/obsidian-dataview-inlinedb">сделать свой HTML&lt;/a>.&lt;/p>
+&lt;p>&lt;strong>Templater&lt;/strong> позволяет создавать шаблоны с интерактивными элементами. Помимо шаблонного текста, можно добавить:&lt;/p>
+&lt;ol>
+&lt;li>попап-модалку с вопросом;&lt;/li>
+&lt;li>попап-модалку со списком вариантов;&lt;/li>
+&lt;li>перемещение файла в другое место;&lt;/li>
+&lt;li>вставку подшаблона, иногда просто по заголовку другой заметки.&lt;/li>
+&lt;/ol>
+&lt;p>Это два основополагающих инструмента, а дальше всё зависит от ваших навыков работы с JavaScript. Ранее такой подход часто встречался в среде Emacs/org-mode, где для автоматизации использовался Lisp. Здесь подход похожий. Хватит теории, давайте посмотрим, как это выглядит на практике.&lt;/p>
+&lt;h2 id="пример-проектный-трекер">Пример: проектный трекер&lt;/h2>
+&lt;p>&lt;img src="https://vanadium23.me/images/projects.png" alt="Проекты мои проектики">&lt;/p>
+&lt;p>Эта система состоит из шаблона проекта (&lt;a href="https://gist.github.com/vanadium23/4ddc068fd409e5bfdbb82f8fa10a7acf">ссылка на шаблон&lt;/a>) и вьюхи, написанной на JavaScript (&lt;a href="https://gist.github.com/vanadium23/55bc62afde8bdf422394dbe96124cc63">ссылка на вьюху&lt;/a>). В сообществе Obsidian эта штука получила лайки, но, подозреваю, что никто её толком не установил.&lt;/p>
+&lt;p>С шаблоном проектов всё интереснее. Его условно можно разделить на три части:&lt;/p>
+&lt;ol>
+&lt;li>метаданные;&lt;/li>
+&lt;li>чеклист;&lt;/li>
+&lt;li>материалы.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>Про метаданные&lt;/strong> в проектных файлах говорить скучно, вы наверняка сталкиваетесь с ними на работе: это статус, время начала, окончания и примерная оценка. Как видно на текущем скрине, я успеваю со статьёй и докладом, но уже давно застрял на своём pet-проекте. Подробно об этом можно прочитать в моём цифровом садике — &lt;a href="https://vanadium23.me/openbox/metadannye-dlya-zametok-proektov/">метаданные для заметок проектов&lt;/a>.&lt;/p>
+&lt;p>&lt;strong>Чеклист&lt;/strong> для меня превратился в три вещи:&lt;/p>
+&lt;ol>
+&lt;li>описание результата и условий проверки;&lt;/li>
+&lt;li>составление начальных шагов;&lt;/li>
+&lt;li>оценка рисков.&lt;/li>
+&lt;/ol>
+&lt;p>Не все пункты обязательны для каждого проекта, шаблон можно подстраивать, например, под разные сроки (вряд ли в двухнедельном проекте нужны риски), но пока я оставил это на ручное управление.&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/filled-project.png" alt="Пример проекта на примере статьи">&lt;/p>
+&lt;p>Для вдохновения можно пойти по ссылочкам:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://habr.com/ru/articles/710356/">https://habr.com/ru/articles/710356/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://habr.com/ru/articles/789248/">https://habr.com/ru/articles/789248/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://ltroj.medium.com/engineering-project-management-in-obsidian-e6aade82dfff#b587">https://ltroj.medium.com/engineering-project-management-in-obsidian-e6aade82dfff#b587&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://nick-senin.github.io/2022/02/02/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B0%D0%BC%D0%B8-%D0%B2-Obsidian.html">https://nick-senin.github.io/2022/02/02/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B0%D0%BC%D0%B8-%D0%B2-Obsidian.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="пример-найм-сотрудников">Пример: найм сотрудников&lt;/h2>
+&lt;p>Отвлечёмся от темы проектов — рано или поздно на работе возникает необходимость в найме сотрудников. Первые несколько раз этот процесс идёт со скрипом, но к тридцатому разу накапливается опыт. Потом этот опыт приходится пересматривать, так как он может оказаться не таким верным, как казалось.&lt;/p>
+&lt;p>Из каких шагов состоит процесс найма?&lt;/p>
+&lt;ol>
+&lt;li>понять, кто нам нужен;&lt;/li>
+&lt;li>создать вакансию;&lt;/li>
+&lt;li>проводить собеседования;&lt;/li>
+&lt;li>???;&lt;/li>
+&lt;li>profit.&lt;/li>
+&lt;/ol>
+&lt;p>В HRTech такие сервисы принято называть &amp;ldquo;системами привлечения талантов&amp;rdquo;, поэтому именно так называется соответствующая заметка. Она состоит из двух шаблонов и одной таблицы: шаблона описания вакансии + профиля кандидата и шаблона собеседования.&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/vacancy.png" alt="Шаблон вакансии">&lt;/p>
+&lt;p>Тут тебе сразу и личные качества сверху, а ещё есть описанные типовые позиции, где есть банк задач.&lt;/p>
+&lt;p>При этом в шаблоне по собеседованию написана следующая автоматизация:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-js" data-lang="js">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">vacancies&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">tp&lt;/span>.&lt;span style="color:#a6e22e">user&lt;/span>.&lt;span style="color:#a6e22e">suggest_folder&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;#vacancy&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">vacancy&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">tp&lt;/span>.&lt;span style="color:#a6e22e">system&lt;/span>.&lt;span style="color:#a6e22e">suggester&lt;/span>(&lt;span style="color:#a6e22e">vacancies&lt;/span>, &lt;span style="color:#a6e22e">vacancies&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">candidate&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">tp&lt;/span>.&lt;span style="color:#a6e22e">system&lt;/span>.&lt;span style="color:#a6e22e">prompt&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;Имя кандидата?&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">questions&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">`[[&lt;/span>&lt;span style="color:#e6db74">${&lt;/span>&lt;span style="color:#a6e22e">vacancy&lt;/span>&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">#Список вопросов]]`&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">title&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">`&lt;/span>&lt;span style="color:#e6db74">${&lt;/span>&lt;span style="color:#a6e22e">tp&lt;/span>.&lt;span style="color:#a6e22e">date&lt;/span>.&lt;span style="color:#a6e22e">now&lt;/span>()&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74"> &lt;/span>&lt;span style="color:#e6db74">${&lt;/span>&lt;span style="color:#a6e22e">candidate&lt;/span>&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">`&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">filename&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">tp&lt;/span>.&lt;span style="color:#a6e22e">user&lt;/span>.&lt;span style="color:#a6e22e">sanitaze_filename&lt;/span>(&lt;span style="color:#a6e22e">title&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">tp&lt;/span>.&lt;span style="color:#a6e22e">file&lt;/span>.&lt;span style="color:#a6e22e">move&lt;/span>(&lt;span style="color:#a6e22e">filename&lt;/span>);
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Мы достаём все вакансии по шаблону, спрашиваем имя кандидата и создаём заметку с дата + кандидат, И внутри будет уже весь текст из подзаголовка списка вопрос.&lt;/p>
+&lt;p>Финальный результат:&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/interviews.png" alt="Собесы">&lt;/p>
+&lt;h3 id="обмазываем-интеграциями">Обмазываем интеграциями&lt;/h3>
+&lt;p>Здесь стоит немного отступить и отметить, что в компаниях всегда существуют корпоративные инструменты со своими воркфлоу, и их множество: таск-трекеры, вики, системы для найма, Google Docs, Miro и так далее. Преимущество JavaScript-стека в этом контексте становится ещё более очевидным благодаря возможности интеграции через API (&lt;a href="https://gist.github.com/vanadium23/a0cfcc0644c9571f752b43ad6b042c02">пример&lt;/a>):&lt;/p>
+&lt;ol>
+&lt;li>получаем собственный воркфлоу, удобный для нас;&lt;/li>
+&lt;li>и сохраняем совместимость с корпоративной средой.&lt;/li>
+&lt;/ol>
+&lt;h2 id="итого">Итого&lt;/h2>
+&lt;p>Тиаго Форте в книге &lt;em>&amp;ldquo;Building a Second Brain&amp;rdquo;&lt;/em> называл заметки строительными блоками для идей. В моём случае, заметка является строчкой в нормализованной таблице. Это следствие профессиональной деформации, но такой формат демонстрирует свою жизнеспособность. Дальше всё зависит от того, насколько глубоко это прорабатывать.&lt;/p>
+&lt;p>Стоит ещё раз отметить, что табличное представление — это мой личный выбор. Некоторые предпочитают графовые структуры, другим понятен линейный текст. За то время, что я пользовался Obsidian, появились две замечательные альтернативы: LogSeq и AnyType. В них гибрид Obsidian и Notion пошёл по другому пути: единицей контента является блок, а заметка — это либо ссылка на конкретный блок, либо&amp;hellip;&lt;/p>
+&lt;p>P.S. А кто-то просто может сказать, что лучше освоить Excel, ведь там всё это уже давно есть.&lt;/p></description></item><item><title>Вишлист на Д.Р. 2024</title><link>https://vanadium23.me/wishlist-2024/</link><pubDate>Fri, 02 Aug 2024 22:44:28 +0300</pubDate><guid>https://vanadium23.me/wishlist-2024/</guid><description>&lt;p>Дорогое:&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://market.yandex.ru/product--phone-2/1899242071">Nothing phone 2&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://doctorhead.ru/product/beyerdynamic_dt_770_pro_250_ohm/">Beyerdynamic DT 770 PRO 250 ohm&lt;/a>&lt;/li>
@@ -1797,108 +1898,108 @@ Timeout&amp;rsquo;ы, пуллинг, идемподентность - наше 
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">Категория&lt;/th>
-&lt;th style="text-align:center">Подкатегория&lt;/th>
-&lt;th style="text-align:center">Процент&lt;/th>
-&lt;th style="text-align:center">Комментарий&lt;/th>
+&lt;th style="text-align: center">Категория&lt;/th>
+&lt;th style="text-align: center">Подкатегория&lt;/th>
+&lt;th style="text-align: center">Процент&lt;/th>
+&lt;th style="text-align: center">Комментарий&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">Счета, связанные с квартирой&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">5%&lt;/td>
-&lt;td style="text-align:center">Оптимизировать сложно&lt;/td>
+&lt;td style="text-align: center">Счета, связанные с квартирой&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">5%&lt;/td>
+&lt;td style="text-align: center">Оптимизировать сложно&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Бытовые&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">10%&lt;/td>
-&lt;td style="text-align:center">Оптимизировать сложно&lt;/td>
+&lt;td style="text-align: center">Бытовые&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">10%&lt;/td>
+&lt;td style="text-align: center">Оптимизировать сложно&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">Телефон/интернет&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">Телефон/интернет&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">Мелкий ремонт&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">Мелкий ремонт&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Питание&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">20-25%&lt;/td>
-&lt;td style="text-align:center">Часто необоснованные траты&lt;/td>
+&lt;td style="text-align: center">Питание&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">20-25%&lt;/td>
+&lt;td style="text-align: center">Часто необоснованные траты&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">Продукты&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">Продукты&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">Рестораны&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">Рестораны&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Лекарства&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">10%&lt;/td>
-&lt;td style="text-align:center">Оптимизировать сложно (и даже опасно)&lt;/td>
+&lt;td style="text-align: center">Лекарства&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">10%&lt;/td>
+&lt;td style="text-align: center">Оптимизировать сложно (и даже опасно)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Транспорт&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">5%&lt;/td>
-&lt;td style="text-align:center">Оптимизировать сложно&lt;/td>
+&lt;td style="text-align: center">Транспорт&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">5%&lt;/td>
+&lt;td style="text-align: center">Оптимизировать сложно&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Вещи&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">10-15%&lt;/td>
-&lt;td style="text-align:center">Часто необоснованные траты&lt;/td>
+&lt;td style="text-align: center">Вещи&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">10-15%&lt;/td>
+&lt;td style="text-align: center">Часто необоснованные траты&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Досуг&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">10-15%&lt;/td>
-&lt;td style="text-align:center">Часто необоснованные траты&lt;/td>
+&lt;td style="text-align: center">Досуг&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">10-15%&lt;/td>
+&lt;td style="text-align: center">Часто необоснованные траты&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">Кино&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">Кино&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">Музеи&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">Музеи&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Образование&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">5%&lt;/td>
-&lt;td style="text-align:center">Оптимизировать сложно&lt;/td>
+&lt;td style="text-align: center">Образование&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">5%&lt;/td>
+&lt;td style="text-align: center">Оптимизировать сложно&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Подарки&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">5%&lt;/td>
-&lt;td style="text-align:center">Оптимизировать сложно&lt;/td>
+&lt;td style="text-align: center">Подарки&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">5%&lt;/td>
+&lt;td style="text-align: center">Оптимизировать сложно&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Крупные расходы&lt;/td>
-&lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">20-25%&lt;/td>
-&lt;td style="text-align:center">Часто необоснованные траты&lt;/td>
+&lt;td style="text-align: center">Крупные расходы&lt;/td>
+&lt;td style="text-align: center">&lt;/td>
+&lt;td style="text-align: center">20-25%&lt;/td>
+&lt;td style="text-align: center">Часто необоснованные траты&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1913,38 +2014,38 @@ Timeout&amp;rsquo;ы, пуллинг, идемподентность - наше 
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">Год&lt;/th>
-&lt;th style="text-align:center">Деньги на начало&lt;/th>
-&lt;th style="text-align:center">Ежемесячный доход&lt;/th>
-&lt;th style="text-align:center">Ежемесячный расход&lt;/th>
-&lt;th style="text-align:center">Большая покупка&lt;/th>
-&lt;th style="text-align:right">Деньги на конец&lt;/th>
+&lt;th style="text-align: left">Год&lt;/th>
+&lt;th style="text-align: center">Деньги на начало&lt;/th>
+&lt;th style="text-align: center">Ежемесячный доход&lt;/th>
+&lt;th style="text-align: center">Ежемесячный расход&lt;/th>
+&lt;th style="text-align: center">Большая покупка&lt;/th>
+&lt;th style="text-align: right">Деньги на конец&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">2018&lt;/td>
-&lt;td style="text-align:center">A&lt;/td>
-&lt;td style="text-align:center">B&lt;/td>
-&lt;td style="text-align:center">C&lt;/td>
-&lt;td style="text-align:center">D&lt;/td>
-&lt;td style="text-align:right">A+B*12-C*12-D&lt;/td>
+&lt;td style="text-align: left">2018&lt;/td>
+&lt;td style="text-align: center">A&lt;/td>
+&lt;td style="text-align: center">B&lt;/td>
+&lt;td style="text-align: center">C&lt;/td>
+&lt;td style="text-align: center">D&lt;/td>
+&lt;td style="text-align: right">A+B*12-C*12-D&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">2019&lt;/td>
-&lt;td style="text-align:center">A&amp;rsquo; (A+B*12-C*12-D)&lt;/td>
-&lt;td style="text-align:center">B&lt;/td>
-&lt;td style="text-align:center">C&lt;/td>
-&lt;td style="text-align:center">D'&lt;/td>
-&lt;td style="text-align:right">A*+B*12-C*12-F&lt;/td>
+&lt;td style="text-align: left">2019&lt;/td>
+&lt;td style="text-align: center">A&amp;rsquo; (A+B*12-C*12-D)&lt;/td>
+&lt;td style="text-align: center">B&lt;/td>
+&lt;td style="text-align: center">C&lt;/td>
+&lt;td style="text-align: center">D'&lt;/td>
+&lt;td style="text-align: right">A*+B*12-C*12-F&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">2020&lt;/td>
-&lt;td style="text-align:center">и так далее&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">2020&lt;/td>
+&lt;td style="text-align: center">и так далее&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1954,105 +2055,105 @@ Timeout&amp;rsquo;ы, пуллинг, идемподентность - наше 
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">Категория&lt;/th>
-&lt;th style="text-align:center">Апрель&lt;/th>
-&lt;th style="text-align:center">Май&lt;/th>
-&lt;th style="text-align:center">Июнь&lt;/th>
-&lt;th style="text-align:center">Июль&lt;/th>
-&lt;th style="text-align:center">Август&lt;/th>
-&lt;th style="text-align:right">и так далее&lt;/th>
+&lt;th style="text-align: left">Категория&lt;/th>
+&lt;th style="text-align: center">Апрель&lt;/th>
+&lt;th style="text-align: center">Май&lt;/th>
+&lt;th style="text-align: center">Июнь&lt;/th>
+&lt;th style="text-align: center">Июль&lt;/th>
+&lt;th style="text-align: center">Август&lt;/th>
+&lt;th style="text-align: right">и так далее&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">Доход&lt;/td>
-&lt;td style="text-align:center">A&lt;/td>
-&lt;td style="text-align:center">A&lt;/td>
-&lt;td style="text-align:center">A&lt;/td>
-&lt;td style="text-align:center">A&lt;/td>
-&lt;td style="text-align:center">A&lt;/td>
-&lt;td style="text-align:right">A&lt;/td>
+&lt;td style="text-align: left">Доход&lt;/td>
+&lt;td style="text-align: center">A&lt;/td>
+&lt;td style="text-align: center">A&lt;/td>
+&lt;td style="text-align: center">A&lt;/td>
+&lt;td style="text-align: center">A&lt;/td>
+&lt;td style="text-align: center">A&lt;/td>
+&lt;td style="text-align: right">A&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">Расход&lt;/td>
-&lt;td style="text-align:center">B&lt;/td>
-&lt;td style="text-align:center">B&lt;/td>
-&lt;td style="text-align:center">B&lt;/td>
-&lt;td style="text-align:center">B&lt;/td>
-&lt;td style="text-align:center">B&lt;/td>
-&lt;td style="text-align:right">B&lt;/td>
+&lt;td style="text-align: left">Расход&lt;/td>
+&lt;td style="text-align: center">B&lt;/td>
+&lt;td style="text-align: center">B&lt;/td>
+&lt;td style="text-align: center">B&lt;/td>
+&lt;td style="text-align: center">B&lt;/td>
+&lt;td style="text-align: center">B&lt;/td>
+&lt;td style="text-align: right">B&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">Питание&lt;/td>
-&lt;td style="text-align:center">C&lt;/td>
-&lt;td style="text-align:center">C&lt;/td>
-&lt;td style="text-align:center">C&lt;/td>
-&lt;td style="text-align:center">C&lt;/td>
-&lt;td style="text-align:center">C&lt;/td>
-&lt;td style="text-align:right">C&lt;/td>
+&lt;td style="text-align: left">Питание&lt;/td>
+&lt;td style="text-align: center">C&lt;/td>
+&lt;td style="text-align: center">C&lt;/td>
+&lt;td style="text-align: center">C&lt;/td>
+&lt;td style="text-align: center">C&lt;/td>
+&lt;td style="text-align: center">C&lt;/td>
+&lt;td style="text-align: right">C&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">Досуг&lt;/td>
-&lt;td style="text-align:center">D&lt;/td>
-&lt;td style="text-align:center">D&lt;/td>
-&lt;td style="text-align:center">D&lt;/td>
-&lt;td style="text-align:center">D&lt;/td>
-&lt;td style="text-align:center">D&lt;/td>
-&lt;td style="text-align:right">D&lt;/td>
+&lt;td style="text-align: left">Досуг&lt;/td>
+&lt;td style="text-align: center">D&lt;/td>
+&lt;td style="text-align: center">D&lt;/td>
+&lt;td style="text-align: center">D&lt;/td>
+&lt;td style="text-align: center">D&lt;/td>
+&lt;td style="text-align: center">D&lt;/td>
+&lt;td style="text-align: right">D&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">и так далее&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">и так далее&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">Накопления&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">Накопления&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">Финансовая подушка&lt;/td>
-&lt;td style="text-align:center">E&lt;/td>
-&lt;td style="text-align:center">E&lt;/td>
-&lt;td style="text-align:center">E&lt;/td>
-&lt;td style="text-align:center">E&lt;/td>
-&lt;td style="text-align:center">E&lt;/td>
-&lt;td style="text-align:right">E&lt;/td>
+&lt;td style="text-align: left">Финансовая подушка&lt;/td>
+&lt;td style="text-align: center">E&lt;/td>
+&lt;td style="text-align: center">E&lt;/td>
+&lt;td style="text-align: center">E&lt;/td>
+&lt;td style="text-align: center">E&lt;/td>
+&lt;td style="text-align: center">E&lt;/td>
+&lt;td style="text-align: right">E&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">Итого&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">Итого&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
