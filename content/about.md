@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Ivan Chernov
-permalink: /about/
 private: true
 date: 2019-12-20T17:00:00+03:00
 ---
