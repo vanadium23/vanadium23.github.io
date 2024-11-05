@@ -2,7 +2,7 @@
 layout: post
 title: План действий после книги «Куда уходят деньги? Как грамотно управлять семейным бюджетом»
 tags: [blog, finance, control]
-slug: financial-planning
+permalink: financial-planning
 date: 2018-03-24T17:00:00+03:00
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: Немножко про модули в golang
 tags: [blog, dev, golang]
-slug: golang-modules
+permalink: golang-modules
 date: 2020-03-08T09:00:00+03:00
 ---
 

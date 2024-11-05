@@ -2,7 +2,7 @@
 layout: post
 title: "Ипотека: уменьшение платежа == уменьшение срока"
 tags: [blog, finance]
-slug: mortgage-payments
+permalink: mortgage-payments
 date: 2021-01-15T09:00:00+03:00
 ---
 

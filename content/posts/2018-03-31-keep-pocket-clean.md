@@ -2,7 +2,7 @@
 layout: post
 title: Держи кармашек в чистоте
 tags: [blog, reading, productivity]
-slug: keep-pocket-clean
+permalink: keep-pocket-clean
 date: 2018-03-31T17:00:00+03:00
 ---
 

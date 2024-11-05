@@ -2,7 +2,7 @@
 layout: post
 title: Выдержка из книги "Why Greatness cannot be planned"
 tags: [blog, learning, book]
-slug: the-myth-of-objective
+permalink: the-myth-of-objective
 date: 2021-08-03T09:00:00+03:00
 ---
 

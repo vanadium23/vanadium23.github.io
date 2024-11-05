@@ -2,7 +2,7 @@
 layout: post
 title: Эксперименты на основе книги "Джедайские техники"
 tags: [blog, book, productivity]
-slug: jedi-book-experiments
+permalink: jedi-book-experiments
 date: 2019-03-31T15:00:00+03:00
 ---
 

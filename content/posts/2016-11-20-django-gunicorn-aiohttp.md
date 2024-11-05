@@ -2,7 +2,7 @@
 layout: post
 title: Cook django with aiohttp workers
 tags: [dev, django, python]
-slug: django-gunicorn-aiohttp
+permalink: django-gunicorn-aiohttp
 date: 2016-11-20T17:00:00+03:00
 ---
 

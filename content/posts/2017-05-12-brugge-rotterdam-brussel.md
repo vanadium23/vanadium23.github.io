@@ -2,7 +2,7 @@
 layout: post
 title: Заметки по поездке Брюгге-Роттердам-Брюссель
 tags: [blog, travel]
-slug: brugge-rotterdam-brussel
+permalink: brugge-rotterdam-brussel
 date: 2017-05-12T17:00:00+03:00
 ---
 

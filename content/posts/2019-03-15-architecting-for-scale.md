@@ -2,7 +2,7 @@
 layout: post
 title: Выдержка из книги "Architecturing for Scale"
 tags: [blog, book]
-slug: architecting-for-scale
+permalink: architecting-for-scale
 date: 2019-03-15T17:00:00+03:00
 ---
 

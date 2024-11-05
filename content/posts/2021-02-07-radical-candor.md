@@ -2,7 +2,7 @@
 layout: post
 title: "Радикальная прямота"
 tags: [blog, management, leadership]
-slug: radical-candor
+permalink: radical-candor
 date: 2021-02-07T09:00:00+03:00
 ---
 

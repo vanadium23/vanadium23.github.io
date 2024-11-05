@@ -2,7 +2,7 @@
 layout: post
 title: "Как организовать активное чтение"
 tags: [blog, reading, writing]
-slug: active-reading
+permalink: active-reading
 date: 2021-04-27T09:00:00+03:00
 ---
 

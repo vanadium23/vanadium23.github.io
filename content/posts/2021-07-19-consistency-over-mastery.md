@@ -2,7 +2,7 @@
 layout: post
 title: "Консистентность - необходимое условие для мастерства"
 tags: [blog, productivity, learning]
-slug: consistency-over-mastery
+permalink: consistency-over-mastery
 date: 2021-07-19T09:00:00+03:00
 ---
 

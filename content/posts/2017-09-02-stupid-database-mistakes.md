@@ -2,7 +2,7 @@
 layout: post
 title: Stupid mistakes with database
 tags: [database, monitoring, dev]
-slug: stupid-database-mistakes
+permalink: stupid-database-mistakes
 date: 2017-09-02T17:00:00+03:00
 ---
 

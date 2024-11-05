@@ -2,7 +2,7 @@
 layout: post
 title: PipEnv, Pipfile, pip... what?!
 tags: [video, slides, python, dev]
-slug: pipenv-pipfile-pip-what
+permalink: pipenv-pipfile-pip-what
 date: 2017-12-15T17:00:00+03:00
 ---
 

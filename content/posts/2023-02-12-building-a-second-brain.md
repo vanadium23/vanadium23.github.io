@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Building a Second Brain
-slug: building-a-second-brain
+permalink: building-a-second-brain
 date: 2023-02-12T10:00:00+03:00
 modified_at: 2023-02-12T11:54:19+04:00
 tags: [blog, note-taking]

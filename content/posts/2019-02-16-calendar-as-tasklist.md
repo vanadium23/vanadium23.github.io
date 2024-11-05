@@ -2,7 +2,7 @@
 layout: post
 title: Календарь в качестве списка задач
 tags: [blog, productivity]
-slug: calendar-as-tasklist
+permalink: calendar-as-tasklist
 date: 2019-02-16T17:00:00+03:00
 ---
 

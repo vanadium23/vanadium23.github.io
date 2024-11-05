@@ -2,7 +2,7 @@
 layout: post
 title: Методология P.A.R.A.
 tags: [blog, productivity]
-slug: para
+permalink: para
 date: 2019-11-10T12:00:00+03:00
 ---
 

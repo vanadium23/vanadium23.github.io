@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Выдержка из книги "Book of Why"
-slug: book-of-why
+permalink: book-of-why
 date: 2022-01-15T15:00:00+03:00
 ---
 

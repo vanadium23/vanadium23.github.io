@@ -2,7 +2,7 @@
 layout: post
 title: Переезд блога с jekyll на hugo
 tags: [blog, dev]
-slug: migrating-to-hugo
+permalink: migrating-to-hugo
 date: 2019-03-24T14:00:00+03:00
 ---
 
