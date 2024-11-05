@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"title":"Про концепт блога","date":"2024-11-02T17:12:30+03:00","modified_at":"2024-11-05T23:35:34+03:00","permalink":"/index/","dgPassFrontmatter":true}
+{"dg-publish":true,"title":"Про концепт блога","date":"2024-11-02T17:12:30+03:00","modified_at":"2024-11-05T23:46:49+03:00","permalink":"/index/","dgPassFrontmatter":true}
 ---
 
 
@@ -14,6 +14,13 @@
 2. кузня (forge) - то, что пишу сам в короткой форме по одной теме и может обновляться
 3. статьи (posts) - собственно, как и раньше буду писать статьи
 
-Над чем сейчас работаю:
+## Над чем сейчас работаю
+
 - [[forge/переезд блога на quartz|переезд блога на quartz]]
 - [[Openbox/event storming|event storming]] в контексте построения [[Openbox/архитектура сервиса|архитектуры сервиса]]
+
+## Немного про мои заметки
+
+Официальная дата начала: **Sun Jun 10 13:50:57 2018 +0300**
+
+<p><span data-tag-name="p" class="el-p"><p dir="auto">You have been using <em>Obsidian</em> for 661 days, with 6215 notes, 105 tags, 20226 tasks created. </p></span></p>
