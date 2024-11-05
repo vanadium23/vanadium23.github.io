@@ -2,7 +2,7 @@
 layout: post
 title: База блоков в Obsidian
 tags: [blog, productivity, note-taking]
-slug: obsidian-anytype
+permalink: obsidian-anytype
 date: 2024-09-12T09:00:00+03:00
 modified_at: 2024-09-12T23:02:15+03:00
 share: true

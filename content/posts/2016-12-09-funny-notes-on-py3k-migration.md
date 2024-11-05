@@ -2,7 +2,7 @@
 layout: post
 title: Funny notes on migration to python3
 tags: [dev, python, py3k]
-slug: funny-notes-on-py3k-migration
+permalink: funny-notes-on-py3k-migration
 date: 2016-12-09T17:00:00+03:00
 ---
 

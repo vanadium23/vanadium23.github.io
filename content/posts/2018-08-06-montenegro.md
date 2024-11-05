@@ -2,7 +2,7 @@
 layout: post
 title: Заметки по поездке в Черногорию
 tags: [blog, travel]
-slug: montenegro
+permalink: montenegro
 date: 2018-08-06T17:00:00+03:00
 ---
 

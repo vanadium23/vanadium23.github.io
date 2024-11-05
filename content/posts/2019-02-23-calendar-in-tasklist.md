@@ -2,7 +2,7 @@
 layout: post
 title: Календарь в списке задач
 tags: [blog, productivity]
-slug: calendar-in-tasklist
+permalink: calendar-in-tasklist
 date: 2019-02-23T17:00:00+03:00
 ---
 

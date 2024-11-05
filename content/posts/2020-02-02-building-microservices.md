@@ -2,7 +2,7 @@
 layout: post
 title: Выдержка из книги "Building microservices"
 tags: [blog, book]
-slug: building-microservices
+permalink: building-microservices
 date: 2020-02-02T09:00:00+03:00
 ---
 

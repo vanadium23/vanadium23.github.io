@@ -2,7 +2,7 @@
 layout: post
 title: "Что меня реально сейчас бесит"
 tags: [blog, productivity]
-slug: what-really-grinds-me
+permalink: what-really-grinds-me
 date: 2021-06-25T09:00:00+03:00
 ---
 

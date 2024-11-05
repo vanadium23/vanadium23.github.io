@@ -2,7 +2,7 @@
 layout: post
 title: Переезд с Google analytics на Cloudflare workers
 tags: [blog, dev]
-slug: remove-google-analytics
+permalink: remove-google-analytics
 date: 2020-02-15T09:00:00+03:00
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: Дневники экспериментов
 tags: [blog, productivity]
-slug: experiment-journals
+permalink: experiment-journals
 date: 2023-04-07T09:00:00+03:00
 modified_at: 2023-04-08T11:58:27+04:00
 share: true

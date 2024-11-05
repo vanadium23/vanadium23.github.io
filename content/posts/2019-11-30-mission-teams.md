@@ -2,7 +2,7 @@
 layout: post
 title: Mission teams
 tags: [video, slides, dev]
-slug: mission-teams
+permalink: mission-teams
 date: 2019-11-30T12:00:00+03:00
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: Адаптация подходов под себя
 tags: [blog, evergreen, productivity]
-slug: adapt-process
+permalink: adapt-process
 date: 2020-09-27T09:00:00+03:00
 ---
 

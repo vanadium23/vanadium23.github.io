@@ -2,7 +2,7 @@
 layout: post
 title: The Ajax, The REST and The GraphQL
 tags: [video, slides, python, dev]
-slug: ajax-rest-graphql
+permalink: ajax-rest-graphql
 date: 2017-08-18T17:00:00+03:00
 ---
 

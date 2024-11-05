@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Обработка входящей информации
-slug: superset-inbox
+permalink: superset-inbox
 date: 2022-01-22T10:00:00+03:00
 ---
 

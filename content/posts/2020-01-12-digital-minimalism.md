@@ -2,7 +2,7 @@
 layout: post
 title: Выдержка из книги "Digital minimalism"
 tags: [blog, book]
-slug: digital-minimalism
+permalink: digital-minimalism
 date: 2020-01-12T16:00:00+03:00
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: Выдержка из книги "Просто космос"
 tags: [blog, book]
-slug: just-space
+permalink: just-space
 date: 2020-01-26T16:00:00+03:00
 ---
 
