@@ -28,6 +28,10 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [
     Component.DesktopOnly(Component.TableOfContents()),
+    Component.DesktopOnly(Component.RecentNotes({
+      limit: 5,
+      showTags: false,
+    })),
   ],
   right: [
     Component.Backlinks(),
