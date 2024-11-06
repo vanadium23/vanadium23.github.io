@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"title":"Про концепт блога","date":"2024-11-02T17:12:30+03:00","modified_at":"2024-11-06T10:52:27+03:00","permalink":"/index/","dgPassFrontmatter":true}
+{"dg-publish":true,"title":"Про концепт блога","date":"2024-11-02T17:12:30+03:00","modified_at":"2024-11-06T22:21:32+03:00","permalink":"/index/","dgPassFrontmatter":true}
 ---
 
 
@@ -10,7 +10,7 @@
 Вопрос весь в том, что где-то 2 года назад я запустил [открытый ящик](https://vanadium23.me/openbox/) и он был назван "цифровым архивом". А случилась поговорка "как корабль позовёшь, так он и поплывёт". Вместо того, чтобы писать свои заметки - туда попадали цитатки, книги и курсы. 
 
 Поэтому решил это всё свалить в блог, концепт такой:
-1. шахта (mine) - то, куда теперь пойдёт референтная библиотека: цитаты, ссылки, книги, статьи курсы
+1. [[mine/index|шахта (mine)]] - то, куда теперь пойдёт референтная библиотека: цитаты, ссылки, книги, статьи курсы
 2. [[forge/index|кузня (forge)]] - то, что пишу сам в короткой форме по одной теме и может обновляться
 3. [статьи (posts)](https://vanadium23.me/posts/) - собственно, как и раньше буду писать статьи
 
@@ -20,4 +20,4 @@
 
 Официальная дата начала: **Sun Jun 10 13:50:57 2018 +0300**
 
-<p><span data-tag-name="p" class="el-p"><p dir="auto">You have been using <em>Obsidian</em> for 661 days, with 6216 notes, 105 tags, 20233 tasks created. </p></span></p>
+<p><span data-tag-name="p" class="el-p"><p dir="auto">You have been using <em>Obsidian</em> for 20 days, with 6217 notes, 105 tags, 20238 tasks created. </p></span></p>
