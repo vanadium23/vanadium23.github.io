@@ -1,5 +1,5 @@
 ---
-{"toc":true,"dg-publish":true,"date":"2023-01-14T12:31:40+03:00","modified_at":"2024-11-02T13:50:34+03:00","permalink":"/forge/event-storming/","dgPassFrontmatter":true}
+{"toc":true,"dg-publish":true,"date":"2023-01-14T12:31:40+03:00","modified_at":"2024-11-02T13:50:34+03:00","permalink":"/forge/event storming/","dgPassFrontmatter":true}
 ---
 
 
