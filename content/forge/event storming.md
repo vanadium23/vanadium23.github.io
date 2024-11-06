@@ -1,9 +1,9 @@
 ---
-{"toc":true,"dg-publish":true,"date":"2023-01-14T12:31:40+03:00","modified_at":"2024-11-02T13:50:34+03:00","permalink":"/forge/event storming/","dgPassFrontmatter":true}
+{"toc":true,"dg-publish":true,"date":"2023-01-14T12:31:40+03:00","modified_at":"2024-11-06T11:08:59+03:00","permalink":"/forge/event storming/","dgPassFrontmatter":true}
 ---
 
 
-Практика для разработки [[forge/архитектура сервиса|архитектура сервиса]], которую в последствии можно переложить на [[Openbox/event based architecture|event based architecture]]. Основное проектирование заключается в описание поведения системы на основе событий. События получаются в следствие действий акторов. Акторы выбирают действие на основе доступной информации.
+Практика для разработки [[forge/архитектура сервиса|архитектуры сервиса]], которую в последствии можно переложить на [[Openbox/event based architecture|event based architecture]]. Основное проектирование заключается в описание поведения системы на основе событий. События получаются в следствие действий акторов. Акторы выбирают действие на основе доступной информации.
 
 ![примерное поведение](https://github.com/ddd-crew/eventstorming-glossary-cheat-sheet/raw/master/_resources/process-picture.jpg)
 
