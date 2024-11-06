@@ -17,10 +17,10 @@
 ## Над чем сейчас работаю
 
 - [[forge/переезд блога на quartz|переезд блога на quartz]]
-- [[Openbox/event storming|event storming]] в контексте построения [[Openbox/архитектура сервиса|архитектуры сервиса]]
+- [[forge/event storming|event storming]] в контексте построения [[forge/архитектура сервиса|архитектуры сервиса]]
 
 ## Немного про мои заметки
 
 Официальная дата начала: **Sun Jun 10 13:50:57 2018 +0300**
 
-<p><span data-tag-name="p" class="el-p"><p dir="auto">You have been using <em>Obsidian</em> for 661 days, with 6215 notes, 105 tags, 20226 tasks created. </p></span></p>
+<p><span data-tag-name="p" class="el-p"><p dir="auto">You have been using <em>Obsidian</em> for 661 days, with 6215 notes, 105 tags, 20233 tasks created. </p></span></p>
