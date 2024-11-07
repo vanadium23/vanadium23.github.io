@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"date":"2024-11-05T23:28:19+03:00","modified_at":"2024-11-07T09:15:24+03:00","permalink":"/forge/переезд блога на quartz/","dgPassFrontmatter":true}
+{"dg-publish":true,"date":"2024-11-05T23:28:19+03:00","modified_at":"2024-11-07T14:56:04+03:00","permalink":"/forge/переезд блога на quartz/","dgPassFrontmatter":true}
 ---
 
 
@@ -10,7 +10,7 @@
 
 Функционально:
 - [x] добавить Recent notes слева на Desktop
-- [ ] добавить чтобы у заметки была дата создания и дата обновления
+- [x] добавить чтобы у заметки была дата создания и дата обновления
 - [ ] добавить navbar с дизайном с vanadium23.me
 - [ ] на десктопе сделать более широкий контент
 - [ ] переверстать страницу одной заметки на более минималистичную
@@ -23,6 +23,17 @@
     - решилось тем, что отключил slugify в настройках [[Openbox/software/obsidian-digital-garden|obsidian-digital-garden]]
 - [ ] починить preview для ссылок (opengraph метаданные)
 
+## Добавлено в quartz
+
+### Подтягивание дат
+
+В quartz настроено куча полей откуда по умолчанию брать даты создания и изменения ([src](https://github.com/jackyzha0/quartz/blob/v4/quartz/plugins/transformers/lastmod.ts)), суть в том что на всех не напасёшься. Поэтому пришлось сделать пару изменений ([src](https://github.com/vanadium23/vanadium23.github.io/commit/3a2f8cea7926366ba764a7bb06063e884aa370ee)).
+
+По хорошему эта переделка должна быть такой:
+- [ ] В contentMeta сказать какие поля показывать в качестве дат (по умолчанию только created).
+- [ ] В lastmod для frontmatter добавить конфиг с полями для проверки даты модификации и старты.
+
+И это тогда можно законтрибьютить назад.
 
 ## Переход на quartz
 
