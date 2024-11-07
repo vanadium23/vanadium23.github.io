@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"date":"2024-11-06T10:45:48+03:00","modified_at":"2024-11-06T11:11:28+03:00","title":"Кузня Чернова","permalink":"/forge/index/","dgPassFrontmatter":true}
+{"dg-publish":true,"date":"2024-11-06T10:45:48+03:00","modified_at":"2024-11-07T14:41:59+03:00","title":"Кузня Чернова","permalink":"/forge/index/","dgPassFrontmatter":true}
 ---
 
 
@@ -14,4 +14,5 @@
 ## Над чем сейчас работаю?
 
 - [[forge/переезд блога на quartz|переезд блога на quartz]]
+- [[forge/как я веду заметки|как я веду заметки]]
 - [[forge/event storming|event storming]] в рамках [[forge/архитектура сервиса|архитектуры сервиса]]
