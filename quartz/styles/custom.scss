@@ -1,3 +1,26 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+/* Hover Effect */
+.nav-link:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Helper Class for Moving Items */
+.nav-left {
+  margin-right: auto;
+}
