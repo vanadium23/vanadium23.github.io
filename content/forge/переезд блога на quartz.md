@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"date":"2024-11-05T23:28:19+03:00","modified_at":"2024-11-06T11:13:08+03:00","permalink":"/forge/переезд блога на quartz/","dgPassFrontmatter":true}
+{"dg-publish":true,"date":"2024-11-05T23:28:19+03:00","modified_at":"2024-11-07T09:15:24+03:00","permalink":"/forge/переезд блога на quartz/","dgPassFrontmatter":true}
 ---
 
 
@@ -10,6 +10,7 @@
 
 Функционально:
 - [x] добавить Recent notes слева на Desktop
+- [ ] добавить чтобы у заметки была дата создания и дата обновления
 - [ ] добавить navbar с дизайном с vanadium23.me
 - [ ] на десктопе сделать более широкий контент
 - [ ] переверстать страницу одной заметки на более минималистичную
@@ -20,7 +21,6 @@
     - решилось тем, что openbox в архив, а quartz натянут на блог 
 - [x] починить slugify в [[Openbox/software/obsidian-digital-garden|obsidian-digital-garden]], который создаёт бесконечный редирект на quartz
     - решилось тем, что отключил slugify в настройках [[Openbox/software/obsidian-digital-garden|obsidian-digital-garden]]
-- [ ] проверить, что даты правильно подтягиваются из frontmatter
 - [ ] починить preview для ссылок (opengraph метаданные)
 
 
