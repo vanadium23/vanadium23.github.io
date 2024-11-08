@@ -5,7 +5,6 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   navbar: [
-    Component.NavbarLeft(Component.PageTitle()),
     Component.Darkmode(),
     Component.Search(),
   ],
