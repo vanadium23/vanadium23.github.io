@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"date":"2024-11-05T23:28:19+03:00","modified_at":"2024-11-08T10:19:09+03:00","permalink":"/forge/переезд блога на quartz/","dgPassFrontmatter":true}
+{"dg-publish":true,"date":"2024-11-05T23:28:19+03:00","modified_at":"2024-11-08T16:32:53+03:00","permalink":"/forge/переезд блога на quartz/","dgPassFrontmatter":true}
 ---
 
 
@@ -7,6 +7,10 @@
 Здесь будет более менее живая заметка о том, как происходит переход. Идея была честно скопирована с западного примера: https://quartz.eilleeenz.com/Quartz-customization-log
 
 ## Что хочется поменять
+
+Концептуально:
+- [ ] подготовить структуру заметок к новому блогу
+- [ ] переименовать статьи (posts) в общий концепт
 
 Функционально:
 - [x] добавить Recent notes слева на Desktop
