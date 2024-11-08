@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"date":"2024-11-05T23:28:19+03:00","modified_at":"2024-11-08T16:32:53+03:00","permalink":"/forge/переезд блога на quartz/","dgPassFrontmatter":true}
+{"dg-publish":true,"date":"2024-11-05T23:28:19+03:00","modified_at":"2024-11-08T18:14:16+03:00","permalink":"/forge/переезд блога на quartz/","dgPassFrontmatter":true}
 ---
 
 
@@ -48,7 +48,9 @@
 
 ![semantic html|400](https://www.w3schools.com/html/img_sem_elements.gif)
 
-Header уже сделан неправильно, но вот nav точно должен быть над article.
+Header уже сделан неправильно, но вот nav точно должен быть над article. Получилось сделать в [PR 11](https://github.com/vanadium23/vanadium23.github.io/pull/11). 
+
+- [ ] Законтрибьюьтить navbar обратно в upstream quartz.
 
 ## Переход на quartz
 
