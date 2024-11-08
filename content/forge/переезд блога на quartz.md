@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"date":"2024-11-05T23:28:19+03:00","modified_at":"2024-11-07T14:58:27+03:00","permalink":"/forge/переезд блога на quartz/","dgPassFrontmatter":true}
+{"dg-publish":true,"date":"2024-11-05T23:28:19+03:00","modified_at":"2024-11-08T10:19:09+03:00","permalink":"/forge/переезд блога на quartz/","dgPassFrontmatter":true}
 ---
 
 
@@ -35,6 +35,16 @@
 - [ ] В lastmod для frontmatter добавить конфиг с полями для проверки даты модификации и старты.
 
 И это тогда можно законтрибьютить назад.
+
+#### Navbar (WIP)
+
+В quartz есть header, но он помещается над основным контентом и учитывает левые и правый сайдбар в ширине. А на сайтах часто есть ещё и navbar сверху, над всем контентом сайта.
+
+В этом плане мне нравится то, что добавились семантические теги в html.
+
+![semantic html|400](https://www.w3schools.com/html/img_sem_elements.gif)
+
+Header уже сделан неправильно, но вот nav точно должен быть над article.
 
 ## Переход на quartz
 
