@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"date":"2024-11-05T23:28:19+03:00","modified_at":"2024-11-13T10:02:52+03:00","permalink":"/forge/переезд блога на quartz/","dgPassFrontmatter":true}
+{"dg-publish":true,"date":"2024-11-05T23:28:19+03:00","modified_at":"2024-11-13T12:28:10+03:00","permalink":"/forge/переезд блога на quartz/","dgPassFrontmatter":true}
 ---
 
 
@@ -43,7 +43,7 @@
 
 И это тогда можно законтрибьютить назад.
 
-#### Navbar
+### Navbar
 
 В quartz есть header, но он помещается над основным контентом и учитывает левые и правый сайдбар в ширине. А на сайтах часто есть ещё и navbar сверху, над всем контентом сайта.
 
@@ -53,7 +53,8 @@
 
 Header уже сделан неправильно, но вот nav точно должен быть над article. Получилось сделать в [PR 11](https://github.com/vanadium23/vanadium23.github.io/pull/11). 
 
-- [ ] Законтрибьюьтить navbar обратно в upstream quartz.
+- [x] Законтрибьюьтить navbar обратно в upstream quartz. ✅ 2024-11-13
+    - https://github.com/jackyzha0/quartz/pull/1588
 
 ## Переход на quartz
 
