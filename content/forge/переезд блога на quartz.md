@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"date":"2024-11-05T23:28:19+03:00","modified_at":"2024-11-13T12:28:10+03:00","permalink":"/forge/переезд блога на quartz/","dgPassFrontmatter":true}
+{"dg-publish":true,"date":"2024-11-05T23:28:19+03:00","modified_at":"2024-11-13T16:26:58+03:00","permalink":"/forge/переезд блога на quartz/","dgPassFrontmatter":true}
 ---
 
 
@@ -29,7 +29,8 @@
     - решилось тем, что отключил slugify в настройках [[Openbox/software/obsidian-digital-garden|obsidian-digital-garden]]
 - [ ] починить preview для ссылок (opengraph метаданные)
     - [ ] поменять картинку
-- [ ] починить загрузку картинок
+- [ ] починить загрузку картинок через digital garden
+- [x] разобраться с бесконечным permalink, если совпадает с slug
 
 ## Добавлено в quartz
 
