@@ -544,7 +544,8 @@ export async function handleSync(argv) {
     )
     try {
       gitPull(ORIGIN_NAME, QUARTZ_SOURCE_BRANCH)
-    } catch {
+    } catch (e) {
+      console.log(chalk.red(e))
       console.log(chalk.red("An error occurred above while pulling updates."))
       await popContentFolder(contentFolder)
       return
