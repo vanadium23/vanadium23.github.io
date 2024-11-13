@@ -9,6 +9,7 @@ Each page is composed of multiple different sections which contain `QuartzCompon
 ```typescript title="quartz/cfg.ts"
 export interface FullPageLayout {
   head: QuartzComponent // single component
+  navbar: QuartzComponent[] // laid out horizontally above all content
   header: QuartzComponent[] // laid out horizontally
   beforeBody: QuartzComponent[] // laid out vertically
   pageBody: QuartzComponent // single component
@@ -32,6 +33,7 @@ These correspond to following parts of the page:
 >
 > 1. `head` is a single component that renders the `<head>` [tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head) in the HTML. This doesn't appear visually on the page and is only is responsible for metadata about the document like the tab title, scripts, and styles.
 > 2. `header` is a set of components that are laid out horizontally and appears _before_ the `beforeBody` section. This enables you to replicate the old Quartz 3 header bar where the title, search bar, and dark mode toggle. By default, Quartz 4 doesn't place any components in the `header`.
+> 3. `navbar` is a set of components that are laid out horizontally and appears _above_ all other components. All items are right aligned. By default, Quartz 4 doesn't place any components in the `navbar`.
 
 Quartz **components**, like plugins, can take in additional properties as configuration options. If you're familiar with React terminology, you can think of them as Higher-order Components.
 
