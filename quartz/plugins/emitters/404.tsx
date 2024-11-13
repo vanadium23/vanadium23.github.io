@@ -1,6 +1,7 @@
 import { QuartzEmitterPlugin } from "../types"
 import { QuartzComponentProps } from "../../components/types"
 import BodyConstructor from "../../components/Body"
+import NavbarContructor from "../../components/Navbar"
 import { pageResources, renderPage } from "../../components/renderPage"
 import { FullPageLayout } from "../../cfg"
 import { FilePath, FullSlug } from "../../util/path"
@@ -20,13 +21,14 @@ export const NotFoundPage: QuartzEmitterPlugin = () => {
     right: [],
   }
 
-  const { head: Head, pageBody, footer: Footer } = opts
+  const { head: Head, navbar, pageBody, footer: Footer } = opts
   const Body = BodyConstructor()
+  const Navbar = NavbarContructor()
 
   return {
     name: "404Page",
     getQuartzComponents() {
-      return [Head, Body, pageBody, Footer]
+      return [Head, Navbar, ...navbar, Body, pageBody, Footer]
     },
     async getDependencyGraph(_ctx, _content, _resources) {
       return new DepGraph<FilePath>()
