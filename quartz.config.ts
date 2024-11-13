@@ -17,7 +17,7 @@ const config: QuartzConfig = {
     baseUrl: "vanadium23.me",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
-    generateSocialImages: false,
+    generateSocialImages: true,
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
