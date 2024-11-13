@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"date":"2024-11-05T23:28:19+03:00","modified_at":"2024-11-08T18:15:06+03:00","permalink":"/forge/переезд блога на quartz/","dgPassFrontmatter":true}
+{"dg-publish":true,"date":"2024-11-05T23:28:19+03:00","modified_at":"2024-11-13T10:02:52+03:00","permalink":"/forge/переезд блога на quartz/","dgPassFrontmatter":true}
 ---
 
 
@@ -10,6 +10,7 @@
 
 Концептуально:
 - [ ] подготовить структуру заметок к новому блогу
+    - [ ] думаю об этом в [[forge/note-taking/иерархия заметок|иерархия заметок]]
 - [ ] переименовать статьи (posts) в общий концепт
 
 Функционально:
@@ -27,6 +28,8 @@
 - [x] починить slugify в [[Openbox/software/obsidian-digital-garden|obsidian-digital-garden]], который создаёт бесконечный редирект на quartz
     - решилось тем, что отключил slugify в настройках [[Openbox/software/obsidian-digital-garden|obsidian-digital-garden]]
 - [ ] починить preview для ссылок (opengraph метаданные)
+    - [ ] поменять картинку
+- [ ] починить загрузку картинок
 
 ## Добавлено в quartz
 
