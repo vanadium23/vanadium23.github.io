@@ -22,11 +22,12 @@
 ## Images
 
 Diff в digital garden:
-![Pasted image 20241031181933.png](/openbox/assets/img/Pasted%20image%2020241031181933.png)
+![Pasted image 20241031181933.png](/images/Pasted%20image%2020241031181933.png)
 
 ## Dataview
 
 - [[Openbox/books/A Philosophy of Software Design|A Philosophy of Software Design]]
+- [[Openbox/books/Ackoff's best|Ackoff's best]]
 - [[Openbox/books/Art of Scalability|Art of Scalability]]
 - [[Openbox/books/Become an Effective Software Engineering Manager|Become an Effective Software Engineering Manager]]
 - [[Openbox/books/Book of why|Book of why]]
@@ -44,9 +45,9 @@ Diff в digital garden:
 - [[Openbox/books/Hold on to your kids|Hold on to your kids]]
 - [[Openbox/books/How to make sense of any mess|How to make sense of any mess]]
 - [[Openbox/books/How to talk so kids will listen & listen so kids will talk|How to talk so kids will listen & listen so kids will talk]]
+- [[Openbox/books/Modern Software Engineering|Modern Software Engineering]]
 - [[Openbox/books/Programmer introduction to math|Programmer introduction to math]]
 - [[Openbox/books/Science and Human Values|Science and Human Values]]
-- [[Openbox/books/Ackoff's best|Ackoff's best]]
 - [[Openbox/books/Sid Meier's Memoir!|Sid Meier's Memoir!]]
 - [[Openbox/books/Software Architecture  the Hard Parts|Software Architecture  the Hard Parts]]
 - [[Openbox/books/Software Architecture In Practice|Software Architecture In Practice]]
@@ -56,9 +57,9 @@ Diff в digital garden:
 - [[Openbox/books/The Elon Musk Blog Series|The Elon Musk Blog Series]]
 - [[Openbox/books/The Hundred-Page Machine Learning Book|The Hundred-Page Machine Learning Book]]
 - [[Openbox/books/The Little Learner|The Little Learner]]
+- [[Openbox/books/The Minimalist Entrepreneur|The Minimalist Entrepreneur]]
 - [[Openbox/books/The Science of Can and Cannot|The Science of Can and Cannot]]
 - [[Openbox/books/The art of systems thinking|The art of systems thinking]]
-- [[Openbox/books/Modern Software Engineering|Modern Software Engineering]]
 - [[Openbox/books/The explosive child|The explosive child]]
 - [[Openbox/books/The logic of failure|The logic of failure]]
 - [[Openbox/books/Thinking in Bets|Thinking in Bets]]
@@ -75,9 +76,8 @@ Diff в digital garden:
 - [[Openbox/books/Пиши сокращай|Пиши сокращай]]
 - [[Openbox/books/Русская модель управления|Русская модель управления]]
 - [[Openbox/books/Системная жизнь|Системная жизнь]]
+- [[Openbox/books/Стратегическое мышление|Стратегическое мышление]]
 - [[Openbox/books/Федиатрия|Федиатрия]]
-- [[Openbox/books/The Minimalist Entrepreneur|The Minimalist Entrepreneur]]
 - [[Openbox/books/Экономика здравого смысла|Экономика здравого смысла]]
 - [[Openbox/books/джедайские техники|джедайские техники]]
-- [[Openbox/books/Стратегическое мышление|Стратегическое мышление]]
 
