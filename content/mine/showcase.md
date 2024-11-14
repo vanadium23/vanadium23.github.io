@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"toc":true,"date":"2023-05-21T16:21:54+04:00","modified_at":"2024-11-01T12:41:35+03:00","permalink":"/mine/showcase/","dgPassFrontmatter":true}
+{"dg-publish":true,"toc":true,"date":"2023-05-21T16:21:54+04:00","modified_at":"2024-11-14T16:59:33+03:00","permalink":"/mine/showcase/","dgPassFrontmatter":true}
 ---
 
 
@@ -21,7 +21,7 @@
 
 ## Images
 
-Diff в digital garden:
+Diff в digital garden, уже устарел:
 ![Pasted image 20241031181933.png](/images/Pasted%20image%2020241031181933.png)
 
 ## Dataview
