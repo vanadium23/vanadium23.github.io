@@ -27,6 +27,7 @@ date: 2019-12-20T17:00:00+03:00
 
 # Speaks
 
+* 🇷🇺 🎤 [Hotel Search Engine](https://www.youtube.com/watch?v=DllZX8D3RqU)
 * 🇷🇺 🎤 [Mission teams](https://vanadium23.me/mission-teams/)
 * 🇷🇺 🎤 [PipEnv, Pipfile, pip... what?!](https://vanadium23.me/pipenv-pipfile-pip-what/)
 * 🇷🇺 🎤 [The Ajax, The REST and The GraphQL](https://vanadium23.me/ajax-rest-graphql/)
