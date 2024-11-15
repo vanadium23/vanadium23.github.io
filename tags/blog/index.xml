@@ -1655,13 +1655,13 @@ Timeout&amp;rsquo;ы, пуллинг, идемподентность - наше 
 &lt;td style="text-align: center">&lt;/td>
 &lt;td style="text-align: center">Телефон/интернет&lt;/td>
 &lt;td style="text-align: center">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
+&lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align: center">&lt;/td>
 &lt;td style="text-align: center">Мелкий ремонт&lt;/td>
 &lt;td style="text-align: center">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
+&lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align: center">Питание&lt;/td>
@@ -1673,13 +1673,13 @@ Timeout&amp;rsquo;ы, пуллинг, идемподентность - наше 
 &lt;td style="text-align: center">&lt;/td>
 &lt;td style="text-align: center">Продукты&lt;/td>
 &lt;td style="text-align: center">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
+&lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align: center">&lt;/td>
 &lt;td style="text-align: center">Рестораны&lt;/td>
 &lt;td style="text-align: center">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
+&lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align: center">Лекарства&lt;/td>
@@ -1709,13 +1709,13 @@ Timeout&amp;rsquo;ы, пуллинг, идемподентность - наше 
 &lt;td style="text-align: center">&lt;/td>
 &lt;td style="text-align: center">Кино&lt;/td>
 &lt;td style="text-align: center">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
+&lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align: center">&lt;/td>
 &lt;td style="text-align: center">Музеи&lt;/td>
 &lt;td style="text-align: center">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
+&lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align: center">Образование&lt;/td>
@@ -1776,10 +1776,10 @@ Timeout&amp;rsquo;ы, пуллинг, идемподентность - наше 
 &lt;tr>
 &lt;td style="text-align: left">2020&lt;/td>
 &lt;td style="text-align: center">и так далее&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1809,13 +1809,13 @@ Timeout&amp;rsquo;ы, пуллинг, идемподентность - наше 
 &lt;td style="text-align: right">A&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align: left">Расход&lt;/td>
@@ -1846,30 +1846,30 @@ Timeout&amp;rsquo;ы, пуллинг, идемподентность - наше 
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align: left">и так далее&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align: left">Накопления&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align: left">Финансовая подушка&lt;/td>
@@ -1882,12 +1882,12 @@ Timeout&amp;rsquo;ы, пуллинг, идемподентность - наше 
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align: left">Итого&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
-&lt;td style="text-align: left">&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
