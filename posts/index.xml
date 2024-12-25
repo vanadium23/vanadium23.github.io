@@ -1,5 +1,84 @@
 <?xml-stylesheet type="text/xsl" href="#stylesheet"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xsl"><xsl:output method="html" doctype-system="about:legacy-compat"/><xsl:template match="/rss"><html lang="ru-ru"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Posts RSS | vanadium23</title><link rel="stylesheet" href="https://vanadium23.me/css/base.min.ede35a5a6f0822c8ed4e62a02aaaead5a369281f08df87a8547512ed5449222f.css" integrity="sha256-7eNaWm8IIsjtTmKgKqrq1aNpKB8I34eoVHUS7VRJIi8="/></head><body><nav class="u-background"><div class="u-wrapper Banner"><a class="Banner-link u-clickable" href="https://vanadium23.me/">
-vanadium23</a><ul class="Banner"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/openbox/">Notes</a></li class="Banner-item"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/about/">About</a></li class="Banner-item"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a></li class="Banner-item"><li><a id="themeSwitch" class="theme-switcher"/></li></ul></div></nav><main><div class="u-wrapper"><div class="u-padding"><h2 class="Heading-title"><a class="Heading-link u-clickable" href="https://vanadium23.me/posts/index.xml" rel="bookmark">Posts RSS</a></h2></div></div></main><footer class="Footer"><div class="u-wrapper"><div class="u-padding"><a href="https://github.com/vanadium23"><i class="svg-icon github"/></a><a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"/></a><a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"/></a><a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"/></a><a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"/></a><a href="https://goodreads.com/vanadium23"><i class="svg-icon goodreads"/></a><a href="https://t.me/chernov_sharit"><i class="svg-icon telegram"/></a></div></div></footer></body></html></xsl:template></xsl:stylesheet><channel><title>Posts on vanadium23</title><link>https://vanadium23.me/posts/</link><description>Recent content in Posts on vanadium23</description><generator>Hugo -- gohugo.io</generator><language>ru-ru</language><lastBuildDate>Thu, 12 Sep 2024 09:00:00 +0300</lastBuildDate><atom:link href="https://vanadium23.me/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>База блоков в Obsidian</title><link>https://vanadium23.me/obsidian-anytype/</link><pubDate>Thu, 12 Sep 2024 09:00:00 +0300</pubDate><guid>https://vanadium23.me/obsidian-anytype/</guid><description>&lt;p>Мой друг, Антон Давыдов, пришел с вопросом: есть ли у меня статья о том, как я веду проекты в Obsidian. А у меня в блоге оказалась статья только о том, что я остановился на &lt;a href="https://vanadium23.me/obsidian/">Obsidian&lt;/a>. Это было уже три года назад, и пора рассказать, что это выросло в целую базу блоков.&lt;/p>
+vanadium23</a><ul class="Banner"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/openbox/">Notes</a></li class="Banner-item"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/about/">About</a></li class="Banner-item"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a></li class="Banner-item"><li><a id="themeSwitch" class="theme-switcher"/></li></ul></div></nav><main><div class="u-wrapper"><div class="u-padding"><h2 class="Heading-title"><a class="Heading-link u-clickable" href="https://vanadium23.me/posts/index.xml" rel="bookmark">Posts RSS</a></h2></div></div></main><footer class="Footer"><div class="u-wrapper"><div class="u-padding"><a href="https://github.com/vanadium23"><i class="svg-icon github"/></a><a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"/></a><a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"/></a><a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"/></a><a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"/></a><a href="https://goodreads.com/vanadium23"><i class="svg-icon goodreads"/></a><a href="https://t.me/chernov_sharit"><i class="svg-icon telegram"/></a></div></div></footer></body></html></xsl:template></xsl:stylesheet><channel><title>Posts on vanadium23</title><link>https://vanadium23.me/posts/</link><description>Recent content in Posts on vanadium23</description><generator>Hugo -- gohugo.io</generator><language>ru-ru</language><lastBuildDate>Wed, 25 Dec 2024 10:00:00 +0300</lastBuildDate><atom:link href="https://vanadium23.me/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Advent of Code 2024</title><link>https://vanadium23.me/advent-of-code-2024/</link><pubDate>Wed, 25 Dec 2024 10:00:00 +0300</pubDate><guid>https://vanadium23.me/advent-of-code-2024/</guid><description>&lt;p>В &lt;a href="https://vanadium23.me/advent-of-code-2023/">прошлом году&lt;/a> был план затащить на работе 10-15 человек в приватный дашборд, чтобы дошли 2-3 человека до конца. Вы не поверите, но в этом году на работе 18 человек решило хотя бы 3 дня, а до конца дошло 3 человека. Так что иногда достаточно просто подождать&amp;hellip;&lt;/p>
+&lt;!-- more -->
+&lt;p>В этот раз решил, что пост будет чуть длиннее. Хочется рассмотреть разные аспекты: про этот год, про Clojure, про подходы к решению, про глобальное комьюнити и про локальные ячейки. Но традиционно начну с цифр:&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/aoc-2024.png" alt="private leaderboard">&lt;/p>
+&lt;p>Чуть лучше в среднем, чуть хуже в одиночном и всё ещё очень далеко от &lt;a href="https://x.com/webholt/status/1871789436155166960/photo/1">@webholt&lt;/a>. С другой стороны, в этом году мог начинать решать только через 2 часа после начала (пока дочку собрать, пока в сад отдать), так что наличие прогресса — это хорошо.&lt;/p>
+&lt;p>В приватном дашборде на работе опустился со второго места на третье, потому что стало больше людей (привет, Никита!):&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/private-aoc-2024.png" alt="private leaderboard">&lt;/p>
+&lt;h2 id="про-этот-год">Про этот год&lt;/h2>
+&lt;p>В одном меме:&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/aoc2024-2d-grid.png" alt="2d grids">&lt;/p>
+&lt;p>Есть несколько хороших и не очень моментов. Хорошее — в этом году было много задач на 2D гриды, и, как следствие, можно было отработать все навыки: BFS, DFS, Дейкстра и A*; всё это рекурсивно и итеративно соединено с пирожком динамического программирования. Если всё в этом абзаце пугает, то смело решайте этот год.&lt;/p>
+&lt;p>Второе — снова была математика, но после прошлого года ничего зубастого не попалось. Отдельно порадовало, что на &lt;a href="https://adventofcode.com/2024/day/13">13 день&lt;/a> вместо вывода формулы Крамера достаточно было сделать &lt;code>pip install z3&lt;/code>.&lt;/p>
+&lt;p>В целом, в этом году многое решалось если не брутфорсом, то брутфорсом + functools.cache. Это радикально отличается от 2022 года, да и данные показывают, что &lt;a href="https://aoc.xhyrom.dev/">сложность этого года ниже средней&lt;/a>. Или этот график показывает прогресс LLMs. Так, что если хотите вкатиться, то это лучший год для того, чтобы это сделать.&lt;/p>
+&lt;h2 id="про-clojure">Про Clojure&lt;/h2>
+&lt;p>По аналогии с прошлым годом, первые пять дней было принято решать на новом языке. Выбор стоял между Zig, чем-то из Lisp и Julia. Народным голосованием был выбран Clojure. За плечами не было никакого опыта с ним, поэтому перед стартом проходил &lt;a href="http://clojurescriptkoans.com/">http://clojurescriptkoans.com/&lt;/a> и &lt;a href="https://markm208.github.io/cljbook/">Animated book&lt;/a>. Также был найден файл с &lt;a href="https://github.com/rjray/advent-2023-clojure/blob/master/src/advent_of_code/utils.clj">полезными утилитками&lt;/a>.&lt;/p>
+&lt;p>Всё это помогло мне ровно никак. По сравнению с Rust — среди AoC пользователей Clojure не было достаточно системности: юнит-тесты никто не писал, обвязок тоже не было, так что приходилось решать руками. А руками решать не получалось из-за отсутствия опыта на тренажёрах и в реальных проектах. После перехода задач на 2D гриды становилось совсем худо: хотелось императивщины со стеком, очередью, без рекурсий и с простой мемоизацией.&lt;/p>
+&lt;p>Поэтому я поплевался пять дней, записал себе в следующий год прохождение курса &lt;a href="https://htdp.org/">How to Design Programs&lt;/a> на DrRacket и повторное прохождение на Lisp первых 5 дней.&lt;/p>
+&lt;p>Решение некоторых дней можно почитать:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://gist.github.com/vanadium23/d32cde3528bbe11cd5ae999365b21fab">day1&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gist.github.com/vanadium23/7423650bd1efdcbbbd8232e8f8d5e6f6">day2&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gist.github.com/vanadium23/a471ba6ead7a6eaf6903b58c99ef5453">day3&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gist.github.com/vanadium23/281186ff57e17980604fc1012bab4b1c">day4&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gist.github.com/vanadium23/92208a48533a7c70100d74de257d3a55">day5&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Полезный опыт был — а именно про упрощение подхода к парсингу входных данных.&lt;/p>
+&lt;h2 id="про-лайфхаки">Про лайфхаки&lt;/h2>
+&lt;p>Видимо, у любого AoC участника на второй-третий год появляются утилитки, а у AoC++ скорее всего и свой язык решения пазлов. Делюсь, что должна в себя включать эта библиотека:&lt;/p>
+&lt;ul>
+&lt;li>Парсинг:
+&lt;ul>
+&lt;li>разбить на линии;&lt;/li>
+&lt;li>разбить на блоки (через &lt;code>\n\n&lt;/code>);&lt;/li>
+&lt;li>достать все числа из строки (не забыть про знак &lt;code>-&lt;/code>).&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Матрицы (и графы):
+&lt;ul>
+&lt;li>нахождение расстояния между двумя точками: BFS, DFS, A*;&lt;/li>
+&lt;li>движение вверх-вниз-влево-вправо с учётом границ и стен (&lt;code>#&lt;/code>);&lt;/li>
+&lt;li>транспонирование;&lt;/li>
+&lt;li>дебаг (вывод).&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>(Задача со *) скачать свой input, засабмитить ответ по флажку.&lt;/li>
+&lt;/ul>
+&lt;p>Про последнее напишу отдельно — есть хорошая утилита на Rust, называется &lt;a href="https://github.com/scarvalhojr/aoc-cli">aoc-cli&lt;/a>. Она умеет скачивать пазлы и инпуты в Markdown и TXT, соответственно. Умеет отсылать ответы, а также рисовать приватные лидерборды. Поверх этого использую &lt;a href="https://vanadium23.me/openbox/makefile/">Makefile&lt;/a>, чтобы всё разложить:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-makefile" data-lang="makefile">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">.PHONY&lt;/span>&lt;span style="color:#f92672">:&lt;/span> help download
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">download &lt;/span>&lt;span style="color:#f92672">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> aoc d -i &lt;span style="color:#e6db74">&amp;#34;`date &amp;#39;+%d&amp;#39;`.txt&amp;#34;&lt;/span> -p &lt;span style="color:#e6db74">&amp;#34;`date &amp;#39;+%d&amp;#39;`.md&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">tmpl&lt;/span>&lt;span style="color:#f92672">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> cp skeleton.py &lt;span style="color:#e6db74">&amp;#34;`date &amp;#39;+%d&amp;#39;`.clj&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">stats &lt;/span>&lt;span style="color:#f92672">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> aoc p XXXXX
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Ещё полезным оказались дополнительные данные для приватных лидербордов с помощью расширения - &lt;a href="https://github.com/jeroenheijmans/advent-of-code-charts">https://github.com/jeroenheijmans/advent-of-code-charts&lt;/a>.&lt;/p>
+&lt;h2 id="про-глобальное-комьюнити">Про глобальное комьюнити&lt;/h2>
+&lt;p>Драма этого года — &lt;a href="https://old.reddit.com/r/adventofcode/comments/1h9cub8/discussion_on_llm_cheaters/">LLM Cheaters&lt;/a>. Первые 12 дней задачи были достаточно простые, чтобы сделать текст задачи + input → OpenAI API → answer → submit. Таким образом в глобальном зачёте висели люди со скоростью в 6 секунд. Плохо ли это? Да, если учесть ежегодный труд Эрика. Что ещё печальнее, никто пока не понимает, как правильно решать эту проблему:&lt;/p>
+&lt;ul>
+&lt;li>отдельный лидерборд — плохо;&lt;/li>
+&lt;li>LLM spoof задачи — плохо;&lt;/li>
+&lt;li>подтверждение задач — плохо;&lt;/li>
+&lt;li>закрыть лидерборд и оставить только приватные — плохо.&lt;/li>
+&lt;/ul>
+&lt;p>Посмотрим, будет ли что-то в следующем году сделано против этого.&lt;/p>
+&lt;p>Как следствие этой проблемы, задачи после 14-15 дня стали трудночитаемыми. Настолько, что каждые 3 дня появлялись мемы про это.&lt;/p>
+&lt;p>&lt;img src="https://vanadium23.me/images/aoc2024-reading.png" alt="reading is hard">&lt;/p>
+&lt;p>Если это всё отбросить, то всё как обычно. Каждый день были смешные мемы, каждый день кто-то решал задачку на картриджах Nintendo 64 или программировал уровни в игре &amp;ldquo;Baba Is You&amp;rdquo;. Читайте сабреддит, там половина удовольствия от Advent of Code.&lt;/p>
+&lt;h2 id="про-локальное-комьюнити">Про локальное комьюнити&lt;/h2>
+&lt;p>Хочу здесь написать благодарности всем коллегам, кто участвовал в этом году. Это были не только разработчики, но и DevOps, QA, менеджеры и рекрутеры. Это показатель того, что Advent of Code не про алгоритмы, а про логику и поиск нестандартных вещей в предоставленных данных.&lt;/p>
+&lt;hr>
+&lt;p>Традиционный топ интересных задач за этот год:&lt;/p>
+&lt;ol>
+&lt;li>Написать квайн поверх собственного ASM — &lt;a href="https://adventofcode.com/2024/day/17">17 день&lt;/a>;&lt;/li>
+&lt;li>Починить битовый калькулятор — &lt;a href="https://adventofcode.com/2024/day/24">24 день&lt;/a>;&lt;/li>
+&lt;li>Симулятор сокобана с широкими ящиками — &lt;a href="https://adventofcode.com/2024/day/15">15 день&lt;/a>.&lt;/li>
+&lt;/ol>
+&lt;p>И спасибо, посмеялся на задаче поиска ёлки с помощью бегающих роботов.&lt;/p></description></item><item><title>База блоков в Obsidian</title><link>https://vanadium23.me/obsidian-anytype/</link><pubDate>Thu, 12 Sep 2024 09:00:00 +0300</pubDate><guid>https://vanadium23.me/obsidian-anytype/</guid><description>&lt;p>Мой друг, Антон Давыдов, пришел с вопросом: есть ли у меня статья о том, как я веду проекты в Obsidian. А у меня в блоге оказалась статья только о том, что я остановился на &lt;a href="https://vanadium23.me/obsidian/">Obsidian&lt;/a>. Это было уже три года назад, и пора рассказать, что это выросло в целую базу блоков.&lt;/p>
 &lt;!-- more -->
 &lt;h2 id="теория">Теория&lt;/h2>
 &lt;p>Поиск статей в сети по самоорганизации и ведению заметок всегда находит темы, которые близки, но обособлены. Одни люди рассказывают, как организовать персональную базу знаний, а другие — как спроектировать процесс ведения задач. Это разделение является ложным или, корректнее сказать, не актуальным для всех.&lt;/p>
