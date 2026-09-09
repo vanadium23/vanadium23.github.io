@@ -1,305 +1,305 @@
-<?xml-stylesheet type="text/xsl" href="#stylesheet"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xsl"><xsl:output method="html" doctype-system="about:legacy-compat"/><xsl:template match="/rss"><html lang="ru-ru"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Note-Taking RSS | vanadium23</title><link rel="stylesheet" href="https://vanadium23.me/css/base.min.ede35a5a6f0822c8ed4e62a02aaaead5a369281f08df87a8547512ed5449222f.css" integrity="sha256-7eNaWm8IIsjtTmKgKqrq1aNpKB8I34eoVHUS7VRJIi8="/></head><body><nav class="u-background"><div class="u-wrapper Banner"><a class="Banner-link u-clickable" href="https://vanadium23.me/">
-vanadium23</a><ul class="Banner"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/openbox/">Notes</a></li class="Banner-item"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/about/">About</a></li class="Banner-item"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a></li class="Banner-item"><li><a id="themeSwitch" class="theme-switcher"/></li></ul></div></nav><main><div class="u-wrapper"><div class="u-padding"><h2 class="Heading-title"><a class="Heading-link u-clickable" href="https://vanadium23.me/tags/note-taking/index.xml" rel="bookmark">Note-Taking RSS</a></h2></div></div></main><footer class="Footer"><div class="u-wrapper"><div class="u-padding"><a href="https://github.com/vanadium23"><i class="svg-icon github"/></a><a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"/></a><a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"/></a><a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"/></a><a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"/></a><a href="https://goodreads.com/vanadium23"><i class="svg-icon goodreads"/></a><a href="https://t.me/chernov_sharit"><i class="svg-icon telegram"/></a></div></div></footer></body></html></xsl:template></xsl:stylesheet><channel><title>Note-Taking on vanadium23</title><link>https://vanadium23.me/tags/note-taking/</link><description>Recent content in Note-Taking on vanadium23</description><generator>Hugo -- gohugo.io</generator><language>ru-ru</language><lastBuildDate>Thu, 12 Sep 2024 09:00:00 +0300</lastBuildDate><atom:link href="https://vanadium23.me/tags/note-taking/index.xml" rel="self" type="application/rss+xml"/><item><title>База блоков в Obsidian</title><link>https://vanadium23.me/obsidian-anytype/</link><pubDate>Thu, 12 Sep 2024 09:00:00 +0300</pubDate><guid>https://vanadium23.me/obsidian-anytype/</guid><description>&lt;p>Мой друг, Антон Давыдов, пришел с вопросом: есть ли у меня статья о том, как я веду проекты в Obsidian. А у меня в блоге оказалась статья только о том, что я остановился на &lt;a href="https://vanadium23.me/obsidian/">Obsidian&lt;/a>. Это было уже три года назад, и пора рассказать, что это выросло в целую базу блоков.&lt;/p>
-&lt;!-- more -->
-&lt;h2 id="теория">Теория&lt;/h2>
-&lt;p>Поиск статей в сети по самоорганизации и ведению заметок всегда находит темы, которые близки, но обособлены. Одни люди рассказывают, как организовать персональную базу знаний, а другие — как спроектировать процесс ведения задач. Это разделение является ложным или, корректнее сказать, не актуальным для всех.&lt;/p>
-&lt;p>Суть в том, что существует некий процесс накопления фактов, а затем превращения их в знания. У меня он выстраивается следующим образом:&lt;/p>
-&lt;ol>
-&lt;li>планирование задач с помощью чек-листов;&lt;/li>
-&lt;li>ведение ежедневника;&lt;/li>
-&lt;li>выполнение рабочих проектов и сохранение материалов по ним (да, банально набор ссылок);&lt;/li>
-&lt;li>перенос новых знаний в базу;&lt;/li>
-&lt;li>обновление чек-листов.&lt;/li>
-&lt;/ol>
-&lt;p>Наверное, нагляднее будет показать это на картинке:
-&lt;img src="https://vanadium23.me/images/obsidian-command-center.png" alt="Obsidian command center">&lt;/p>
-&lt;p>Здесь сразу видна цикличность этого процесса. Чем ближе различные элементы располагаются друг к другу, тем выше вероятность того, что мысли начнут взаимно обогащаться. Суть в том, чтобы одновременно и 1000 раз повторить одно и то же, и чтобы 10 разных вещей как бы соединились между собой. Лучше об этом написано в блоге thesephist: &lt;a href="https://thesephist.com/posts/tools/#tasks-and-notes-a-false-dichotomy">https://thesephist.com/posts/tools/#tasks-and-notes-a-false-dichotomy&lt;/a>, который стал моим вдохновением.&lt;/p>
-&lt;p>&lt;img src="https://vanadium23.me/images/obsidian-graph.png" alt="Obsidian graph">&lt;/p>
-&lt;h2 id="настройка-obsidian">Настройка Obsidian&lt;/h2>
-&lt;details>
-&lt;summary>Строго для Антона&lt;/summary>
+<?xml-stylesheet type="text/xsl" href="#stylesheet"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xsl"><xsl:output method="html" doctype-system="about:legacy-compat"/><xsl:template match="/rss"><html lang="ru-ru"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Note-Taking RSS | vanadium23</title><link rel="stylesheet" href="https://vanadium23.me/css/base.min.4dd4d7794011bc9f1aa1c265d7200c91a892cec651cecf83d0d137a023578d97.css" integrity="sha256-TdTXeUARvJ8aocJl1yAMkaiSzsZRzs+D0NE3oCNXjZc="/></head><body><nav class="u-background"><div class="u-wrapper Banner"><a class="Banner-link u-clickable" href="https://vanadium23.me/">
+vanadium23</a><ul class="Banner"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/openbox/">Notes</a></li class="Banner-item"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/about/">About</a></li class="Banner-item"><li class="Banner-item"><a class="Banner-link u-clickable" href="https://vanadium23.me/tags/">Tags</a></li class="Banner-item"><li><a id="themeSwitch" class="theme-switcher"/></li></ul></div></nav><main><div class="u-wrapper"><div class="u-padding"><h2 class="Heading-title"><a class="Heading-link u-clickable" href="https://vanadium23.me/tags/note-taking/index.xml" rel="bookmark">Note-Taking RSS</a></h2></div></div></main><footer class="Footer"><div class="u-wrapper"><div class="u-padding"><a href="https://github.com/vanadium23"><i class="svg-icon github"/></a><a href="https://www.linkedin.com/in/vanadium23"><i class="svg-icon linkedin"/></a><a href="https://www.twitter.com/vanadium23"><i class="svg-icon twitter"/></a><a href="http://stackoverflow.com/users/4809450/vanadium23"><i class="svg-icon stackoverflow"/></a><a href="https://www.codewars.com/users/vanadium23"><i class="svg-icon codewars"/></a><a href="https://goodreads.com/vanadium23"><i class="svg-icon goodreads"/></a><a href="https://t.me/chernov_sharit"><i class="svg-icon telegram"/></a></div></div></footer></body></html></xsl:template></xsl:stylesheet><channel><title>Note-Taking on vanadium23</title><link>https://vanadium23.me/tags/note-taking/</link><description>Recent content in Note-Taking on vanadium23</description><generator>Hugo -- gohugo.io</generator><language>ru-ru</language><lastBuildDate>Thu, 12 Sep 2024 09:00:00 +0300</lastBuildDate><atom:link href="https://vanadium23.me/tags/note-taking/index.xml" rel="self" type="application/rss+xml"/><item><title>База блоков в Obsidian</title><link>https://vanadium23.me/obsidian-anytype/</link><pubDate>Thu, 12 Sep 2024 09:00:00 +0300</pubDate><guid>https://vanadium23.me/obsidian-anytype/</guid><description>&lt;p&gt;Мой друг, Антон Давыдов, пришел с вопросом: есть ли у меня статья о том, как я веду проекты в Obsidian. А у меня в блоге оказалась статья только о том, что я остановился на &lt;a href="https://vanadium23.me/obsidian/"&gt;Obsidian&lt;/a&gt;. Это было уже три года назад, и пора рассказать, что это выросло в целую базу блоков.&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h2 id="теория"&gt;Теория&lt;/h2&gt;
+&lt;p&gt;Поиск статей в сети по самоорганизации и ведению заметок всегда находит темы, которые близки, но обособлены. Одни люди рассказывают, как организовать персональную базу знаний, а другие — как спроектировать процесс ведения задач. Это разделение является ложным или, корректнее сказать, не актуальным для всех.&lt;/p&gt;
+&lt;p&gt;Суть в том, что существует некий процесс накопления фактов, а затем превращения их в знания. У меня он выстраивается следующим образом:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;планирование задач с помощью чек-листов;&lt;/li&gt;
+&lt;li&gt;ведение ежедневника;&lt;/li&gt;
+&lt;li&gt;выполнение рабочих проектов и сохранение материалов по ним (да, банально набор ссылок);&lt;/li&gt;
+&lt;li&gt;перенос новых знаний в базу;&lt;/li&gt;
+&lt;li&gt;обновление чек-листов.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Наверное, нагляднее будет показать это на картинке:
+&lt;img src="https://vanadium23.me/images/obsidian-command-center.png" alt="Obsidian command center"&gt;&lt;/p&gt;
+&lt;p&gt;Здесь сразу видна цикличность этого процесса. Чем ближе различные элементы располагаются друг к другу, тем выше вероятность того, что мысли начнут взаимно обогащаться. Суть в том, чтобы одновременно и 1000 раз повторить одно и то же, и чтобы 10 разных вещей как бы соединились между собой. Лучше об этом написано в блоге thesephist: &lt;a href="https://thesephist.com/posts/tools/#tasks-and-notes-a-false-dichotomy"&gt;https://thesephist.com/posts/tools/#tasks-and-notes-a-false-dichotomy&lt;/a&gt;, который стал моим вдохновением.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://vanadium23.me/images/obsidian-graph.png" alt="Obsidian graph"&gt;&lt;/p&gt;
+&lt;h2 id="настройка-obsidian"&gt;Настройка Obsidian&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;Строго для Антона&lt;/summary&gt;
 Комбайны - это круто, потому что они свои.
-&lt;/details>
-&lt;p>Теперь о том, почему именно Obsidian. Его преимущества и недостатки заключаются в двух вещах:&lt;/p>
-&lt;ol>
-&lt;li>он написан на Electron, а значит, можно использовать JavaScript для гибкой настройки;&lt;/li>
-&lt;li>всё работает поверх локальных файлов, так что даже при отсутствии Obsidian контент можно будет восстановить (но не все связи).&lt;/li>
-&lt;/ol>
-&lt;p>Для того чтобы примеры из поста работали, необходим следующий набор плагинов:&lt;/p>
-&lt;ul>
-&lt;li>Dataview&lt;/li>
-&lt;li>Templater&lt;/li>
-&lt;li>MetaEdit&lt;/li>
-&lt;li>Buttons&lt;/li>
-&lt;li>Obsidian Charts&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Dataview&lt;/strong> предоставляет возможность расставлять метаданные по заметкам. Метаданные хранятся в двух местах: в YAML-заголовке или в тексте заметки в формате &lt;code>Key:: value&lt;/code>. На основе этих метаданных Dataview позволяет строить таблицы. Здесь прослеживается аналогия с Notion, только там сначала создаётся таблица, а потом она заполняется контентом. Важное ограничение заключается в том, что редактировать данные в таблицах нельзя. Есть два варианта: либо использовать альтернативы (&lt;a href="https://rafaelgb.github.io/obsidian-db-folder/">folderDB&lt;/a>, &lt;a href="https://github.com/marcusolsson/obsidian-projects">Obsidian Projects&lt;/a>), либо &lt;a href="https://github.com/vanadium23/obsidian-dataview-inlinedb">сделать свой HTML&lt;/a>.&lt;/p>
-&lt;p>&lt;strong>Templater&lt;/strong> позволяет создавать шаблоны с интерактивными элементами. Помимо шаблонного текста, можно добавить:&lt;/p>
-&lt;ol>
-&lt;li>попап-модалку с вопросом;&lt;/li>
-&lt;li>попап-модалку со списком вариантов;&lt;/li>
-&lt;li>перемещение файла в другое место;&lt;/li>
-&lt;li>вставку подшаблона, иногда просто по заголовку другой заметки.&lt;/li>
-&lt;/ol>
-&lt;p>Это два основополагающих инструмента, а дальше всё зависит от ваших навыков работы с JavaScript. Ранее такой подход часто встречался в среде Emacs/org-mode, где для автоматизации использовался Lisp. Здесь подход похожий. Хватит теории, давайте посмотрим, как это выглядит на практике.&lt;/p>
-&lt;h2 id="пример-проектный-трекер">Пример: проектный трекер&lt;/h2>
-&lt;p>&lt;img src="https://vanadium23.me/images/projects.png" alt="Проекты мои проектики">&lt;/p>
-&lt;p>Эта система состоит из шаблона проекта (&lt;a href="https://gist.github.com/vanadium23/4ddc068fd409e5bfdbb82f8fa10a7acf">ссылка на шаблон&lt;/a>) и вьюхи, написанной на JavaScript (&lt;a href="https://gist.github.com/vanadium23/55bc62afde8bdf422394dbe96124cc63">ссылка на вьюху&lt;/a>). В сообществе Obsidian эта штука получила лайки, но, подозреваю, что никто её толком не установил.&lt;/p>
-&lt;p>С шаблоном проектов всё интереснее. Его условно можно разделить на три части:&lt;/p>
-&lt;ol>
-&lt;li>метаданные;&lt;/li>
-&lt;li>чеклист;&lt;/li>
-&lt;li>материалы.&lt;/li>
-&lt;/ol>
-&lt;p>&lt;strong>Про метаданные&lt;/strong> в проектных файлах говорить скучно, вы наверняка сталкиваетесь с ними на работе: это статус, время начала, окончания и примерная оценка. Как видно на текущем скрине, я успеваю со статьёй и докладом, но уже давно застрял на своём pet-проекте. Подробно об этом можно прочитать в моём цифровом садике — &lt;a href="https://vanadium23.me/openbox/metadannye-dlya-zametok-proektov/">метаданные для заметок проектов&lt;/a>.&lt;/p>
-&lt;p>&lt;strong>Чеклист&lt;/strong> для меня превратился в три вещи:&lt;/p>
-&lt;ol>
-&lt;li>описание результата и условий проверки;&lt;/li>
-&lt;li>составление начальных шагов;&lt;/li>
-&lt;li>оценка рисков.&lt;/li>
-&lt;/ol>
-&lt;p>Не все пункты обязательны для каждого проекта, шаблон можно подстраивать, например, под разные сроки (вряд ли в двухнедельном проекте нужны риски), но пока я оставил это на ручное управление.&lt;/p>
-&lt;p>&lt;img src="https://vanadium23.me/images/filled-project.png" alt="Пример проекта на примере статьи">&lt;/p>
-&lt;p>Для вдохновения можно пойти по ссылочкам:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://habr.com/ru/articles/710356/">https://habr.com/ru/articles/710356/&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://habr.com/ru/articles/789248/">https://habr.com/ru/articles/789248/&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://ltroj.medium.com/engineering-project-management-in-obsidian-e6aade82dfff#b587">https://ltroj.medium.com/engineering-project-management-in-obsidian-e6aade82dfff#b587&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://nick-senin.github.io/2022/02/02/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B0%D0%BC%D0%B8-%D0%B2-Obsidian.html">https://nick-senin.github.io/2022/02/02/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B0%D0%BC%D0%B8-%D0%B2-Obsidian.html&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="пример-найм-сотрудников">Пример: найм сотрудников&lt;/h2>
-&lt;p>Отвлечёмся от темы проектов — рано или поздно на работе возникает необходимость в найме сотрудников. Первые несколько раз этот процесс идёт со скрипом, но к тридцатому разу накапливается опыт. Потом этот опыт приходится пересматривать, так как он может оказаться не таким верным, как казалось.&lt;/p>
-&lt;p>Из каких шагов состоит процесс найма?&lt;/p>
-&lt;ol>
-&lt;li>понять, кто нам нужен;&lt;/li>
-&lt;li>создать вакансию;&lt;/li>
-&lt;li>проводить собеседования;&lt;/li>
-&lt;li>???;&lt;/li>
-&lt;li>profit.&lt;/li>
-&lt;/ol>
-&lt;p>В HRTech такие сервисы принято называть &amp;ldquo;системами привлечения талантов&amp;rdquo;, поэтому именно так называется соответствующая заметка. Она состоит из двух шаблонов и одной таблицы: шаблона описания вакансии + профиля кандидата и шаблона собеседования.&lt;/p>
-&lt;p>&lt;img src="https://vanadium23.me/images/vacancy.png" alt="Шаблон вакансии">&lt;/p>
-&lt;p>Тут тебе сразу и личные качества сверху, а ещё есть описанные типовые позиции, где есть банк задач.&lt;/p>
-&lt;p>При этом в шаблоне по собеседованию написана следующая автоматизация:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-js" data-lang="js">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">vacancies&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">tp&lt;/span>.&lt;span style="color:#a6e22e">user&lt;/span>.&lt;span style="color:#a6e22e">suggest_folder&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;#vacancy&amp;#34;&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">vacancy&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">tp&lt;/span>.&lt;span style="color:#a6e22e">system&lt;/span>.&lt;span style="color:#a6e22e">suggester&lt;/span>(&lt;span style="color:#a6e22e">vacancies&lt;/span>, &lt;span style="color:#a6e22e">vacancies&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">candidate&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">tp&lt;/span>.&lt;span style="color:#a6e22e">system&lt;/span>.&lt;span style="color:#a6e22e">prompt&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;Имя кандидата?&amp;#34;&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">questions&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">`[[&lt;/span>&lt;span style="color:#e6db74">${&lt;/span>&lt;span style="color:#a6e22e">vacancy&lt;/span>&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">#Список вопросов]]`&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">title&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">`&lt;/span>&lt;span style="color:#e6db74">${&lt;/span>&lt;span style="color:#a6e22e">tp&lt;/span>.&lt;span style="color:#a6e22e">date&lt;/span>.&lt;span style="color:#a6e22e">now&lt;/span>()&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74"> &lt;/span>&lt;span style="color:#e6db74">${&lt;/span>&lt;span style="color:#a6e22e">candidate&lt;/span>&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">`&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">filename&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">tp&lt;/span>.&lt;span style="color:#a6e22e">user&lt;/span>.&lt;span style="color:#a6e22e">sanitaze_filename&lt;/span>(&lt;span style="color:#a6e22e">title&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">await&lt;/span> &lt;span style="color:#a6e22e">tp&lt;/span>.&lt;span style="color:#a6e22e">file&lt;/span>.&lt;span style="color:#a6e22e">move&lt;/span>(&lt;span style="color:#a6e22e">filename&lt;/span>);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Мы достаём все вакансии по шаблону, спрашиваем имя кандидата и создаём заметку с дата + кандидат, И внутри будет уже весь текст из подзаголовка списка вопрос.&lt;/p>
-&lt;p>Финальный результат:&lt;/p>
-&lt;p>&lt;img src="https://vanadium23.me/images/interviews.png" alt="Собесы">&lt;/p>
-&lt;h3 id="обмазываем-интеграциями">Обмазываем интеграциями&lt;/h3>
-&lt;p>Здесь стоит немного отступить и отметить, что в компаниях всегда существуют корпоративные инструменты со своими воркфлоу, и их множество: таск-трекеры, вики, системы для найма, Google Docs, Miro и так далее. Преимущество JavaScript-стека в этом контексте становится ещё более очевидным благодаря возможности интеграции через API (&lt;a href="https://gist.github.com/vanadium23/a0cfcc0644c9571f752b43ad6b042c02">пример&lt;/a>):&lt;/p>
-&lt;ol>
-&lt;li>получаем собственный воркфлоу, удобный для нас;&lt;/li>
-&lt;li>и сохраняем совместимость с корпоративной средой.&lt;/li>
-&lt;/ol>
-&lt;h2 id="итого">Итого&lt;/h2>
-&lt;p>Тиаго Форте в книге &lt;em>&amp;ldquo;Building a Second Brain&amp;rdquo;&lt;/em> называл заметки строительными блоками для идей. В моём случае, заметка является строчкой в нормализованной таблице. Это следствие профессиональной деформации, но такой формат демонстрирует свою жизнеспособность. Дальше всё зависит от того, насколько глубоко это прорабатывать.&lt;/p>
-&lt;p>Стоит ещё раз отметить, что табличное представление — это мой личный выбор. Некоторые предпочитают графовые структуры, другим понятен линейный текст. За то время, что я пользовался Obsidian, появились две замечательные альтернативы: LogSeq и AnyType. В них гибрид Obsidian и Notion пошёл по другому пути: единицей контента является блок, а заметка — это либо ссылка на конкретный блок, либо&amp;hellip;&lt;/p>
-&lt;p>P.S. А кто-то просто может сказать, что лучше освоить Excel, ведь там всё это уже давно есть.&lt;/p></description></item><item><title>Building a Second Brain</title><link>https://vanadium23.me/building-a-second-brain/</link><pubDate>Sun, 12 Feb 2023 10:00:00 +0300</pubDate><guid>https://vanadium23.me/building-a-second-brain/</guid><description>&lt;p>Несколько лет назад была написана статья про &lt;a href="https://vanadium23.me/para/">para&lt;/a>. С того момента прошло уже 4 года, и Тиаго Форте решил порадовать своей книгой про подход &amp;ldquo;building a second brain&amp;rdquo;. Пробежав по главам, понял что не хочу её читать, так как они содержали все известные статьи из блога. Это было ошибкой. Ведь свои подходы надо итерировать.&lt;/p>
-&lt;!-- more -->
-&lt;p>Начнём с того, что building a second brain - это методология по ведению персональной базы знаний. Она включает в себя приёмы по организации и обработке информации. В результате накопленный опыт аккумулируется в ней в виде отдельных промежуточных блоков / &lt;em>intermediate packets&lt;/em>. Эти блоки можно комбинировать как лего для новых проектов, чтобы не начинать с чистого листа&lt;/p>
-&lt;p>Основной подхода служит принцип &lt;strong>CODE&lt;/strong>. Это акроним от первых букв слов: Capture, Organise, Distil и Exctract. Под капотом этот принцип использует подходы дивергентного и конвергентного мышления. В рамках дивергентного состояния надо быть открытым ко всему и не критиковать себя. А вот на конвергентной стадии надо собирать полученные знания в непротиворечивую модель.&lt;/p>
-&lt;p>&lt;img src="https://vanadium23.me/images/Pasted%20image%2020230211134034.png" alt="CODE diagram">&lt;/p>
-&lt;h2 id="capture">Capture&lt;/h2>
-&lt;p>Творческий процесс заключается не только в создание нового, но и в грамотном синтезе доступных знаний. Чтобы их не терять, стоит настроить приложения и интегрировать их с заметками:&lt;/p>
-&lt;ul>
-&lt;li>для чтения статей: getpocket, instapaper, wallabag;&lt;/li>
-&lt;li>для чтения книг: kindle, koreader;&lt;/li>
-&lt;li>для сохранения отдельных цитат: zotero, readwise;&lt;/li>
-&lt;/ul>
-&lt;p>Но приложения - это самая простая часть данного этапа.&lt;/p>
-&lt;p>Основная сложность заключается в том, &lt;strong>что&lt;/strong> сохранять. Здесь могут быть две потенциальные проблемы: сохраняем всё подряд или не сохраняем ничего. Ответ автора на этот вопрос заключается в том, чтобы сохранять всё, что резонирует. Так как мы не очень понимаем, что нам понадобиться в дальнейшем. Момент с резонансом здесь самый тонкий. С одной стороны, интуиция человека выдаёт быстрое и, как правило, верное решение на основании поверхностного изучения. С другой стороны, можно &lt;a href="https://vanadium23.me/openbox/ne-bud-plyushkinym/">стать Плюшкиным&lt;/a>.&lt;/p>
-&lt;h2 id="organize">Organize&lt;/h2>
-&lt;p>Сохраняя большое количество информации нужно понимать, как они в итоге попадут в заметке. И здесь мы возвращаемся к подходу PARA. PARA &lt;em>опять&lt;/em> является акронимом от первых букв: Projects, Areas, Resources и Archive. Это название корневых директорий во всех инструментах, которыми вы пользуетесь будь это заметки, облачное хранилище или папки на компьютере.&lt;/p>
-&lt;p>Из блога мне не хватило аналогий для понимания значения метода. Суть не только в том, чтобы информация лежала единообразно или что мы разделяем проекты от ресурсов. А в том, что мы сортируем контент по его применимости/actionability. Мы можем провести аналогию с кухней: запасы идут в погреб (Archive), то что будет нужно в течение полугода в морозилке (Resources), чуть более востребованное в холодильнике (Areas), а то к чему возвращаемся несколько раз в день непосредственно на столе (Projects). Продолжая аналогию, мы размещаем картинки дизайна квартир с пинтерест в Resources, так как сейчас никакого ремонта нет. А вот статья про налаживание сна у младенца нам пригодится в рамках проекта первого года жизни ребёнка.&lt;/p>
-&lt;h2 id="distill">Distill&lt;/h2>
-&lt;p>Для эффективного использования накопленных заметок необходимо их осмыслить. Это можно делать с помощью составления выдержек. Подходом автора для решения этой задачи является метод &amp;ldquo;прогрессивная суммаризация&amp;rdquo;. По названию и возможно сути перекликается с &lt;a href="https://www.artlebedev.ru/kovodstvo/sections/167/">прогрессивным jpeg&amp;rsquo;ом&lt;/a>.&lt;/p>
-&lt;p>При прочтении статьи мы выделяем 3-5 абзацев, которые считаем наиболее важными. Потом в них мы выделяем предложения, которые являются важными. А потом мы составляем выдержку по тому, что выделили. Таким образом статью мы сможем вспомнить за несколько предложений, но ещё и пройтись по пути обратно, если нам нужно будет докопаться до сути. Эта идея перекликается из другой недавно прочтённой книгой Ackoff&amp;rsquo;s best, где были проведены исследования что &lt;a href="https://vanadium23.me/openbox/quotes/202302011212/">любой материал можно сократить в 3 раза&lt;/a>.&lt;/p>
-&lt;p>Самое интересное, что автор показывал пример со статьёй из wikipedia. Что помогает понять, что таким образом можно держать и те статьи, что всегда доступны в интернете. Делается это для того, чтобы быстро вспомнить о чём речь.&lt;/p>
-&lt;p>&lt;img src="https://vanadium23.me/images/Screen%20Shot%202023-02-12%20at%2011.29.33.png" alt="Пример wiki статьи">&lt;/p>
-&lt;h2 id="express">Express&lt;/h2>
-&lt;p>Полученные выдержки, мы можем начинать использовать в своих проектах. Это помогает избежать проблемы чистого листа. Стартуя новый проект, мы можем пробежаться по ключевым заметкам в ресурсах и соединить те, которые представляют интерес. Данный подход называется &lt;strong>архипелаг идей&lt;/strong>.&lt;/p>
-&lt;p>Если после начального освящения, трудности с первым шагом, то можно не прыгать сразу к результату. Любой проект - это путь, где следующий шаг может быть очевидным, а фактический результат сильно расходится от запланированного. Главное оставлять себе хлебные крошки к следующему шагу: написали структуру поста &amp;ndash;&amp;gt; оставьте вопросы, которые хотелось бы осветить. Этот подход называется &lt;strong>Hemingway bridge&lt;/strong>.&lt;/p>
-&lt;p>Проект выходит из под контроля - &lt;a href="https://bureau.ru/about/fff/">флексим&lt;/a>. В книге подход с уменьшением размера проекта назван &lt;strong>dial down&lt;/strong>. Но в прочтении от бюро Горбунова он выглядит более цельным, поэтому тут только порекомендую ознакомиться ссылкой.&lt;/p>
-&lt;p>Но эти все подходы направлены на использование информации в проектах, в то время как основные знания мы получаем по их завершению. И тут building a second brain начинает работать. По завершению проекта мы должны провести его ревью. В связанных заметках, встречах и остальных материалах появиться новое знание, которое будет полезно для нас в будущем.&lt;/p>
-&lt;p>&lt;img src="https://vanadium23.me/images/Screen%20Shot%202023-02-12%20at%2011.38.18.png" alt="Knowledge cycle">&lt;/p>
-&lt;p>И эти обезличеные знания то, чем стоит делиться. Каждый человек - уникален и второго такого с такими же знаниями и опытом нет. Поэтому надо приходить в локальные сообщества и показывать результат своих мыслей. Ведь любой человек нуждается в самореализации.&lt;/p>
-&lt;h2 id="что-поменялось-в-моих-подходах-после-прочтения">Что поменялось в моих подходах после прочтения?&lt;/h2>
-&lt;p>После двух лет использования PARA, произошла реорганизация заметок. Ёкнуло у меня в тот момент, когда увидел репозиторий &lt;a href="https://github.com/uwidev/life-disciplines-projects">Life-Disciplines-Projects&lt;/a>. Это был уже третий подход в рамках obsidian, и пришло осознание, что не важно что ты используешь, гораздо важнее чтобы было самому удобнее. Сейчас корневые директории в своих заметках держу такие: Actions, Journal, Life, Knowledge, Trash. И для внешнего взгляда они &lt;em>наверное&lt;/em> ничего не значат. Но из книги увидел, что организация пошла точно так же по степени востребованности.&lt;/p>
-&lt;p>Буду перерабатывать подходы к составлению заметок из статей. Сейчас они разбиваются на цитаты, а надо бы собирать их в одну атомарную заметку. Но дальше начинается вопрос переиспользовать ли этот подход для книг, и тут уже начинают плавать. В любом случае, прогрессивную суммаризацию точно стоит провести в виде эксперимента и адаптировать.&lt;/p>
-&lt;p>По результатам мне хотелось бы уже переключиться на свои заметки вместо гугл поиска. Кстати, люди делали такой эксперимент и оно работает. Подробнее почитать можно &lt;a href="https://thesephist.com/posts/monocle/">тут&lt;/a>.&lt;/p>
-&lt;h2 id="чеклист-внедрения-из-книги">Чеклист внедрения из книги&lt;/h2>
-&lt;ol>
-&lt;li>Выбрать для чего мы хотим вести заметки.&lt;/li>
-&lt;li>Выбрать приложение для ведения заметок и остаться с ним на полгода.&lt;/li>
-&lt;li>Выбрать приложение для сохранения статей.&lt;/li>
-&lt;li>Сделать себе структуру папок с помощью PARA.&lt;/li>
-&lt;li>Составить список открытых больших вопросов, с помощью которых можно будет фильтровать весь входящий контент.&lt;/li>
-&lt;li>Настроить автоматическую синхронизацию заметок из книг в заметки.&lt;/li>
-&lt;li>Практиковать progressive summarization на статьях из пункта 3.&lt;/li>
-&lt;li>Начать писать атомарные заметки для себя в будущем.&lt;/li>
-&lt;li>Начать использовать свои заметки на одном из проектов.&lt;/li>
-&lt;li>Поставить себе еженедельное ревью с двумя шагами: просмотреть заметки за неделю и составить следующие шаги по проекту.&lt;/li>
-&lt;li>Присоединиться к локальным сообществам по ведению заметок, чтобы находить новые идеи.
-&lt;ul>
-&lt;li>В русскоязычном телеграмме могу рекомендовать &lt;a href="https://t.me/Zettelkasten_ru/1">чат Zettelkasten&lt;/a> и &lt;a href="https://zttl.space/">их форум&lt;/a>.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ol></description></item><item><title>Obsidian - моя следующая заметочница</title><link>https://vanadium23.me/obsidian/</link><pubDate>Sun, 21 Feb 2021 09:00:00 +0300</pubDate><guid>https://vanadium23.me/obsidian/</guid><description>&lt;p>В &lt;a href="https://vanadium23.me/notes-evolution/">прошлой статье&lt;/a> я писал о том, какой путь для выбора систем заметок пришлось пройти, чтобы остановится на Vs Code. Время не стоит на месте и выходят новые инструменты, которые стоит попробовать для решения задач ведения заметок. Это немного противоречит правилу [[сначала подход, потом инструмент]], но так как подход уже сформирован, то можно и поглядеть на новое.&lt;/p>
-&lt;p>Мои требования к инструменту выглядят следующим образом.&lt;/p>
-&lt;ol>
-&lt;li>Файлы должны лежать локально:
-&lt;ul>
-&lt;li>Имея навык однострочников на bash, можно автоматизировать свою рутину.&lt;/li>
-&lt;li>Локальные файлы будут работать на порядок быстрее любого решения поверх &amp;ldquo;облачных&amp;rdquo; поставщиков.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Из инструмента можно работать с git:
-&lt;ul>
-&lt;li>Так как у нас ничего не синхронизируется, то делаем это с помощью стандартных инструментов разработчика.&lt;/li>
-&lt;li>В заметках не очень нужны сложные операции вида rebase, stash. Вся работа сводится к &lt;code>git add -A . &amp;amp;&amp;amp; git commit - m 'snapshot ``date``'&lt;/code>.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Двунаправленные ссылки:
-&lt;ul>
-&lt;li>Неважно как они будут реализованы с помощью wiki-links или обычными.&lt;/li>
-&lt;li>Важно, чтобы было отображение заметок, которые ссылаются на эту заметку.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Возможность расширения с помощью плагинов:
-&lt;ul>
-&lt;li>Хорошо иметь возможность настроить инструмент под себя.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Забыл дописать, естественно, это markdown:
-&lt;ul>
-&lt;li>Просто пока не нашёл более простой формат. (:&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ol>
-&lt;p>Как вы уже поняли из названия сегодня покажу, что такое &lt;a href="https://obsidian.md/">Obsidian&lt;/a>.&lt;/p>
-&lt;h2 id="граф-и-связность">Граф и связность&lt;/h2>
-&lt;p>&lt;img src="https://vanadium23.me/images/%D0%A1%D0%B2%D1%8F%D0%B7%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BE%D0%BA.png" alt="Пример графа">&lt;/p>
-&lt;p>Это граф моих заметок:&lt;/p>
-&lt;ul>
-&lt;li>фиолетовое - все записи по работе&lt;/li>
-&lt;li>синее - записи по старой&lt;/li>
-&lt;li>оранжевым - персональная база знаний&lt;/li>
-&lt;li>красным - проекты&lt;/li>
-&lt;li>бирюзовым - дневник
-По поводу цветов, всё можно разукрасить на своё усмотрение по комбинации параметров: путь, тег, связи с файлом и так далее.&lt;/li>
-&lt;/ul>
-&lt;p>Зачем это нужно? Например, можно просматривать вещи и наблюдать за тем, как [[формируются знания вокруг концепций]].&lt;/p>
-&lt;p>&lt;img src="https://vanadium23.me/images/20210221114859.png" alt="Кластер вокруг ведения заметок">&lt;/p>
-&lt;h2 id="ведение-дневника">Ведение дневника&lt;/h2>
-&lt;p>Ведение разного рода дневник и активная выгрузка мыслей из головы в какую-то письменную форму, повышает структурность понимания, что происходит вокруг и помогает связать это с каким-то событиями из прошлого, а ещё лучше сформировать ментальную модель, что может произойти дальше. Разных дневник довольно много: можно вести &lt;a href="https://blog.system-school.ru/2020/10/14/emotions-diary/">дневник эмоций&lt;/a>, можно вести &lt;a href="https://habr.com/ru/post/116251/">проектный дневник&lt;/a>, или просто сесть и написать всё, что лезет в голову. Особенно странно читать, как мысли прыгают с темы на тему, органически выделяя связи в потоке, но никак не связывая их если сесть и подумать. Мне тяжело давалась привычка вести текстовый дневник с мыслями, а не просто лог всех текущих встреч и обсуждений. В obsidian на помощь пришёл плагин с ежедневными заметками и календарём. Теперь когда вижу день без точечки, то мой внутренний задрот не может с этим смириться. Если вы обратили внимание на самый первый граф, то дневник находится посередине между работой и знаниями. Кроме того, obsidian автоматически находит все несвязанные заметки с таким же именем, поэтому можно довольно быстро найти все встречи или обсуждения, которые были в это день просто перейдя на нужную дату в календаре.&lt;/p>
-&lt;p>&lt;img src="https://vanadium23.me/images/20210221115634.png" alt="Пример календаря">
-&lt;img src="https://vanadium23.me/images/20210221120213.png" alt="Простой день">&lt;/p>
-&lt;h2 id="mind-map">Mind map&lt;/h2>
-&lt;p>В markdown есть ряд вещей, которых не хватает: работа с мыслекартами, работа с таблицами (приходится делать это в Excel/Google Sheets), графики. Первую проблему можно решить с помощью &lt;a href="https://markmap.js.org/">markmap&lt;/a>, и плагин для неё есть и в Vs Code, и в Obsidian. Я привык просматривать свои годовые цели в этом формате:&lt;/p>
-&lt;p>&lt;img src="https://vanadium23.me/images/20210221120350.png" alt="Мыслекарта целей 2020">&lt;/p>
-&lt;h2 id="git">Git&lt;/h2>
-&lt;p>В Vs Code старался делать атомарные коммиты с подписями, а в итоге понял, что мне просто по кнопке нужно всё сохранить. Эту проблему решает &lt;a href="https://github.com/denolehov/obsidian-git">obsidian-git&lt;/a>.
-Главное при работе с ним сделать &lt;code>.gitignore&lt;/code> с исключением файлов из &lt;code>.obsidian&lt;/code>, потому что там будут конфликты, а их разрешение через интерфейс не завезли и приходится открывать консоль.&lt;/p>
-&lt;h2 id="картинки-pdf-и-остальное">Картинки, pdf и остальное&lt;/h2>
-&lt;p>Всё работает с помощью drag&amp;rsquo;n&amp;rsquo;drop и самое прекрасное, что можно перетащить не только картинку, но и всякие бинарные данные. При отображение заметок, pdf будут отрисованы внутри неё и можно не переходить в стороннее приложение.&lt;/p>
-&lt;p>&lt;img src="https://vanadium23.me/images/20210221125122.png" alt="Как-то так">&lt;/p>
-&lt;p>Pdf работает ещё и в сторону экспорта, что уже несколько раз позволило просто выгрузить заметку и переслать в случае, если это требовалось.&lt;/p>
-&lt;h2 id="индексация-и-связность">Индексация и связность&lt;/h2>
-&lt;p>Повторю ещё раз тезис про формирование знаний вокруг концепций, и добавлю противоречий в то, что иногда нужны заметки-оглавления, которая не несёт сама смысловой ценности, но помогает объединить всё вокруг конкретики, например: все заметки за 2020 год. Изначально проблему можно решить с помощью простого bash скрипта, но в Obsidian решили пойти дальше и позволили встраивать поиск в заметки. Выглядит это следующим образом:&lt;/p>
-&lt;p>&lt;img src="https://vanadium23.me/images/20210221122748.png" alt="Пример индекса">&lt;/p>
-&lt;p>Но если возможностей не хватает, то есть на помощь опять приходят плагины с большим количеством возможностей: &lt;a href="https://github.com/jplattel/obsidian-query-language">obsidian-query-language&lt;/a>, &lt;a href="https://github.com/blacksmithgu/obsidian-dataview">obsidian-dataview&lt;/a>.&lt;/p>
-&lt;h2 id="итого">Итого&lt;/h2>
-&lt;p>Организованный подход привёл к тому, что начал переиспользовать практики работы с задачами в том, как работаю с заметками. Пришло больше осознанности по каким-то темам, самое главное книги стало читать интереснее, потому что появилась игра &lt;del>натягивание совы на глобус&lt;/del> соотнеси новую информацию со старыми концепциями. В этом плане сильно помогает &lt;a href="https://zettelkasten.de/posts/knowledge-cycle-efficiently-organize-writing-projects/">цикл знаний&lt;/a> из Zettelkasten и &lt;a href="https://fortelabs.co/blog/progressive-summarization-a-practical-technique-for-designing-discoverable-notes/">прогрессивное подведение итогов&lt;/a>.&lt;/p>
-&lt;p>&lt;img src="https://vanadium23.me/images/20210221124035.png" alt="Мой рабочий инструмент">&lt;/p>
-&lt;p>P.s. всё это касается не только заметок, но и работы, потому что менеджмент - это не меньшая работа с текстом, чем разработка. Просто вместо формального кода, у тебя неформальные слова. (:&lt;/p>
-&lt;h2 id="что-ещё-почитать">Что ещё почитать&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://publish.obsidian.md/lyt-kit/_Start+Here">Быстрый старт с разными подходами&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://forum.obsidian.md/t/meta-post-migration-workflows/768">Миграция с других инструментов&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://joshwin.imprint.to/post/how-i-use-obsidian-to-manage-my-goals-tasks-notes-and-software-development-knowledge-base">Как вести дела в Obsidian&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://nesslabs.com/how-to-choose-the-right-note-taking-app">Выбор заметочницы для себя&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Эволюция заметочниц</title><link>https://vanadium23.me/notes-evolution/</link><pubDate>Sun, 29 Mar 2020 09:00:00 +0300</pubDate><guid>https://vanadium23.me/notes-evolution/</guid><description>&lt;p>У меня есть какая-то непонятная страсть сохранять, складировать и каталогизировать информацией, которую обладаю. Это не какие-нибудь случайные стикеры, прикреплённые к монитору, или бумажки разбросанные по столу.
-В этой заметке (&lt;em>ха-ха&lt;/em>) хочу рассказать, что пробовал и к чему пришёл из цифровых заметочниц.&lt;/p>
-&lt;p>Вдохновление для написания статьи появилось из-за статьи &lt;a href="https://kortina.nyc/essays/suping-up-vs-code-as-a-markdown-notebook/">&amp;ldquo;Suping Up VS Code as a Markdown Notebook&amp;rdquo;&lt;/a>&lt;/p>
-&lt;!-- more -->
-&lt;h2 id="evernotehttpsevernotecom">&lt;a href="https://evernote.com/">Evernote&lt;/a>&lt;/h2>
-&lt;p>&lt;img src="https://evernote.com/img/footer/footer-logo.svg" alt="Evernote logo">&lt;/p>
-&lt;p>Думаю, что все кто старается делать цифровые заметки сталкивались с этим приложением. До него я вёл дневники или блокноты, которые старательно писал с какого по какой год там лежат заметки. Теперь дневники лежат пыляться на чердаке у бабушки, а Evernote в виде бэкапа на NAS.
-Во времена использования Evernote, его напарником был Google Reader, где просматривал 200 заголовков в день, чтобы выцепить чего же нового произошло в индустрии. После открытия нужной статьи, она прочитывалась и с помощью Web Clipper помещалась с нужным тегом в Evernote.&lt;/p>
-&lt;blockquote>
-&lt;p>Что мы получали в итоге?&lt;/p>
-&lt;/blockquote>
-&lt;p>Гору мусора, по которой максимум производился поиск и никак не использовался.&lt;/p>
-&lt;blockquote>
-&lt;p>Устраивало ли меня это?&lt;/p>
-&lt;/blockquote>
-&lt;p>По началу да, но после прочтения статьи про &lt;a href="https://habr.com/ru/company/redmadrobot/blog/241005/">университет в Evernote&lt;/a>, осознал что не использую и десятой возможности Evernote. И вот спустя пару-тройку месяц настроил кучу тегов, списка блокнотов куда помещал свои теперь электронные дневники и дела которые надо делать в ближайшее время.&lt;/p>
-&lt;blockquote>
-&lt;p>На этом всё?&lt;/p>
-&lt;/blockquote>
-&lt;p>Как бы нет, подстава подкралась незаметно, когда Evernote на бесплатной подписке запретил использовать больше двух устройств. Это было критично потому, что у меня был домашний комп, планшет и телефон. Я мог заплатить за премиум подписку, но меня начал беспокоить тот факт, что через некоторые время закрутят гайки или введут премиум для премиума и придёться платить ещё больше.&lt;/p>
-&lt;h2 id="nimbushttpsnimbuswebme">&lt;a href="https://nimbusweb.me/">Nimbus&lt;/a>&lt;/h2>
-&lt;p>&lt;img src="https://nimbusweb.me/new-style-img/nimbus-note-short-logo.svg" alt="Nimbus logo">&lt;/p>
-&lt;p>В этот момент появился Nimbus, который хотел выехать на том, что Evernote поменяли свою политику. Кроме этого у них так же был клиппер, а мобильное приложение работало шустрее. Миграция не составила труда, так как они умели работать с бекапом Evernote в формате enex.
-Потыкал в неё чисто ради интереса, так как проблемы с тем что надо платить она не решает.&lt;/p>
-&lt;p>NB: сейчас происходит тоже самое только уже Nimbus vs Notion, судя по тому как быстро они добавили функциональность таблиц.&lt;/p>
-&lt;h2 id="google-keephttpskeepgooglecom">&lt;a href="https://keep.google.com/">Google Keep&lt;/a>&lt;/h2>
-&lt;p>&lt;img src="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png" alt="Keep logo">&lt;/p>
-&lt;p>Если мне не изменяет память, то вместе с обновлением до android 4 (или 4.1) прилетело приложение google keep. Оно не идёт ни в какое сравнение с предыдущими двумя программами, потому что ближе подходят к идеологии стикеров на монитор. Нет полноценного WYSIWYG редактора, карточное представление заметок, но зато в них можно рисовать или вставлять картинки.
-Скорее всего задумка была в том, чтобы зайти через удобное мобильное приложение.&lt;/p>
-&lt;h2 id="joplinhttpsjoplinapporg">&lt;a href="https://joplinapp.org/">Joplin&lt;/a>&lt;/h2>
-&lt;p>Начал искать приложение, которое позволяло бы хранить заметки только у себя и своём сервере. Нашёл Joplin, который был не сильно хуже чем Nimbus, но хорошо отвечал требованиям для паранойи:&lt;/p>
-&lt;ol>
-&lt;li>файлы храняться в markdown заметках&lt;/li>
-&lt;li>синхронизация идёт через Nextcloud (просто папку забекапить)&lt;/li>
-&lt;li>вся дополнительная мета информация хранится в sqlite&lt;/li>
-&lt;li>даже clipper есть (но он так себе)&lt;/li>
-&lt;/ol>
-&lt;p>На бумаге всё выглядело красиво, а вот в реализации подкачало: синхронизация доставляла лютую боль, потому что в Nextcloud всё время скапливались файлы с именем conflicted copy.&lt;/p>
-&lt;h2 id="qownnoteshttpswwwqownnotesorg">&lt;a href="https://www.qownnotes.org/">QOwnNotes&lt;/a>&lt;/h2>
-&lt;p>&lt;img src="https://www.qownnotes.org/bundles/pbeprojectwebpage/images/header-icon.png" alt="QOwnNotes logo">&lt;/p>
-&lt;p>Тоже самое, что и Joplin, но в виду того что синхронизация для Nextcloud сделана в виде дополнения и имеет своё API, то работает получше. С другой стороны, сами приложения чуть хуже.&lt;/p>
-&lt;h2 id="git-repository">Git repository&lt;/h2>
-&lt;p>Ещё дольше попробовав разные приложения, я понял что складывать всё подряд довольно бесполезное занятие. С одной стороны ты можешь выжить в мире пандемии без интернета, потому что твоя подписка вот она хранится на локальном NAS, но с другой стороны это не дело заметочницы.
+&lt;/details&gt;
+&lt;p&gt;Теперь о том, почему именно Obsidian. Его преимущества и недостатки заключаются в двух вещах:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;он написан на Electron, а значит, можно использовать JavaScript для гибкой настройки;&lt;/li&gt;
+&lt;li&gt;всё работает поверх локальных файлов, так что даже при отсутствии Obsidian контент можно будет восстановить (но не все связи).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Для того чтобы примеры из поста работали, необходим следующий набор плагинов:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dataview&lt;/li&gt;
+&lt;li&gt;Templater&lt;/li&gt;
+&lt;li&gt;MetaEdit&lt;/li&gt;
+&lt;li&gt;Buttons&lt;/li&gt;
+&lt;li&gt;Obsidian Charts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Dataview&lt;/strong&gt; предоставляет возможность расставлять метаданные по заметкам. Метаданные хранятся в двух местах: в YAML-заголовке или в тексте заметки в формате &lt;code&gt;Key:: value&lt;/code&gt;. На основе этих метаданных Dataview позволяет строить таблицы. Здесь прослеживается аналогия с Notion, только там сначала создаётся таблица, а потом она заполняется контентом. Важное ограничение заключается в том, что редактировать данные в таблицах нельзя. Есть два варианта: либо использовать альтернативы (&lt;a href="https://rafaelgb.github.io/obsidian-db-folder/"&gt;folderDB&lt;/a&gt;, &lt;a href="https://github.com/marcusolsson/obsidian-projects"&gt;Obsidian Projects&lt;/a&gt;), либо &lt;a href="https://github.com/vanadium23/obsidian-dataview-inlinedb"&gt;сделать свой HTML&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Templater&lt;/strong&gt; позволяет создавать шаблоны с интерактивными элементами. Помимо шаблонного текста, можно добавить:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;попап-модалку с вопросом;&lt;/li&gt;
+&lt;li&gt;попап-модалку со списком вариантов;&lt;/li&gt;
+&lt;li&gt;перемещение файла в другое место;&lt;/li&gt;
+&lt;li&gt;вставку подшаблона, иногда просто по заголовку другой заметки.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Это два основополагающих инструмента, а дальше всё зависит от ваших навыков работы с JavaScript. Ранее такой подход часто встречался в среде Emacs/org-mode, где для автоматизации использовался Lisp. Здесь подход похожий. Хватит теории, давайте посмотрим, как это выглядит на практике.&lt;/p&gt;
+&lt;h2 id="пример-проектный-трекер"&gt;Пример: проектный трекер&lt;/h2&gt;
+&lt;p&gt;&lt;img src="https://vanadium23.me/images/projects.png" alt="Проекты мои проектики"&gt;&lt;/p&gt;
+&lt;p&gt;Эта система состоит из шаблона проекта (&lt;a href="https://gist.github.com/vanadium23/4ddc068fd409e5bfdbb82f8fa10a7acf"&gt;ссылка на шаблон&lt;/a&gt;) и вьюхи, написанной на JavaScript (&lt;a href="https://gist.github.com/vanadium23/55bc62afde8bdf422394dbe96124cc63"&gt;ссылка на вьюху&lt;/a&gt;). В сообществе Obsidian эта штука получила лайки, но, подозреваю, что никто её толком не установил.&lt;/p&gt;
+&lt;p&gt;С шаблоном проектов всё интереснее. Его условно можно разделить на три части:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;метаданные;&lt;/li&gt;
+&lt;li&gt;чеклист;&lt;/li&gt;
+&lt;li&gt;материалы.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Про метаданные&lt;/strong&gt; в проектных файлах говорить скучно, вы наверняка сталкиваетесь с ними на работе: это статус, время начала, окончания и примерная оценка. Как видно на текущем скрине, я успеваю со статьёй и докладом, но уже давно застрял на своём pet-проекте. Подробно об этом можно прочитать в моём цифровом садике — &lt;a href="https://vanadium23.me/openbox/metadannye-dlya-zametok-proektov/"&gt;метаданные для заметок проектов&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Чеклист&lt;/strong&gt; для меня превратился в три вещи:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;описание результата и условий проверки;&lt;/li&gt;
+&lt;li&gt;составление начальных шагов;&lt;/li&gt;
+&lt;li&gt;оценка рисков.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Не все пункты обязательны для каждого проекта, шаблон можно подстраивать, например, под разные сроки (вряд ли в двухнедельном проекте нужны риски), но пока я оставил это на ручное управление.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://vanadium23.me/images/filled-project.png" alt="Пример проекта на примере статьи"&gt;&lt;/p&gt;
+&lt;p&gt;Для вдохновения можно пойти по ссылочкам:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://habr.com/ru/articles/710356/"&gt;https://habr.com/ru/articles/710356/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://habr.com/ru/articles/789248/"&gt;https://habr.com/ru/articles/789248/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://ltroj.medium.com/engineering-project-management-in-obsidian-e6aade82dfff#b587"&gt;https://ltroj.medium.com/engineering-project-management-in-obsidian-e6aade82dfff#b587&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://nick-senin.github.io/2022/02/02/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B0%D0%BC%D0%B8-%D0%B2-Obsidian.html"&gt;https://nick-senin.github.io/2022/02/02/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B0%D0%BC%D0%B8-%D0%B2-Obsidian.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="пример-найм-сотрудников"&gt;Пример: найм сотрудников&lt;/h2&gt;
+&lt;p&gt;Отвлечёмся от темы проектов — рано или поздно на работе возникает необходимость в найме сотрудников. Первые несколько раз этот процесс идёт со скрипом, но к тридцатому разу накапливается опыт. Потом этот опыт приходится пересматривать, так как он может оказаться не таким верным, как казалось.&lt;/p&gt;
+&lt;p&gt;Из каких шагов состоит процесс найма?&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;понять, кто нам нужен;&lt;/li&gt;
+&lt;li&gt;создать вакансию;&lt;/li&gt;
+&lt;li&gt;проводить собеседования;&lt;/li&gt;
+&lt;li&gt;???;&lt;/li&gt;
+&lt;li&gt;profit.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;В HRTech такие сервисы принято называть &amp;ldquo;системами привлечения талантов&amp;rdquo;, поэтому именно так называется соответствующая заметка. Она состоит из двух шаблонов и одной таблицы: шаблона описания вакансии + профиля кандидата и шаблона собеседования.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://vanadium23.me/images/vacancy.png" alt="Шаблон вакансии"&gt;&lt;/p&gt;
+&lt;p&gt;Тут тебе сразу и личные качества сверху, а ещё есть описанные типовые позиции, где есть банк задач.&lt;/p&gt;
+&lt;p&gt;При этом в шаблоне по собеседованию написана следующая автоматизация:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-js" data-lang="js"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;const&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;vacancies&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;tp&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;user&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;suggest_folder&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;#vacancy&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;const&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;vacancy&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;await&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;tp&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;system&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;suggester&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;vacancies&lt;/span&gt;, &lt;span style="color:#a6e22e"&gt;vacancies&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;const&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;candidate&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;await&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;tp&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;system&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;prompt&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;Имя кандидата?&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;const&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;questions&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;`[[&lt;/span&gt;&lt;span style="color:#e6db74"&gt;${&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;vacancy&lt;/span&gt;&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt;#Список вопросов]]`&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;const&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;title&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;`&lt;/span&gt;&lt;span style="color:#e6db74"&gt;${&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;tp&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;date&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;now&lt;/span&gt;()&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt; &lt;/span&gt;&lt;span style="color:#e6db74"&gt;${&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;candidate&lt;/span&gt;&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt;`&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;const&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;filename&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;tp&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;user&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;sanitaze_filename&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;title&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;await&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;tp&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;file&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;move&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;filename&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Мы достаём все вакансии по шаблону, спрашиваем имя кандидата и создаём заметку с дата + кандидат, И внутри будет уже весь текст из подзаголовка списка вопрос.&lt;/p&gt;
+&lt;p&gt;Финальный результат:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://vanadium23.me/images/interviews.png" alt="Собесы"&gt;&lt;/p&gt;
+&lt;h3 id="обмазываем-интеграциями"&gt;Обмазываем интеграциями&lt;/h3&gt;
+&lt;p&gt;Здесь стоит немного отступить и отметить, что в компаниях всегда существуют корпоративные инструменты со своими воркфлоу, и их множество: таск-трекеры, вики, системы для найма, Google Docs, Miro и так далее. Преимущество JavaScript-стека в этом контексте становится ещё более очевидным благодаря возможности интеграции через API (&lt;a href="https://gist.github.com/vanadium23/a0cfcc0644c9571f752b43ad6b042c02"&gt;пример&lt;/a&gt;):&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;получаем собственный воркфлоу, удобный для нас;&lt;/li&gt;
+&lt;li&gt;и сохраняем совместимость с корпоративной средой.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="итого"&gt;Итого&lt;/h2&gt;
+&lt;p&gt;Тиаго Форте в книге &lt;em&gt;&amp;ldquo;Building a Second Brain&amp;rdquo;&lt;/em&gt; называл заметки строительными блоками для идей. В моём случае, заметка является строчкой в нормализованной таблице. Это следствие профессиональной деформации, но такой формат демонстрирует свою жизнеспособность. Дальше всё зависит от того, насколько глубоко это прорабатывать.&lt;/p&gt;
+&lt;p&gt;Стоит ещё раз отметить, что табличное представление — это мой личный выбор. Некоторые предпочитают графовые структуры, другим понятен линейный текст. За то время, что я пользовался Obsidian, появились две замечательные альтернативы: LogSeq и AnyType. В них гибрид Obsidian и Notion пошёл по другому пути: единицей контента является блок, а заметка — это либо ссылка на конкретный блок, либо&amp;hellip;&lt;/p&gt;
+&lt;p&gt;P.S. А кто-то просто может сказать, что лучше освоить Excel, ведь там всё это уже давно есть.&lt;/p&gt;</description></item><item><title>Building a Second Brain</title><link>https://vanadium23.me/building-a-second-brain/</link><pubDate>Sun, 12 Feb 2023 10:00:00 +0300</pubDate><guid>https://vanadium23.me/building-a-second-brain/</guid><description>&lt;p&gt;Несколько лет назад была написана статья про &lt;a href="https://vanadium23.me/para/"&gt;para&lt;/a&gt;. С того момента прошло уже 4 года, и Тиаго Форте решил порадовать своей книгой про подход &amp;ldquo;building a second brain&amp;rdquo;. Пробежав по главам, понял что не хочу её читать, так как они содержали все известные статьи из блога. Это было ошибкой. Ведь свои подходы надо итерировать.&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;Начнём с того, что building a second brain - это методология по ведению персональной базы знаний. Она включает в себя приёмы по организации и обработке информации. В результате накопленный опыт аккумулируется в ней в виде отдельных промежуточных блоков / &lt;em&gt;intermediate packets&lt;/em&gt;. Эти блоки можно комбинировать как лего для новых проектов, чтобы не начинать с чистого листа&lt;/p&gt;
+&lt;p&gt;Основной подхода служит принцип &lt;strong&gt;CODE&lt;/strong&gt;. Это акроним от первых букв слов: Capture, Organise, Distil и Exctract. Под капотом этот принцип использует подходы дивергентного и конвергентного мышления. В рамках дивергентного состояния надо быть открытым ко всему и не критиковать себя. А вот на конвергентной стадии надо собирать полученные знания в непротиворечивую модель.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://vanadium23.me/images/Pasted%20image%2020230211134034.png" alt="CODE diagram"&gt;&lt;/p&gt;
+&lt;h2 id="capture"&gt;Capture&lt;/h2&gt;
+&lt;p&gt;Творческий процесс заключается не только в создание нового, но и в грамотном синтезе доступных знаний. Чтобы их не терять, стоит настроить приложения и интегрировать их с заметками:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;для чтения статей: getpocket, instapaper, wallabag;&lt;/li&gt;
+&lt;li&gt;для чтения книг: kindle, koreader;&lt;/li&gt;
+&lt;li&gt;для сохранения отдельных цитат: zotero, readwise;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Но приложения - это самая простая часть данного этапа.&lt;/p&gt;
+&lt;p&gt;Основная сложность заключается в том, &lt;strong&gt;что&lt;/strong&gt; сохранять. Здесь могут быть две потенциальные проблемы: сохраняем всё подряд или не сохраняем ничего. Ответ автора на этот вопрос заключается в том, чтобы сохранять всё, что резонирует. Так как мы не очень понимаем, что нам понадобиться в дальнейшем. Момент с резонансом здесь самый тонкий. С одной стороны, интуиция человека выдаёт быстрое и, как правило, верное решение на основании поверхностного изучения. С другой стороны, можно &lt;a href="https://vanadium23.me/openbox/ne-bud-plyushkinym/"&gt;стать Плюшкиным&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="organize"&gt;Organize&lt;/h2&gt;
+&lt;p&gt;Сохраняя большое количество информации нужно понимать, как они в итоге попадут в заметке. И здесь мы возвращаемся к подходу PARA. PARA &lt;em&gt;опять&lt;/em&gt; является акронимом от первых букв: Projects, Areas, Resources и Archive. Это название корневых директорий во всех инструментах, которыми вы пользуетесь будь это заметки, облачное хранилище или папки на компьютере.&lt;/p&gt;
+&lt;p&gt;Из блога мне не хватило аналогий для понимания значения метода. Суть не только в том, чтобы информация лежала единообразно или что мы разделяем проекты от ресурсов. А в том, что мы сортируем контент по его применимости/actionability. Мы можем провести аналогию с кухней: запасы идут в погреб (Archive), то что будет нужно в течение полугода в морозилке (Resources), чуть более востребованное в холодильнике (Areas), а то к чему возвращаемся несколько раз в день непосредственно на столе (Projects). Продолжая аналогию, мы размещаем картинки дизайна квартир с пинтерест в Resources, так как сейчас никакого ремонта нет. А вот статья про налаживание сна у младенца нам пригодится в рамках проекта первого года жизни ребёнка.&lt;/p&gt;
+&lt;h2 id="distill"&gt;Distill&lt;/h2&gt;
+&lt;p&gt;Для эффективного использования накопленных заметок необходимо их осмыслить. Это можно делать с помощью составления выдержек. Подходом автора для решения этой задачи является метод &amp;ldquo;прогрессивная суммаризация&amp;rdquo;. По названию и возможно сути перекликается с &lt;a href="https://www.artlebedev.ru/kovodstvo/sections/167/"&gt;прогрессивным jpeg&amp;rsquo;ом&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;При прочтении статьи мы выделяем 3-5 абзацев, которые считаем наиболее важными. Потом в них мы выделяем предложения, которые являются важными. А потом мы составляем выдержку по тому, что выделили. Таким образом статью мы сможем вспомнить за несколько предложений, но ещё и пройтись по пути обратно, если нам нужно будет докопаться до сути. Эта идея перекликается из другой недавно прочтённой книгой Ackoff&amp;rsquo;s best, где были проведены исследования что &lt;a href="https://vanadium23.me/openbox/quotes/202302011212/"&gt;любой материал можно сократить в 3 раза&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Самое интересное, что автор показывал пример со статьёй из wikipedia. Что помогает понять, что таким образом можно держать и те статьи, что всегда доступны в интернете. Делается это для того, чтобы быстро вспомнить о чём речь.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://vanadium23.me/images/Screen%20Shot%202023-02-12%20at%2011.29.33.png" alt="Пример wiki статьи"&gt;&lt;/p&gt;
+&lt;h2 id="express"&gt;Express&lt;/h2&gt;
+&lt;p&gt;Полученные выдержки, мы можем начинать использовать в своих проектах. Это помогает избежать проблемы чистого листа. Стартуя новый проект, мы можем пробежаться по ключевым заметкам в ресурсах и соединить те, которые представляют интерес. Данный подход называется &lt;strong&gt;архипелаг идей&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Если после начального освящения, трудности с первым шагом, то можно не прыгать сразу к результату. Любой проект - это путь, где следующий шаг может быть очевидным, а фактический результат сильно расходится от запланированного. Главное оставлять себе хлебные крошки к следующему шагу: написали структуру поста &amp;ndash;&amp;gt; оставьте вопросы, которые хотелось бы осветить. Этот подход называется &lt;strong&gt;Hemingway bridge&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Проект выходит из под контроля - &lt;a href="https://bureau.ru/about/fff/"&gt;флексим&lt;/a&gt;. В книге подход с уменьшением размера проекта назван &lt;strong&gt;dial down&lt;/strong&gt;. Но в прочтении от бюро Горбунова он выглядит более цельным, поэтому тут только порекомендую ознакомиться ссылкой.&lt;/p&gt;
+&lt;p&gt;Но эти все подходы направлены на использование информации в проектах, в то время как основные знания мы получаем по их завершению. И тут building a second brain начинает работать. По завершению проекта мы должны провести его ревью. В связанных заметках, встречах и остальных материалах появиться новое знание, которое будет полезно для нас в будущем.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://vanadium23.me/images/Screen%20Shot%202023-02-12%20at%2011.38.18.png" alt="Knowledge cycle"&gt;&lt;/p&gt;
+&lt;p&gt;И эти обезличеные знания то, чем стоит делиться. Каждый человек - уникален и второго такого с такими же знаниями и опытом нет. Поэтому надо приходить в локальные сообщества и показывать результат своих мыслей. Ведь любой человек нуждается в самореализации.&lt;/p&gt;
+&lt;h2 id="что-поменялось-в-моих-подходах-после-прочтения"&gt;Что поменялось в моих подходах после прочтения?&lt;/h2&gt;
+&lt;p&gt;После двух лет использования PARA, произошла реорганизация заметок. Ёкнуло у меня в тот момент, когда увидел репозиторий &lt;a href="https://github.com/uwidev/life-disciplines-projects"&gt;Life-Disciplines-Projects&lt;/a&gt;. Это был уже третий подход в рамках obsidian, и пришло осознание, что не важно что ты используешь, гораздо важнее чтобы было самому удобнее. Сейчас корневые директории в своих заметках держу такие: Actions, Journal, Life, Knowledge, Trash. И для внешнего взгляда они &lt;em&gt;наверное&lt;/em&gt; ничего не значат. Но из книги увидел, что организация пошла точно так же по степени востребованности.&lt;/p&gt;
+&lt;p&gt;Буду перерабатывать подходы к составлению заметок из статей. Сейчас они разбиваются на цитаты, а надо бы собирать их в одну атомарную заметку. Но дальше начинается вопрос переиспользовать ли этот подход для книг, и тут уже начинают плавать. В любом случае, прогрессивную суммаризацию точно стоит провести в виде эксперимента и адаптировать.&lt;/p&gt;
+&lt;p&gt;По результатам мне хотелось бы уже переключиться на свои заметки вместо гугл поиска. Кстати, люди делали такой эксперимент и оно работает. Подробнее почитать можно &lt;a href="https://thesephist.com/posts/monocle/"&gt;тут&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="чеклист-внедрения-из-книги"&gt;Чеклист внедрения из книги&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Выбрать для чего мы хотим вести заметки.&lt;/li&gt;
+&lt;li&gt;Выбрать приложение для ведения заметок и остаться с ним на полгода.&lt;/li&gt;
+&lt;li&gt;Выбрать приложение для сохранения статей.&lt;/li&gt;
+&lt;li&gt;Сделать себе структуру папок с помощью PARA.&lt;/li&gt;
+&lt;li&gt;Составить список открытых больших вопросов, с помощью которых можно будет фильтровать весь входящий контент.&lt;/li&gt;
+&lt;li&gt;Настроить автоматическую синхронизацию заметок из книг в заметки.&lt;/li&gt;
+&lt;li&gt;Практиковать progressive summarization на статьях из пункта 3.&lt;/li&gt;
+&lt;li&gt;Начать писать атомарные заметки для себя в будущем.&lt;/li&gt;
+&lt;li&gt;Начать использовать свои заметки на одном из проектов.&lt;/li&gt;
+&lt;li&gt;Поставить себе еженедельное ревью с двумя шагами: просмотреть заметки за неделю и составить следующие шаги по проекту.&lt;/li&gt;
+&lt;li&gt;Присоединиться к локальным сообществам по ведению заметок, чтобы находить новые идеи.
+&lt;ul&gt;
+&lt;li&gt;В русскоязычном телеграмме могу рекомендовать &lt;a href="https://t.me/Zettelkasten_ru/1"&gt;чат Zettelkasten&lt;/a&gt; и &lt;a href="https://zttl.space/"&gt;их форум&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>Obsidian - моя следующая заметочница</title><link>https://vanadium23.me/obsidian/</link><pubDate>Sun, 21 Feb 2021 09:00:00 +0300</pubDate><guid>https://vanadium23.me/obsidian/</guid><description>&lt;p&gt;В &lt;a href="https://vanadium23.me/notes-evolution/"&gt;прошлой статье&lt;/a&gt; я писал о том, какой путь для выбора систем заметок пришлось пройти, чтобы остановится на Vs Code. Время не стоит на месте и выходят новые инструменты, которые стоит попробовать для решения задач ведения заметок. Это немного противоречит правилу [[сначала подход, потом инструмент]], но так как подход уже сформирован, то можно и поглядеть на новое.&lt;/p&gt;
+&lt;p&gt;Мои требования к инструменту выглядят следующим образом.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Файлы должны лежать локально:
+&lt;ul&gt;
+&lt;li&gt;Имея навык однострочников на bash, можно автоматизировать свою рутину.&lt;/li&gt;
+&lt;li&gt;Локальные файлы будут работать на порядок быстрее любого решения поверх &amp;ldquo;облачных&amp;rdquo; поставщиков.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Из инструмента можно работать с git:
+&lt;ul&gt;
+&lt;li&gt;Так как у нас ничего не синхронизируется, то делаем это с помощью стандартных инструментов разработчика.&lt;/li&gt;
+&lt;li&gt;В заметках не очень нужны сложные операции вида rebase, stash. Вся работа сводится к &lt;code&gt;git add -A . &amp;amp;&amp;amp; git commit - m 'snapshot ``date``'&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Двунаправленные ссылки:
+&lt;ul&gt;
+&lt;li&gt;Неважно как они будут реализованы с помощью wiki-links или обычными.&lt;/li&gt;
+&lt;li&gt;Важно, чтобы было отображение заметок, которые ссылаются на эту заметку.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Возможность расширения с помощью плагинов:
+&lt;ul&gt;
+&lt;li&gt;Хорошо иметь возможность настроить инструмент под себя.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Забыл дописать, естественно, это markdown:
+&lt;ul&gt;
+&lt;li&gt;Просто пока не нашёл более простой формат. (:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Как вы уже поняли из названия сегодня покажу, что такое &lt;a href="https://obsidian.md/"&gt;Obsidian&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="граф-и-связность"&gt;Граф и связность&lt;/h2&gt;
+&lt;p&gt;&lt;img src="https://vanadium23.me/images/%D0%A1%D0%B2%D1%8F%D0%B7%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BE%D0%BA.png" alt="Пример графа"&gt;&lt;/p&gt;
+&lt;p&gt;Это граф моих заметок:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;фиолетовое - все записи по работе&lt;/li&gt;
+&lt;li&gt;синее - записи по старой&lt;/li&gt;
+&lt;li&gt;оранжевым - персональная база знаний&lt;/li&gt;
+&lt;li&gt;красным - проекты&lt;/li&gt;
+&lt;li&gt;бирюзовым - дневник
+По поводу цветов, всё можно разукрасить на своё усмотрение по комбинации параметров: путь, тег, связи с файлом и так далее.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Зачем это нужно? Например, можно просматривать вещи и наблюдать за тем, как [[формируются знания вокруг концепций]].&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://vanadium23.me/images/20210221114859.png" alt="Кластер вокруг ведения заметок"&gt;&lt;/p&gt;
+&lt;h2 id="ведение-дневника"&gt;Ведение дневника&lt;/h2&gt;
+&lt;p&gt;Ведение разного рода дневник и активная выгрузка мыслей из головы в какую-то письменную форму, повышает структурность понимания, что происходит вокруг и помогает связать это с каким-то событиями из прошлого, а ещё лучше сформировать ментальную модель, что может произойти дальше. Разных дневник довольно много: можно вести &lt;a href="https://blog.system-school.ru/2020/10/14/emotions-diary/"&gt;дневник эмоций&lt;/a&gt;, можно вести &lt;a href="https://habr.com/ru/post/116251/"&gt;проектный дневник&lt;/a&gt;, или просто сесть и написать всё, что лезет в голову. Особенно странно читать, как мысли прыгают с темы на тему, органически выделяя связи в потоке, но никак не связывая их если сесть и подумать. Мне тяжело давалась привычка вести текстовый дневник с мыслями, а не просто лог всех текущих встреч и обсуждений. В obsidian на помощь пришёл плагин с ежедневными заметками и календарём. Теперь когда вижу день без точечки, то мой внутренний задрот не может с этим смириться. Если вы обратили внимание на самый первый граф, то дневник находится посередине между работой и знаниями. Кроме того, obsidian автоматически находит все несвязанные заметки с таким же именем, поэтому можно довольно быстро найти все встречи или обсуждения, которые были в это день просто перейдя на нужную дату в календаре.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://vanadium23.me/images/20210221115634.png" alt="Пример календаря"&gt;
+&lt;img src="https://vanadium23.me/images/20210221120213.png" alt="Простой день"&gt;&lt;/p&gt;
+&lt;h2 id="mind-map"&gt;Mind map&lt;/h2&gt;
+&lt;p&gt;В markdown есть ряд вещей, которых не хватает: работа с мыслекартами, работа с таблицами (приходится делать это в Excel/Google Sheets), графики. Первую проблему можно решить с помощью &lt;a href="https://markmap.js.org/"&gt;markmap&lt;/a&gt;, и плагин для неё есть и в Vs Code, и в Obsidian. Я привык просматривать свои годовые цели в этом формате:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://vanadium23.me/images/20210221120350.png" alt="Мыслекарта целей 2020"&gt;&lt;/p&gt;
+&lt;h2 id="git"&gt;Git&lt;/h2&gt;
+&lt;p&gt;В Vs Code старался делать атомарные коммиты с подписями, а в итоге понял, что мне просто по кнопке нужно всё сохранить. Эту проблему решает &lt;a href="https://github.com/denolehov/obsidian-git"&gt;obsidian-git&lt;/a&gt;.
+Главное при работе с ним сделать &lt;code&gt;.gitignore&lt;/code&gt; с исключением файлов из &lt;code&gt;.obsidian&lt;/code&gt;, потому что там будут конфликты, а их разрешение через интерфейс не завезли и приходится открывать консоль.&lt;/p&gt;
+&lt;h2 id="картинки-pdf-и-остальное"&gt;Картинки, pdf и остальное&lt;/h2&gt;
+&lt;p&gt;Всё работает с помощью drag&amp;rsquo;n&amp;rsquo;drop и самое прекрасное, что можно перетащить не только картинку, но и всякие бинарные данные. При отображение заметок, pdf будут отрисованы внутри неё и можно не переходить в стороннее приложение.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://vanadium23.me/images/20210221125122.png" alt="Как-то так"&gt;&lt;/p&gt;
+&lt;p&gt;Pdf работает ещё и в сторону экспорта, что уже несколько раз позволило просто выгрузить заметку и переслать в случае, если это требовалось.&lt;/p&gt;
+&lt;h2 id="индексация-и-связность"&gt;Индексация и связность&lt;/h2&gt;
+&lt;p&gt;Повторю ещё раз тезис про формирование знаний вокруг концепций, и добавлю противоречий в то, что иногда нужны заметки-оглавления, которая не несёт сама смысловой ценности, но помогает объединить всё вокруг конкретики, например: все заметки за 2020 год. Изначально проблему можно решить с помощью простого bash скрипта, но в Obsidian решили пойти дальше и позволили встраивать поиск в заметки. Выглядит это следующим образом:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://vanadium23.me/images/20210221122748.png" alt="Пример индекса"&gt;&lt;/p&gt;
+&lt;p&gt;Но если возможностей не хватает, то есть на помощь опять приходят плагины с большим количеством возможностей: &lt;a href="https://github.com/jplattel/obsidian-query-language"&gt;obsidian-query-language&lt;/a&gt;, &lt;a href="https://github.com/blacksmithgu/obsidian-dataview"&gt;obsidian-dataview&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="итого"&gt;Итого&lt;/h2&gt;
+&lt;p&gt;Организованный подход привёл к тому, что начал переиспользовать практики работы с задачами в том, как работаю с заметками. Пришло больше осознанности по каким-то темам, самое главное книги стало читать интереснее, потому что появилась игра &lt;del&gt;натягивание совы на глобус&lt;/del&gt; соотнеси новую информацию со старыми концепциями. В этом плане сильно помогает &lt;a href="https://zettelkasten.de/posts/knowledge-cycle-efficiently-organize-writing-projects/"&gt;цикл знаний&lt;/a&gt; из Zettelkasten и &lt;a href="https://fortelabs.co/blog/progressive-summarization-a-practical-technique-for-designing-discoverable-notes/"&gt;прогрессивное подведение итогов&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://vanadium23.me/images/20210221124035.png" alt="Мой рабочий инструмент"&gt;&lt;/p&gt;
+&lt;p&gt;P.s. всё это касается не только заметок, но и работы, потому что менеджмент - это не меньшая работа с текстом, чем разработка. Просто вместо формального кода, у тебя неформальные слова. (:&lt;/p&gt;
+&lt;h2 id="что-ещё-почитать"&gt;Что ещё почитать&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://publish.obsidian.md/lyt-kit/_Start+Here"&gt;Быстрый старт с разными подходами&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://forum.obsidian.md/t/meta-post-migration-workflows/768"&gt;Миграция с других инструментов&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://joshwin.imprint.to/post/how-i-use-obsidian-to-manage-my-goals-tasks-notes-and-software-development-knowledge-base"&gt;Как вести дела в Obsidian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://nesslabs.com/how-to-choose-the-right-note-taking-app"&gt;Выбор заметочницы для себя&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Эволюция заметочниц</title><link>https://vanadium23.me/notes-evolution/</link><pubDate>Sun, 29 Mar 2020 09:00:00 +0300</pubDate><guid>https://vanadium23.me/notes-evolution/</guid><description>&lt;p&gt;У меня есть какая-то непонятная страсть сохранять, складировать и каталогизировать информацией, которую обладаю. Это не какие-нибудь случайные стикеры, прикреплённые к монитору, или бумажки разбросанные по столу.
+В этой заметке (&lt;em&gt;ха-ха&lt;/em&gt;) хочу рассказать, что пробовал и к чему пришёл из цифровых заметочниц.&lt;/p&gt;
+&lt;p&gt;Вдохновление для написания статьи появилось из-за статьи &lt;a href="https://kortina.nyc/essays/suping-up-vs-code-as-a-markdown-notebook/"&gt;&amp;ldquo;Suping Up VS Code as a Markdown Notebook&amp;rdquo;&lt;/a&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h2 id="evernote"&gt;&lt;a href="https://evernote.com/"&gt;Evernote&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src="https://evernote.com/img/footer/footer-logo.svg" alt="Evernote logo"&gt;&lt;/p&gt;
+&lt;p&gt;Думаю, что все кто старается делать цифровые заметки сталкивались с этим приложением. До него я вёл дневники или блокноты, которые старательно писал с какого по какой год там лежат заметки. Теперь дневники лежат пыляться на чердаке у бабушки, а Evernote в виде бэкапа на NAS.
+Во времена использования Evernote, его напарником был Google Reader, где просматривал 200 заголовков в день, чтобы выцепить чего же нового произошло в индустрии. После открытия нужной статьи, она прочитывалась и с помощью Web Clipper помещалась с нужным тегом в Evernote.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Что мы получали в итоге?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Гору мусора, по которой максимум производился поиск и никак не использовался.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Устраивало ли меня это?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;По началу да, но после прочтения статьи про &lt;a href="https://habr.com/ru/company/redmadrobot/blog/241005/"&gt;университет в Evernote&lt;/a&gt;, осознал что не использую и десятой возможности Evernote. И вот спустя пару-тройку месяц настроил кучу тегов, списка блокнотов куда помещал свои теперь электронные дневники и дела которые надо делать в ближайшее время.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;На этом всё?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Как бы нет, подстава подкралась незаметно, когда Evernote на бесплатной подписке запретил использовать больше двух устройств. Это было критично потому, что у меня был домашний комп, планшет и телефон. Я мог заплатить за премиум подписку, но меня начал беспокоить тот факт, что через некоторые время закрутят гайки или введут премиум для премиума и придёться платить ещё больше.&lt;/p&gt;
+&lt;h2 id="nimbus"&gt;&lt;a href="https://nimbusweb.me/"&gt;Nimbus&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src="https://nimbusweb.me/new-style-img/nimbus-note-short-logo.svg" alt="Nimbus logo"&gt;&lt;/p&gt;
+&lt;p&gt;В этот момент появился Nimbus, который хотел выехать на том, что Evernote поменяли свою политику. Кроме этого у них так же был клиппер, а мобильное приложение работало шустрее. Миграция не составила труда, так как они умели работать с бекапом Evernote в формате enex.
+Потыкал в неё чисто ради интереса, так как проблемы с тем что надо платить она не решает.&lt;/p&gt;
+&lt;p&gt;NB: сейчас происходит тоже самое только уже Nimbus vs Notion, судя по тому как быстро они добавили функциональность таблиц.&lt;/p&gt;
+&lt;h2 id="google-keep"&gt;&lt;a href="https://keep.google.com/"&gt;Google Keep&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png" alt="Keep logo"&gt;&lt;/p&gt;
+&lt;p&gt;Если мне не изменяет память, то вместе с обновлением до android 4 (или 4.1) прилетело приложение google keep. Оно не идёт ни в какое сравнение с предыдущими двумя программами, потому что ближе подходят к идеологии стикеров на монитор. Нет полноценного WYSIWYG редактора, карточное представление заметок, но зато в них можно рисовать или вставлять картинки.
+Скорее всего задумка была в том, чтобы зайти через удобное мобильное приложение.&lt;/p&gt;
+&lt;h2 id="joplin"&gt;&lt;a href="https://joplinapp.org/"&gt;Joplin&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Начал искать приложение, которое позволяло бы хранить заметки только у себя и своём сервере. Нашёл Joplin, который был не сильно хуже чем Nimbus, но хорошо отвечал требованиям для паранойи:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;файлы храняться в markdown заметках&lt;/li&gt;
+&lt;li&gt;синхронизация идёт через Nextcloud (просто папку забекапить)&lt;/li&gt;
+&lt;li&gt;вся дополнительная мета информация хранится в sqlite&lt;/li&gt;
+&lt;li&gt;даже clipper есть (но он так себе)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;На бумаге всё выглядело красиво, а вот в реализации подкачало: синхронизация доставляла лютую боль, потому что в Nextcloud всё время скапливались файлы с именем conflicted copy.&lt;/p&gt;
+&lt;h2 id="qownnotes"&gt;&lt;a href="https://www.qownnotes.org/"&gt;QOwnNotes&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src="https://www.qownnotes.org/bundles/pbeprojectwebpage/images/header-icon.png" alt="QOwnNotes logo"&gt;&lt;/p&gt;
+&lt;p&gt;Тоже самое, что и Joplin, но в виду того что синхронизация для Nextcloud сделана в виде дополнения и имеет своё API, то работает получше. С другой стороны, сами приложения чуть хуже.&lt;/p&gt;
+&lt;h2 id="git-repository"&gt;Git repository&lt;/h2&gt;
+&lt;p&gt;Ещё дольше попробовав разные приложения, я понял что складывать всё подряд довольно бесполезное занятие. С одной стороны ты можешь выжить в мире пандемии без интернета, потому что твоя подписка вот она хранится на локальном NAS, но с другой стороны это не дело заметочницы.
 Исходный код программ разработчики хранят в системе контроля версий и я решил бить микроскопом по гвоздям, и использую для хранения заметок git, благо вариантов много: можно сделать себе приватный репозиторий на Gitlab или развернуть свой с помощью Gogs/Gitea.
-Дальше дело остаётся только за выбором редактора.&lt;/p>
-&lt;blockquote>
-&lt;p>Это что мне надо будить коммитить каждый раз после написания заметки?&lt;/p>
-&lt;/blockquote>
-&lt;p>Ага, именно и писать к этому ещё и сообщение что же ты добавил.&lt;/p>
-&lt;blockquote>
-&lt;p>Стоп, а как же web clipper?&lt;/p>
-&lt;/blockquote>
-&lt;p>Можно использовать тот что идёт с Joplin, а можно просто писать выдержки по книгам или статьям.&lt;/p>
-&lt;h3 id="vs-code">VS Code&lt;/h3>
-&lt;p>Vs Code отлично подходит для написания markdown заметок с помощью нескольких расширений:&lt;/p>
-&lt;ol>
-&lt;li>Markdown all in one - полезные быстрые клавиши и автодополнение.&lt;/li>
-&lt;li>markdownlint - потому что всё время забываю про переносы.&lt;/li>
-&lt;li>Image preview - показывает изображения во время редактирования файла.&lt;/li>
-&lt;li>Можно делать пользовательские сниппеты, чтобы вставить автоматически даты или заголовок в виде YAML.&lt;/li>
-&lt;/ol>
-&lt;p>Из минусов не нашёл хорошего плагина для проверки грамматики, поэтому пишу с ошибками в блоге и надеюсь, что при большом количестве чтения и писанины стану более грамотным. (:&lt;/p>
-&lt;h3 id="организация-заметок">Организация заметок&lt;/h3>
-&lt;p>Keep it simple stupid, а именно:&lt;/p>
-&lt;ol>
-&lt;li>Используй папки в качестве категорий или для группировки.&lt;/li>
-&lt;li>Теги можно ставить в любом месте заметки с помощью @tag и потом искать с помощью &lt;code>grep&lt;/code>.&lt;/li>
-&lt;li>Удобно организовать заметки с помощью &lt;a href="https://vanadium23.me/para/">P.A.R.A.&lt;/a>&lt;/li>
-&lt;/ol>
-&lt;p>В целом, именно то что заметки это просто файлы по папкам даёт огромное спокойствие, что под капотом там нет 100500 вызовов синхронизаций поверх PouchDB с умными алгоритмами синхронизации конфликтов.&lt;/p>
-&lt;h3 id="gitjournalhttpsgitjournalio">&lt;a href="https://gitjournal.io/">GitJournal&lt;/a>&lt;/h3>
-&lt;p>Приложение, которое отлично дополняет этот подход на мобильном приложение. Ради него и была большая часть статьи, потому что раньше всегда отвечал, что веду заметки только на компе. Теперь можно комфортно заниматься этим и на телефоне. Попробуйте его и поделитесь своим впечатлением.&lt;/p>
-&lt;h2 id="итого">Итого&lt;/h2>
-&lt;p>Вот такая странная заметка о том, что можно использовать инструменты разработчика для ведения заметок и это получается даже удобно.&lt;/p>
-&lt;p>P.s. А где notion? А dynalist и workflowy?&lt;/p>
-&lt;ul>
-&lt;li>Notion - он появился позже этого подхода и манит только тем, что может заменить заметки и ToDo. А потом я слышу что медленно работает, нет оффлайн и думаю зачем оно такое?&lt;/li>
-&lt;li>Dynalist/Workflowy - братья-близнецы, которые представляют из себя бесконечный список из markdown, где можно углубляться бесконечно вглубь. Вот только проблема в том, что не всё в этом мире список. (:&lt;/li>
-&lt;/ul></description></item></channel></rss>
+Дальше дело остаётся только за выбором редактора.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Это что мне надо будить коммитить каждый раз после написания заметки?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Ага, именно и писать к этому ещё и сообщение что же ты добавил.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Стоп, а как же web clipper?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Можно использовать тот что идёт с Joplin, а можно просто писать выдержки по книгам или статьям.&lt;/p&gt;
+&lt;h3 id="vs-code"&gt;VS Code&lt;/h3&gt;
+&lt;p&gt;Vs Code отлично подходит для написания markdown заметок с помощью нескольких расширений:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Markdown all in one - полезные быстрые клавиши и автодополнение.&lt;/li&gt;
+&lt;li&gt;markdownlint - потому что всё время забываю про переносы.&lt;/li&gt;
+&lt;li&gt;Image preview - показывает изображения во время редактирования файла.&lt;/li&gt;
+&lt;li&gt;Можно делать пользовательские сниппеты, чтобы вставить автоматически даты или заголовок в виде YAML.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Из минусов не нашёл хорошего плагина для проверки грамматики, поэтому пишу с ошибками в блоге и надеюсь, что при большом количестве чтения и писанины стану более грамотным. (:&lt;/p&gt;
+&lt;h3 id="организация-заметок"&gt;Организация заметок&lt;/h3&gt;
+&lt;p&gt;Keep it simple stupid, а именно:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Используй папки в качестве категорий или для группировки.&lt;/li&gt;
+&lt;li&gt;Теги можно ставить в любом месте заметки с помощью @tag и потом искать с помощью &lt;code&gt;grep&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Удобно организовать заметки с помощью &lt;a href="https://vanadium23.me/para/"&gt;P.A.R.A.&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;В целом, именно то что заметки это просто файлы по папкам даёт огромное спокойствие, что под капотом там нет 100500 вызовов синхронизаций поверх PouchDB с умными алгоритмами синхронизации конфликтов.&lt;/p&gt;
+&lt;h3 id="gitjournal"&gt;&lt;a href="https://gitjournal.io/"&gt;GitJournal&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Приложение, которое отлично дополняет этот подход на мобильном приложение. Ради него и была большая часть статьи, потому что раньше всегда отвечал, что веду заметки только на компе. Теперь можно комфортно заниматься этим и на телефоне. Попробуйте его и поделитесь своим впечатлением.&lt;/p&gt;
+&lt;h2 id="итого"&gt;Итого&lt;/h2&gt;
+&lt;p&gt;Вот такая странная заметка о том, что можно использовать инструменты разработчика для ведения заметок и это получается даже удобно.&lt;/p&gt;
+&lt;p&gt;P.s. А где notion? А dynalist и workflowy?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Notion - он появился позже этого подхода и манит только тем, что может заменить заметки и ToDo. А потом я слышу что медленно работает, нет оффлайн и думаю зачем оно такое?&lt;/li&gt;
+&lt;li&gt;Dynalist/Workflowy - братья-близнецы, которые представляют из себя бесконечный список из markdown, где можно углубляться бесконечно вглубь. Вот только проблема в том, что не всё в этом мире список. (:&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
