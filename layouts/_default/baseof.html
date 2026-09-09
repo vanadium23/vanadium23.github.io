@@ -9,7 +9,7 @@
 {{- .Scratch.Add "js" (slice (resources.Get "js/themes.js"))}}
 {{- $allJS := .Scratch.Get "js" | uniq -}}
 <!DOCTYPE html>
-<html lang="{{ site.LanguageCode }}">
+<html lang="{{ site.Language.Locale }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

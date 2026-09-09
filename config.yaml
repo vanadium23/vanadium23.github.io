@@ -1,5 +1,5 @@
 baseURL: 'https://vanadium23.me/'
-languageCode: ru-ru
+locale: ru-ru
 title: vanadium23
 
 Params:
